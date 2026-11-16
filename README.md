@@ -1,6 +1,20 @@
-# modded-supermimic — Unitree G1 Motion-Tracking Speedrun
+<h1 align="center">modded-supermimic</h1>
 
-> **Train a deployable 29-DoF Unitree G1 motion-tracking policy from scratch to ≥ 0.82 normalized return and 0/40 clip failures across all 40 LAFAN1 clips as fast as possible on 1× Colab G4 (RTX PRO 6000 Blackwell 96 GB).**
+<p align="center">
+  <b>Unitree G1 Motion-Tracking Speedrun Benchmark.</b><br>
+  Train a deployable 29-DoF policy from scratch to ≥ 0.82 normalized return and 0/40 failures across 40 LAFAN1 clips as fast as possible on 1× Colab G4 (RTX PRO 6000 Blackwell 96 GB).
+</p>
+
+<p align="center">
+  English · <a href="README.zh-CN.md">简体中文</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/basicv8vc/modded-supermimic/actions/workflows/ci.yml"><img src="https://github.com/basicv8vc/modded-supermimic/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status"></a>
+  <a href="benchmark/v2/protocol_v2.json"><img src="https://img.shields.io/badge/protocol-V2%20FULL__COLLISION-2f6feb" alt="Protocol V2 FULL_COLLISION"></a>
+  <img src="https://img.shields.io/badge/hardware-1%C3%97%20Colab%20G4%20(sm__120)-lightgrey" alt="1x Colab G4">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20%2B%20Apache--2.0%20assets-green" alt="MIT and Apache-2.0 assets"></a>
+</p>
 
 Inspired by [modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt): **fix the task, hardware, and independent referee; leave the training algorithm, framework, and simulator open.**
 
