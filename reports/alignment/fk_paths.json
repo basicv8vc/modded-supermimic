@@ -1,0 +1,210 @@
+{
+  "clips": {
+    "fallAndGetUp3_subject1": {
+      "num_frames": {
+        "v1": 5109,
+        "official": 5109,
+        "cache": 5109
+      },
+      "v1_vs_official": {
+        "joint_pos": {
+          "max_abs": 8.592754602432251e-05,
+          "mean_abs": 1.962209761194992e-06,
+          "first_frame_max_abs": 0.0
+        },
+        "joint_vel": {
+          "max_abs": 0.002529144287109375,
+          "mean_abs": 6.484988552602528e-05,
+          "first_frame_max_abs": 3.0994415283203125e-06
+        },
+        "body_pos_w": {
+          "max_abs": 0.0014090538024902344,
+          "mean_abs": 3.654920638933717e-06,
+          "first_frame_max_abs": 1.1920928955078125e-07
+        },
+        "body_quat_w": {
+          "max_abs": 0.0010805241763591766,
+          "mean_abs": 6.725093735292742e-06,
+          "first_frame_max_abs": 1.4901161193847656e-07
+        },
+        "body_lin_vel_w": {
+          "max_abs": 7.3633317947387695,
+          "mean_abs": 0.2398523246814926,
+          "first_frame_max_abs": 2.6254687309265137
+        },
+        "body_ang_vel_w": {
+          "max_abs": 0.05068409629166126,
+          "mean_abs": 0.0005065793434669396,
+          "first_frame_max_abs": 6.3907355070114136e-06
+        }
+      },
+      "cache_vs_v1": {
+        "joint_pos": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "joint_vel": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "body_pos_w": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "body_quat_w": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "body_lin_vel_w": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "body_ang_vel_w": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        }
+      },
+      "cache_vs_official": {
+        "joint_pos": {
+          "max_abs": 8.592754602432251e-05,
+          "mean_abs": 1.962209761194992e-06,
+          "first_frame_max_abs": 0.0
+        },
+        "joint_vel": {
+          "max_abs": 0.002529144287109375,
+          "mean_abs": 6.484988552602528e-05,
+          "first_frame_max_abs": 3.0994415283203125e-06
+        },
+        "body_pos_w": {
+          "max_abs": 0.0014090538024902344,
+          "mean_abs": 3.654920638933717e-06,
+          "first_frame_max_abs": 1.1920928955078125e-07
+        },
+        "body_quat_w": {
+          "max_abs": 0.0010805241763591766,
+          "mean_abs": 6.725093735292742e-06,
+          "first_frame_max_abs": 1.4901161193847656e-07
+        },
+        "body_lin_vel_w": {
+          "max_abs": 7.3633317947387695,
+          "mean_abs": 0.2398523246814926,
+          "first_frame_max_abs": 2.6254687309265137
+        },
+        "body_ang_vel_w": {
+          "max_abs": 0.05068409629166126,
+          "mean_abs": 0.0005065793434669396,
+          "first_frame_max_abs": 6.3907355070114136e-06
+        }
+      }
+    },
+    "walk4_subject1": {
+      "num_frames": {
+        "v1": 8195,
+        "official": 8195,
+        "cache": 8195
+      },
+      "v1_vs_official": {
+        "joint_pos": {
+          "max_abs": 0.00025391578674316406,
+          "mean_abs": 2.3078549979630143e-06,
+          "first_frame_max_abs": 0.0
+        },
+        "joint_vel": {
+          "max_abs": 0.008189201354980469,
+          "mean_abs": 7.661506115493682e-05,
+          "first_frame_max_abs": 1.6689300537109375e-06
+        },
+        "body_pos_w": {
+          "max_abs": 0.0014271736145019531,
+          "mean_abs": 1.2647050878312996e-06,
+          "first_frame_max_abs": 1.341104507446289e-07
+        },
+        "body_quat_w": {
+          "max_abs": 0.0011996403336524963,
+          "mean_abs": 2.07452867975059e-06,
+          "first_frame_max_abs": 1.1920928955078125e-07
+        },
+        "body_lin_vel_w": {
+          "max_abs": 4.8422932624816895,
+          "mean_abs": 0.130158748117282,
+          "first_frame_max_abs": 1.4613505601882935
+        },
+        "body_ang_vel_w": {
+          "max_abs": 0.049723029136657715,
+          "mean_abs": 0.00016893408049423772,
+          "first_frame_max_abs": 7.033348083496094e-06
+        }
+      },
+      "cache_vs_v1": {
+        "joint_pos": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "joint_vel": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "body_pos_w": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "body_quat_w": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "body_lin_vel_w": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        },
+        "body_ang_vel_w": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "first_frame_max_abs": 0.0
+        }
+      },
+      "cache_vs_official": {
+        "joint_pos": {
+          "max_abs": 0.00025391578674316406,
+          "mean_abs": 2.3078549979630143e-06,
+          "first_frame_max_abs": 0.0
+        },
+        "joint_vel": {
+          "max_abs": 0.008189201354980469,
+          "mean_abs": 7.661506115493682e-05,
+          "first_frame_max_abs": 1.6689300537109375e-06
+        },
+        "body_pos_w": {
+          "max_abs": 0.0014271736145019531,
+          "mean_abs": 1.2647050878312996e-06,
+          "first_frame_max_abs": 1.341104507446289e-07
+        },
+        "body_quat_w": {
+          "max_abs": 0.0011996403336524963,
+          "mean_abs": 2.07452867975059e-06,
+          "first_frame_max_abs": 1.1920928955078125e-07
+        },
+        "body_lin_vel_w": {
+          "max_abs": 4.8422932624816895,
+          "mean_abs": 0.130158748117282,
+          "first_frame_max_abs": 1.4613505601882935
+        },
+        "body_ang_vel_w": {
+          "max_abs": 0.049723029136657715,
+          "mean_abs": 0.00016893408049423772,
+          "first_frame_max_abs": 7.033348083496094e-06
+        }
+      }
+    }
+  }
+}

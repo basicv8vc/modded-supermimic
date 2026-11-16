@@ -1,0 +1,15 @@
+# future runs' large artifacts stay out of git (archives are curated by hand)
+out/**/checkpoints/*.pkl
+out/**/ckpt/*.pkl
+out/**/*.pt
+out/**/*.mp4
+# local scratch
+*.log.tmp
+# inflight collect transfers (verified temp files; never committed)
+out/**/*.part.*
+# per-file progress of an interrupted collect (never evidence of anything)
+out/**/.collect_partial.json
+# a previous verdict revoked before a re-collect; kept for forensics, read by no gate
+out/**/collect_manifest.txt.superseded
+out/**/collect_manifest.txt.failed
+__pycache__/

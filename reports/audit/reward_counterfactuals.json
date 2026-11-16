@@ -1,0 +1,1899 @@
+{
+  "provenance": {
+    "source_record": "reports/nablamimic_canonical_eval_mjlab.json",
+    "protocol_id": "modded-supermimic-g1-lafan1-v1",
+    "algorithm": "NablaMimic 8-min recipe (configs/ours.args)",
+    "evaluator": "canonical-mjlab-g1-v1",
+    "source_git_sha": "unknown",
+    "note": "Read-only decomposition of the frozen official record. No re-simulation. counterfactual_exact entries are exact linear re-weightings (the reward does not feed back into the trajectory); projection_requires_resim entries are extrapolations under a stated assumption and must not be reported as scores.",
+    "source_record_sha256": "a0a7bd6c793054414f59bed8f5ce1d73a31ebd1e90ddd560126d5ab17de4d244"
+  },
+  "denominator_per_step": 0.1,
+  "identity_residual_max": 3.2675534583637145e-08,
+  "summary": {
+    "official": {
+      "mean_clamped_return": 0.4819220861608978,
+      "mean_raw_return": 0.4798256806048988,
+      "n_clips_below_zero_raw": 2,
+      "n_clips_above_one_raw": 0
+    },
+    "no_self_collision_penalty": {
+      "mean_clamped_return": 0.6720398170617538,
+      "mean_raw_return": 0.6720398170617538,
+      "n_clips_below_zero_raw": 0,
+      "n_clips_above_one_raw": 0
+    },
+    "joint_limit_original_weight": {
+      "mean_clamped_return": 0.4844322074292372,
+      "mean_raw_return": 0.48237884047417373,
+      "n_clips_below_zero_raw": 2,
+      "n_clips_above_one_raw": 0
+    },
+    "original_penalties": {
+      "mean_clamped_return": 0.6745929769310288,
+      "mean_raw_return": 0.6745929769310288,
+      "n_clips_below_zero_raw": 0,
+      "n_clips_above_one_raw": 0
+    }
+  },
+  "termination_histogram": {
+    "<none>": 24,
+    "ee_body_pos": 16
+  },
+  "failed_clips": [
+    "dance1_subject1",
+    "dance1_subject2",
+    "dance1_subject3",
+    "dance2_subject1",
+    "dance2_subject2",
+    "dance2_subject4",
+    "fallAndGetUp1_subject1",
+    "fallAndGetUp2_subject2",
+    "fallAndGetUp2_subject3",
+    "fight1_subject3",
+    "fightAndSports1_subject1",
+    "fightAndSports1_subject4",
+    "jumps1_subject2",
+    "jumps1_subject5",
+    "sprint1_subject2",
+    "walk3_subject3"
+  ],
+  "failed_clip_alive_fraction_mean": 0.5021003308704393,
+  "alive_no_fall_but_zero_score": [
+    "walk4_subject1"
+  ],
+  "clips": [
+    {
+      "clip": "dance1_subject1",
+      "steps": 6573,
+      "alive_steps": 3638,
+      "alive_fraction": 0.5534763426137228,
+      "fall_step": 3638,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.40776491135123033,
+        "failed": true
+      },
+      "reconstructed_raw": 0.40776491809198623,
+      "sums": {
+        "motion_global_root_pos": 10.591641417806857,
+        "motion_global_root_ori": 35.70558506846445,
+        "motion_body_pos": 71.60736709713981,
+        "motion_body_ori": 66.96604926049736,
+        "motion_body_lin_vel": 65.64230425640947,
+        "motion_body_ang_vel": 61.942084448635626,
+        "action_rate_l2": -7.656482685333424,
+        "joint_limit": -0.3746686976682395,
+        "self_collisions": -36.399999504089344
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.002911391263828163,
+        "motion_global_root_ori": 0.009814619315135912,
+        "motion_body_pos": 0.019683168525876805,
+        "motion_body_ori": 0.018407380225535282,
+        "motion_body_lin_vel": 0.01804351408917248,
+        "motion_body_ang_vel": 0.017026411338272575,
+        "action_rate_l2": -0.002104585674912981,
+        "joint_limit": -0.00010298754746240779,
+        "self_collisions": -0.01000549738979916
+      },
+      "positive_fraction_of_max": 0.8588648475782121,
+      "counterfactual_exact": {
+        "raw": 0.40776491809198623,
+        "raw_no_self_collision_penalty": 0.4631429791053581,
+        "raw_joint_limit_original_weight": 0.4082209274608202,
+        "raw_original_penalties": 0.4635989884741921
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.7367341414564667
+      }
+    },
+    {
+      "clip": "dance1_subject2",
+      "steps": 6573,
+      "alive_steps": 5607,
+      "alive_fraction": 0.853035143769968,
+      "fall_step": 5607,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.4388436960915343,
+        "failed": true
+      },
+      "reconstructed_raw": 0.43884369873022017,
+      "sums": {
+        "motion_global_root_pos": 13.460057194646943,
+        "motion_global_root_ori": 54.82107976377087,
+        "motion_body_pos": 110.24630089521543,
+        "motion_body_ori": 98.19525536239246,
+        "motion_body_lin_vel": 98.77258809864628,
+        "motion_body_ang_vel": 81.949335820787,
+        "action_rate_l2": -35.879127254902855,
+        "joint_limit": -1.7135281929140909,
+        "self_collisions": -131.3999985122683
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.002400580915756544,
+        "motion_global_root_ori": 0.009777256958047239,
+        "motion_body_pos": 0.019662261618550995,
+        "motion_body_ori": 0.017512975809237108,
+        "motion_body_lin_vel": 0.0176159422326817,
+        "motion_body_ang_vel": 0.01461554054231978,
+        "action_rate_l2": -0.006398988274461005,
+        "joint_limit": -0.0003056051708425345,
+        "self_collisions": -0.02343499170898311
+      },
+      "positive_fraction_of_max": 0.8158455807659335,
+      "counterfactual_exact": {
+        "raw": 0.43884369873022017,
+        "raw_no_self_collision_penalty": 0.6387524139474243,
+        "raw_joint_limit_original_weight": 0.44092923433699227,
+        "raw_original_penalties": 0.6408379495541965
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.5144497292230671
+      }
+    },
+    {
+      "clip": "dance1_subject3",
+      "steps": 6573,
+      "alive_steps": 3250,
+      "alive_fraction": 0.4944469800699833,
+      "fall_step": 3250,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.3463568949722525,
+        "failed": true
+      },
+      "reconstructed_raw": 0.34635689963724436,
+      "sums": {
+        "motion_global_root_pos": 21.06480977941296,
+        "motion_global_root_ori": 32.063934218287535,
+        "motion_body_pos": 64.11678750515001,
+        "motion_body_ori": 59.6368748593332,
+        "motion_body_lin_vel": 62.2205656510592,
+        "motion_body_ang_vel": 59.93095838382856,
+        "action_rate_l2": -4.793248737292016,
+        "joint_limit": -0.38029259633389295,
+        "self_collisions": -66.19999893188482
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.006481479932127065,
+        "motion_global_root_ori": 0.009865825913319241,
+        "motion_body_pos": 0.019728242309276927,
+        "motion_body_ori": 0.0183498076490256,
+        "motion_body_lin_vel": 0.019144789431095138,
+        "motion_body_ang_vel": 0.018440294887331864,
+        "action_rate_l2": -0.0014748457653206203,
+        "joint_limit": -0.00011701310656427475,
+        "self_collisions": -0.020369230440579946
+      },
+      "positive_fraction_of_max": 0.9201044012217583,
+      "counterfactual_exact": {
+        "raw": 0.34635689963724436,
+        "raw_no_self_collision_penalty": 0.4470719444141876,
+        "raw_joint_limit_original_weight": 0.3468197538545989,
+        "raw_original_penalties": 0.4475347986315421
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.70049350809711
+      }
+    },
+    {
+      "clip": "dance2_subject1",
+      "steps": 11283,
+      "alive_steps": 9695,
+      "alive_fraction": 0.8592572897279093,
+      "fall_step": 9695,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.4907402422095546,
+        "failed": true
+      },
+      "reconstructed_raw": 0.4907402481355644,
+      "sums": {
+        "motion_global_root_pos": 12.767201167968144,
+        "motion_global_root_ori": 93.88730917602915,
+        "motion_body_pos": 189.95899584889682,
+        "motion_body_ori": 171.5169463992138,
+        "motion_body_lin_vel": 169.7565369191785,
+        "motion_body_ang_vel": 152.08144519146555,
+        "action_rate_l2": -39.27315598776033,
+        "joint_limit": -4.793059261334119,
+        "self_collisions": -192.19999748230023
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0013168851127352392,
+        "motion_global_root_ori": 0.009684095840745657,
+        "motion_body_pos": 0.019593501376884665,
+        "motion_body_ori": 0.017691278638392347,
+        "motion_body_lin_vel": 0.01750969952750681,
+        "motion_body_ang_vel": 0.01568658537302378,
+        "action_rate_l2": -0.004050867043606017,
+        "joint_limit": -0.0004943846582087797,
+        "self_collisions": -0.019824651622723077
+      },
+      "positive_fraction_of_max": 0.8148204586928849,
+      "counterfactual_exact": {
+        "raw": 0.4907402481355644,
+        "raw_no_self_collision_penalty": 0.6610850123669747,
+        "raw_joint_limit_original_weight": 0.4941386771075286,
+        "raw_original_penalties": 0.6644834413389389
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.5711214254475063
+      }
+    },
+    {
+      "clip": "dance2_subject2",
+      "steps": 11283,
+      "alive_steps": 6835,
+      "alive_fraction": 0.6057786049809448,
+      "fall_step": 6835,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.3716417844916958,
+        "failed": true
+      },
+      "reconstructed_raw": 0.3716417893134533,
+      "sums": {
+        "motion_global_root_pos": 17.5811221015125,
+        "motion_global_root_ori": 66.925089828373,
+        "motion_body_pos": 134.72639877915594,
+        "motion_body_ori": 122.91021871566967,
+        "motion_body_lin_vel": 124.64716853887067,
+        "motion_body_ang_vel": 112.88385502133643,
+        "action_rate_l2": -26.884509751406025,
+        "joint_limit": -2.0659142966382222,
+        "self_collisions": -131.3999980545045
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0025722197661320408,
+        "motion_global_root_ori": 0.009791527407223556,
+        "motion_body_pos": 0.019711250735794578,
+        "motion_body_ori": 0.017982475305877054,
+        "motion_body_lin_vel": 0.018236601102980348,
+        "motion_body_ang_vel": 0.016515560354255512,
+        "action_rate_l2": -0.003933359144316902,
+        "joint_limit": -0.0003022552006785987,
+        "self_collisions": -0.019224579086247914
+      },
+      "positive_fraction_of_max": 0.8480963467226308,
+      "counterfactual_exact": {
+        "raw": 0.3716417893134533,
+        "raw_no_self_collision_penalty": 0.48810017631558444,
+        "raw_joint_limit_original_weight": 0.3731065871839758,
+        "raw_original_penalties": 0.48956497418610695
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.6134944124101966
+      }
+    },
+    {
+      "clip": "dance2_subject3",
+      "steps": 11283,
+      "alive_steps": 11283,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7053638664888521,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7053638770033969,
+      "sums": {
+        "motion_global_root_pos": 24.343442680557523,
+        "motion_global_root_ori": 111.2381787955775,
+        "motion_body_pos": 222.88982518434767,
+        "motion_body_ori": 209.20450381040774,
+        "motion_body_lin_vel": 212.87370127097068,
+        "motion_body_ang_vel": 202.94004214197443,
+        "action_rate_l2": -18.506350333280732,
+        "joint_limit": -2.1212837216164924,
+        "self_collisions": -166.99999740600578
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0021575328086995945,
+        "motion_global_root_ori": 0.009858918620542187,
+        "motion_body_pos": 0.01975448242349975,
+        "motion_body_ori": 0.01854156729685436,
+        "motion_body_lin_vel": 0.01886676427111324,
+        "motion_body_ang_vel": 0.017986354882741685,
+        "action_rate_l2": -0.0016401976720092823,
+        "joint_limit": -0.000188007065640033,
+        "self_collisions": -0.014801027865461825
+      },
+      "positive_fraction_of_max": 0.871656203034508,
+      "counterfactual_exact": {
+        "raw": 0.7053638770033969,
+        "raw_no_self_collision_penalty": 0.8533741556580152,
+        "raw_joint_limit_original_weight": 0.7068679335285172,
+        "raw_original_penalties": 0.8548782121831354
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "dance2_subject4",
+      "steps": 11283,
+      "alive_steps": 3003,
+      "alive_fraction": 0.2661526189843127,
+      "fall_step": 3003,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.14104672526107193,
+        "failed": true
+      },
+      "reconstructed_raw": 0.14104672698560616,
+      "sums": {
+        "motion_global_root_pos": 21.837181147634954,
+        "motion_global_root_ori": 29.260136102438082,
+        "motion_body_pos": 58.84427175402652,
+        "motion_body_ori": 52.93361873127528,
+        "motion_body_lin_vel": 53.17020631536845,
+        "motion_body_ang_vel": 47.393850470259636,
+        "action_rate_l2": -14.74304970594288,
+        "joint_limit": -0.5531942830793563,
+        "self_collisions": -88.99999847412127
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.007271788593951034,
+        "motion_global_root_ori": 0.009743635065746947,
+        "motion_body_pos": 0.01959516208925292,
+        "motion_body_ori": 0.017626912664427334,
+        "motion_body_lin_vel": 0.017705696408714104,
+        "motion_body_ang_vel": 0.01578216798876445,
+        "action_rate_l2": -0.004909440461519441,
+        "joint_limit": -0.0001842138804793061,
+        "self_collisions": -0.029637029128911512
+      },
+      "positive_fraction_of_max": 0.8772536281085678,
+      "counterfactual_exact": {
+        "raw": 0.14104672698560616,
+        "raw_no_self_collision_penalty": 0.2199264562013478,
+        "raw_joint_limit_original_weight": 0.1414389590395488,
+        "raw_original_penalties": 0.22031868825529044
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.5299467933994654
+      }
+    },
+    {
+      "clip": "dance2_subject5",
+      "steps": 11283,
+      "alive_steps": 11283,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7625366661477734,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7625366796713431,
+      "sums": {
+        "motion_global_root_pos": 12.219462824518473,
+        "motion_global_root_ori": 110.65729420811037,
+        "motion_body_pos": 222.13370782256442,
+        "motion_body_ori": 207.27340099096546,
+        "motion_body_lin_vel": 205.91647191304895,
+        "motion_body_ang_vel": 196.52946004279096,
+        "action_rate_l2": -18.792404628307718,
+        "joint_limit": -2.167258568629623,
+        "self_collisions": -73.39999893188488
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0010829976800955838,
+        "motion_global_root_ori": 0.009807435452283114,
+        "motion_body_pos": 0.019687468565325217,
+        "motion_body_ori": 0.01837041575741961,
+        "motion_body_lin_vel": 0.018250152611277937,
+        "motion_body_ang_vel": 0.017418191974013203,
+        "action_rate_l2": -0.0016655503525930797,
+        "joint_limit": -0.00019208176625273624,
+        "self_collisions": -0.006505361954434537
+      },
+      "positive_fraction_of_max": 0.8461666204041465,
+      "counterfactual_exact": {
+        "raw": 0.7625366796713431,
+        "raw_no_self_collision_penalty": 0.8275902992156884,
+        "raw_joint_limit_original_weight": 0.764073333801365,
+        "raw_original_penalties": 0.8291269533457103
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "fallAndGetUp1_subject1",
+      "steps": 8409,
+      "alive_steps": 1733,
+      "alive_fraction": 0.2060887144725889,
+      "fall_step": 1733,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.04644409675855056,
+        "failed": true
+      },
+      "reconstructed_raw": 0.04644409421607863,
+      "sums": {
+        "motion_global_root_pos": 9.511765752155306,
+        "motion_global_root_ori": 16.180243438184313,
+        "motion_body_pos": 33.294475178718635,
+        "motion_body_ori": 27.528997145593156,
+        "motion_body_lin_vel": 30.097937370389737,
+        "motion_body_ang_vel": 27.898382866680635,
+        "action_rate_l2": -3.5313949664703053,
+        "joint_limit": -1.9255686074495308,
+        "self_collisions": -99.99999935150142
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.005488612667140973,
+        "motion_global_root_ori": 0.009336551320360249,
+        "motion_body_pos": 0.019212045688816293,
+        "motion_body_ori": 0.01588516857795335,
+        "motion_body_lin_vel": 0.017367534547253167,
+        "motion_body_ang_vel": 0.016098316714760898,
+        "action_rate_l2": -0.0020377351220255656,
+        "joint_limit": -0.0011111186424982867,
+        "self_collisions": -0.05770340412665979
+      },
+      "positive_fraction_of_max": 0.8338822951628492,
+      "counterfactual_exact": {
+        "raw": 0.04644409421607863,
+        "raw_no_self_collision_penalty": 0.16536429798763458,
+        "raw_joint_limit_original_weight": 0.048276006317350635,
+        "raw_original_penalties": 0.16719621008890656
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.2253597162510128
+      }
+    },
+    {
+      "clip": "fallAndGetUp1_subject4",
+      "steps": 8409,
+      "alive_steps": 8409,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.037554991129732165,
+        "failed": false
+      },
+      "reconstructed_raw": 0.037554965140182486,
+      "sums": {
+        "motion_global_root_pos": 15.166682913525154,
+        "motion_global_root_ori": 78.29622611358872,
+        "motion_body_pos": 163.11723958492516,
+        "motion_body_ori": 137.35077282466136,
+        "motion_body_lin_vel": 151.6845826062837,
+        "motion_body_ang_vel": 145.94118727000597,
+        "action_rate_l2": -13.225594995707976,
+        "joint_limit": -9.551130021896673,
+        "self_collisions": -637.1999961090061
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0018036250343114702,
+        "motion_global_root_ori": 0.009311003224353517,
+        "motion_body_pos": 0.019397935495888353,
+        "motion_body_ori": 0.016333781998413767,
+        "motion_body_lin_vel": 0.01803836158952119,
+        "motion_body_ang_vel": 0.017355355841361157,
+        "action_rate_l2": -0.0015727904620891874,
+        "joint_limit": -0.00113582233581837,
+        "self_collisions": -0.07577595387192367
+      },
+      "positive_fraction_of_max": 0.8224006318384944,
+      "counterfactual_exact": {
+        "raw": 0.037554965140182486,
+        "raw_no_self_collision_penalty": 0.795314503859419,
+        "raw_joint_limit_original_weight": 0.04664154382672945,
+        "raw_original_penalties": 0.8044010825459661
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "fallAndGetUp1_subject5",
+      "steps": 8409,
+      "alive_steps": 8409,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.5918596560113997,
+        "failed": false
+      },
+      "reconstructed_raw": 0.5918596640401392,
+      "sums": {
+        "motion_global_root_pos": 5.24378331317852,
+        "motion_global_root_ori": 80.42022330492834,
+        "motion_body_pos": 162.9939893078818,
+        "motion_body_ori": 139.90822919130486,
+        "motion_body_lin_vel": 146.84065659597644,
+        "motion_body_ang_vel": 140.99582102984422,
+        "action_rate_l2": -16.599721080221435,
+        "joint_limit": -10.10819226962279,
+        "self_collisions": -151.99999790191674
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0006235917841810584,
+        "motion_global_root_ori": 0.009563589404795854,
+        "motion_body_pos": 0.019383278547732405,
+        "motion_body_ori": 0.016637915232644174,
+        "motion_body_lin_vel": 0.017462320917585497,
+        "motion_body_ang_vel": 0.0167672518765423,
+        "action_rate_l2": -0.001974042226212562,
+        "joint_limit": -0.001202068292261005,
+        "self_collisions": -0.018075870840993786
+      },
+      "positive_fraction_of_max": 0.8043794776348127,
+      "counterfactual_exact": {
+        "raw": 0.5918596640401392,
+        "raw_no_self_collision_penalty": 0.772618372450077,
+        "raw_joint_limit_original_weight": 0.6014762103782273,
+        "raw_original_penalties": 0.7822349187881651
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "fallAndGetUp2_subject2",
+      "steps": 8194,
+      "alive_steps": 7300,
+      "alive_fraction": 0.8908957773980962,
+      "fall_step": 7300,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.006047868562422643,
+        "failed": true
+      },
+      "reconstructed_raw": 0.006047846068990784,
+      "sums": {
+        "motion_global_root_pos": 13.14040860371963,
+        "motion_global_root_ori": 68.13563550561773,
+        "motion_body_pos": 141.70367325544612,
+        "motion_body_ori": 121.69413313180334,
+        "motion_body_lin_vel": 133.9277306585034,
+        "motion_body_ang_vel": 129.43888703677953,
+        "action_rate_l2": -8.48526330971222,
+        "joint_limit": -7.799604352715248,
+        "self_collisions": -586.7999954605112
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.001800055973112278,
+        "motion_global_root_ori": 0.00933364869939969,
+        "motion_body_pos": 0.01941146208978714,
+        "motion_body_ori": 0.016670429196137444,
+        "motion_body_lin_vel": 0.01834626447376759,
+        "motion_body_ang_vel": 0.017731354388599935,
+        "action_rate_l2": -0.0011623648369468796,
+        "joint_limit": -0.0010684389524267463,
+        "self_collisions": -0.08038356102198783
+      },
+      "positive_fraction_of_max": 0.8329321482080407,
+      "counterfactual_exact": {
+        "raw": 0.006047846068990784,
+        "raw_no_self_collision_penalty": 0.7221815969361023,
+        "raw_joint_limit_original_weight": 0.013662788077987853,
+        "raw_original_penalties": 0.7297965389450994
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.006788500094426094
+      }
+    },
+    {
+      "clip": "fallAndGetUp2_subject3",
+      "steps": 8194,
+      "alive_steps": 1182,
+      "alive_fraction": 0.1442518916280205,
+      "fall_step": 1182,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.005022755325975317,
+        "failed": true
+      },
+      "reconstructed_raw": 0.005022750965315825,
+      "sums": {
+        "motion_global_root_pos": 10.026990110576113,
+        "motion_global_root_ori": 11.21106018871068,
+        "motion_body_pos": 22.93454940438269,
+        "motion_body_ori": 18.86813596576444,
+        "motion_body_lin_vel": 22.180095094591366,
+        "motion_body_ang_vel": 21.72309112042181,
+        "action_rate_l2": -0.7726260112673399,
+        "joint_limit": -3.0556544188456636,
+        "self_collisions": -98.9999993133543
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.008483071159539859,
+        "motion_global_root_ori": 0.009484822494679086,
+        "motion_body_pos": 0.019403172084926132,
+        "motion_body_ori": 0.01596288998795638,
+        "motion_body_lin_vel": 0.018764885866828566,
+        "motion_body_ang_vel": 0.01837824967886786,
+        "action_rate_l2": -0.0006536599080095938,
+        "joint_limit": -0.0025851560227120674,
+        "self_collisions": -0.08375634459674644
+      },
+      "positive_fraction_of_max": 0.9047709127279787,
+      "counterfactual_exact": {
+        "raw": 0.005022750965315825,
+        "raw_no_self_collision_penalty": 0.1258428624046059,
+        "raw_joint_limit_original_weight": 0.00800606013675411,
+        "raw_original_penalties": 0.12882617157604417
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.03481930745329769
+      }
+    },
+    {
+      "clip": "fallAndGetUp3_subject1",
+      "steps": 5108,
+      "alive_steps": 5108,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.5816426778543294,
+        "failed": false
+      },
+      "reconstructed_raw": 0.5816426851004207,
+      "sums": {
+        "motion_global_root_pos": 8.68152970719811,
+        "motion_global_root_ori": 49.192195688486756,
+        "motion_body_pos": 99.44948838353251,
+        "motion_body_ori": 88.44584774524041,
+        "motion_body_lin_vel": 91.49260632477785,
+        "motion_body_ang_vel": 88.35544194430645,
+        "action_rate_l2": -7.652119872869543,
+        "joint_limit": -5.46190797355026,
+        "self_collisions": -115.39999839782745
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0016995946960058944,
+        "motion_global_root_ori": 0.009630422022021683,
+        "motion_body_pos": 0.019469359511263218,
+        "motion_body_ori": 0.01731516204879413,
+        "motion_body_lin_vel": 0.017911630055751342,
+        "motion_body_ang_vel": 0.017297463184085052,
+        "action_rate_l2": -0.0014980657542814297,
+        "joint_limit": -0.0010692850378915936,
+        "self_collisions": -0.022592012215706236
+      },
+      "positive_fraction_of_max": 0.8332363151792133,
+      "counterfactual_exact": {
+        "raw": 0.5816426851004207,
+        "raw_no_self_collision_penalty": 0.8075628072574831,
+        "raw_joint_limit_original_weight": 0.5901969654035535,
+        "raw_original_penalties": 0.8161170875606159
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "fight1_subject2",
+      "steps": 12243,
+      "alive_steps": 12243,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.6603984447807879,
+        "failed": false
+      },
+      "reconstructed_raw": 0.6603984546571638,
+      "sums": {
+        "motion_global_root_pos": 6.599001293997274,
+        "motion_global_root_ori": 118.97930974006792,
+        "motion_body_pos": 239.56992726326303,
+        "motion_body_ori": 220.23117611765986,
+        "motion_body_lin_vel": 211.9623022327826,
+        "motion_body_ang_vel": 200.67519565196142,
+        "action_rate_l2": -22.82086321134001,
+        "joint_limit": -3.870222806386887,
+        "self_collisions": -162.79999824523955
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0005390019843173466,
+        "motion_global_root_ori": 0.009718149942013225,
+        "motion_body_pos": 0.019567910419281468,
+        "motion_body_ori": 0.01798833424141631,
+        "motion_body_lin_vel": 0.017312938187763017,
+        "motion_body_ang_vel": 0.016391014918889276,
+        "action_rate_l2": -0.0018639927478020103,
+        "joint_limit": -0.0003161171940200022,
+        "self_collisions": -0.01329739428614225
+      },
+      "positive_fraction_of_max": 0.8151734969368064,
+      "counterfactual_exact": {
+        "raw": 0.6603984546571638,
+        "raw_no_self_collision_penalty": 0.7933723975185863,
+        "raw_joint_limit_original_weight": 0.6629273922093238,
+        "raw_original_penalties": 0.7959013350707463
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "fight1_subject3",
+      "steps": 12243,
+      "alive_steps": 3839,
+      "alive_fraction": 0.31356693620844567,
+      "fall_step": 3839,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.12337300101545992,
+        "failed": true
+      },
+      "reconstructed_raw": 0.12337299957629248,
+      "sums": {
+        "motion_global_root_pos": 14.544884484921532,
+        "motion_global_root_ori": 37.65391210019629,
+        "motion_body_pos": 75.65169753909169,
+        "motion_body_ori": 70.97642102360737,
+        "motion_body_lin_vel": 68.60040582269444,
+        "motion_body_ang_vel": 65.19790331423319,
+        "action_rate_l2": -5.960940419027354,
+        "joint_limit": -1.2187221629288985,
+        "self_collisions": -174.39999832153333
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0037887169796617694,
+        "motion_global_root_ori": 0.009808260510600752,
+        "motion_body_pos": 0.019706094696298953,
+        "motion_body_ori": 0.018488257625321015,
+        "motion_body_lin_vel": 0.017869342490933693,
+        "motion_body_ang_vel": 0.01698304332228007,
+        "action_rate_l2": -0.0015527325915674274,
+        "joint_limit": -0.0003174582346780147,
+        "self_collisions": -0.045428496567213685
+      },
+      "positive_fraction_of_max": 0.8664371562509624,
+      "counterfactual_exact": {
+        "raw": 0.12337299957629248,
+        "raw_no_self_collision_penalty": 0.2658217444276633,
+        "raw_joint_limit_original_weight": 0.12416935482446952,
+        "raw_original_penalties": 0.2666180996758403
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.3934502823163712
+      }
+    },
+    {
+      "clip": "fight1_subject5",
+      "steps": 12243,
+      "alive_steps": 12243,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7931139149708335,
+        "failed": false
+      },
+      "reconstructed_raw": 0.793113931100221,
+      "sums": {
+        "motion_global_root_pos": 8.082220253430332,
+        "motion_global_root_ori": 120.24401327610195,
+        "motion_body_pos": 240.9784121501477,
+        "motion_body_ori": 226.79979373455268,
+        "motion_body_lin_vel": 223.4902889060997,
+        "motion_body_ang_vel": 215.38203969393516,
+        "action_rate_l2": -14.167519575945384,
+        "joint_limit": -2.5998635459959045,
+        "self_collisions": -47.19999904632568
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0006601503106616296,
+        "motion_global_root_ori": 0.009821450075643385,
+        "motion_body_pos": 0.019682954516878844,
+        "motion_body_ori": 0.01852485450743712,
+        "motion_body_lin_vel": 0.01825453638047045,
+        "motion_body_ang_vel": 0.017592260041977878,
+        "action_rate_l2": -0.0011571934636890782,
+        "joint_limit": -0.0002123551046308833,
+        "self_collisions": -0.0038552641547272464
+      },
+      "positive_fraction_of_max": 0.8453620583306929,
+      "counterfactual_exact": {
+        "raw": 0.793113931100221,
+        "raw_no_self_collision_penalty": 0.8316665726474936,
+        "raw_joint_limit_original_weight": 0.7948127719372681,
+        "raw_original_penalties": 0.8333654134845406
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "fightAndSports1_subject1",
+      "steps": 12256,
+      "alive_steps": 233,
+      "alive_fraction": 0.019011096605744127,
+      "fall_step": 233,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.018264056075797182,
+        "failed": true
+      },
+      "reconstructed_raw": 0.018264056348495677,
+      "sums": {
+        "motion_global_root_pos": 2.263046028912067,
+        "motion_global_root_ori": 2.3066601413488383,
+        "motion_body_pos": 4.61186807155609,
+        "motion_body_ori": 4.33700154423714,
+        "motion_body_lin_vel": 4.516312708258631,
+        "motion_body_ang_vel": 4.598609832525257,
+        "action_rate_l2": -0.13490280562527465,
+        "joint_limit": -0.11416806049644947,
+        "self_collisions": 0.0
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.009712643900910159,
+        "motion_global_root_ori": 0.009899828932827632,
+        "motion_body_pos": 0.019793425199811546,
+        "motion_body_ori": 0.018613740533206607,
+        "motion_body_lin_vel": 0.019383316344457644,
+        "motion_body_ang_vel": 0.019736522886374494,
+        "action_rate_l2": -0.0005789819983917367,
+        "joint_limit": -0.0004899916759504269,
+        "self_collisions": 0.0
+      },
+      "positive_fraction_of_max": 0.9713947779758809,
+      "counterfactual_exact": {
+        "raw": 0.018264056348495677,
+        "raw_no_self_collision_penalty": 0.018264056348495677,
+        "raw_joint_limit_original_weight": 0.018338578581195707,
+        "raw_original_penalties": 0.018338578581195707
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.9607050412324594
+      }
+    },
+    {
+      "clip": "fightAndSports1_subject4",
+      "steps": 12256,
+      "alive_steps": 2370,
+      "alive_fraction": 0.19337467362924282,
+      "fall_step": 2370,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.092104573228929,
+        "failed": true
+      },
+      "reconstructed_raw": 0.09210457297141646,
+      "sums": {
+        "motion_global_root_pos": 10.218352209582234,
+        "motion_global_root_ori": 23.12796327114114,
+        "motion_body_pos": 46.56411643624305,
+        "motion_body_ori": 42.31003303408623,
+        "motion_body_lin_vel": 43.5335367926956,
+        "motion_body_ang_vel": 41.759718417152826,
+        "action_rate_l2": -3.5771290784630896,
+        "joint_limit": -0.8532270971685649,
+        "self_collisions": -90.19999935150139
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.004311541016701365,
+        "motion_global_root_ori": 0.009758634291620735,
+        "motion_body_pos": 0.019647306513182722,
+        "motion_body_ori": 0.017852334613538495,
+        "motion_body_lin_vel": 0.018368580925188015,
+        "motion_body_ang_vel": 0.01762013435322904,
+        "action_rate_l2": -0.0015093371639084766,
+        "joint_limit": -0.00036001143340445776,
+        "self_collisions": -0.0380590714563297
+      },
+      "positive_fraction_of_max": 0.8755853171346036,
+      "counterfactual_exact": {
+        "raw": 0.09210457297141646,
+        "raw_no_self_collision_penalty": 0.16570117818641433,
+        "raw_joint_limit_original_weight": 0.09266150971891553,
+        "raw_original_penalties": 0.16625811493391338
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.47630111659817725
+      }
+    },
+    {
+      "clip": "jumps1_subject1",
+      "steps": 12221,
+      "alive_steps": 12221,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7047231874844244,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7047231992677894,
+      "sums": {
+        "motion_global_root_pos": 6.078833938140431,
+        "motion_global_root_ori": 119.79045466721163,
+        "motion_body_pos": 240.13601811886178,
+        "motion_body_ori": 228.16795518636954,
+        "motion_body_lin_vel": 217.67223442867632,
+        "motion_body_ang_vel": 212.74034223014192,
+        "action_rate_l2": -20.69830433314299,
+        "joint_limit": -7.44531466176383,
+        "self_collisions": -135.19999774932924
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0004974088812814361,
+        "motion_global_root_ori": 0.009802017401784767,
+        "motion_body_pos": 0.019649457337276965,
+        "motion_body_ori": 0.01867015425794694,
+        "motion_body_lin_vel": 0.017811327586013937,
+        "motion_body_ang_vel": 0.01740776877752573,
+        "action_rate_l2": -0.0016936669939565494,
+        "joint_limit": -0.0006092230309928672,
+        "self_collisions": -0.011062924290101403
+      },
+      "positive_fraction_of_max": 0.8383813424182976,
+      "counterfactual_exact": {
+        "raw": 0.7047231992677894,
+        "raw_no_self_collision_penalty": 0.8153524421688034,
+        "raw_joint_limit_original_weight": 0.7095969835157323,
+        "raw_original_penalties": 0.8202262264167464
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "jumps1_subject2",
+      "steps": 12221,
+      "alive_steps": 601,
+      "alive_fraction": 0.049177645037230995,
+      "fall_step": 601,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.04675386334078156,
+        "failed": true
+      },
+      "reconstructed_raw": 0.04675386418160136,
+      "sums": {
+        "motion_global_root_pos": 5.443434082865704,
+        "motion_global_root_ori": 5.960463926196078,
+        "motion_body_pos": 11.792427493333777,
+        "motion_body_ori": 11.029325556755033,
+        "motion_body_lin_vel": 11.64709910452362,
+        "motion_body_ang_vel": 11.733242675065949,
+        "action_rate_l2": -0.3720859885395841,
+        "joint_limit": -0.09600943386554718,
+        "self_collisions": 0.0
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.009057294647031122,
+        "motion_global_root_ori": 0.009917577248246386,
+        "motion_body_pos": 0.0196213435829181,
+        "motion_body_ori": 0.018351623222554132,
+        "motion_body_lin_vel": 0.019379532619839636,
+        "motion_body_ang_vel": 0.019522866347863474,
+        "action_rate_l2": -0.000619111461796313,
+        "joint_limit": -0.0001597494739859354,
+        "self_collisions": 0.0
+      },
+      "positive_fraction_of_max": 0.9585023766845285,
+      "counterfactual_exact": {
+        "raw": 0.04675386418160136,
+        "raw_no_self_collision_penalty": 0.04675386418160136,
+        "raw_joint_limit_original_weight": 0.046816713005013874,
+        "raw_original_penalties": 0.046816713005013874
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.9507137673267059
+      }
+    },
+    {
+      "clip": "jumps1_subject5",
+      "steps": 12221,
+      "alive_steps": 11702,
+      "alive_fraction": 0.9575321168480484,
+      "fall_step": 11702,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.742154645861334,
+        "failed": true
+      },
+      "reconstructed_raw": 0.7421546604718576,
+      "sums": {
+        "motion_global_root_pos": 2.3374530895710746,
+        "motion_global_root_ori": 114.6084498447191,
+        "motion_body_pos": 229.60794851422554,
+        "motion_body_ori": 215.01326739072957,
+        "motion_body_lin_vel": 209.3704558590078,
+        "motion_body_ang_vel": 206.0425118611773,
+        "action_rate_l2": -17.54692189732538,
+        "joint_limit": -7.045954900534112,
+        "self_collisions": -45.39999919891355
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0001997481703615685,
+        "motion_global_root_ori": 0.009793919829492318,
+        "motion_body_pos": 0.019621256923109343,
+        "motion_body_ori": 0.018374061475878445,
+        "motion_body_lin_vel": 0.017891852320885984,
+        "motion_body_ang_vel": 0.017607461276805444,
+        "action_rate_l2": -0.0014994805928324542,
+        "joint_limit": -0.0006021154418504625,
+        "self_collisions": -0.003879678618946637
+      },
+      "positive_fraction_of_max": 0.8348829999653309,
+      "counterfactual_exact": {
+        "raw": 0.7421546604718576,
+        "raw_no_self_collision_penalty": 0.7793038292787585,
+        "raw_joint_limit_original_weight": 0.7467670194608333,
+        "raw_original_penalties": 0.7839161882677342
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.7750702534290355
+      }
+    },
+    {
+      "clip": "run1_subject2",
+      "steps": 11889,
+      "alive_steps": 11889,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7802400719936862,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7802400869227674,
+      "sums": {
+        "motion_global_root_pos": 20.699983724109767,
+        "motion_global_root_ori": 117.14089613437771,
+        "motion_body_pos": 234.43121740222227,
+        "motion_body_ori": 224.20266319692388,
+        "motion_body_lin_vel": 216.06955922067317,
+        "motion_body_ang_vel": 204.35245388617787,
+        "action_rate_l2": -21.991000658015526,
+        "joint_limit": -2.478334670253098,
+        "self_collisions": -64.79999889373785
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0017411038543283513,
+        "motion_global_root_ori": 0.009852880489055237,
+        "motion_body_pos": 0.019718329329819352,
+        "motion_body_ori": 0.018857991689538556,
+        "motion_body_lin_vel": 0.018173905225054517,
+        "motion_body_ang_vel": 0.017188363519739076,
+        "action_rate_l2": -0.001849693048870008,
+        "joint_limit": -0.00020845610818850182,
+        "self_collisions": -0.005450416258199836
+      },
+      "positive_fraction_of_max": 0.8553257410753509,
+      "counterfactual_exact": {
+        "raw": 0.7802400869227674,
+        "raw_no_self_collision_penalty": 0.8347442495047658,
+        "raw_joint_limit_original_weight": 0.7819077357882753,
+        "raw_original_penalties": 0.8364118983702737
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "run1_subject5",
+      "steps": 11889,
+      "alive_steps": 11889,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7725517609842802,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7725517763500842,
+      "sums": {
+        "motion_global_root_pos": 17.31870728246572,
+        "motion_global_root_ori": 116.40848294973465,
+        "motion_body_pos": 232.68151485204902,
+        "motion_body_ori": 219.5759506630928,
+        "motion_body_lin_vel": 206.1987144387527,
+        "motion_body_ang_vel": 194.0411556152369,
+        "action_rate_l2": -24.861434350709768,
+        "joint_limit": -6.276285082064562,
+        "self_collisions": -36.59999946594234
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0014567000826365313,
+        "motion_global_root_ori": 0.009791276217489667,
+        "motion_body_pos": 0.019571159462700733,
+        "motion_body_ori": 0.01846883259004902,
+        "motion_body_lin_vel": 0.017343655012091234,
+        "motion_body_ang_vel": 0.016321066163280083,
+        "action_rate_l2": -0.0020911291404415652,
+        "joint_limit": -0.0005279068956232283,
+        "self_collisions": -0.003078475857174055
+      },
+      "positive_fraction_of_max": 0.8295268952824726,
+      "counterfactual_exact": {
+        "raw": 0.7725517763500842,
+        "raw_no_self_collision_penalty": 0.8033365349218248,
+        "raw_joint_limit_original_weight": 0.77677503151507,
+        "raw_original_penalties": 0.8075597900868106
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "run2_subject1",
+      "steps": 12239,
+      "alive_steps": 12239,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7013039634913748,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7013039764255611,
+      "sums": {
+        "motion_global_root_pos": 6.276067114202144,
+        "motion_global_root_ori": 119.8309766554846,
+        "motion_body_pos": 240.01865137458037,
+        "motion_body_ori": 225.85659517765308,
+        "motion_body_lin_vel": 217.54329255402237,
+        "motion_body_ang_vel": 202.17700415931876,
+        "action_rate_l2": -29.73681688288706,
+        "joint_limit": -3.639835693947968,
+        "self_collisions": -119.99999771118216
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.000512792476035799,
+        "motion_global_root_ori": 0.009790912382995719,
+        "motion_body_pos": 0.019610969145729257,
+        "motion_body_ori": 0.018453843874307794,
+        "motion_body_lin_vel": 0.017774596989461752,
+        "motion_body_ang_vel": 0.01651907869591623,
+        "action_rate_l2": -0.002429677006527254,
+        "joint_limit": -0.0002973964943171802,
+        "self_collisions": -0.009804722421046014
+      },
+      "positive_fraction_of_max": 0.8266219356444655,
+      "counterfactual_exact": {
+        "raw": 0.7013039764255611,
+        "raw_no_self_collision_penalty": 0.7993512006360212,
+        "raw_joint_limit_original_weight": 0.7036831483800984,
+        "raw_original_penalties": 0.8017303725905586
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "run2_subject4",
+      "steps": 12239,
+      "alive_steps": 12239,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.5703504942053161,
+        "failed": false
+      },
+      "reconstructed_raw": 0.5703504987597519,
+      "sums": {
+        "motion_global_root_pos": 28.512578310832307,
+        "motion_global_root_ori": 120.07470236897596,
+        "motion_body_pos": 239.6489449489152,
+        "motion_body_ori": 227.35712682843484,
+        "motion_body_lin_vel": 216.91656155379684,
+        "motion_body_ang_vel": 202.79728348529238,
+        "action_rate_l2": -32.49949341907264,
+        "joint_limit": -2.3557323453715058,
+        "self_collisions": -302.3999962997431
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0023296493431515897,
+        "motion_global_root_ori": 0.00981082624143933,
+        "motion_body_pos": 0.01958076190447873,
+        "motion_body_ori": 0.018576446345978825,
+        "motion_body_lin_vel": 0.017723389292736078,
+        "motion_body_ang_vel": 0.01656975925200526,
+        "action_rate_l2": -0.002655404315636297,
+        "joint_limit": -0.0001924775182099441,
+        "self_collisions": -0.02470790066996839
+      },
+      "positive_fraction_of_max": 0.8459083237978983,
+      "counterfactual_exact": {
+        "raw": 0.5703504987597519,
+        "raw_no_self_collision_penalty": 0.8174295054594357,
+        "raw_joint_limit_original_weight": 0.5718903189054314,
+        "raw_original_penalties": 0.8189693256051154
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "sprint1_subject2",
+      "steps": 13654,
+      "alive_steps": 11890,
+      "alive_fraction": 0.8708070894975831,
+      "fall_step": 11890,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.6932810806005351,
+        "failed": true
+      },
+      "reconstructed_raw": 0.6932810924793547,
+      "sums": {
+        "motion_global_root_pos": 21.24021299457258,
+        "motion_global_root_ori": 117.32777987539815,
+        "motion_body_pos": 234.30290783524774,
+        "motion_body_ori": 223.50508250236754,
+        "motion_body_lin_vel": 216.5782718405687,
+        "motion_body_ang_vel": 210.3671985199503,
+        "action_rate_l2": -19.938992280490368,
+        "joint_limit": -1.1764583792432675,
+        "self_collisions": -55.599999237060565
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0017863930188875173,
+        "motion_global_root_ori": 0.009867769543767717,
+        "motion_body_pos": 0.019705879548801323,
+        "motion_body_ori": 0.018797736122991383,
+        "motion_body_lin_vel": 0.018215161635035216,
+        "motion_body_ang_vel": 0.017692783727497923,
+        "action_rate_l2": -0.0016769547754827896,
+        "joint_limit": -9.894519589934966e-05,
+        "self_collisions": -0.004676198421956313
+      },
+      "positive_fraction_of_max": 0.8606572359698108,
+      "counterfactual_exact": {
+        "raw": 0.6932810924793547,
+        "raw_no_self_collision_penalty": 0.7340017598567243,
+        "raw_joint_limit_original_weight": 0.6939703899038416,
+        "raw_original_penalties": 0.7346910572812114
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": 0.7961362520364261
+      }
+    },
+    {
+      "clip": "sprint1_subject4",
+      "steps": 13654,
+      "alive_steps": 13654,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.6848437004626207,
+        "failed": false
+      },
+      "reconstructed_raw": 0.6848437107941457,
+      "sums": {
+        "motion_global_root_pos": 10.516566098039496,
+        "motion_global_root_ori": 134.15036133825865,
+        "motion_body_pos": 268.2848786139508,
+        "motion_body_ori": 249.13757386267355,
+        "motion_body_lin_vel": 240.64899208851276,
+        "motion_body_ang_vel": 239.18987232823122,
+        "action_rate_l2": -27.260969689497532,
+        "joint_limit": -1.9816744013945569,
+        "self_collisions": -177.5999975204476
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0007702186976739048,
+        "motion_global_root_ori": 0.00982498618267604,
+        "motion_body_pos": 0.01964881196821084,
+        "motion_body_ori": 0.01824648995625264,
+        "motion_body_lin_vel": 0.01762479801439232,
+        "motion_body_ang_vel": 0.01751793410928894,
+        "action_rate_l2": -0.00199655556536528,
+        "joint_limit": -0.00014513508139699406,
+        "self_collisions": -0.013007177202317826
+      },
+      "positive_fraction_of_max": 0.8363323892849468,
+      "counterfactual_exact": {
+        "raw": 0.6848437107941457,
+        "raw_no_self_collision_penalty": 0.814915482817324,
+        "raw_joint_limit_original_weight": 0.6860047914453217,
+        "raw_original_penalties": 0.8160765634684999
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk1_subject1",
+      "steps": 13064,
+      "alive_steps": 13064,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7803437937580309,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7803438077779442,
+      "sums": {
+        "motion_global_root_pos": 53.67866641966715,
+        "motion_global_root_ori": 129.14824278771923,
+        "motion_body_pos": 258.8265712904962,
+        "motion_body_ori": 249.71912157178076,
+        "motion_body_lin_vel": 252.90595961272953,
+        "motion_body_ang_vel": 250.77720128357657,
+        "action_rate_l2": -6.442817528008025,
+        "joint_limit": -0.5717982374946589,
+        "self_collisions": -168.5999967193605
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.004108899756557498,
+        "motion_global_root_ori": 0.009885811603469016,
+        "motion_body_pos": 0.019812199272083296,
+        "motion_body_ori": 0.01911505829545168,
+        "motion_body_lin_vel": 0.01935899874561616,
+        "motion_body_ang_vel": 0.019196050312582407,
+        "action_rate_l2": -0.0004931734176368666,
+        "joint_limit": -4.376900164533518e-05,
+        "self_collisions": -0.012905694788683442
+      },
+      "positive_fraction_of_max": 0.9147701798576006,
+      "counterfactual_exact": {
+        "raw": 0.7803438077779442,
+        "raw_no_self_collision_penalty": 0.9094007556647786,
+        "raw_joint_limit_original_weight": 0.7806939597911069,
+        "raw_original_penalties": 0.9097509076779413
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk1_subject2",
+      "steps": 13064,
+      "alive_steps": 13064,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7611611467459343,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7611611599788879,
+      "sums": {
+        "motion_global_root_pos": 32.16390018359542,
+        "motion_global_root_ori": 129.35198265195066,
+        "motion_body_pos": 259.0758920383469,
+        "motion_body_ori": 250.4107394468811,
+        "motion_body_lin_vel": 249.31767339706687,
+        "motion_body_ang_vel": 242.80532290876118,
+        "action_rate_l2": -12.655708660695957,
+        "joint_limit": -0.8888652016274861,
+        "self_collisions": -155.19999736785954
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0024620254274032014,
+        "motion_global_root_ori": 0.009901407122776382,
+        "motion_body_pos": 0.019831283836370707,
+        "motion_body_ori": 0.019167999039106026,
+        "motion_body_lin_vel": 0.01908432894956115,
+        "motion_body_ang_vel": 0.01858583304567982,
+        "action_rate_l2": -0.0009687468356319624,
+        "joint_limit": -6.803928365182839e-05,
+        "self_collisions": -0.011879975303724704
+      },
+      "positive_fraction_of_max": 0.8903287742089728,
+      "counterfactual_exact": {
+        "raw": 0.7611611599788879,
+        "raw_no_self_collision_penalty": 0.8799609130161349,
+        "raw_joint_limit_original_weight": 0.7617054742481025,
+        "raw_original_penalties": 0.8805052272853496
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk1_subject5",
+      "steps": 13064,
+      "alive_steps": 13064,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.7943379655805464,
+        "failed": false
+      },
+      "reconstructed_raw": 0.7943379793333517,
+      "sums": {
+        "motion_global_root_pos": 24.434404917890106,
+        "motion_global_root_ori": 128.58362603962522,
+        "motion_body_pos": 258.1476233565833,
+        "motion_body_ori": 247.0800156211876,
+        "motion_body_lin_vel": 245.35352007269992,
+        "motion_body_ang_vel": 240.10416139841337,
+        "action_rate_l2": -11.18698723308911,
+        "joint_limit": -3.5932294218044207,
+        "self_collisions": -91.19999855041536
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0018703616746700937,
+        "motion_global_root_ori": 0.009842592317791275,
+        "motion_body_pos": 0.01976022836471091,
+        "motion_body_ori": 0.01891304467400395,
+        "motion_body_lin_vel": 0.01878088794187844,
+        "motion_body_ang_vel": 0.018379069304838746,
+        "action_rate_l2": -0.0008563217416632815,
+        "joint_limit": -0.0002750481798686789,
+        "self_collisions": -0.006981016423026283
+      },
+      "positive_fraction_of_max": 0.8754618427789341,
+      "counterfactual_exact": {
+        "raw": 0.7943379793333517,
+        "raw_no_self_collision_penalty": 0.8641481435636145,
+        "raw_joint_limit_original_weight": 0.796538364772301,
+        "raw_original_penalties": 0.8663485290025639
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk2_subject1",
+      "steps": 11908,
+      "alive_steps": 11908,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.21370632632776,
+        "failed": false
+      },
+      "reconstructed_raw": 0.21370631026421702,
+      "sums": {
+        "motion_global_root_pos": 19.3266124403654,
+        "motion_global_root_ori": 116.96616353750359,
+        "motion_body_pos": 235.2913624453571,
+        "motion_body_ori": 222.55908263921944,
+        "motion_body_lin_vel": 223.6196091765194,
+        "motion_body_ang_vel": 215.74941480741055,
+        "action_rate_l2": -20.821436235525567,
+        "joint_limit": -4.409340499156408,
+        "self_collisions": -753.7999940490638
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0016229939906252434,
+        "motion_global_root_ori": 0.009822486020952603,
+        "motion_body_pos": 0.019759099970218096,
+        "motion_body_ori": 0.018689879294526323,
+        "motion_body_lin_vel": 0.01877893929933821,
+        "motion_body_ang_vel": 0.01811802274163676,
+        "action_rate_l2": -0.0017485250449719152,
+        "joint_limit": -0.00037028388471249646,
+        "self_collisions": -0.06330198136119111
+      },
+      "positive_fraction_of_max": 0.8679142131729723,
+      "counterfactual_exact": {
+        "raw": 0.21370631026421702,
+        "raw_no_self_collision_penalty": 0.8467261238761282,
+        "raw_joint_limit_original_weight": 0.21666858134191697,
+        "raw_original_penalties": 0.8496883949538282
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk2_subject3",
+      "steps": 11908,
+      "alive_steps": 11908,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.509851800716117,
+        "failed": false
+      },
+      "reconstructed_raw": 0.5098518007675641,
+      "sums": {
+        "motion_global_root_pos": 18.76898790095681,
+        "motion_global_root_ori": 116.8573073017608,
+        "motion_body_pos": 234.76369295597254,
+        "motion_body_ori": 218.8506631123292,
+        "motion_body_lin_vel": 226.8404173770544,
+        "motion_body_ang_vel": 223.2824878743311,
+        "action_rate_l2": -10.104105846006798,
+        "joint_limit": -6.527930518547654,
+        "self_collisions": -415.59999580383516
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.001576166266455896,
+        "motion_global_root_ori": 0.009813344583621162,
+        "motion_body_pos": 0.019714787786023896,
+        "motion_body_ori": 0.018378456761196607,
+        "motion_body_lin_vel": 0.019049413619168155,
+        "motion_body_ang_vel": 0.018750628810407382,
+        "action_rate_l2": -0.0008485140952306683,
+        "joint_limit": -0.000548197053959326,
+        "self_collisions": -0.0349009066009267
+      },
+      "positive_fraction_of_max": 0.872827978268731,
+      "counterfactual_exact": {
+        "raw": 0.5098518007675641,
+        "raw_no_self_collision_penalty": 0.858860866776831,
+        "raw_joint_limit_original_weight": 0.5142373771992387,
+        "raw_original_penalties": 0.8632464432085056
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk2_subject4",
+      "steps": 11908,
+      "alive_steps": 11908,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.8127783548629971,
+        "failed": false
+      },
+      "reconstructed_raw": 0.8127783690251091,
+      "sums": {
+        "motion_global_root_pos": 44.928472127217745,
+        "motion_global_root_ori": 117.57496165454496,
+        "motion_body_pos": 236.03439190864827,
+        "motion_body_ori": 227.02663725376348,
+        "motion_body_lin_vel": 228.9462976503405,
+        "motion_body_ang_vel": 224.78221274793378,
+        "action_rate_l2": -11.679730675583917,
+        "joint_limit": -0.5567621669085935,
+        "self_collisions": -99.19999866485631
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.003772965412094201,
+        "motion_global_root_ori": 0.009873611156747142,
+        "motion_body_pos": 0.019821497473013795,
+        "motion_body_ori": 0.019065051835216954,
+        "motion_body_lin_vel": 0.01922625946005547,
+        "motion_body_ang_vel": 0.018876571443393834,
+        "action_rate_l2": -0.0009808305908283437,
+        "joint_limit": -4.675530457747678e-05,
+        "self_collisions": -0.008330533982604662
+      },
+      "positive_fraction_of_max": 0.9063595678052139,
+      "counterfactual_exact": {
+        "raw": 0.8127783690251091,
+        "raw_no_self_collision_penalty": 0.8960837088511557,
+        "raw_joint_limit_original_weight": 0.8131524114617289,
+        "raw_original_penalties": 0.8964577512877756
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk3_subject1",
+      "steps": 12329,
+      "alive_steps": 12329,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.782649412026626,
+        "failed": false
+      },
+      "reconstructed_raw": 0.782649425473128,
+      "sums": {
+        "motion_global_root_pos": 25.954579320370723,
+        "motion_global_root_ori": 121.41992420375426,
+        "motion_body_pos": 244.10491369366704,
+        "motion_body_ori": 231.97107019067013,
+        "motion_body_lin_vel": 237.04612709463007,
+        "motion_body_ang_vel": 233.1418076616546,
+        "action_rate_l2": -11.288973260688344,
+        "joint_limit": -3.420973725970836,
+        "self_collisions": -113.99999851226818
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0021051650028689043,
+        "motion_global_root_ori": 0.009848318939391212,
+        "motion_body_pos": 0.019799246791602484,
+        "motion_body_ori": 0.018815075852921578,
+        "motion_body_lin_vel": 0.019226711582012335,
+        "motion_body_ang_vel": 0.018910033876360987,
+        "action_rate_l2": -0.0009156438689827516,
+        "joint_limit": -0.00027747373882479,
+        "self_collisions": -0.009246491890037163
+      },
+      "positive_fraction_of_max": 0.8870455204515749,
+      "counterfactual_exact": {
+        "raw": 0.782649425473128,
+        "raw_no_self_collision_penalty": 0.8751143443734996,
+        "raw_joint_limit_original_weight": 0.7848692153837262,
+        "raw_original_penalties": 0.8773341342840977
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk3_subject2",
+      "steps": 12329,
+      "alive_steps": 12329,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.8003911185036398,
+        "failed": false
+      },
+      "reconstructed_raw": 0.8003911318286389,
+      "sums": {
+        "motion_global_root_pos": 69.25249509485538,
+        "motion_global_root_ori": 122.10854975462152,
+        "motion_body_pos": 244.74830632448547,
+        "motion_body_ori": 237.29035310506922,
+        "motion_body_lin_vel": 237.76710099578253,
+        "motion_body_ang_vel": 232.81747222453507,
+        "action_rate_l2": -9.999187565669095,
+        "joint_limit": -1.18286613429198,
+        "self_collisions": -145.99999736785938
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.005617040724702358,
+        "motion_global_root_ori": 0.009904173067939129,
+        "motion_body_pos": 0.019851432097046432,
+        "motion_body_ori": 0.019246520650909985,
+        "motion_body_lin_vel": 0.019285189471634562,
+        "motion_body_ang_vel": 0.01888372716558805,
+        "action_rate_l2": -0.0008110298942062694,
+        "joint_limit": -9.594177421461432e-05,
+        "self_collisions": -0.01184199832653576
+      },
+      "positive_fraction_of_max": 0.9278808317782051,
+      "counterfactual_exact": {
+        "raw": 0.8003911318286389,
+        "raw_no_self_collision_penalty": 0.9188111150939964,
+        "raw_joint_limit_original_weight": 0.8011586660223557,
+        "raw_original_penalties": 0.9195786492877134
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk3_subject3",
+      "steps": 12329,
+      "alive_steps": 9330,
+      "alive_fraction": 0.756752372455187,
+      "fall_step": 9330,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "official": {
+        "normalized_return": 0.0,
+        "failed": true
+      },
+      "reconstructed_raw": -0.035266069669951314,
+      "sums": {
+        "motion_global_root_pos": 11.655931813006596,
+        "motion_global_root_ori": 90.68118247002457,
+        "motion_body_pos": 181.5153752744215,
+        "motion_body_ori": 168.225644354227,
+        "motion_body_lin_vel": 178.70808742411677,
+        "motion_body_ang_vel": 179.1178850966713,
+        "action_rate_l2": -4.193227989664823,
+        "joint_limit": -1.9904198587723623,
+        "self_collisions": -847.1999958801136
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0012492960142557981,
+        "motion_global_root_ori": 0.009719312161846148,
+        "motion_body_pos": 0.019455024145168434,
+        "motion_body_ori": 0.018030615686412326,
+        "motion_body_lin_vel": 0.019154135843956782,
+        "motion_body_ang_vel": 0.019198058424080525,
+        "action_rate_l2": -0.00044943493994263915,
+        "joint_limit": -0.00021333546181911706,
+        "self_collisions": -0.09080385807932623
+      },
+      "positive_fraction_of_max": 0.8680644227572002,
+      "counterfactual_exact": {
+        "raw": -0.035266069669951314,
+        "raw_no_self_collision_penalty": 0.6518942806261908,
+        "raw_joint_limit_original_weight": -0.0339745327350678,
+        "raw_original_penalties": 0.6531858175610743
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": -0.046601862053679506
+      }
+    },
+    {
+      "clip": "walk3_subject4",
+      "steps": 12329,
+      "alive_steps": 12329,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.6702531293223098,
+        "failed": false
+      },
+      "reconstructed_raw": 0.6702531376991769,
+      "sums": {
+        "motion_global_root_pos": 25.90264384529966,
+        "motion_global_root_ori": 119.97747905194865,
+        "motion_body_pos": 243.60987026572514,
+        "motion_body_ori": 232.63134453177605,
+        "motion_body_lin_vel": 238.8240717124972,
+        "motion_body_ang_vel": 233.523307055237,
+        "action_rate_l2": -11.87036354316792,
+        "joint_limit": -2.0432623491692357,
+        "self_collisions": -254.19999710083124
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0021009525383485815,
+        "motion_global_root_ori": 0.009731322820338117,
+        "motion_body_pos": 0.019759094027554963,
+        "motion_body_ori": 0.01886863042678044,
+        "motion_body_lin_vel": 0.019370919921526255,
+        "motion_body_ang_vel": 0.01894097713157896,
+        "action_rate_l2": -0.0009628001900533637,
+        "joint_limit": -0.00016572814901202334,
+        "self_collisions": -0.020618054757144233
+      },
+      "positive_fraction_of_max": 0.8877189686612732,
+      "counterfactual_exact": {
+        "raw": 0.6702531376991769,
+        "raw_no_self_collision_penalty": 0.8764336852706193,
+        "raw_joint_limit_original_weight": 0.6715789628912731,
+        "raw_original_penalties": 0.8777595104627155
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk3_subject5",
+      "steps": 12329,
+      "alive_steps": 12329,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.8350865842325959,
+        "failed": false
+      },
+      "reconstructed_raw": 0.8350866008814518,
+      "sums": {
+        "motion_global_root_pos": 3.3796474166602084,
+        "motion_global_root_ori": 120.4580151629458,
+        "motion_body_pos": 244.3298058879396,
+        "motion_body_ori": 234.00836698532345,
+        "motion_body_lin_vel": 233.3329457020786,
+        "motion_body_ang_vel": 229.9756370937851,
+        "action_rate_l2": -7.067974855906882,
+        "joint_limit": -11.438173547553584,
+        "self_collisions": -17.399999618530277
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.0002741217792732751,
+        "motion_global_root_ori": 0.009770298902015232,
+        "motion_body_pos": 0.019817487702809604,
+        "motion_body_ori": 0.018980320138318067,
+        "motion_body_lin_vel": 0.018925537002358554,
+        "motion_body_ang_vel": 0.018653227114428187,
+        "action_rate_l2": -0.0005732804652369926,
+        "joint_limit": -0.0009277454414432301,
+        "self_collisions": -0.0014113066443775064
+      },
+      "positive_fraction_of_max": 0.8642099263920291,
+      "counterfactual_exact": {
+        "raw": 0.8350866008814518,
+        "raw_no_self_collision_penalty": 0.8491996673252269,
+        "raw_joint_limit_original_weight": 0.8425085644129976,
+        "raw_original_penalties": 0.8566216308567727
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    },
+    {
+      "clip": "walk4_subject1",
+      "steps": 8194,
+      "alive_steps": 8194,
+      "alive_fraction": 1.0,
+      "fall_step": null,
+      "fall_terms": [],
+      "official": {
+        "normalized_return": 0.0,
+        "failed": false
+      },
+      "reconstructed_raw": -0.048590152570013055,
+      "sums": {
+        "motion_global_root_pos": 61.387509190738925,
+        "motion_global_root_ori": 81.20865463316545,
+        "motion_body_pos": 163.1297368907949,
+        "motion_body_ori": 157.32020301699777,
+        "motion_body_lin_vel": 160.81759344816362,
+        "motion_body_ang_vel": 157.74527096033356,
+        "action_rate_l2": -5.183309988897269,
+        "joint_limit": -0.44043477478087917,
+        "self_collisions": -815.7999943923847
+      },
+      "per_alive_step": {
+        "motion_global_root_pos": 0.007491763386714538,
+        "motion_global_root_ori": 0.00991074623299554,
+        "motion_body_pos": 0.01990843750192762,
+        "motion_body_ori": 0.01919943898181569,
+        "motion_body_lin_vel": 0.019626262319766125,
+        "motion_body_ang_vel": 0.01925131449357256,
+        "action_rate_l2": -0.0006325738331580753,
+        "joint_limit": -5.375088781802284e-05,
+        "self_collisions": -0.09956065345281727
+      },
+      "positive_fraction_of_max": 0.9538796291679206,
+      "counterfactual_exact": {
+        "raw": -0.048590152570013055,
+        "raw_no_self_collision_penalty": 0.9470163819581596,
+        "raw_joint_limit_original_weight": -0.04816014546746888,
+        "raw_original_penalties": 0.9474463890607038
+      },
+      "projection_requires_resim": {
+        "raw_if_no_termination_mean_reward_held": null
+      }
+    }
+  ]
+}

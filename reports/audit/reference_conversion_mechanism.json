@@ -1,0 +1,13 @@
+{
+  "claim": "output frame counts can differ only when (N-1) % 3 == 0",
+  "n_frames_range": [
+    100,
+    4000
+  ],
+  "ambiguous_lengths": 1301,
+  "ambiguous_fraction": 0.33350422968469623,
+  "numpy_matches_exact_ceil": 3901,
+  "numpy_deviations_from_exact": [],
+  "interior_times_identical": true,
+  "note": "Both grids are 0, 0.02, 0.04, ...; only the final sample (t == duration) may be present or absent. Interior reference frames therefore coincide, so the divergence can only affect the last FUTURE goal windows and T itself."
+}

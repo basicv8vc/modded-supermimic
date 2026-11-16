@@ -1,0 +1,1279 @@
+{
+  "protocol_id": "modded-supermimic-g1-lafan1-v2",
+  "algorithm": "smoke-scripted",
+  "training_commit": "0000000000000000000000000000000000000000",
+  "seed": 0,
+  "hardware": {
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "gpu_count": 1,
+    "declared_gpu_name": "declared-only",
+    "gpu_compute_capability": "sm_80",
+    "actual_torch_device": "cuda:0",
+    "actual_warp_device": "cuda:0",
+    "actual_simulation_backend": "mujoco_warp",
+    "cuda_graph_step_captured": true
+  },
+  "evaluator": {
+    "implementation": "canonical-mjlab-g1-v2-original-aligned",
+    "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+    "evaluator_source_tree": "research/modded-supermimic/benchmark/v2",
+    "source_git_sha": "0f8634bb425a4ccc481d529c4902743e4181855d",
+    "self_collision": true,
+    "self_collision_reward_penalty": false,
+    "robot_dof": 29,
+    "mujoco": "3.11.0",
+    "mujoco_warp": "3.11.0",
+    "warp_lang": "1.16.0",
+    "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+    "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+    "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+    "mjlab_version": "1.6.0",
+    "motion_converter_version": "official-csv-to-npz-mjlab1.6.0-1",
+    "reference_implementations": {
+      "supermimic": {
+        "repo": "zita-ch/supermimic_vibed",
+        "commit": "8bfc1158bd968f729fcc65d5e897a05b05ea3d36",
+        "protocol": "supermimic/evaluate.py:53-96, supermimic/mdp.py:108-152"
+      },
+      "nablamimic": {
+        "repo": "sailab-ai/NablaMimic",
+        "commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+        "protocol": "src/nablamimic/evaluate.py:35-116, src/nablamimic/env.py:404-433"
+      }
+    },
+    "depends_on_prs": [
+      {
+        "number": 12,
+        "branch": "research/mjlab-reuse-refactor",
+        "head": "f5bf4e0d881837b84ecb0654c88d7d0d3bfc361e",
+        "role": "official mjlab evaluator (physics / PD / motion converter / record identity)"
+      },
+      {
+        "number": 13,
+        "branch": "feat/nablamimic-canonical-policy",
+        "head": "66a6e52664195fee3c446924980ae586bc55c25d",
+        "role": "NablaMimic policy adapter with the confirmed reference-frame indexing fix"
+      }
+    ]
+  },
+  "checkpoints": [
+    {
+      "checkpoint_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "training_wall_s": 0.0,
+      "setup_wall_s": 0.2286349670000618,
+      "eval_wall_s": 1.3901406589999397,
+      "per_clip": [
+        {
+          "clip": "dance1_subject1",
+          "normalized_return": 0.004670021364913943,
+          "failed": true
+        }
+      ]
+    }
+  ],
+  "evaluation": {
+    "mode": "smoke",
+    "submission_eligible": false,
+    "cuda_required": true,
+    "provenance": {
+      "gpu_name": "NVIDIA A100-SXM4-40GB",
+      "gpu_compute_capability": "sm_80",
+      "gpu_count": 1,
+      "actual_torch_device": "cuda:0",
+      "actual_warp_device": "cuda:0",
+      "warp_cuda_devices": [
+        "cuda:0"
+      ],
+      "actual_simulation_backend": "mujoco_warp",
+      "simulation_state_device": "cuda:0",
+      "cuda_graph_step_captured": true,
+      "cuda_runtime": "13.0",
+      "driver_version": "580.82.07",
+      "mujoco_version": "3.11.0",
+      "mujoco_warp_version": "3.11.0",
+      "warp_version": "1.16.0",
+      "mjlab_version": "1.6.0",
+      "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+      "version_drift": {},
+      "target_gpu_match": false,
+      "sm_120_confirmed": false,
+      "evaluator_git_sha": "0f8634bb425a4ccc481d529c4902743e4181855d",
+      "v2_protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+      "v2_protocol_id": "modded-supermimic-g1-lafan1-v2",
+      "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+      "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+      "motion_converter_version": "official-csv-to-npz-mjlab1.6.0-1",
+      "simulation_fps": 54.26516760431652,
+      "simulation_fps_source": "measured steady-state CUDA rollout",
+      "nominal_control_fps": 50.0,
+      "runtime": {
+        "env_device": "cuda:0",
+        "sim_device": "cuda:0",
+        "simulation_class": "mjlab.sim.sim.Simulation",
+        "simulation_backend": "mujoco_warp",
+        "mujoco_warp_data_class": "mujoco_warp._src.types.Data",
+        "warp_device": "cuda:0",
+        "warp_device_is_cuda": true,
+        "warp_device_arch": 80,
+        "wp_data_qpos_device": "cuda:0",
+        "wp_data_qpos_is_cuda": true,
+        "wp_data_is_mjwarp": true,
+        "use_cuda_graph": true,
+        "step_graph_captured": true,
+        "graph_capture_status": "captured",
+        "no_cpu_fallback": true,
+        "warnings": []
+      },
+      "kernel_execution": {
+        "kernel_execution_wall_s": 0.2852587859999858,
+        "qpos_max_abs_delta": 0.1202094554901123,
+        "qpos_finite_after_step": true,
+        "state_advanced_by_gpu_kernel": true,
+        "torch_memory_allocated_bytes": 16630784,
+        "torch_max_memory_allocated_bytes": 16640000
+      },
+      "telemetry": {
+        "samples": 4,
+        "interval_s": 0.4,
+        "gpu_utilization_pct": {
+          "mean": 25.5,
+          "max": 39.0,
+          "min": 1.0
+        },
+        "gpu_memory_used_mib": {
+          "mean": 657.0,
+          "max": 664.0,
+          "min": 638.0
+        },
+        "cpu_utilization_pct": {
+          "mean": 13.6,
+          "max": 20.5,
+          "min": 9.2
+        }
+      },
+      "performance": {
+        "per_clip": {
+          "dance1_subject1": {
+            "cuda_env_build_s": 0.3449978099999953,
+            "reset_wall_s": 0.019428524999966612,
+            "warmup_steps": 5,
+            "warmup_wall_s": 0.08971935400006714,
+            "first_step_wall_s": 0.018747146000009707,
+            "steady_steps": 40,
+            "steady_wall_s": 0.6990931060005323,
+            "steady_simulation_fps": 57.21698534382278,
+            "step_wall_s_mean": 0.017529165777791098,
+            "step_wall_s_max": 0.02067395000005945,
+            "total_steps": 45,
+            "total_step_wall_s": 0.7888124600005995,
+            "reference_load_s": 0.07685476300002847
+          }
+        },
+        "evaluation_wall_s": 91.18037396800003,
+        "steady_simulation_fps": 54.26516760431652
+      },
+      "collected_at_unix": 1794467115.6356268,
+      "platform": "6.6.159+",
+      "dependency_versions": {
+        "mujoco": "3.11.0",
+        "mujoco_warp": "3.11.0",
+        "warp_lang": "1.16.0"
+      },
+      "evaluation_mode": "smoke"
+    },
+    "telemetry": {
+      "samples": 4,
+      "interval_s": 0.4,
+      "gpu_utilization_pct": {
+        "mean": 25.5,
+        "max": 39.0,
+        "min": 1.0
+      },
+      "gpu_memory_used_mib": {
+        "mean": 657.0,
+        "max": 664.0,
+        "min": 638.0
+      },
+      "cpu_utilization_pct": {
+        "mean": 13.6,
+        "max": 20.5,
+        "min": 9.2
+      }
+    },
+    "performance": {
+      "dance1_subject1": {
+        "cuda_env_build_s": 0.3449978099999953,
+        "reset_wall_s": 0.019428524999966612,
+        "warmup_steps": 5,
+        "warmup_wall_s": 0.08971935400006714,
+        "first_step_wall_s": 0.018747146000009707,
+        "steady_steps": 40,
+        "steady_wall_s": 0.6990931060005323,
+        "steady_simulation_fps": 57.21698534382278,
+        "step_wall_s_mean": 0.017529165777791098,
+        "step_wall_s_max": 0.02067395000005945,
+        "total_steps": 45,
+        "total_step_wall_s": 0.7888124600005995,
+        "reference_load_s": 0.07685476300002847
+      }
+    },
+    "normalization": "full-clip (T-1)*0.1 denominator, no clipping",
+    "control_hz": 50.0,
+    "clip_steps": {
+      "dance1_subject1": 6573
+    },
+    "normalized_return_denominator": 0.1,
+    "aggregate_normalized_return": 0.004670021364913943,
+    "failed_clips": 1,
+    "per_clip_diagnostics": {
+      "dance1_subject1": {
+        "steps": 6573,
+        "alive_steps": 45,
+        "fall_step": 45,
+        "fall_terms": [
+          "root_height"
+        ],
+        "mean_term_score": {
+          "action_rate_l2": -0.0028978053088843203,
+          "joint_limit": 0.0,
+          "motion_body_ang_vel": 0.01611370845635732,
+          "motion_body_lin_vel": 0.012862937851084603,
+          "motion_body_ori": 0.010789291044076284,
+          "motion_body_pos": 0.015817464060253573,
+          "motion_global_root_ori": 0.009038524634308284,
+          "motion_global_root_pos": 0.006489324613163866
+        }
+      }
+    },
+    "clip_subset": [
+      "dance1_subject1"
+    ],
+    "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+    "robot_dof": 29,
+    "hardware_report": "torch.cuda.is_available              : True\ntorch.cuda.get_device_name(0)        : NVIDIA A100-SXM4-40GB\ntorch.cuda.get_device_capability(0)  : (8, 0) (sm_80)\nwarp CUDA devices                    : ['cuda:0']\nmjlab runtime device                 : cuda:0\nMuJoCo Warp simulation backend       : mujoco_warp\nwarp device / arch                   : cuda:0 / 80\nCUDA runtime / driver                : 13.0 / 580.82.07\nCUDA graph step captured             : True\nphysics state array device           : cuda:0\ntarget GPU RTX PRO 6000 / sm_120     : False / False",
+    "runtime_parity": {
+      "clip": "dance1_subject1",
+      "device": "cuda:0",
+      "status": "PASS",
+      "checks": {
+        "reward": {
+          "status": "PASS",
+          "checks": {
+            "all_8_terms_present": true,
+            "weights_match": true,
+            "dt_scaling_match": true,
+            "body_indexing_match": true,
+            "root_anchor_match": true,
+            "soft_limit_factor_match": true,
+            "action_history_matches": true,
+            "joint_soft_limits_dim": true,
+            "reward_scaled_by_dt": true,
+            "frame_alignment": true,
+            "tolerance": true
+          },
+          "steps": 6,
+          "max_abs_error": 2.4756229184685896e-09,
+          "max_rel_error": 5.292098046313351e-07,
+          "worst_term": "motion_body_ori",
+          "tolerance": {
+            "atol": 2e-05,
+            "rtol": 0.0003
+          },
+          "static": {
+            "reward_term_names_runtime": [
+              "motion_global_root_pos",
+              "motion_global_root_ori",
+              "motion_body_pos",
+              "motion_body_ori",
+              "motion_body_lin_vel",
+              "motion_body_ang_vel",
+              "action_rate_l2",
+              "joint_limit"
+            ],
+            "reward_term_names_oracle": [
+              "motion_global_root_pos",
+              "motion_global_root_ori",
+              "motion_body_pos",
+              "motion_body_ori",
+              "motion_body_lin_vel",
+              "motion_body_ang_vel",
+              "action_rate_l2",
+              "joint_limit"
+            ],
+            "weights_runtime": {
+              "motion_global_root_pos": 0.5,
+              "motion_global_root_ori": 0.5,
+              "motion_body_pos": 1.0,
+              "motion_body_ori": 1.0,
+              "motion_body_lin_vel": 1.0,
+              "motion_body_ang_vel": 1.0,
+              "action_rate_l2": -0.1,
+              "joint_limit": -2.0
+            },
+            "weights_oracle": {
+              "motion_global_root_pos": 0.5,
+              "motion_global_root_ori": 0.5,
+              "motion_body_pos": 1.0,
+              "motion_body_ori": 1.0,
+              "motion_body_lin_vel": 1.0,
+              "motion_body_ang_vel": 1.0,
+              "action_rate_l2": -0.1,
+              "joint_limit": -2.0
+            },
+            "dt_runtime": 0.02,
+            "dt_oracle": 0.02,
+            "body_names_runtime": [
+              "pelvis",
+              "left_hip_roll_link",
+              "left_knee_link",
+              "left_ankle_roll_link",
+              "right_hip_roll_link",
+              "right_knee_link",
+              "right_ankle_roll_link",
+              "torso_link",
+              "left_shoulder_roll_link",
+              "left_elbow_link",
+              "left_wrist_yaw_link",
+              "right_shoulder_roll_link",
+              "right_elbow_link",
+              "right_wrist_yaw_link"
+            ],
+            "body_names_oracle": [
+              "pelvis",
+              "left_hip_roll_link",
+              "left_knee_link",
+              "left_ankle_roll_link",
+              "right_hip_roll_link",
+              "right_knee_link",
+              "right_ankle_roll_link",
+              "torso_link",
+              "left_shoulder_roll_link",
+              "left_elbow_link",
+              "left_wrist_yaw_link",
+              "right_shoulder_roll_link",
+              "right_elbow_link",
+              "right_wrist_yaw_link"
+            ],
+            "anchor_index_runtime": 7,
+            "anchor_index_oracle": 7,
+            "robot_anchor_index_runtime": 15,
+            "anchor_body_name": "torso_link",
+            "termination_root": "pelvis",
+            "soft_limit_factor_oracle": 0.9,
+            "soft_limit_factor_constants": 0.9,
+            "relative_reference_source": "MotionCommand.body_pos_relative_w / body_quat_relative_w (CUDA buffers)",
+            "oracle_expected_value_source": "benchmark.v2.spec.reward_terms_from_relative_reference (independent math)",
+            "per_term_max_abs_error": {
+              "motion_global_root_pos": 1.0280973624515743e-09,
+              "motion_global_root_ori": 9.441899709999868e-10,
+              "motion_body_pos": 8.322455224973879e-10,
+              "motion_body_ori": 2.4756229184685896e-09,
+              "motion_body_lin_vel": 7.237756600650402e-10,
+              "motion_body_ang_vel": 8.472016321987852e-10,
+              "action_rate_l2": 1.2501359431156545e-11,
+              "joint_limit": 0.0
+            },
+            "per_term_max_rel_error": {
+              "motion_global_root_pos": 1.0431932365823267e-07,
+              "motion_global_root_ori": 9.715205422603706e-08,
+              "motion_body_pos": 4.56699447020598e-08,
+              "motion_body_ori": 5.292098046313351e-07,
+              "motion_body_lin_vel": 3.176259875548491e-07,
+              "motion_body_ang_vel": 3.351613490199908e-07,
+              "action_rate_l2": 1.0922246413575725e-07,
+              "joint_limit": 0.0
+            },
+            "action_history_prev_matches_previous_step": true,
+            "joint_soft_limits_shape": [
+              1,
+              29,
+              2
+            ],
+            "reference_frame_before_first_step": 1,
+            "reward_reference_frames": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "reference_frame_after_steps": 7,
+            "reward_manager_scale_by_dt": true,
+            "executed_steps": 6
+          },
+          "rows": [
+            {
+              "step": 0,
+              "term": "motion_global_root_pos",
+              "gpu_runtime": 0.009999655485153199,
+              "v2_oracle": 0.00999965524994056,
+              "abs_error": 2.3521263929626723e-10,
+              "rel_error": 2.3522074853297108e-08
+            },
+            {
+              "step": 0,
+              "term": "motion_global_root_ori",
+              "gpu_runtime": 0.00999868929386139,
+              "v2_oracle": 0.009998690073135915,
+              "abs_error": 7.792745251172795e-10,
+              "rel_error": 7.79376617754163e-08
+            },
+            {
+              "step": 0,
+              "term": "motion_body_pos",
+              "gpu_runtime": 0.01999521851539612,
+              "v2_oracle": 0.019995218634890496,
+              "abs_error": 1.1949437619951375e-10,
+              "rel_error": 5.976147517137072e-09
+            },
+            {
+              "step": 0,
+              "term": "motion_body_ori",
+              "gpu_runtime": 0.019630573987960816,
+              "v2_oracle": 0.01963057434155875,
+              "abs_error": 3.535979356539265e-10,
+              "rel_error": 1.8012612850829577e-08
+            },
+            {
+              "step": 0,
+              "term": "motion_body_lin_vel",
+              "gpu_runtime": 0.01617940664291382,
+              "v2_oracle": 0.016179406819991093,
+              "abs_error": 1.7707727298366116e-10,
+              "rel_error": 1.0944608473832704e-08
+            },
+            {
+              "step": 0,
+              "term": "motion_body_ang_vel",
+              "gpu_runtime": 0.00252774178981781,
+              "v2_oracle": 0.0025277426370194423,
+              "abs_error": 8.472016321987852e-10,
+              "rel_error": 3.351613490199908e-07
+            },
+            {
+              "step": 0,
+              "term": "action_rate_l2",
+              "gpu_runtime": -0.00017646975815296172,
+              "v2_oracle": -0.00017646977065432115,
+              "abs_error": 1.2501359431156545e-11,
+              "rel_error": 7.084136498168236e-08
+            },
+            {
+              "step": 0,
+              "term": "joint_limit",
+              "gpu_runtime": -0.0,
+              "v2_oracle": -0.0,
+              "abs_error": 0.0,
+              "rel_error": 0.0
+            },
+            {
+              "step": 1,
+              "term": "motion_global_root_pos",
+              "gpu_runtime": 0.009995864033699035,
+              "v2_oracle": 0.009995863672974486,
+              "abs_error": 3.607245491893396e-10,
+              "rel_error": 3.6087381840212535e-08
+            },
+            {
+              "step": 1,
+              "term": "motion_global_root_ori",
+              "gpu_runtime": 0.009989303350448609,
+              "v2_oracle": 0.009989304072346763,
+              "abs_error": 7.21898154101841e-10,
+              "rel_error": 7.226711179012566e-08
+            },
+            {
+              "step": 1,
+              "term": "motion_body_pos",
+              "gpu_runtime": 0.01993006467819214,
+              "v2_oracle": 0.019930064249908636,
+              "abs_error": 4.282835024127518e-10,
+              "rel_error": 2.1489318701755574e-08
+            },
+            {
+              "step": 1,
+              "term": "motion_body_ori",
+              "gpu_runtime": 0.017161058187484743,
+              "v2_oracle": 0.017161060062861003,
+              "abs_error": 1.875376260535022e-09,
+              "rel_error": 1.0928091001753472e-07
+            },
+            {
+              "step": 1,
+              "term": "motion_body_lin_vel",
+              "gpu_runtime": 0.010229219198226929,
+              "v2_oracle": 0.01022921905585439,
+              "abs_error": 1.4237253910531766e-10,
+              "rel_error": 1.391822174575829e-08
+            },
+            {
+              "step": 1,
+              "term": "motion_body_ang_vel",
+              "gpu_runtime": 0.0009966479986906053,
+              "v2_oracle": 0.000996648184507265,
+              "abs_error": 1.8581665980205164e-10,
+              "rel_error": 1.864415775702415e-07
+            },
+            {
+              "step": 1,
+              "term": "action_rate_l2",
+              "gpu_runtime": -0.00010665757581591606,
+              "v2_oracle": -0.00010665757312226653,
+              "abs_error": 2.693649529773509e-12,
+              "rel_error": 2.5255117390357772e-08
+            },
+            {
+              "step": 1,
+              "term": "joint_limit",
+              "gpu_runtime": -0.0,
+              "v2_oracle": -0.0,
+              "abs_error": 0.0,
+              "rel_error": 0.0
+            },
+            {
+              "step": 2,
+              "term": "motion_global_root_pos",
+              "gpu_runtime": 0.009980058073997497,
+              "v2_oracle": 0.009980057839333983,
+              "abs_error": 2.3466351431467025e-10,
+              "rel_error": 2.351324191627435e-08
+            },
+            {
+              "step": 2,
+              "term": "motion_global_root_ori",
+              "gpu_runtime": 0.00996660053730011,
+              "v2_oracle": 0.009966601245537084,
+              "abs_error": 7.082369742755779e-10,
+              "rel_error": 7.106103242494198e-08
+            },
+            {
+              "step": 2,
+              "term": "motion_body_pos",
+              "gpu_runtime": 0.019691394567489626,
+              "v2_oracle": 0.01969139469297656,
+              "abs_error": 1.2548693334446526e-10,
+              "rel_error": 6.3726787919813215e-09
+            },
+            {
+              "step": 2,
+              "term": "motion_body_ori",
+              "gpu_runtime": 0.01289264440536499,
+              "v2_oracle": 0.012892646880987908,
+              "abs_error": 2.4756229184685896e-09,
+              "rel_error": 1.9201820551831428e-07
+            },
+            {
+              "step": 2,
+              "term": "motion_body_lin_vel",
+              "gpu_runtime": 0.005561867952346802,
+              "v2_oracle": 0.005561868676122462,
+              "abs_error": 7.237756600650402e-10,
+              "rel_error": 1.3013174208378308e-07
+            },
+            {
+              "step": 2,
+              "term": "motion_body_ang_vel",
+              "gpu_runtime": 0.0006633415818214416,
+              "v2_oracle": 0.0006633416550346949,
+              "abs_error": 7.321325327675626e-11,
+              "rel_error": 1.1037035398135366e-07
+            },
+            {
+              "step": 2,
+              "term": "action_rate_l2",
+              "gpu_runtime": -9.359979070723058e-05,
+              "v2_oracle": -9.359978894685653e-05,
+              "abs_error": 1.760374045969501e-12,
+              "rel_error": 1.8807457428872992e-08
+            },
+            {
+              "step": 2,
+              "term": "joint_limit",
+              "gpu_runtime": -0.0,
+              "v2_oracle": -0.0,
+              "abs_error": 0.0,
+              "rel_error": 0.0
+            },
+            {
+              "step": 3,
+              "term": "motion_global_root_pos",
+              "gpu_runtime": 0.009937690496444702,
+              "v2_oracle": 0.009937690706078818,
+              "abs_error": 2.0963411562213707e-10,
+              "rel_error": 2.109485209616207e-08
+            },
+            {
+              "step": 3,
+              "term": "motion_global_root_ori",
+              "gpu_runtime": 0.009917635321617126,
+              "v2_oracle": 0.00991763503775978,
+              "abs_error": 2.8385734561486853e-10,
+              "rel_error": 2.8621475234179107e-08
+            },
+            {
+              "step": 3,
+              "term": "motion_body_pos",
+              "gpu_runtime": 0.019153088331222534,
+              "v2_oracle": 0.019153088310633594,
+              "abs_error": 2.0588940274901546e-11,
+              "rel_error": 1.0749671249346655e-09
+            },
+            {
+              "step": 3,
+              "term": "motion_body_ori",
+              "gpu_runtime": 0.00831304132938385,
+              "v2_oracle": 0.008313042733097343,
+              "abs_error": 1.403713492664771e-09,
+              "rel_error": 1.6885676373057254e-07
+            },
+            {
+              "step": 3,
+              "term": "motion_body_lin_vel",
+              "gpu_runtime": 0.002975301444530487,
+              "v2_oracle": 0.002975301963551872,
+              "abs_error": 5.190213848982328e-10,
+              "rel_error": 1.7444326366075216e-07
+            },
+            {
+              "step": 3,
+              "term": "motion_body_ang_vel",
+              "gpu_runtime": 0.0005532889068126679,
+              "v2_oracle": 0.0005532889496117573,
+              "abs_error": 4.2799089359363274e-11,
+              "rel_error": 7.735395653463779e-08
+            },
+            {
+              "step": 3,
+              "term": "action_rate_l2",
+              "gpu_runtime": -9.958969429135322e-05,
+              "v2_oracle": -9.958970516878622e-05,
+              "abs_error": 1.0877433001088392e-11,
+              "rel_error": 1.0922246413575725e-07
+            },
+            {
+              "step": 3,
+              "term": "joint_limit",
+              "gpu_runtime": -0.0,
+              "v2_oracle": -0.0,
+              "abs_error": 0.0,
+              "rel_error": 0.0
+            },
+            {
+              "step": 4,
+              "term": "motion_global_root_pos",
+              "gpu_runtime": 0.009855290651321411,
+              "v2_oracle": 0.009855291679418773,
+              "abs_error": 1.0280973624515743e-09,
+              "rel_error": 1.0431932365823267e-07
+            },
+            {
+              "step": 4,
+              "term": "motion_global_root_ori",
+              "gpu_runtime": 0.00983076810836792,
+              "v2_oracle": 0.009830768637197021,
+              "abs_error": 5.288291003019419e-10,
+              "rel_error": 5.379326071218814e-08
+            },
+            {
+              "step": 4,
+              "term": "motion_body_pos",
+              "gpu_runtime": 0.018223047256469727,
+              "v2_oracle": 0.018223046424224204,
+              "abs_error": 8.322455224973879e-10,
+              "rel_error": 4.56699447020598e-08
+            },
+            {
+              "step": 4,
+              "term": "motion_body_ori",
+              "gpu_runtime": 0.004615442454814911,
+              "v2_oracle": 0.0046154442986087,
+              "abs_error": 1.8437937886542355e-09,
+              "rel_error": 3.9948348834153123e-07
+            },
+            {
+              "step": 4,
+              "term": "motion_body_lin_vel",
+              "gpu_runtime": 0.0017430566251277924,
+              "v2_oracle": 0.0017430571787680502,
+              "abs_error": 5.536402577707711e-10,
+              "rel_error": 3.176259875548491e-07
+            },
+            {
+              "step": 4,
+              "term": "motion_body_ang_vel",
+              "gpu_runtime": 0.000424051471054554,
+              "v2_oracle": 0.00042405148571985924,
+              "abs_error": 1.466530526574375e-11,
+              "rel_error": 3.4583784657300027e-08
+            },
+            {
+              "step": 4,
+              "term": "action_rate_l2",
+              "gpu_runtime": -9.045921266078949e-05,
+              "v2_oracle": -9.045921099966793e-05,
+              "abs_error": 1.6611215576884178e-12,
+              "rel_error": 1.836321077015049e-08
+            },
+            {
+              "step": 4,
+              "term": "joint_limit",
+              "gpu_runtime": -0.0,
+              "v2_oracle": -0.0,
+              "abs_error": 0.0,
+              "rel_error": 0.0
+            },
+            {
+              "step": 5,
+              "term": "motion_global_root_pos",
+              "gpu_runtime": 0.009744349718093872,
+              "v2_oracle": 0.00974435042389886,
+              "abs_error": 7.058049873720496e-10,
+              "rel_error": 7.243222551202613e-08
+            },
+            {
+              "step": 5,
+              "term": "motion_global_root_ori",
+              "gpu_runtime": 0.009718681573867799,
+              "v2_oracle": 0.00971868251805777,
+              "abs_error": 9.441899709999868e-10,
+              "rel_error": 9.715205422603706e-08
+            },
+            {
+              "step": 5,
+              "term": "motion_body_pos",
+              "gpu_runtime": 0.016924268007278444,
+              "v2_oracle": 0.016924267520772054,
+              "abs_error": 4.865063907288913e-10,
+              "rel_error": 2.8746082519185908e-08
+            },
+            {
+              "step": 5,
+              "term": "motion_body_ori",
+              "gpu_runtime": 0.0021660542488098145,
+              "v2_oracle": 0.002166055395107567,
+              "abs_error": 1.146297752465525e-09,
+              "rel_error": 5.292098046313351e-07
+            },
+            {
+              "step": 5,
+              "term": "motion_body_lin_vel",
+              "gpu_runtime": 0.0014983372390270234,
+              "v2_oracle": 0.0014983371772118316,
+              "abs_error": 6.181519185410878e-11,
+              "rel_error": 4.1255862027756043e-08
+            },
+            {
+              "step": 5,
+              "term": "motion_body_ang_vel",
+              "gpu_runtime": 0.00024394281208515168,
+              "v2_oracle": 0.00024394287719985066,
+              "abs_error": 6.511469897887805e-11,
+              "rel_error": 2.6692601040993997e-07
+            },
+            {
+              "step": 5,
+              "term": "action_rate_l2",
+              "gpu_runtime": -0.00010192929767072201,
+              "v2_oracle": -0.00010192928824122061,
+              "abs_error": 9.429501396287371e-12,
+              "rel_error": 9.251022506869662e-08
+            },
+            {
+              "step": 5,
+              "term": "joint_limit",
+              "gpu_runtime": -0.0,
+              "v2_oracle": -0.0,
+              "abs_error": 0.0,
+              "rel_error": 0.0
+            }
+          ]
+        },
+        "termination": {
+          "status": "PASS",
+          "checks": {
+            "ee_body_pos_absent": true,
+            "anchor_terms_absent": true,
+            "pelvis_glue_present": true,
+            "self_collision_reward_penalty_absent": true,
+            "self_collision_physics_contact_sensor_present": true,
+            "torso_anchor_not_used_for_termination": true,
+            "thresholds_match_spec": true,
+            "termination_uses_current_reference_frame": true,
+            "clip_end_is_time_out_success": true,
+            "clip_end_success_not_a_failure": true,
+            "all_boundary_cases_match": true
+          },
+          "structural": {
+            "termination_terms": [
+              "time_out",
+              "root_height",
+              "root_tilt",
+              "nonfinite"
+            ],
+            "ee_body_pos_absent": true,
+            "anchor_terms_absent": true,
+            "pelvis_glue_present": true,
+            "self_collision_reward_penalty_absent": true,
+            "self_collision_physics_contact_sensor_present": true,
+            "torso_anchor_not_used_for_termination": true,
+            "thresholds_match_spec": true,
+            "termination_uses_current_reference_frame": true,
+            "clip_end_is_time_out_success": true,
+            "clip_end_success_not_a_failure": true,
+            "runtime_terminations_normal_state": {
+              "time_out": false,
+              "root_height": false,
+              "root_tilt": false,
+              "nonfinite": false
+            }
+          },
+          "cases": [
+            {
+              "case": "normal",
+              "glue_on_cuda": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle_reasons": [],
+              "match": true
+            },
+            {
+              "case": "height_0.249_below_threshold",
+              "glue_on_cuda": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle_reasons": [],
+              "match": true
+            },
+            {
+              "case": "height_exactly_0.25_strict_gt",
+              "glue_on_cuda": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle_reasons": [],
+              "match": true
+            },
+            {
+              "case": "height_0.251_above_threshold",
+              "glue_on_cuda": {
+                "root_height": true,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": true,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle_reasons": [
+                "root_height"
+              ],
+              "match": true
+            },
+            {
+              "case": "height_negative_minus_0.251",
+              "glue_on_cuda": {
+                "root_height": true,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": true,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle_reasons": [
+                "root_height"
+              ],
+              "match": true
+            },
+            {
+              "case": "tilt_0.79_below_threshold",
+              "glue_on_cuda": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle_reasons": [],
+              "match": true
+            },
+            {
+              "case": "tilt_exactly_0.8_strict_gt",
+              "glue_on_cuda": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle_reasons": [],
+              "match": true
+            },
+            {
+              "case": "tilt_0.81_above_threshold",
+              "glue_on_cuda": {
+                "root_height": false,
+                "root_tilt": true,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": false,
+                "root_tilt": true,
+                "nonfinite": false
+              },
+              "oracle_reasons": [
+                "root_tilt"
+              ],
+              "match": true
+            },
+            {
+              "case": "nonfinite_qpos",
+              "glue_on_cuda": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": true
+              },
+              "oracle": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": true
+              },
+              "oracle_reasons": [
+                "nonfinite"
+              ],
+              "match": true
+            },
+            {
+              "case": "wrist_ankle_deviation_only",
+              "glue_on_cuda": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle": {
+                "root_height": false,
+                "root_tilt": false,
+                "nonfinite": false
+              },
+              "oracle_reasons": [],
+              "match": true
+            }
+          ],
+          "reference_frame": 7,
+          "thresholds": {
+            "height": 0.25,
+            "tilt": 0.8
+          }
+        },
+        "frame_alignment": {
+          "status": "PASS",
+          "checks": {
+            "first_scored_frame_is_1": true,
+            "frame_advances_by_one": true,
+            "policy_index_matches_command": true,
+            "env_ref_index_matches_command": true,
+            "time_s_matches_dt": true,
+            "control_dt_matches_oracle": true,
+            "full_clip_frames_match_motion": true,
+            "v2_matches_v1_pr13_frame_semantics": true
+          },
+          "details": {
+            "first_scored_reference_frame": 1,
+            "frame_0_is_initial_condition_only": true,
+            "full_clip_frames": 6574,
+            "scored_control_steps_full_clip": 6573,
+            "motion_time_step_total": 6574,
+            "control_dt": 0.02,
+            "pr13_frame_semantics_documented_in_v1": true
+          },
+          "observed": [
+            {
+              "step": 0,
+              "command_frame": 1,
+              "policy_reference_index": 1,
+              "env_ref_index": 1,
+              "time_s": 0.0
+            },
+            {
+              "step": 1,
+              "command_frame": 2,
+              "policy_reference_index": 2,
+              "env_ref_index": 2,
+              "time_s": 0.02
+            },
+            {
+              "step": 2,
+              "command_frame": 3,
+              "policy_reference_index": 3,
+              "env_ref_index": 3,
+              "time_s": 0.04
+            }
+          ]
+        },
+        "reference_reanchor": {
+          "status": "PASS",
+          "checks": {
+            "rel_pos_matches_mjlab_buffer": true,
+            "rel_quat_matches_mjlab_buffer": true,
+            "anchor_is_torso_link": true,
+            "termination_root_is_pelvis": true,
+            "robot_anchor_body_is_torso_link": true,
+            "body_count_matches_spec": true
+          },
+          "rows": [
+            {
+              "step": 0,
+              "command_frame": 1,
+              "rel_pos_max_abs_error": 6.480805807285162e-08,
+              "rel_quat_max_abs_error": 1.364169571471674e-07,
+              "rel_pos_shape": [
+                14,
+                3
+              ],
+              "rel_quat_shape": [
+                14,
+                4
+              ]
+            },
+            {
+              "step": 1,
+              "command_frame": 2,
+              "rel_pos_max_abs_error": 6.238837589600532e-08,
+              "rel_quat_max_abs_error": 1.3031567314136794e-07,
+              "rel_pos_shape": [
+                14,
+                3
+              ],
+              "rel_quat_shape": [
+                14,
+                4
+              ]
+            },
+            {
+              "step": 2,
+              "command_frame": 3,
+              "rel_pos_max_abs_error": 5.8424076909702194e-08,
+              "rel_quat_max_abs_error": 1.2401170110254434e-07,
+              "rel_pos_shape": [
+                14,
+                3
+              ],
+              "rel_quat_shape": [
+                14,
+                4
+              ]
+            }
+          ],
+          "max_abs_error": 1.364169571471674e-07,
+          "tolerance": 5e-06,
+          "note": "float32 round-trip only; reward terms keep REWARD_TOLERANCE"
+        },
+        "identity_v1": {
+          "status": "PASS",
+          "checks": {
+            "protocol_id": true,
+            "v1_protocol_unchanged": true,
+            "v1_cpu_evaluator_unchanged": true,
+            "v2_protocol_sha_frozen": true,
+            "evaluator_implementation": true,
+            "clip_count_40": true
+          },
+          "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+          "v1_protocol_sha256": "ddec7124dbee4c999986f995a8c2aa88097a494e1a0f4df00f2967366c15935b",
+          "identity": {
+            "protocol_id": "modded-supermimic-g1-lafan1-v2",
+            "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+            "evaluator_implementation": "canonical-mjlab-g1-v2-original-aligned",
+            "evaluator_source_tree": "research/modded-supermimic/benchmark/v2",
+            "evaluator_source_git_sha": "0f8634bb425a4ccc481d529c4902743e4181855d",
+            "mjlab": {
+              "repo": "mujocolab/mjlab",
+              "version": "1.6.0",
+              "commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10"
+            },
+            "reference_implementations": {
+              "supermimic": {
+                "repo": "zita-ch/supermimic_vibed",
+                "commit": "8bfc1158bd968f729fcc65d5e897a05b05ea3d36",
+                "protocol": "supermimic/evaluate.py:53-96, supermimic/mdp.py:108-152"
+              },
+              "nablamimic": {
+                "repo": "sailab-ai/NablaMimic",
+                "commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+                "protocol": "src/nablamimic/evaluate.py:35-116, src/nablamimic/env.py:404-433"
+              }
+            },
+            "depends_on_prs": [
+              {
+                "number": 12,
+                "branch": "research/mjlab-reuse-refactor",
+                "head": "f5bf4e0d881837b84ecb0654c88d7d0d3bfc361e",
+                "role": "official mjlab evaluator (physics / PD / motion converter / record identity)"
+              },
+              {
+                "number": 13,
+                "branch": "feat/nablamimic-canonical-policy",
+                "head": "66a6e52664195fee3c446924980ae586bc55c25d",
+                "role": "NablaMimic policy adapter with the confirmed reference-frame indexing fix"
+              }
+            ],
+            "v1_protocol_sha256": "ddec7124dbee4c999986f995a8c2aa88097a494e1a0f4df00f2967366c15935b"
+          }
+        },
+        "cpu_fallback_rejection": {
+          "status": "PASS",
+          "checks": {
+            "cpu_device_string_rejected": true,
+            "cpu_warp_state_rejected": true,
+            "cpu_fallback_is_opt_in_only": true
+          }
+        }
+      },
+      "timing": {
+        "cuda_init_probe_s": 0.03433404399993378,
+        "reference_load_s": 79.44919135999999,
+        "cuda_env_build_s": 1.8284359819999736,
+        "first_kernel_jit_wall_s": 0.28637742599994453,
+        "total_wall_s": 89.712453708
+      },
+      "hardware": "torch.cuda.is_available              : True\ntorch.cuda.get_device_name(0)        : NVIDIA A100-SXM4-40GB\ntorch.cuda.get_device_capability(0)  : (8, 0) (sm_80)\nwarp CUDA devices                    : ['cuda:0']\nmjlab runtime device                 : cuda:0\nMuJoCo Warp simulation backend       : mujoco_warp\nwarp device / arch                   : cuda:0 / 80\nCUDA runtime / driver                : 13.0 / 580.82.07\nCUDA graph step captured             : True\nphysics state array device           : cuda:0\ntarget GPU RTX PRO 6000 / sm_120     : False / False",
+      "versions": {
+        "mujoco": "3.11.0",
+        "mujoco_warp": "3.11.0",
+        "warp_lang": "1.16.0",
+        "mjlab": "1.6.0",
+        "torch": "2.14.1+cu130"
+      },
+      "version_drift": {},
+      "target_gpu_match": false,
+      "sm_120_confirmed": false,
+      "runtime": {
+        "env_device": "cuda:0",
+        "sim_device": "cuda:0",
+        "simulation_class": "mjlab.sim.sim.Simulation",
+        "simulation_backend": "mujoco_warp",
+        "mujoco_warp_data_class": "mujoco_warp._src.types.Data",
+        "warp_device": "cuda:0",
+        "warp_device_is_cuda": true,
+        "warp_device_arch": 80,
+        "wp_data_qpos_device": "cuda:0",
+        "wp_data_qpos_is_cuda": true,
+        "wp_data_is_mjwarp": true,
+        "use_cuda_graph": true,
+        "step_graph_captured": true,
+        "graph_capture_status": "captured",
+        "no_cpu_fallback": true,
+        "warnings": []
+      },
+      "no_cpu_fallback": true,
+      "kernel_execution": {
+        "kernel_execution_wall_s": 0.2852587859999858,
+        "qpos_max_abs_delta": 0.1202094554901123,
+        "qpos_finite_after_step": true,
+        "state_advanced_by_gpu_kernel": true,
+        "torch_memory_allocated_bytes": 16630784,
+        "torch_max_memory_allocated_bytes": 16640000
+      },
+      "performance": {
+        "steps": 200,
+        "warmup_steps": 20,
+        "warmup_wall_s": 0.3835025229996063,
+        "first_step_wall_s": 0.01794452900003307,
+        "first_step_is_jit_cold_start": true,
+        "steady_steps": 180,
+        "steady_wall_s": 3.3170449469998857,
+        "steady_simulation_fps": 54.26516760431652,
+        "sim_step_fps": 56.18041299169904,
+        "sim_step_steps": 180,
+        "sim_step_wall_s_mean": 0.017799797950003596,
+        "policy_glue_overhead_s_per_step": 0.0006282295333291041,
+        "bottleneck": "physics",
+        "step_wall_s_mean": 0.01850273734999746,
+        "step_wall_s_max": 0.021147621000068284,
+        "total_rollout_wall_s": 3.79491305800002,
+        "manual_resets": 4,
+        "manual_reset_wall_s": 0.07929193500012843,
+        "note": "steady_simulation_fps = V2TrackingEnv.step (numpy I/O included); sim_step_fps = raw mjlab env.step with a CUDA-resident action. Both exclude CUDA init, env build, reference load and kernel JIT."
+      },
+      "performance_parity_check_only": {
+        "cuda_env_build_s": 1.4592725079999127,
+        "reset_wall_s": 0.01624289200003659,
+        "warmup_steps": 5,
+        "warmup_wall_s": 0.10155875099997047,
+        "first_step_wall_s": 0.01980620100005126,
+        "steady_steps": 207,
+        "steady_wall_s": 3.721715028000972,
+        "steady_simulation_fps": 55.6195190772532,
+        "step_wall_s_mean": 0.01803431027830633,
+        "step_wall_s_max": 0.021942607000028147,
+        "total_steps": 212,
+        "total_step_wall_s": 3.8232737790009423
+      },
+      "reward_per_term_max_abs_error": {
+        "motion_global_root_pos": 1.0280973624515743e-09,
+        "motion_global_root_ori": 9.441899709999868e-10,
+        "motion_body_pos": 8.322455224973879e-10,
+        "motion_body_ori": 2.4756229184685896e-09,
+        "motion_body_lin_vel": 7.237756600650402e-10,
+        "motion_body_ang_vel": 8.472016321987852e-10,
+        "action_rate_l2": 1.2501359431156545e-11,
+        "joint_limit": 0.0
+      },
+      "telemetry": {
+        "samples": 197,
+        "interval_s": 0.4,
+        "gpu_utilization_pct": {
+          "mean": 3.487309644670051,
+          "max": 45.0,
+          "min": 0.0
+        },
+        "gpu_memory_used_mib": {
+          "mean": 78.1015228426396,
+          "max": 638.0,
+          "min": 6.0
+        },
+        "cpu_utilization_pct": {
+          "mean": 11.01015228426396,
+          "max": 40.0,
+          "min": 8.9
+        }
+      }
+    },
+    "evaluation_wall_s": 91.18037396800003,
+    "cuda_init_s": 1.8284359819999736,
+    "version_drift": {}
+  },
+  "mode": "smoke",
+  "submission_eligible": false,
+  "target_hardware_met": false,
+  "report_scope": "preflight_non_target_hardware"
+}

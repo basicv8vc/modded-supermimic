@@ -1,0 +1,130 @@
+{
+  "cases": {
+    "coincident_anchor": {
+      "nablamimic": {
+        "terms": {
+          "action_rate": -0.018517402932047844,
+          "body_ang_vel": 0.013553624041378498,
+          "body_lin_vel": 0.011310331523418427,
+          "body_ori": 0.016324838623404503,
+          "body_pos": 0.019012290984392166,
+          "joint_limit": -0.014742855913937092,
+          "root_ori": 0.005736198276281357,
+          "root_pos": 0.00931099709123373
+        },
+        "total": 0.04198802635073662
+      },
+      "supermimic": {
+        "terms": {
+          "action_rate": 9.258702054397196,
+          "e_body_ori": 0.03248711518093784,
+          "e_body_pos": 0.00455819167940299,
+          "e_root_pos": 0.006425000000000002,
+          "joint_limit": 0.36857142857142833,
+          "track": 0.0752482816135601
+        },
+        "total": 0.04198802036190857
+      },
+      "v2": {
+        "terms": {
+          "action_rate_l2": -0.01851740410879439,
+          "joint_limit": -0.014742857142857134,
+          "motion_body_ang_vel": 0.013553623846869242,
+          "motion_body_lin_vel": 0.011310331818261124,
+          "motion_body_ori": 0.016324838953454074,
+          "motion_body_pos": 0.019012291657452957,
+          "motion_global_root_ori": 0.005736198168357509,
+          "motion_global_root_pos": 0.009310997273728092
+        },
+        "total": 0.04198802046647147
+      }
+    },
+    "drift": {
+      "nablamimic": {
+        "terms": {
+          "action_rate": -0.018517402932047844,
+          "body_ang_vel": 0.013553624041378498,
+          "body_lin_vel": 0.011310331523418427,
+          "body_ori": 0.016324836760759354,
+          "body_pos": 0.019528448581695557,
+          "joint_limit": -0.014742855913937092,
+          "root_ori": 0.0057361978106200695,
+          "root_pos": 0.009184738621115685
+        },
+        "total": 0.04237791523337364
+      },
+      "supermimic": {
+        "terms": {
+          "action_rate": 9.258702054397196,
+          "e_body_ori": 0.03248711518093784,
+          "e_body_pos": 0.004630196276124886,
+          "e_root_pos": 0.006425000000000002,
+          "joint_limit": 0.36857142857142833,
+          "track": 0.07523307689227508
+        },
+        "total": 0.04197281564062355
+      },
+      "v2": {
+        "terms": {
+          "action_rate_l2": -0.01851740410879439,
+          "joint_limit": -0.014742857142857134,
+          "motion_body_ang_vel": 0.013553623846869242,
+          "motion_body_lin_vel": 0.011310331818261124,
+          "motion_body_ori": 0.016324838953454074,
+          "motion_body_pos": 0.019528449240225728,
+          "motion_global_root_ori": 0.005736198168357509,
+          "motion_global_root_pos": 0.009184738102154295
+        },
+        "total": 0.042377918877670444
+      }
+    },
+    "perfect": {
+      "nablamimic": {
+        "terms": {
+          "action_rate": -0.02619907632470131,
+          "body_ang_vel": 0.019999999552965164,
+          "body_lin_vel": 0.019999999552965164,
+          "body_ori": 0.019999999552965164,
+          "body_pos": 0.019999999552965164,
+          "joint_limit": -0.014742855913937092,
+          "root_ori": 0.009999999776482582,
+          "root_pos": 0.009999999776482582
+        },
+        "total": 0.059058066457509995
+      },
+      "supermimic": {
+        "terms": {
+          "action_rate": 13.099538321470952,
+          "e_body_ori": 2.000000333390934e-06,
+          "e_body_pos": 4.926801001749517e-21,
+          "e_root_pos": 0.0,
+          "joint_limit": 0.36857142857142833,
+          "track": 0.09999962500228123
+        },
+        "total": 0.05905769121648218
+      },
+      "v2": {
+        "terms": {
+          "action_rate_l2": -0.0261990766429419,
+          "joint_limit": -0.014742857142857134,
+          "motion_body_ang_vel": 0.02,
+          "motion_body_lin_vel": 0.02,
+          "motion_body_ori": 0.0199999999995,
+          "motion_body_pos": 0.02,
+          "motion_global_root_ori": 0.00999999999975,
+          "motion_global_root_pos": 0.01
+        },
+        "total": 0.05905806621345097
+      }
+    }
+  },
+  "nablamimic_commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+  "oracle_sha256": {
+    "nablamimic/env.py": "6ce93ebcc29baeb9f095cf077866760f439f85ba0e91e2a79c5f614f73c14f68",
+    "nablamimic/evaluate.py": "18f2d65b1411621415a2276911d6a18168dbd27324e3603a56ab21d7fbbf9d45",
+    "supermimic/evaluate.py": "5b8923a8c46dcbf2b19e048729ab0039b9ffe1a45777f83eb355df14b245bb36",
+    "supermimic/mdp.py": "19662edc4d994553ebb4cf587f3080ca95b407e53806f7cd28939937e135754f",
+    "supermimic/rotations.py": "f0d75dd6d8398220aff7f2910e7ef4a559bf33368fa3324a6d405ee2304be8de"
+  },
+  "supermimic_commit": "8bfc1158bd968f729fcc65d5e897a05b05ea3d36"
+}

@@ -1,0 +1,60 @@
+{
+  "a": {
+    "path": "/tmp/nm_serial_2clips.json",
+    "algorithm": "unknown",
+    "workers": 1
+  },
+  "b": {
+    "path": "/tmp/nm_batched_2clips.json",
+    "algorithm": "NablaMimic",
+    "workers": "batched(num_envs=40)"
+  },
+  "tol_return": 0.01,
+  "tol_terms": 0.01,
+  "clips_compared": 2,
+  "clips_mismatched": 1,
+  "max_abs_return_diff": 0.0034084810891895634,
+  "max_abs_term_diff": 0.0009289209447521036,
+  "aggregate_return_a": 0.6869515665292918,
+  "aggregate_return_b": 0.687423957898016,
+  "abs_aggregate_diff": 0.00047239136872423426,
+  "verdict": "FAIL",
+  "per_clip": [
+    {
+      "clip": "fallAndGetUp2_subject3",
+      "return_a": 0.4867501060896313,
+      "return_b": 0.4842864077378901,
+      "abs_return_diff": 0.002463698351741206,
+      "failed_a": true,
+      "failed_b": true,
+      "alive_steps_a": 4916,
+      "alive_steps_b": 4934,
+      "fall_step_a": 4916,
+      "fall_step_b": 4934,
+      "fall_terms_a": [
+        "root_height"
+      ],
+      "fall_terms_b": [
+        "root_height"
+      ],
+      "max_abs_term_diff": 0.0009289209447521036,
+      "match": false
+    },
+    {
+      "clip": "walk1_subject1",
+      "return_a": 0.8871530269689524,
+      "return_b": 0.8905615080581419,
+      "abs_return_diff": 0.0034084810891895634,
+      "failed_a": false,
+      "failed_b": false,
+      "alive_steps_a": 13064,
+      "alive_steps_b": 13064,
+      "fall_step_a": null,
+      "fall_step_b": null,
+      "fall_terms_a": [],
+      "fall_terms_b": [],
+      "max_abs_term_diff": 0.0003463058618207069,
+      "match": true
+    }
+  ]
+}

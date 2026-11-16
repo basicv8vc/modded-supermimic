@@ -1,0 +1,258 @@
+{
+  "protocol_id": "modded-supermimic-g1-lafan1-v2",
+  "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+  "status": "G4_BASELINE_EVALUATION_COMPLETE",
+  "records": [
+    {
+      "path": "g4_official_supermimic_seed0.json",
+      "algorithm": "SuperMimic-official-gencoord-proprio",
+      "upstream_repo": "https://github.com/HybridRobotics/supermimic",
+      "seed": 0,
+      "training_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+      "mjlab_research_commit": "dd51a9fcc98791a2f0b018b3c7f71a3eefd5ecdd",
+      "checkpoint_sha256": "83b9417dfa10aba86fd82c4923f0c8afae7e7317e6bc76a36010bed717cfe9b5",
+      "training_wall_s": 3419.35,
+      "aggregate_normalized_return": 0.8463096052387961,
+      "failed_clips": 1,
+      "report_scope": "acceptance",
+      "submission_eligible": true,
+      "target_hardware_met": true,
+      "backend": "batched(num_envs=40)",
+      "audit": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "notes": [
+        "Trained from scratch on Colab G4 (RTX PRO 6000 Blackwell, 25,001 iterations, 3419.35 s = 0.950 h) using official HybridRobotics/supermimic task SuperMimic-GenCoord-G1 with sensor-only deployable actor (--runner.actor-obs proprio --runner.history-length 10, no privileged teacher or DAgger distillation) on the 40 canonical LAFAN1 clips with FULL_COLLISION enabled.",
+        "2-clip Option B vs serial parity check (g4_parity_official_supermimic_2clips.json) PASSED 2/2 clips (walk1_subject1: 0.88297 vs 0.88357; dance1_subject1: 0.85088 vs 0.85112; max|delta_return|=0.000595, max|delta_term|=3.16e-5).",
+        "Single failed clip on 40-clip V2 FULL_COLLISION: jumps1_subject2 (0.77013, terminated at step 11614/12221)."
+      ]
+    },
+    {
+      "path": "g4_nablamimic_seed0.json",
+      "algorithm": "NablaMimic",
+      "seed": 0,
+      "training_commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+      "checkpoint_sha256": "4086e7a9bd38bfcabe48a81171fc6571dcb1b4a920b215c9362afa3b5f56601e",
+      "aggregate_normalized_return": 0.82817307608584,
+      "failed_clips": 1,
+      "report_scope": "acceptance",
+      "submission_eligible": true,
+      "target_hardware_met": true,
+      "backend": "batched(num_envs=40)",
+      "audit": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "caveats": [
+        "Trained with self-collision enabled in NablaEngine / MuJoCo Warp.",
+        "2-clip Option B vs serial parity check (g4_parity_nablamimic_2clips.json) had 1/2 clips marked mismatch by exact fall-step gate (fallAndGetUp2_subject3: fall step 4916 vs 4934, |delta_return|=0.00246 < 0.01 tol)."
+      ]
+    },
+    {
+      "path": "nablamimic_25m_bisect/v2_it_003936.json",
+      "algorithm": "NablaMimic",
+      "seed": 0,
+      "training_commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+      "checkpoint_sha256": "7bc16b436cf2a0d7ead39347c5fe649f935d7e6b950754811355171ba649b3b3",
+      "training_wall_s": 1498.46,
+      "aggregate_normalized_return": 0.8689635955216994,
+      "failed_clips": 0,
+      "report_scope": "acceptance",
+      "submission_eligible": true,
+      "target_hardware_met": true,
+      "backend": "batched(num_envs=40)",
+      "audit": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "notes": [
+        "25-minute G4 sweep (configs/ours.args, --hours 0.41667 --seed 0, NablaEngine 0.1.0 @ c61a6fe7f5ec47c7f4f9b0a4c055d60cbe40807c, 3,936 iterations in 1498.46 s = 24.97 min; run v2_25m_s0_20261116T021256Z) extending the 8-min baseline g4_nablamimic_seed0.json.",
+        "V2 bisect across 12 checkpoints (nablamimic_25m_bisect/bisect_summary.json) found earliest and stable 0/40 failed + >=0.82 onset at it_001500 (572.18 s = 9.54 min, 0.84108, 0/40 failed) and remained 0/40 across all 11 checkpoints from it_001500 through it_003936 (0.86896)."
+      ]
+    }
+  ],
+  "note": "V2 is an independent protocol on RTX PRO 6000 Blackwell (sm_120). V1 records in ../ stay untouched and MUST NOT be compared directly against V2. Diagnostic ablations and historical L4/A100 preflight artifacts are listed separately below with submission_eligible=false and never enter records[].",
+  "v1_records_directory": "../",
+  "v1_scores_comparable": false,
+  "target_hardware": {
+    "required": "NVIDIA RTX PRO 6000 Blackwell / sm_120",
+    "met": true,
+    "observed": "NVIDIA RTX PRO 6000 Blackwell Server Edition / sm_120 (Colab G4, CUDA 13.0, driver 580.82.07)"
+  },
+  "smoke_records": [
+    {
+      "path": "smoke_gpu.json",
+      "mode": "smoke",
+      "submission_eligible": false,
+      "clips": ["walk1_subject1"],
+      "audit": "SMOKE_VALID",
+      "gpu_runtime_parity": "PASS",
+      "report_scope": "preflight_non_target_hardware",
+      "hardware": "NVIDIA L4 / sm_89"
+    },
+    {
+      "path": "smoke_gpu_dance1.json",
+      "mode": "smoke",
+      "submission_eligible": false,
+      "clips": ["dance1_subject1"],
+      "audit": "SMOKE_VALID",
+      "gpu_runtime_parity": "PASS",
+      "report_scope": "preflight_non_target_hardware",
+      "hardware": "NVIDIA L4 / sm_89"
+    },
+    {
+      "path": "smoke_gpu_2clips.json",
+      "mode": "smoke",
+      "submission_eligible": false,
+      "clips": ["walk1_subject1", "dance1_subject1"],
+      "audit": "SMOKE_VALID",
+      "gpu_runtime_parity": "PASS",
+      "report_scope": "preflight_non_target_hardware",
+      "hardware": "NVIDIA L4 / sm_89"
+    },
+    {
+      "path": "smoke_gpu_a100_walk1.json",
+      "mode": "smoke",
+      "submission_eligible": false,
+      "clips": ["walk1_subject1"],
+      "audit": "SMOKE_VALID",
+      "gpu_runtime_parity": "PASS",
+      "report_scope": "preflight_non_target_hardware",
+      "hardware": "NVIDIA A100-SXM4-40GB / sm_80"
+    },
+    {
+      "path": "smoke_gpu_a100_dance1.json",
+      "mode": "smoke",
+      "submission_eligible": false,
+      "clips": ["dance1_subject1"],
+      "audit": "SMOKE_VALID",
+      "gpu_runtime_parity": "PASS",
+      "report_scope": "preflight_non_target_hardware",
+      "hardware": "NVIDIA A100-SXM4-40GB / sm_80"
+    },
+    {
+      "path": "smoke_gpu_a100_2clips.json",
+      "mode": "smoke",
+      "submission_eligible": false,
+      "clips": ["walk1_subject1", "dance1_subject1"],
+      "audit": "SMOKE_VALID",
+      "gpu_runtime_parity": "PASS",
+      "report_scope": "preflight_non_target_hardware",
+      "hardware": "NVIDIA A100-SXM4-40GB / sm_80"
+    }
+  ],
+  "diagnostic_artifacts": [
+    "preflight_a100_sm80.json",
+    "preflight_l4_sm89_2026-11-12.json",
+    "gpu_performance.json",
+    "a100_throughput_benchmark.json",
+    "g4_parity_official_supermimic_2clips.json",
+    "g4_parity_nablamimic_2clips.json",
+    "g4_parity_supermimic_2clips.json",
+    "diag_g4_supermimic_no_self_collision.json",
+    "diag_g4_supermimic_bf16_full_collision.json",
+    "a100_supermimic_seed0.json"
+  ],
+  "retired_baselines": [
+    {
+      "path": "g4_supermimic_seed0.json",
+      "algorithm": "SuperMimic-vibed",
+      "status": "RETIRED_SUPERSEDED_BY_OFFICIAL_SUPERMIMIC",
+      "aggregate_normalized_return": 0.52868894571902,
+      "failed_clips": 24,
+      "note": "Removed from official V2 records[] (2026-11-15): unofficial zita-ch/supermimic_vibed fork trained with enabled_self_collisions=False and evaluated under pre-fix 1-frame adapter offset; superseded by official HybridRobotics/supermimic (g4_official_supermimic_seed0.json, 0.84631, 1/40 failed)."
+    },
+    {
+      "path": "a100_supermimic_seed0.json",
+      "algorithm": "SuperMimic-vibed",
+      "status": "RETIRED_SUPERSEDED_BY_OFFICIAL_SUPERMIMIC",
+      "seed": 0,
+      "training_commit": "8bfc1158bd968f729fcc65d5e897a05b05ea3d36",
+      "checkpoint_sha256": "816a02a4d2dd9994c0d91887e84ca633d420d674139ba6f8907e996a431454d5",
+      "aggregate_normalized_return": 0.5699935224259255,
+      "failed_clips": 20,
+      "report_scope": "controlled_baseline_non_target_hardware",
+      "submission_eligible": false,
+      "target_hardware_met": false,
+      "hardware": "NVIDIA A100-SXM4-40GB / sm_80",
+      "backend": "batched(num_envs=40)",
+      "audit": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "note": "Post-fix A100 controlled re-evaluation of 816a02a4 retained as an archived diagnostic artifact after retiring SuperMimic-vibed from the official V2 baseline table."
+    }
+  ],
+  "acceptance_artifact": {
+    "path": "gpu_runtime_status.json",
+    "present": true,
+    "acceptance_status": "PASS",
+    "checked_at_utc": "2026-11-13T15:07:24Z",
+    "hardware": "NVIDIA RTX PRO 6000 Blackwell Server Edition / sm_120"
+  },
+  "next_step": "Official V2 baselines and 0/40 sweeps established on G4: SuperMimic official GenCoord proprio (25k record: 0.84631, 1/40 failed in 3419.35 s; 35k sweep official_35k_20261115T120918Z reached earliest 0/40 at 15,000 iters / 2210.83 s / 0.82641, stable 0/40 from 17,000 iters / 2453.09 s / 0.83635, peak 0.85751 at 34,500 iters / 4568.23 s); NablaMimic (8-min baseline: 0.82817, 1/40 failed; 25-min sweep v2_25m_s0_20261116T021256Z reached earliest and stable 0/40 onset at 1,500 iters / 572.18 s / 0.84108 and 0.86896, 0/40 failed at 3,936 iters / 1498.46 s, registered in records[]).",
+  "follow_up_sweeps": [
+    {
+      "run_id": "official_35k_20261115T120918Z",
+      "algorithm": "SuperMimic-official-gencoord-proprio",
+      "training_commit": "abc124c1bd5976341034668af3d12c087f2f1f55",
+      "max_iterations": 35001,
+      "save_interval": 500,
+      "earliest_zero_fail": {
+        "est_iter": 15000,
+        "wall_s": 2210.83,
+        "aggregate_normalized_return": 0.8264087783199049,
+        "failed_clips": 0
+      },
+      "stable_zero_fail_onset": {
+        "est_iter": 17000,
+        "wall_s": 2453.09,
+        "aggregate_normalized_return": 0.836346876413096,
+        "failed_clips": 0
+      },
+      "best_passing": {
+        "est_iter": 34500,
+        "wall_s": 4568.23,
+        "aggregate_normalized_return": 0.857508923723542,
+        "failed_clips": 0,
+        "parity_2clips_summary": "../../baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/parity_best_2clips.json"
+      },
+      "final": {
+        "est_iter": 35000,
+        "wall_s": 4632.13,
+        "aggregate_normalized_return": 0.8526377044670304,
+        "failed_clips": 0
+      },
+      "summary_path": "../../baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json",
+      "notes": "Summary artifacts committed in baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/; full per-snapshot per-clip JSONs remain in Google Drive MyDrive/supermimic_v2/runs/official_35k_20261115T120918Z/evals/, so records[] retains g4_official_supermimic_seed0.json to preserve per-clip file audit integrity."
+    },
+    {
+      "run_id": "v2_25m_s0_20261116T021256Z",
+      "algorithm": "NablaMimic",
+      "training_commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+      "budget_hours": 0.41667,
+      "total_iterations": 3936,
+      "save_interval": 250,
+      "earliest_zero_fail": {
+        "iter": 1500,
+        "wall_s": 572.18,
+        "aggregate_normalized_return": 0.8410790037870592,
+        "failed_clips": 0,
+        "record_path": "nablamimic_25m_bisect/v2_it_001500.json"
+      },
+      "stable_zero_fail_onset": {
+        "iter": 1500,
+        "wall_s": 572.18,
+        "aggregate_normalized_return": 0.8410790037870592,
+        "failed_clips": 0,
+        "record_path": "nablamimic_25m_bisect/v2_it_001500.json"
+      },
+      "best_passing": {
+        "iter": 3936,
+        "wall_s": 1498.46,
+        "aggregate_normalized_return": 0.8689635955216994,
+        "failed_clips": 0,
+        "record_path": "nablamimic_25m_bisect/v2_it_003936.json"
+      },
+      "final": {
+        "iter": 3936,
+        "wall_s": 1498.46,
+        "aggregate_normalized_return": 0.8689635955216994,
+        "failed_clips": 0,
+        "record_path": "nablamimic_25m_bisect/v2_it_003936.json"
+      },
+      "summary_path": "nablamimic_25m_bisect/bisect_summary.json",
+      "training_summary_path": "../../baselines/nablamimic/out/v2_25m_s0_20261116T021256Z/summary.json",
+      "notes": "Trained on Colab G4 (sm_120) using official configs/ours.args with --hours 0.41667 --seed 0 (NablaEngine 0.1.0 @ c61a6fe7f5ec47c7f4f9b0a4c055d60cbe40807c); 12 checkpoints (it_001250..it_003936) evaluated under V2 FULL_COLLISION via fast_eval.py (--policy-backend nablamimic_gpu). Full 40-clip JSONs committed in reports/v2/nablamimic_25m_bisect/ and training archive in baselines/nablamimic/out/v2_25m_s0_20261116T021256Z/; .pkl weights stored on Google Drive MyDrive/supermimic/nablamimic/runs/v2_25m_s0_20261116T021256Z/checkpoints/."
+    }
+  ]
+}

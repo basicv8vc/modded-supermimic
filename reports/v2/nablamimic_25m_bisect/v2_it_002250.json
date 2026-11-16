@@ -1,0 +1,2304 @@
+{
+  "protocol_id": "modded-supermimic-g1-lafan1-v2",
+  "algorithm": "NablaMimic",
+  "training_commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+  "seed": 0,
+  "hardware": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "gpu_count": 1,
+    "declared_gpu_name": "declared-only",
+    "gpu_compute_capability": "sm_120",
+    "actual_torch_device": "cuda:0",
+    "actual_warp_device": "cuda:0",
+    "actual_simulation_backend": "mujoco_warp",
+    "cuda_graph_step_captured": true
+  },
+  "evaluator": {
+    "implementation": "canonical-mjlab-g1-v2-original-aligned",
+    "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+    "evaluator_source_tree": "research/modded-supermimic/benchmark/v2",
+    "source_git_sha": "unknown",
+    "self_collision": true,
+    "self_collision_reward_penalty": false,
+    "robot_dof": 29,
+    "mujoco": "3.11.0",
+    "mujoco_warp": "3.11.0",
+    "warp_lang": "1.16.0",
+    "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+    "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+    "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+    "mjlab_version": "1.6.0",
+    "motion_converter_version": "official-csv-to-npz-mjlab1.6.0-1",
+    "reference_implementations": {
+      "supermimic": {
+        "repo": "zita-ch/supermimic_vibed",
+        "commit": "8bfc1158bd968f729fcc65d5e897a05b05ea3d36",
+        "protocol": "supermimic/evaluate.py:53-96, supermimic/mdp.py:108-152"
+      },
+      "nablamimic": {
+        "repo": "sailab-ai/NablaMimic",
+        "commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+        "protocol": "src/nablamimic/evaluate.py:35-116, src/nablamimic/env.py:404-433"
+      }
+    },
+    "depends_on_prs": [
+      {
+        "number": 12,
+        "branch": "research/mjlab-reuse-refactor",
+        "head": "f5bf4e0d881837b84ecb0654c88d7d0d3bfc361e",
+        "role": "official mjlab evaluator (physics / PD / motion converter / record identity)"
+      },
+      {
+        "number": 13,
+        "branch": "feat/nablamimic-canonical-policy",
+        "head": "66a6e52664195fee3c446924980ae586bc55c25d",
+        "role": "NablaMimic policy adapter with the confirmed reference-frame indexing fix"
+      }
+    ]
+  },
+  "checkpoints": [
+    {
+      "checkpoint_sha256": "9e36f18422ddb3246c3e5d491dfe4be9e237fa078838c8855f4bd2fa6508df3b",
+      "training_wall_s": 858.15,
+      "setup_wall_s": 0.0,
+      "eval_wall_s": 4331.6566724460035,
+      "per_clip": [
+        {
+          "clip": "dance1_subject1",
+          "normalized_return": 0.8411331782898193,
+          "failed": false
+        },
+        {
+          "clip": "dance1_subject2",
+          "normalized_return": 0.7993574482702634,
+          "failed": false
+        },
+        {
+          "clip": "dance1_subject3",
+          "normalized_return": 0.8736569408957007,
+          "failed": false
+        },
+        {
+          "clip": "dance2_subject1",
+          "normalized_return": 0.8093260175905984,
+          "failed": false
+        },
+        {
+          "clip": "dance2_subject2",
+          "normalized_return": 0.801026918995093,
+          "failed": false
+        },
+        {
+          "clip": "dance2_subject3",
+          "normalized_return": 0.8631504708469353,
+          "failed": false
+        },
+        {
+          "clip": "dance2_subject4",
+          "normalized_return": 0.8069599801787568,
+          "failed": false
+        },
+        {
+          "clip": "dance2_subject5",
+          "normalized_return": 0.8459885155947683,
+          "failed": false
+        },
+        {
+          "clip": "fallAndGetUp1_subject1",
+          "normalized_return": 0.8350432145787285,
+          "failed": false
+        },
+        {
+          "clip": "fallAndGetUp1_subject4",
+          "normalized_return": 0.8380088321213376,
+          "failed": false
+        },
+        {
+          "clip": "fallAndGetUp1_subject5",
+          "normalized_return": 0.8153457223030265,
+          "failed": false
+        },
+        {
+          "clip": "fallAndGetUp2_subject2",
+          "normalized_return": 0.8438951770252414,
+          "failed": false
+        },
+        {
+          "clip": "fallAndGetUp2_subject3",
+          "normalized_return": 0.8575668432066715,
+          "failed": false
+        },
+        {
+          "clip": "fallAndGetUp3_subject1",
+          "normalized_return": 0.8451897601400827,
+          "failed": false
+        },
+        {
+          "clip": "fight1_subject2",
+          "normalized_return": 0.8368898652336337,
+          "failed": false
+        },
+        {
+          "clip": "fight1_subject3",
+          "normalized_return": 0.842551879075426,
+          "failed": false
+        },
+        {
+          "clip": "fight1_subject5",
+          "normalized_return": 0.8511479673528334,
+          "failed": false
+        },
+        {
+          "clip": "fightAndSports1_subject1",
+          "normalized_return": 0.8315645174598126,
+          "failed": false
+        },
+        {
+          "clip": "fightAndSports1_subject4",
+          "normalized_return": 0.8364422659069911,
+          "failed": false
+        },
+        {
+          "clip": "jumps1_subject1",
+          "normalized_return": 0.8550252509911139,
+          "failed": false
+        },
+        {
+          "clip": "jumps1_subject2",
+          "normalized_return": 0.84811485775846,
+          "failed": false
+        },
+        {
+          "clip": "jumps1_subject5",
+          "normalized_return": 0.8422625055674561,
+          "failed": false
+        },
+        {
+          "clip": "run1_subject2",
+          "normalized_return": 0.8479548241062324,
+          "failed": false
+        },
+        {
+          "clip": "run1_subject5",
+          "normalized_return": 0.8208406029056184,
+          "failed": false
+        },
+        {
+          "clip": "run2_subject1",
+          "normalized_return": 0.8244522247076599,
+          "failed": false
+        },
+        {
+          "clip": "run2_subject4",
+          "normalized_return": 0.8297022971752198,
+          "failed": false
+        },
+        {
+          "clip": "sprint1_subject2",
+          "normalized_return": 0.842933145410231,
+          "failed": false
+        },
+        {
+          "clip": "sprint1_subject4",
+          "normalized_return": 0.8285752494421259,
+          "failed": false
+        },
+        {
+          "clip": "walk1_subject1",
+          "normalized_return": 0.880514351030571,
+          "failed": false
+        },
+        {
+          "clip": "walk1_subject2",
+          "normalized_return": 0.8898825891058154,
+          "failed": false
+        },
+        {
+          "clip": "walk1_subject5",
+          "normalized_return": 0.8657294464858211,
+          "failed": false
+        },
+        {
+          "clip": "walk2_subject1",
+          "normalized_return": 0.8991546908735749,
+          "failed": false
+        },
+        {
+          "clip": "walk2_subject3",
+          "normalized_return": 0.8923446737620248,
+          "failed": false
+        },
+        {
+          "clip": "walk2_subject4",
+          "normalized_return": 0.8947748689435806,
+          "failed": false
+        },
+        {
+          "clip": "walk3_subject1",
+          "normalized_return": 0.9140664046154819,
+          "failed": false
+        },
+        {
+          "clip": "walk3_subject2",
+          "normalized_return": 0.885253803479245,
+          "failed": false
+        },
+        {
+          "clip": "walk3_subject3",
+          "normalized_return": 0.8427795020339021,
+          "failed": false
+        },
+        {
+          "clip": "walk3_subject4",
+          "normalized_return": 0.917408936431527,
+          "failed": false
+        },
+        {
+          "clip": "walk3_subject5",
+          "normalized_return": 0.9102116106383962,
+          "failed": false
+        },
+        {
+          "clip": "walk4_subject1",
+          "normalized_return": 0.9142316259991141,
+          "failed": false
+        }
+      ]
+    }
+  ],
+  "target_hardware_met": true,
+  "submission_eligible": true,
+  "comparison_valid": true,
+  "evaluation": {
+    "mode": "benchmark",
+    "submission_eligible": true,
+    "comparison_valid": true,
+    "cuda_required": true,
+    "provenance": {
+      "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "gpu_compute_capability": "sm_120",
+      "gpu_count": 1,
+      "actual_torch_device": "cuda:0",
+      "actual_warp_device": "cuda:0",
+      "warp_cuda_devices": [
+        "cuda:0"
+      ],
+      "actual_simulation_backend": "mujoco_warp",
+      "simulation_state_device": "cuda:0",
+      "cuda_graph_step_captured": true,
+      "cuda_runtime": "13.0",
+      "driver_version": "580.82.07",
+      "mujoco_version": "3.11.0",
+      "mujoco_warp_version": "3.11.0",
+      "warp_version": "1.16.0",
+      "mjlab_version": "1.6.0",
+      "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+      "version_drift": {},
+      "target_gpu_match": true,
+      "sm_120_confirmed": true,
+      "evaluator_git_sha": "unknown",
+      "v2_protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+      "v2_protocol_id": "modded-supermimic-g1-lafan1-v2",
+      "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+      "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+      "motion_converter_version": "official-csv-to-npz-mjlab1.6.0-1",
+      "simulation_fps": 3198.403380757425,
+      "simulation_fps_source": "measured steady-state CUDA rollout",
+      "nominal_control_fps": 50.0,
+      "runtime": {
+        "env_device": "cuda:0",
+        "sim_device": "cuda:0",
+        "simulation_class": "mjlab.sim.sim.Simulation",
+        "simulation_backend": "mujoco_warp",
+        "mujoco_warp_data_class": "mujoco_warp._src.types.Data",
+        "warp_device": "cuda:0",
+        "warp_device_is_cuda": true,
+        "warp_device_arch": 120,
+        "wp_data_qpos_device": "cuda:0",
+        "wp_data_qpos_is_cuda": true,
+        "wp_data_is_mjwarp": true,
+        "use_cuda_graph": true,
+        "step_graph_captured": true,
+        "graph_capture_status": "captured",
+        "no_cpu_fallback": true,
+        "warnings": []
+      },
+      "kernel_execution": {},
+      "telemetry": {
+        "samples": 378,
+        "interval_s": 0.4,
+        "gpu_utilization_pct": {
+          "mean": 56.41005291005291,
+          "max": 69.0,
+          "min": 0.0
+        },
+        "gpu_memory_used_mib": {
+          "mean": 1544.873015873016,
+          "max": 1641.0,
+          "min": 559.0
+        },
+        "cpu_utilization_pct": {
+          "mean": 2.5613756613756613,
+          "max": 24.8,
+          "min": 2.1
+        }
+      },
+      "performance": {
+        "per_clip": {
+          "dance1_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "dance1_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "dance1_subject3": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "dance2_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "dance2_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "dance2_subject3": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "dance2_subject4": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "dance2_subject5": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fallAndGetUp1_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fallAndGetUp1_subject4": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fallAndGetUp1_subject5": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fallAndGetUp2_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fallAndGetUp2_subject3": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fallAndGetUp3_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fight1_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fight1_subject3": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fight1_subject5": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fightAndSports1_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "fightAndSports1_subject4": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "jumps1_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "jumps1_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "jumps1_subject5": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "run1_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "run1_subject5": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "run2_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "run2_subject4": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "sprint1_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "sprint1_subject4": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk1_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk1_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk1_subject5": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk2_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk2_subject3": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk2_subject4": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk3_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk3_subject2": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk3_subject3": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk3_subject4": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk3_subject5": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          },
+          "walk4_subject1": {
+            "batched": true,
+            "batch_envs": 40,
+            "policy_backend": "nablamimic_gpu",
+            "cuda_env_build_s": 0.9075217170002361,
+            "reset_wall_s": 0.181974865000484,
+            "reference_load_s": 2.701034090000576,
+            "warmup_steps": 5,
+            "steady_steps": 440880,
+            "steady_wall_s": 137.84377625801335,
+            "steady_simulation_fps": 3198.403380757425,
+            "executed_env_steps": 441080,
+            "rollout_wall_s": 138.2098193059992,
+            "aggregate_executed_fps": 3191.379615535423
+          }
+        },
+        "evaluation_wall_s": 165.2416090910001,
+        "steady_simulation_fps": 3198.403380757425
+      },
+      "collected_at_unix": 1794798563.3683102,
+      "platform": "6.6.159+",
+      "dependency_versions": {
+        "mujoco": "3.11.0",
+        "mujoco_warp": "3.11.0",
+        "warp_lang": "1.16.0"
+      },
+      "evaluation_mode": "benchmark"
+    },
+    "telemetry": {
+      "samples": 378,
+      "interval_s": 0.4,
+      "gpu_utilization_pct": {
+        "mean": 56.41005291005291,
+        "max": 69.0,
+        "min": 0.0
+      },
+      "gpu_memory_used_mib": {
+        "mean": 1544.873015873016,
+        "max": 1641.0,
+        "min": 559.0
+      },
+      "cpu_utilization_pct": {
+        "mean": 2.5613756613756613,
+        "max": 24.8,
+        "min": 2.1
+      }
+    },
+    "performance": {
+      "dance1_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "dance1_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "dance1_subject3": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "dance2_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "dance2_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "dance2_subject3": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "dance2_subject4": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "dance2_subject5": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fallAndGetUp1_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fallAndGetUp1_subject4": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fallAndGetUp1_subject5": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fallAndGetUp2_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fallAndGetUp2_subject3": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fallAndGetUp3_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fight1_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fight1_subject3": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fight1_subject5": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fightAndSports1_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "fightAndSports1_subject4": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "jumps1_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "jumps1_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "jumps1_subject5": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "run1_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "run1_subject5": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "run2_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "run2_subject4": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "sprint1_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "sprint1_subject4": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk1_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk1_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk1_subject5": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk2_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk2_subject3": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk2_subject4": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk3_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk3_subject2": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk3_subject3": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk3_subject4": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk3_subject5": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      },
+      "walk4_subject1": {
+        "batched": true,
+        "batch_envs": 40,
+        "policy_backend": "nablamimic_gpu",
+        "cuda_env_build_s": 0.9075217170002361,
+        "reset_wall_s": 0.181974865000484,
+        "reference_load_s": 2.701034090000576,
+        "warmup_steps": 5,
+        "steady_steps": 440880,
+        "steady_wall_s": 137.84377625801335,
+        "steady_simulation_fps": 3198.403380757425,
+        "executed_env_steps": 441080,
+        "rollout_wall_s": 138.2098193059992,
+        "aggregate_executed_fps": 3191.379615535423
+      }
+    },
+    "normalization": "full-clip (T-1)*0.1 denominator, no clipping",
+    "control_hz": 50.0,
+    "clip_steps": {
+      "dance1_subject1": 6573,
+      "dance1_subject2": 6573,
+      "dance1_subject3": 6573,
+      "dance2_subject1": 11283,
+      "dance2_subject2": 11283,
+      "dance2_subject3": 11283,
+      "dance2_subject4": 11283,
+      "dance2_subject5": 11283,
+      "fallAndGetUp1_subject1": 8409,
+      "fallAndGetUp1_subject4": 8409,
+      "fallAndGetUp1_subject5": 8409,
+      "fallAndGetUp2_subject2": 8194,
+      "fallAndGetUp2_subject3": 8194,
+      "fallAndGetUp3_subject1": 5108,
+      "fight1_subject2": 12243,
+      "fight1_subject3": 12243,
+      "fight1_subject5": 12243,
+      "fightAndSports1_subject1": 12256,
+      "fightAndSports1_subject4": 12256,
+      "jumps1_subject1": 12221,
+      "jumps1_subject2": 12221,
+      "jumps1_subject5": 12221,
+      "run1_subject2": 11889,
+      "run1_subject5": 11889,
+      "run2_subject1": 12239,
+      "run2_subject4": 12239,
+      "sprint1_subject2": 13654,
+      "sprint1_subject4": 13654,
+      "walk1_subject1": 13064,
+      "walk1_subject2": 13064,
+      "walk1_subject5": 13064,
+      "walk2_subject1": 11908,
+      "walk2_subject3": 11908,
+      "walk2_subject4": 11908,
+      "walk3_subject1": 12329,
+      "walk3_subject2": 12329,
+      "walk3_subject3": 12329,
+      "walk3_subject4": 12329,
+      "walk3_subject5": 12329,
+      "walk4_subject1": 8194
+    },
+    "normalized_return_denominator": 0.1,
+    "aggregate_normalized_return": 0.8530114744132223,
+    "failed_clips": 0,
+    "per_clip_diagnostics": {
+      "dance1_subject1": {
+        "steps": 6573,
+        "alive_steps": 6573,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0022412601695837313,
+          "joint_limit": -5.217516082557719e-05,
+          "motion_body_ang_vel": 0.017448551827848064,
+          "motion_body_lin_vel": 0.018324457787257976,
+          "motion_body_ori": 0.018560688143756728,
+          "motion_body_pos": 0.01971756950900396,
+          "motion_global_root_ori": 0.00983889846369385,
+          "motion_global_root_pos": 0.002516586909941109
+        }
+      },
+      "dance1_subject2": {
+        "steps": 6573,
+        "alive_steps": 6573,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.005514966609044844,
+          "joint_limit": -4.181830273174373e-05,
+          "motion_body_ang_vel": 0.016150680348914977,
+          "motion_body_lin_vel": 0.018311671747177245,
+          "motion_body_ori": 0.0181578067079624,
+          "motion_body_pos": 0.019766757383185417,
+          "motion_global_root_ori": 0.009875932994311247,
+          "motion_global_root_pos": 0.0032296799990446253
+        }
+      },
+      "dance1_subject3": {
+        "steps": 6573,
+        "alive_steps": 6573,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0015278804481176497,
+          "joint_limit": -1.9561428869161583e-05,
+          "motion_body_ang_vel": 0.01838669100702353,
+          "motion_body_lin_vel": 0.019096577841129392,
+          "motion_body_ori": 0.01877369802820933,
+          "motion_body_pos": 0.01981861640952973,
+          "motion_global_root_ori": 0.009888428270734056,
+          "motion_global_root_pos": 0.0029491237945562503
+        }
+      },
+      "dance2_subject1": {
+        "steps": 11283,
+        "alive_steps": 11283,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0036860716571623345,
+          "joint_limit": -7.183950695150145e-05,
+          "motion_body_ang_vel": 0.016923441971334278,
+          "motion_body_lin_vel": 0.01823135819635158,
+          "motion_body_ori": 0.018280458258250157,
+          "motion_body_pos": 0.019706142895672508,
+          "motion_global_root_ori": 0.009847520097154474,
+          "motion_global_root_pos": 0.0017015910199124741
+        }
+      },
+      "dance2_subject2": {
+        "steps": 11283,
+        "alive_steps": 11283,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.00416901969373844,
+          "joint_limit": -5.8458216795639744e-05,
+          "motion_body_ang_vel": 0.01713353041423212,
+          "motion_body_lin_vel": 0.01863187424152453,
+          "motion_body_ori": 0.018310557018104072,
+          "motion_body_pos": 0.01977751480299409,
+          "motion_global_root_ori": 0.009874539629835314,
+          "motion_global_root_pos": 0.0006021532182827838
+        }
+      },
+      "dance2_subject3": {
+        "steps": 11283,
+        "alive_steps": 11283,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0015775225598439104,
+          "joint_limit": -1.9774806536637594e-05,
+          "motion_body_ang_vel": 0.018387567124284812,
+          "motion_body_lin_vel": 0.019101143083382843,
+          "motion_body_ori": 0.018843858061947848,
+          "motion_body_pos": 0.019819511889422194,
+          "motion_global_root_ori": 0.009888929488084702,
+          "motion_global_root_pos": 0.00187133423067283
+        }
+      },
+      "dance2_subject4": {
+        "steps": 11283,
+        "alive_steps": 11283,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.003949772065962802,
+          "joint_limit": -2.8827852210097003e-05,
+          "motion_body_ang_vel": 0.01684961485583523,
+          "motion_body_lin_vel": 0.018314590522192194,
+          "motion_body_ori": 0.01822193242137525,
+          "motion_body_pos": 0.0197201551456636,
+          "motion_global_root_ori": 0.009831455928674406,
+          "motion_global_root_pos": 0.0017368486090559717
+        }
+      },
+      "dance2_subject5": {
+        "steps": 11283,
+        "alive_steps": 11283,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0016044624952375407,
+          "joint_limit": -4.545223562478031e-05,
+          "motion_body_ang_vel": 0.01794551887884524,
+          "motion_body_lin_vel": 0.018693267624994306,
+          "motion_body_ori": 0.018726570018231446,
+          "motion_body_pos": 0.01975341264129102,
+          "motion_global_root_ori": 0.009874642471025374,
+          "motion_global_root_pos": 0.0012553541528787474
+        }
+      },
+      "fallAndGetUp1_subject1": {
+        "steps": 8409,
+        "alive_steps": 8409,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.001730124424449995,
+          "joint_limit": -0.0001451434696887497,
+          "motion_body_ang_vel": 0.01756878919677653,
+          "motion_body_lin_vel": 0.01834594514799361,
+          "motion_body_ori": 0.01756323090690102,
+          "motion_body_pos": 0.01956129006337951,
+          "motion_global_root_ori": 0.009697180244613576,
+          "motion_global_root_pos": 0.0026431533781570127
+        }
+      },
+      "fallAndGetUp1_subject4": {
+        "steps": 8409,
+        "alive_steps": 8409,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0015539309801285836,
+          "joint_limit": -0.00012007569358436897,
+          "motion_body_ang_vel": 0.017700322178481612,
+          "motion_body_lin_vel": 0.018439340065390546,
+          "motion_body_ori": 0.016921254476112566,
+          "motion_body_pos": 0.01945602216784747,
+          "motion_global_root_ori": 0.009580264432178114,
+          "motion_global_root_pos": 0.003377686062627193
+        }
+      },
+      "fallAndGetUp1_subject5": {
+        "steps": 8409,
+        "alive_steps": 8409,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0019358015263825415,
+          "joint_limit": -0.00011963526830341138,
+          "motion_body_ang_vel": 0.017377157846681136,
+          "motion_body_lin_vel": 0.018047870058827267,
+          "motion_body_ori": 0.01732948854479676,
+          "motion_body_pos": 0.019492933982937822,
+          "motion_global_root_ori": 0.009703589493160934,
+          "motion_global_root_pos": 0.0016389685486195137
+        }
+      },
+      "fallAndGetUp2_subject2": {
+        "steps": 8194,
+        "alive_steps": 8194,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.001385646393709498,
+          "joint_limit": -0.0001628132406532303,
+          "motion_body_ang_vel": 0.017795367730571707,
+          "motion_body_lin_vel": 0.01846705191306227,
+          "motion_body_ori": 0.016904679320215353,
+          "motion_body_pos": 0.01943029544057317,
+          "motion_global_root_ori": 0.0095412927842932,
+          "motion_global_root_pos": 0.003799289572156833
+        }
+      },
+      "fallAndGetUp2_subject3": {
+        "steps": 8194,
+        "alive_steps": 8194,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0008373500690157149,
+          "joint_limit": -0.00017840425227334662,
+          "motion_body_ang_vel": 0.018403761722426498,
+          "motion_body_lin_vel": 0.018649659148504853,
+          "motion_body_ori": 0.016524692416481614,
+          "motion_body_pos": 0.019361701643029406,
+          "motion_global_root_ori": 0.00951780773539479,
+          "motion_global_root_pos": 0.004314815478140537
+        }
+      },
+      "fallAndGetUp3_subject1": {
+        "steps": 5108,
+        "alive_steps": 5108,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0014540072823193636,
+          "joint_limit": -0.00010621178946190624,
+          "motion_body_ang_vel": 0.017898625775703746,
+          "motion_body_lin_vel": 0.018464988771289624,
+          "motion_body_ori": 0.017896194439667612,
+          "motion_body_pos": 0.019612045280749127,
+          "motion_global_root_ori": 0.009787929756858604,
+          "motion_global_root_pos": 0.002419410495205372
+        }
+      },
+      "fight1_subject2": {
+        "steps": 12243,
+        "alive_steps": 12243,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0017588707487287015,
+          "joint_limit": -5.209529438668608e-05,
+          "motion_body_ang_vel": 0.01732503047294422,
+          "motion_body_lin_vel": 0.018147774369308065,
+          "motion_body_ori": 0.01849644654675774,
+          "motion_body_pos": 0.019702892265937,
+          "motion_global_root_ori": 0.0098203774286117,
+          "motion_global_root_pos": 0.0020074310436014316
+        }
+      },
+      "fight1_subject3": {
+        "steps": 12243,
+        "alive_steps": 12243,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.00150637918053809,
+          "joint_limit": -3.1083313172632264e-05,
+          "motion_body_ang_vel": 0.01776933464127748,
+          "motion_body_lin_vel": 0.01840023861002444,
+          "motion_body_ori": 0.018379150831316225,
+          "motion_body_pos": 0.019689680577903063,
+          "motion_global_root_ori": 0.009845841576269271,
+          "motion_global_root_pos": 0.0017084036167792336
+        }
+      },
+      "fight1_subject5": {
+        "steps": 12243,
+        "alive_steps": 12243,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0011457948481747493,
+          "joint_limit": -3.3761387104980575e-05,
+          "motion_body_ang_vel": 0.018071927931508178,
+          "motion_body_lin_vel": 0.01865383277462804,
+          "motion_body_ori": 0.018704481230368487,
+          "motion_body_pos": 0.019759865762334357,
+          "motion_global_root_ori": 0.009875680608573712,
+          "motion_global_root_pos": 0.0012285641321495382
+        }
+      },
+      "fightAndSports1_subject1": {
+        "steps": 12256,
+        "alive_steps": 12256,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0016460542469597195,
+          "joint_limit": -6.57293423095635e-05,
+          "motion_body_ang_vel": 0.017581190547181488,
+          "motion_body_lin_vel": 0.018276782480134177,
+          "motion_body_ori": 0.01844020171735576,
+          "motion_body_pos": 0.019652418736471763,
+          "motion_global_root_ori": 0.009852493574802385,
+          "motion_global_root_pos": 0.0010651477783524118
+        }
+      },
+      "fightAndSports1_subject4": {
+        "steps": 12256,
+        "alive_steps": 12256,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0017293931123587001,
+          "joint_limit": -5.176592616766979e-05,
+          "motion_body_ang_vel": 0.018077208040742584,
+          "motion_body_lin_vel": 0.018591173464618495,
+          "motion_body_ori": 0.018426307157522758,
+          "motion_body_pos": 0.01973508336710775,
+          "motion_global_root_ori": 0.009822413281046095,
+          "motion_global_root_pos": 0.000773199800009001
+        }
+      },
+      "jumps1_subject1": {
+        "steps": 12221,
+        "alive_steps": 12221,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0016923028880361974,
+          "joint_limit": -9.823160671667046e-05,
+          "motion_body_ang_vel": 0.017847765182355098,
+          "motion_body_lin_vel": 0.01816904871128533,
+          "motion_body_ori": 0.018953326272916682,
+          "motion_body_pos": 0.01973964237929532,
+          "motion_global_root_ori": 0.009901514814957938,
+          "motion_global_root_pos": 0.0026817617039078343
+        }
+      },
+      "jumps1_subject2": {
+        "steps": 12221,
+        "alive_steps": 12221,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0010668338365784622,
+          "joint_limit": -0.00010262538587201651,
+          "motion_body_ang_vel": 0.01829051561230381,
+          "motion_body_lin_vel": 0.018607493098087628,
+          "motion_body_ori": 0.018101381276815792,
+          "motion_body_pos": 0.01960744531138562,
+          "motion_global_root_ori": 0.009636312695420536,
+          "motion_global_root_pos": 0.0017377964757688351
+        }
+      },
+      "jumps1_subject5": {
+        "steps": 12221,
+        "alive_steps": 12221,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0014090131639624308,
+          "joint_limit": -0.00011941673153211563,
+          "motion_body_ang_vel": 0.018119446433177054,
+          "motion_body_lin_vel": 0.018455966887686963,
+          "motion_body_ori": 0.01869166933811537,
+          "motion_body_pos": 0.019724075879303273,
+          "motion_global_root_ori": 0.009877095311174743,
+          "motion_global_root_pos": 0.0008864261317791349
+        }
+      },
+      "run1_subject2": {
+        "steps": 11889,
+        "alive_steps": 11889,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0018296454216189726,
+          "joint_limit": -2.573542929980225e-05,
+          "motion_body_ang_vel": 0.017641484926423038,
+          "motion_body_lin_vel": 0.018515853441979705,
+          "motion_body_ori": 0.018987220943015453,
+          "motion_body_pos": 0.019748923428991472,
+          "motion_global_root_ori": 0.009896647205767594,
+          "motion_global_root_pos": 0.0018607327782194768
+        }
+      },
+      "run1_subject5": {
+        "steps": 11889,
+        "alive_steps": 11889,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.002089224877253,
+          "joint_limit": -3.95080074734848e-05,
+          "motion_body_ang_vel": 0.017044613642245195,
+          "motion_body_lin_vel": 0.018014450841836335,
+          "motion_body_ori": 0.018749069232208187,
+          "motion_body_pos": 0.019654911480526296,
+          "motion_global_root_ori": 0.009879568754493643,
+          "motion_global_root_pos": 0.0008701787580426331
+        }
+      },
+      "run2_subject1": {
+        "steps": 12239,
+        "alive_steps": 12239,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.002467986319465748,
+          "joint_limit": -4.0149486419608705e-05,
+          "motion_body_ang_vel": 0.01712700254125955,
+          "motion_body_lin_vel": 0.018234831840606484,
+          "motion_body_ori": 0.018750720072088094,
+          "motion_body_pos": 0.019674994938872405,
+          "motion_global_root_ori": 0.009861914431934229,
+          "motion_global_root_pos": 0.0013038939822489
+        }
+      },
+      "run2_subject4": {
+        "steps": 12239,
+        "alive_steps": 12239,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.002667486949016201,
+          "joint_limit": -1.6997746643434983e-05,
+          "motion_body_ang_vel": 0.017173209825160837,
+          "motion_body_lin_vel": 0.018260702485498978,
+          "motion_body_ori": 0.018789935339157297,
+          "motion_body_pos": 0.019647860359143312,
+          "motion_global_root_ori": 0.009881188897963116,
+          "motion_global_root_pos": 0.001901816994738652
+        }
+      },
+      "sprint1_subject2": {
+        "steps": 13654,
+        "alive_steps": 13654,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0016601872186613185,
+          "joint_limit": -1.3695631864141938e-05,
+          "motion_body_ang_vel": 0.018105493717325734,
+          "motion_body_lin_vel": 0.018598933518888826,
+          "motion_body_ori": 0.018975433985447182,
+          "motion_body_pos": 0.019735787155305017,
+          "motion_global_root_ori": 0.009898755314937389,
+          "motion_global_root_pos": 0.0006527931458833295
+        }
+      },
+      "sprint1_subject4": {
+        "steps": 13654,
+        "alive_steps": 13654,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0019995116240152273,
+          "joint_limit": -1.543235467595643e-05,
+          "motion_body_ang_vel": 0.01788835392966564,
+          "motion_body_lin_vel": 0.018224474956805053,
+          "motion_body_ori": 0.018299166782402673,
+          "motion_body_pos": 0.01965752530936329,
+          "motion_global_root_ori": 0.009887092881301922,
+          "motion_global_root_pos": 0.0009158545983294726
+        }
+      },
+      "walk1_subject1": {
+        "steps": 13064,
+        "alive_steps": 13064,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0005036317141630244,
+          "joint_limit": -1.082100277017649e-05,
+          "motion_body_ang_vel": 0.019309558293785598,
+          "motion_body_lin_vel": 0.01943312892503523,
+          "motion_body_ori": 0.019193553902860105,
+          "motion_body_pos": 0.01984616298489706,
+          "motion_global_root_ori": 0.009918898222277903,
+          "motion_global_root_pos": 0.0008645849994096049
+        }
+      },
+      "walk1_subject2": {
+        "steps": 13064,
+        "alive_steps": 13064,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0009744105836400244,
+          "joint_limit": -1.1045217705884138e-05,
+          "motion_body_ang_vel": 0.018770326589421238,
+          "motion_body_lin_vel": 0.01920047234581294,
+          "motion_body_ori": 0.01924757162991293,
+          "motion_body_pos": 0.019858635864628334,
+          "motion_global_root_ori": 0.009912125380745127,
+          "motion_global_root_pos": 0.0029845824175397926
+        }
+      },
+      "walk1_subject5": {
+        "steps": 13064,
+        "alive_steps": 13064,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0008366726416857713,
+          "joint_limit": -4.876672304334733e-05,
+          "motion_body_ang_vel": 0.018627219481835117,
+          "motion_body_lin_vel": 0.018943149253551488,
+          "motion_body_ori": 0.019058089870280848,
+          "motion_body_pos": 0.01979281590405717,
+          "motion_global_root_ori": 0.009899563474374762,
+          "motion_global_root_pos": 0.0011375455380229027
+        }
+      },
+      "walk2_subject1": {
+        "steps": 11908,
+        "alive_steps": 11908,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0016999170822195233,
+          "joint_limit": -6.0544567168684354e-05,
+          "motion_body_ang_vel": 0.01847019273091635,
+          "motion_body_lin_vel": 0.019028428053384196,
+          "motion_body_ori": 0.01890700727459988,
+          "motion_body_pos": 0.019796950951422577,
+          "motion_global_root_ori": 0.009891381087832761,
+          "motion_global_root_pos": 0.0055819701666193775
+        }
+      },
+      "walk2_subject3": {
+        "steps": 11908,
+        "alive_steps": 11908,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0008283509693487347,
+          "joint_limit": -7.326743343143908e-05,
+          "motion_body_ang_vel": 0.018981112804225205,
+          "motion_body_lin_vel": 0.019306212371127444,
+          "motion_body_ori": 0.01874363697919185,
+          "motion_body_pos": 0.019787062956993166,
+          "motion_global_root_ori": 0.009889557999374172,
+          "motion_global_root_pos": 0.003428502116846807
+        }
+      },
+      "walk2_subject4": {
+        "steps": 11908,
+        "alive_steps": 11908,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0009624495149647331,
+          "joint_limit": -6.3575209348517615e-06,
+          "motion_body_ang_vel": 0.01909509901777904,
+          "motion_body_lin_vel": 0.019433442611495384,
+          "motion_body_ori": 0.019166596728600098,
+          "motion_body_pos": 0.019859448202463666,
+          "motion_global_root_ori": 0.00992783451811678,
+          "motion_global_root_pos": 0.0029638722910875297
+        }
+      },
+      "walk3_subject1": {
+        "steps": 12329,
+        "alive_steps": 12329,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0009043680593261322,
+          "joint_limit": -4.740162032858395e-05,
+          "motion_body_ang_vel": 0.01906386162438026,
+          "motion_body_lin_vel": 0.019369232782474478,
+          "motion_body_ori": 0.018888544364455327,
+          "motion_body_pos": 0.019811692896084306,
+          "motion_global_root_ori": 0.009901237086589266,
+          "motion_global_root_pos": 0.005323840804190308
+        }
+      },
+      "walk3_subject2": {
+        "steps": 12329,
+        "alive_steps": 12329,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0007934368043677019,
+          "joint_limit": -1.5848193846847206e-05,
+          "motion_body_ang_vel": 0.019045273779705663,
+          "motion_body_lin_vel": 0.019380158006507983,
+          "motion_body_ori": 0.019325964559213756,
+          "motion_body_pos": 0.019877958272590052,
+          "motion_global_root_ori": 0.009934039910795509,
+          "motion_global_root_pos": 0.001771270286025897
+        }
+      },
+      "walk3_subject3": {
+        "steps": 12329,
+        "alive_steps": 12329,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0005092649688881194,
+          "joint_limit": -5.425524267810195e-05,
+          "motion_body_ang_vel": 0.019003825856021304,
+          "motion_body_lin_vel": 0.018720780816629045,
+          "motion_body_ori": 0.017357305727986095,
+          "motion_body_pos": 0.019044142870235637,
+          "motion_global_root_ori": 0.009575855505860232,
+          "motion_global_root_pos": 0.0011395591634693952
+        }
+      },
+      "walk3_subject4": {
+        "steps": 12329,
+        "alive_steps": 12329,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0009379697708489644,
+          "joint_limit": -1.5701152441882442e-05,
+          "motion_body_ang_vel": 0.019116777022007297,
+          "motion_body_lin_vel": 0.019496855495808957,
+          "motion_body_ori": 0.019059570013321932,
+          "motion_body_pos": 0.019827495592336063,
+          "motion_global_root_ori": 0.009903134249065545,
+          "motion_global_root_pos": 0.005290731719913491
+        }
+      },
+      "walk3_subject5": {
+        "steps": 12329,
+        "alive_steps": 12329,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0005610875619513459,
+          "joint_limit": -0.00013491938017827574,
+          "motion_body_ang_vel": 0.01890939747247963,
+          "motion_body_lin_vel": 0.019135516198146966,
+          "motion_body_ori": 0.019121585310929227,
+          "motion_body_pos": 0.019849495619163188,
+          "motion_global_root_ori": 0.009883031129921036,
+          "motion_global_root_pos": 0.0048181417157671024
+        }
+      },
+      "walk4_subject1": {
+        "steps": 8194,
+        "alive_steps": 8194,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.0006352899932276967,
+          "joint_limit": -1.1323672390769973e-05,
+          "motion_body_ang_vel": 0.01933512168208786,
+          "motion_body_lin_vel": 0.019615707281828727,
+          "motion_body_ori": 0.019188852600429605,
+          "motion_body_pos": 0.019855912778438345,
+          "motion_global_root_ori": 0.009917893369807385,
+          "motion_global_root_pos": 0.00415628799199195
+        }
+      }
+    },
+    "clip_subset": null,
+    "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+    "robot_dof": 29,
+    "hardware_report": "torch.cuda.is_available              : True\ntorch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition\ntorch.cuda.get_device_capability(0)  : (12, 0) (sm_120)\nwarp CUDA devices                    : ['cuda:0']\nmjlab runtime device                 : cuda:0\nMuJoCo Warp simulation backend       : mujoco_warp\nwarp device / arch                   : cuda:0 / 120\nCUDA runtime / driver                : 13.0 / 580.82.07\nCUDA graph step captured             : True\nphysics state array device           : cuda:0\ntarget GPU RTX PRO 6000 / sm_120     : True / True",
+    "runtime_parity": {
+      "status": "SKIPPED"
+    },
+    "evaluation_wall_s": 165.2416090910001,
+    "cuda_init_s": 0.9075217170002361,
+    "version_drift": {},
+    "fast_eval": {
+      "implementation": "benchmark/v2/batched.py",
+      "option": "B_batched_simulation",
+      "workers": "batched(num_envs=40)",
+      "batch_envs": 40,
+      "batch_resolution": {
+        "batch_envs": 40,
+        "mode": "auto",
+        "vram_free_mib": 96691.875,
+        "n_clips": 40
+      },
+      "policy_backend": "nablamimic_gpu",
+      "eval_wall_s": 165.2416090910001,
+      "rollout_wall_s": 138.2098193059992,
+      "total_control_steps": 441080,
+      "executed_control_steps": 441080,
+      "aggregate_steps_per_s": 2669.3034667623765,
+      "steady_aggregate_steps_per_s": 3198.403380757425,
+      "parts_dir": "/content/v2_parts/it_002250"
+    }
+  },
+  "mode": "benchmark",
+  "report_scope": "acceptance"
+}

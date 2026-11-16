@@ -1,0 +1,204 @@
+{
+  "rows": [
+    {
+      "clip": "dance1_subject1",
+      "offset_mean": -6.549384458606484e-09,
+      "offset_std": 1.5418810420985428e-06
+    },
+    {
+      "clip": "dance1_subject2",
+      "offset_mean": 1.4313719525810483e-09,
+      "offset_std": 9.398708842101291e-07
+    },
+    {
+      "clip": "dance1_subject3",
+      "offset_mean": -1.491057600839642e-08,
+      "offset_std": 1.0560586502858064e-06
+    },
+    {
+      "clip": "dance2_subject1",
+      "offset_mean": 1.1378288212041781e-08,
+      "offset_std": 2.5466466935861283e-06
+    },
+    {
+      "clip": "dance2_subject2",
+      "offset_mean": 1.6097131209157565e-08,
+      "offset_std": 1.879888611490595e-06
+    },
+    {
+      "clip": "dance2_subject3",
+      "offset_mean": 2.029801577880058e-08,
+      "offset_std": 1.870144654154678e-06
+    },
+    {
+      "clip": "dance2_subject4",
+      "offset_mean": 1.6527653700753384e-08,
+      "offset_std": 2.4147214666551348e-06
+    },
+    {
+      "clip": "dance2_subject5",
+      "offset_mean": 1.3743531766814154e-08,
+      "offset_std": 2.486380215561552e-06
+    },
+    {
+      "clip": "fallAndGetUp1_subject1",
+      "offset_mean": 1.026335065375156e-09,
+      "offset_std": 1.5045684792691007e-06
+    },
+    {
+      "clip": "fallAndGetUp1_subject4",
+      "offset_mean": 3.0661526104840926e-09,
+      "offset_std": 1.1825260685478497e-06
+    },
+    {
+      "clip": "fallAndGetUp1_subject5",
+      "offset_mean": -2.1564889754193966e-08,
+      "offset_std": 1.521783344544258e-06
+    },
+    {
+      "clip": "fallAndGetUp2_subject2",
+      "offset_mean": 1.8739538417613464e-08,
+      "offset_std": 1.8464969673522553e-06
+    },
+    {
+      "clip": "fallAndGetUp2_subject3",
+      "offset_mean": -3.286377781079786e-08,
+      "offset_std": 1.3288670100923826e-06
+    },
+    {
+      "clip": "fallAndGetUp3_subject1",
+      "offset_mean": 6.725003048742781e-09,
+      "offset_std": 9.240745027912745e-07
+    },
+    {
+      "clip": "fight1_subject2",
+      "offset_mean": 3.367315945505728e-08,
+      "offset_std": 1.8640905210987821e-06
+    },
+    {
+      "clip": "fight1_subject3",
+      "offset_mean": 2.341299236836451e-09,
+      "offset_std": 2.210435517659726e-06
+    },
+    {
+      "clip": "fight1_subject5",
+      "offset_mean": -7.597633994550703e-09,
+      "offset_std": 1.555851819461407e-06
+    },
+    {
+      "clip": "fightAndSports1_subject1",
+      "offset_mean": -1.5771463482748616e-08,
+      "offset_std": 2.4096291650062494e-06
+    },
+    {
+      "clip": "fightAndSports1_subject4",
+      "offset_mean": -2.0949796627383515e-09,
+      "offset_std": 1.6337691263966017e-06
+    },
+    {
+      "clip": "jumps1_subject1",
+      "offset_mean": 3.399429478220478e-08,
+      "offset_std": 2.0008637365398085e-06
+    },
+    {
+      "clip": "jumps1_subject2",
+      "offset_mean": -1.7858098489684797e-08,
+      "offset_std": 1.4862894817063386e-06
+    },
+    {
+      "clip": "jumps1_subject5",
+      "offset_mean": 1.647749896953485e-08,
+      "offset_std": 2.1703684246014533e-06
+    },
+    {
+      "clip": "run1_subject2",
+      "offset_mean": -8.096824487191025e-09,
+      "offset_std": 1.5468592107928205e-06
+    },
+    {
+      "clip": "run1_subject5",
+      "offset_mean": 3.928418855484051e-08,
+      "offset_std": 1.7834509651947852e-06
+    },
+    {
+      "clip": "run2_subject1",
+      "offset_mean": 1.3268825468572413e-08,
+      "offset_std": 1.8381556853955116e-06
+    },
+    {
+      "clip": "run2_subject4",
+      "offset_mean": -2.199122687322471e-08,
+      "offset_std": 1.7166751319277297e-06
+    },
+    {
+      "clip": "sprint1_subject2",
+      "offset_mean": 7.050102559194775e-10,
+      "offset_std": 1.1377357061041351e-06
+    },
+    {
+      "clip": "sprint1_subject4",
+      "offset_mean": -3.432117367458267e-08,
+      "offset_std": 1.2100112691069224e-06
+    },
+    {
+      "clip": "walk1_subject1",
+      "offset_mean": 3.013452459305769e-09,
+      "offset_std": 7.975338428565069e-07
+    },
+    {
+      "clip": "walk1_subject2",
+      "offset_mean": 3.623804848074557e-09,
+      "offset_std": 1.31953729890366e-06
+    },
+    {
+      "clip": "walk1_subject5",
+      "offset_mean": 1.6162904694462017e-08,
+      "offset_std": 1.088073684677251e-06
+    },
+    {
+      "clip": "walk2_subject1",
+      "offset_mean": 1.0478120020197992e-08,
+      "offset_std": 1.5082153976108053e-06
+    },
+    {
+      "clip": "walk2_subject3",
+      "offset_mean": -7.234704346330603e-08,
+      "offset_std": 1.48913835625551e-06
+    },
+    {
+      "clip": "walk2_subject4",
+      "offset_mean": 1.5732451211925463e-08,
+      "offset_std": 1.3192756869572962e-06
+    },
+    {
+      "clip": "walk3_subject1",
+      "offset_mean": 1.0774680317555515e-08,
+      "offset_std": 1.4595938223790557e-06
+    },
+    {
+      "clip": "walk3_subject2",
+      "offset_mean": -2.602560538723587e-08,
+      "offset_std": 1.3194358262995887e-06
+    },
+    {
+      "clip": "walk3_subject3",
+      "offset_mean": -7.679255964062828e-09,
+      "offset_std": 9.58056660914499e-07
+    },
+    {
+      "clip": "walk3_subject4",
+      "offset_mean": -7.187189687743805e-09,
+      "offset_std": 1.0056410688906472e-06
+    },
+    {
+      "clip": "walk3_subject5",
+      "offset_mean": 9.749631387885885e-11,
+      "offset_std": 7.111612957387283e-07
+    },
+    {
+      "clip": "walk4_subject1",
+      "offset_mean": 1.1297542821110011e-08,
+      "offset_std": 5.573275116678473e-07
+    }
+  ]
+}

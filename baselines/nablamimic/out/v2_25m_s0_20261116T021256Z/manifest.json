@@ -1,0 +1,165 @@
+{
+ "experiment_id": "v2_25m_s0_20261116T021256Z",
+ "algorithm": "NablaMimic",
+ "git_sha": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+ "engine": "NablaEngine (nablaengine[jax] @ c61a6fe7f5ec47c7f4f9b0a4c055d60cbe40807c)",
+ "seed": 0,
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "model": "G1 29-DoF (Menagerie unitree_g1/scene_mjx.xml @ f3b6013, 31 bodies / 502 contact pairs)",
+ "training_time_min": 24.97,
+ "updates": 3936,
+ "normalized_return": null,
+ "failed_clips": null,
+ "budget_checkpoint": "it_3750",
+ "last_checkpoint": null,
+ "drive_path": "/content/drive/MyDrive/supermimic/nablamimic/runs/v2_25m_s0_20261116T021256Z",
+ "status": "INCOMPLETE",
+ "config_fingerprint": "889f4daf4a5b7bc6",
+ "eval_protocol_fingerprint": "d4392e99c7cb7374",
+ "integrity_problems": [
+  "no evaluated checkpoint"
+ ],
+ "integrity_facts": {},
+ "physics": "engine",
+ "residual_action": true,
+ "actor_ema": 0.999,
+ "hours_effective": 0.41667,
+ "checkpoint_curve": [
+  {
+   "iter": 0,
+   "wall_min": 0.02,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.3744380474090576,
+   "term_rate": 0.022670745849609375
+  },
+  {
+   "iter": 250,
+   "wall_min": 1.62,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.6045236587524414,
+   "term_rate": 0.00254058837890625
+  },
+  {
+   "iter": 500,
+   "wall_min": 3.2,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.6949520111083984,
+   "term_rate": 0.000518798828125
+  },
+  {
+   "iter": 750,
+   "wall_min": 4.79,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7222703099250793,
+   "term_rate": 0.000186920166015625
+  },
+  {
+   "iter": 1000,
+   "wall_min": 6.37,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7340661287307739,
+   "term_rate": 0.00022125244140625
+  },
+  {
+   "iter": 1250,
+   "wall_min": 7.95,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7563154697418213,
+   "term_rate": 0.000152587890625
+  },
+  {
+   "iter": 1500,
+   "wall_min": 9.54,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7720813751220703,
+   "term_rate": 0.00016021728515625
+  },
+  {
+   "iter": 1750,
+   "wall_min": 11.13,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7776584625244141,
+   "term_rate": 0.000125885009765625
+  },
+  {
+   "iter": 2000,
+   "wall_min": 12.71,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7827082872390747,
+   "term_rate": 0.000141143798828125
+  },
+  {
+   "iter": 2250,
+   "wall_min": 14.3,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7865767478942871,
+   "term_rate": 0.00012969970703125
+  },
+  {
+   "iter": 2500,
+   "wall_min": 15.88,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7944167256355286,
+   "term_rate": 6.103515625e-05
+  },
+  {
+   "iter": 2750,
+   "wall_min": 17.47,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7988910675048828,
+   "term_rate": 9.918212890625e-05
+  },
+  {
+   "iter": 3000,
+   "wall_min": 19.06,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.7997531294822693,
+   "term_rate": 9.1552734375e-05
+  },
+  {
+   "iter": 3250,
+   "wall_min": 20.65,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.8052129745483398,
+   "term_rate": 3.814697265625e-05
+  },
+  {
+   "iter": 3500,
+   "wall_min": 22.24,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.8045280575752258,
+   "term_rate": 6.866455078125e-05
+  },
+  {
+   "iter": 3750,
+   "wall_min": 23.83,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": 0.8032241463661194,
+   "term_rate": 6.866455078125e-05
+  },
+  {
+   "iter": 3936,
+   "wall_min": 0.0,
+   "full_norm_return": "",
+   "failed_frac": "",
+   "rew_mean": "",
+   "term_rate": ""
+  }
+ ]
+}

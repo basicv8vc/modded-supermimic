@@ -1,0 +1,717 @@
+{
+  "acceptance_status": "BLOCKED_TARGET_HARDWARE",
+  "checked_at_utc": "2026-11-12T07:02:29Z",
+  "checks": {
+    "cpu_fallback_rejection": {
+      "checks": {
+        "cpu_device_string_rejected": true,
+        "cpu_fallback_is_opt_in_only": true,
+        "cpu_warp_state_rejected": true
+      },
+      "status": "PASS"
+    },
+    "frame_alignment": {
+      "checks": {
+        "control_dt_matches_oracle": true,
+        "env_ref_index_matches_command": true,
+        "first_scored_frame_is_1": true,
+        "frame_advances_by_one": true,
+        "full_clip_frames_match_motion": true,
+        "policy_index_matches_command": true,
+        "time_s_matches_dt": true,
+        "v2_matches_v1_pr13_frame_semantics": true
+      },
+      "status": "PASS"
+    },
+    "identity_v1": {
+      "checks": {
+        "clip_count_40": true,
+        "evaluator_implementation": true,
+        "protocol_id": true,
+        "v1_cpu_evaluator_unchanged": true,
+        "v1_protocol_unchanged": true,
+        "v2_protocol_sha_frozen": true
+      },
+      "status": "PASS"
+    },
+    "reference_reanchor": {
+      "checks": {
+        "anchor_is_torso_link": true,
+        "body_count_matches_spec": true,
+        "rel_pos_matches_mjlab_buffer": true,
+        "rel_quat_matches_mjlab_buffer": true,
+        "robot_anchor_body_is_torso_link": true,
+        "termination_root_is_pelvis": true
+      },
+      "status": "PASS"
+    },
+    "reward": {
+      "checks": {
+        "action_history_matches": true,
+        "all_8_terms_present": true,
+        "body_indexing_match": true,
+        "dt_scaling_match": true,
+        "frame_alignment": true,
+        "joint_soft_limits_dim": true,
+        "reward_scaled_by_dt": true,
+        "root_anchor_match": true,
+        "soft_limit_factor_match": true,
+        "tolerance": true,
+        "weights_match": true
+      },
+      "status": "PASS"
+    },
+    "termination": {
+      "checks": {
+        "all_boundary_cases_match": true,
+        "anchor_terms_absent": true,
+        "clip_end_is_time_out_success": true,
+        "clip_end_success_not_a_failure": true,
+        "ee_body_pos_absent": true,
+        "pelvis_glue_present": true,
+        "self_collision_physics_contact_sensor_present": true,
+        "self_collision_reward_penalty_absent": true,
+        "termination_uses_current_reference_frame": true,
+        "thresholds_match_spec": true,
+        "torso_anchor_not_used_for_termination": true
+      },
+      "status": "PASS"
+    }
+  },
+  "clip": "walk1_subject1",
+  "device_requested": "cuda:0",
+  "errors": [],
+  "frame_alignment": {
+    "checks": {
+      "control_dt_matches_oracle": true,
+      "env_ref_index_matches_command": true,
+      "first_scored_frame_is_1": true,
+      "frame_advances_by_one": true,
+      "full_clip_frames_match_motion": true,
+      "policy_index_matches_command": true,
+      "time_s_matches_dt": true,
+      "v2_matches_v1_pr13_frame_semantics": true
+    },
+    "details": {
+      "control_dt": 0.02,
+      "first_scored_reference_frame": 1,
+      "frame_0_is_initial_condition_only": true,
+      "full_clip_frames": 13065,
+      "motion_time_step_total": 13065,
+      "pr13_frame_semantics_documented_in_v1": true,
+      "scored_control_steps_full_clip": 13064
+    },
+    "observed": [
+      {
+        "command_frame": 1,
+        "env_ref_index": 1,
+        "policy_reference_index": 1,
+        "step": 0,
+        "time_s": 0.0
+      },
+      {
+        "command_frame": 2,
+        "env_ref_index": 2,
+        "policy_reference_index": 2,
+        "step": 1,
+        "time_s": 0.02
+      },
+      {
+        "command_frame": 3,
+        "env_ref_index": 3,
+        "policy_reference_index": 3,
+        "step": 2,
+        "time_s": 0.04
+      }
+    ],
+    "status": "PASS"
+  },
+  "hardware": "torch.cuda.is_available              : True\ntorch.cuda.get_device_name(0)        : NVIDIA A100-SXM4-40GB\ntorch.cuda.get_device_capability(0)  : (8, 0) (sm_80)\nwarp CUDA devices                    : ['cuda:0']\nmjlab runtime device                 : cuda:0\nMuJoCo Warp simulation backend       : mujoco_warp\nwarp device / arch                   : cuda:0 / 80\nCUDA runtime / driver                : 13.0 / 580.82.07\nCUDA graph step captured             : True\nphysics state array device           : cuda:0\ntarget GPU RTX PRO 6000 / sm_120     : False / False",
+  "kernel_execution": {
+    "kernel_execution_wall_s": 0.2918300300000283,
+    "qpos_finite_after_step": true,
+    "qpos_max_abs_delta": 0.11042606830596924,
+    "state_advanced_by_gpu_kernel": true,
+    "torch_max_memory_allocated_bytes": 33062400,
+    "torch_memory_allocated_bytes": 33053184
+  },
+  "no_cpu_fallback": true,
+  "performance": {
+    "bottleneck": "physics",
+    "first_step_is_jit_cold_start": true,
+    "first_step_wall_s": 0.016097833000003448,
+    "manual_reset_wall_s": 0.06845881799984,
+    "manual_resets": 4,
+    "note": "steady_simulation_fps = V2TrackingEnv.step (numpy I/O included); sim_step_fps = raw mjlab env.step with a CUDA-resident action. Both exclude CUDA init, env build, reference load and kernel JIT.",
+    "policy_glue_overhead_s_per_step": 0.0008999824111097267,
+    "sim_step_fps": 63.15805619985886,
+    "sim_step_steps": 180,
+    "sim_step_wall_s_mean": 0.01583329285555553,
+    "steady_simulation_fps": 59.76116355368413,
+    "steady_steps": 180,
+    "steady_wall_s": 3.0119895479997467,
+    "step_wall_s_max": 0.018050797000000784,
+    "step_wall_s_mean": 0.016775262245000134,
+    "steps": 200,
+    "total_rollout_wall_s": 3.4381731280000167,
+    "warmup_steps": 20,
+    "warmup_wall_s": 0.34306290100028036
+  },
+  "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+  "report_scope": "preflight",
+  "reward_max_abs_error": 5.0000247267187325e-09,
+  "reward_max_rel_error": 3.5058971895907606e-06,
+  "reward_per_term_max_abs_error": {
+    "action_rate_l2": 2.2231794882679803e-11,
+    "joint_limit": 5.960464483090178e-10,
+    "motion_body_ang_vel": 2.2978828024405873e-09,
+    "motion_body_lin_vel": 2.1068886097569406e-09,
+    "motion_body_ori": 2.800250449921937e-09,
+    "motion_body_pos": 2.2853942852757436e-09,
+    "motion_global_root_ori": 5.0000247267187325e-09,
+    "motion_global_root_pos": 1.168563008510648e-09
+  },
+  "reward_static": {
+    "action_history_prev_matches_previous_step": true,
+    "anchor_body_name": "torso_link",
+    "anchor_index_oracle": 7,
+    "anchor_index_runtime": 7,
+    "body_names_oracle": [
+      "pelvis",
+      "left_hip_roll_link",
+      "left_knee_link",
+      "left_ankle_roll_link",
+      "right_hip_roll_link",
+      "right_knee_link",
+      "right_ankle_roll_link",
+      "torso_link",
+      "left_shoulder_roll_link",
+      "left_elbow_link",
+      "left_wrist_yaw_link",
+      "right_shoulder_roll_link",
+      "right_elbow_link",
+      "right_wrist_yaw_link"
+    ],
+    "body_names_runtime": [
+      "pelvis",
+      "left_hip_roll_link",
+      "left_knee_link",
+      "left_ankle_roll_link",
+      "right_hip_roll_link",
+      "right_knee_link",
+      "right_ankle_roll_link",
+      "torso_link",
+      "left_shoulder_roll_link",
+      "left_elbow_link",
+      "left_wrist_yaw_link",
+      "right_shoulder_roll_link",
+      "right_elbow_link",
+      "right_wrist_yaw_link"
+    ],
+    "dt_oracle": 0.02,
+    "dt_runtime": 0.02,
+    "executed_steps": 200,
+    "joint_soft_limits_shape": [
+      1,
+      29,
+      2
+    ],
+    "oracle_expected_value_source": "benchmark.v2.spec.reward_terms_from_relative_reference (independent math)",
+    "per_term_max_abs_error": {
+      "action_rate_l2": 2.2231794882679803e-11,
+      "joint_limit": 5.960464483090178e-10,
+      "motion_body_ang_vel": 2.2978828024405873e-09,
+      "motion_body_lin_vel": 2.1068886097569406e-09,
+      "motion_body_ori": 2.800250449921937e-09,
+      "motion_body_pos": 2.2853942852757436e-09,
+      "motion_global_root_ori": 5.0000247267187325e-09,
+      "motion_global_root_pos": 1.168563008510648e-09
+    },
+    "per_term_max_rel_error": {
+      "action_rate_l2": 1.7863598952135982e-07,
+      "joint_limit": 1.1129591173122695e-07,
+      "motion_body_ang_vel": 1.0246135205872793e-06,
+      "motion_body_lin_vel": 5.28660142062211e-07,
+      "motion_body_ori": 3.5058971895907606e-06,
+      "motion_body_pos": 3.055692633875222e-07,
+      "motion_global_root_ori": 2.313771814181316e-06,
+      "motion_global_root_pos": 3.9718869235659483e-07
+    },
+    "reference_frame_after_steps": 21,
+    "reference_frame_before_first_step": 1,
+    "relative_reference_source": "MotionCommand.body_pos_relative_w / body_quat_relative_w (CUDA buffers)",
+    "reward_manager_scale_by_dt": true,
+    "reward_reference_frames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "reward_term_names_oracle": [
+      "motion_global_root_pos",
+      "motion_global_root_ori",
+      "motion_body_pos",
+      "motion_body_ori",
+      "motion_body_lin_vel",
+      "motion_body_ang_vel",
+      "action_rate_l2",
+      "joint_limit"
+    ],
+    "reward_term_names_runtime": [
+      "motion_global_root_pos",
+      "motion_global_root_ori",
+      "motion_body_pos",
+      "motion_body_ori",
+      "motion_body_lin_vel",
+      "motion_body_ang_vel",
+      "action_rate_l2",
+      "joint_limit"
+    ],
+    "robot_anchor_index_runtime": 15,
+    "soft_limit_factor_constants": 0.9,
+    "soft_limit_factor_oracle": 0.9,
+    "termination_root": "pelvis",
+    "weights_oracle": {
+      "action_rate_l2": -0.1,
+      "joint_limit": -2.0,
+      "motion_body_ang_vel": 1.0,
+      "motion_body_lin_vel": 1.0,
+      "motion_body_ori": 1.0,
+      "motion_body_pos": 1.0,
+      "motion_global_root_ori": 0.5,
+      "motion_global_root_pos": 0.5
+    },
+    "weights_runtime": {
+      "action_rate_l2": -0.1,
+      "joint_limit": -2.0,
+      "motion_body_ang_vel": 1.0,
+      "motion_body_lin_vel": 1.0,
+      "motion_body_ori": 1.0,
+      "motion_body_pos": 1.0,
+      "motion_global_root_ori": 0.5,
+      "motion_global_root_pos": 0.5
+    }
+  },
+  "runtime": {
+    "env_device": "cuda:0",
+    "graph_capture_status": "captured",
+    "mujoco_warp_data_class": "mujoco_warp._src.types.Data",
+    "no_cpu_fallback": true,
+    "sim_device": "cuda:0",
+    "simulation_backend": "mujoco_warp",
+    "simulation_class": "mjlab.sim.sim.Simulation",
+    "step_graph_captured": true,
+    "use_cuda_graph": true,
+    "warnings": [],
+    "warp_device": "cuda:0",
+    "warp_device_arch": 80,
+    "warp_device_is_cuda": true,
+    "wp_data_is_mjwarp": true,
+    "wp_data_qpos_device": "cuda:0",
+    "wp_data_qpos_is_cuda": true
+  },
+  "sm_120_confirmed": false,
+  "source_fingerprint": {
+    "benchmark/v2/config.py": "b1d23f4ca28de1499309e5295023734a21dd76c37cd48cdd1ca313bee091ea59",
+    "benchmark/v2/parity.py": "83ce32fb85702633f26b6009ac0a4566c9aef0848d3b4f8e0af777812f16b0bf",
+    "benchmark/v2/runner.py": "1012189bbaf96d255737ad3eb8311c20424a4550aa6433f955366d2f05999c59",
+    "benchmark/v2/runtime.py": "dc47e2badca628b1e0066fe1d3cfeeed9f9451effd64d0d1e1fb831472fe0716",
+    "benchmark/v2/spec.py": "c6ba78b9811d3308994f1b3c4cbd4ce198331b063b4697f4af67e59b76354ed4",
+    "combined": "16abd9996382b533157dc3534d982499dc884a7e7097b8c24ae88807802c12ae",
+    "scripts/v2/gpu_runtime_check.py": "5c4074c1a78ef6a38e1d83737246c87649c0d157ab606f9d6e30c9211e908ad4",
+    "scripts/v2/run_eval.py": "d1d0c49af038713b0e5463bd8157526c268ece52dafbc282ab791e60a6843167"
+  },
+  "status": "PASS",
+  "target_gpu_match": false,
+  "target_hardware_met": false,
+  "telemetry": {
+    "cpu_utilization_pct": {
+      "max": 33.7,
+      "mean": 11.77843137254902,
+      "min": 8.9
+    },
+    "gpu_memory_used_mib": {
+      "max": 658.0,
+      "mean": 404.9019607843137,
+      "min": 6.0
+    },
+    "gpu_utilization_pct": {
+      "max": 43.0,
+      "mean": 19.235294117647058,
+      "min": 0.0
+    },
+    "interval_s": 0.4,
+    "samples": 51
+  },
+  "termination_cases": [
+    {
+      "case": "normal",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "oracle_reasons": []
+    },
+    {
+      "case": "height_0.249_below_threshold",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "oracle_reasons": []
+    },
+    {
+      "case": "height_exactly_0.25_strict_gt",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "oracle_reasons": []
+    },
+    {
+      "case": "height_0.251_above_threshold",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": true,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": true,
+        "root_tilt": false
+      },
+      "oracle_reasons": [
+        "root_height"
+      ]
+    },
+    {
+      "case": "height_negative_minus_0.251",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": true,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": true,
+        "root_tilt": false
+      },
+      "oracle_reasons": [
+        "root_height"
+      ]
+    },
+    {
+      "case": "tilt_0.79_below_threshold",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "oracle_reasons": []
+    },
+    {
+      "case": "tilt_exactly_0.8_strict_gt",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "oracle_reasons": []
+    },
+    {
+      "case": "tilt_0.81_above_threshold",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": true
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": true
+      },
+      "oracle_reasons": [
+        "root_tilt"
+      ]
+    },
+    {
+      "case": "nonfinite_qpos",
+      "glue_on_cuda": {
+        "nonfinite": true,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": true,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "oracle_reasons": [
+        "nonfinite"
+      ]
+    },
+    {
+      "case": "wrist_ankle_deviation_only",
+      "glue_on_cuda": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "match": true,
+      "oracle": {
+        "nonfinite": false,
+        "root_height": false,
+        "root_tilt": false
+      },
+      "oracle_reasons": []
+    }
+  ],
+  "timing": {
+    "cuda_env_build_s": 10.877680850999923,
+    "cuda_init_probe_s": 0.03296723699997983,
+    "first_kernel_jit_wall_s": 0.29288016099997094,
+    "reference_load_s": 0.15527695499997662,
+    "total_wall_s": 22.733477552000068
+  },
+  "version_drift": {},
+  "versions": {
+    "mjlab": "1.6.0",
+    "mujoco": "3.11.0",
+    "mujoco_warp": "3.11.0",
+    "torch": "2.14.1+cu130",
+    "warp_lang": "1.16.0"
+  }
+}

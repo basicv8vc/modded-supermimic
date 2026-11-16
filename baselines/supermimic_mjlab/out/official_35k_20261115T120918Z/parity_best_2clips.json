@@ -1,0 +1,56 @@
+{
+  "a": {
+    "path": "/content/gptfiles/research/modded-supermimic/reports/v2/_parity_official_35k_20261115T120918Z_serial_2clips.json",
+    "algorithm": "SuperMimic-official-gencoord-proprio",
+    "workers": 2
+  },
+  "b": {
+    "path": "/content/gptfiles/research/modded-supermimic/reports/v2/_parity_official_35k_20261115T120918Z_batched_2clips.json",
+    "algorithm": "SuperMimic-official-gencoord-proprio",
+    "workers": "batched(num_envs=2)"
+  },
+  "tol_return": 0.01,
+  "tol_terms": 0.01,
+  "clips_compared": 2,
+  "clips_mismatched": 0,
+  "max_abs_return_diff": 0.005828357248613303,
+  "max_abs_term_diff": 0.0006134674732816861,
+  "aggregate_return_a": 0.8644747973943027,
+  "aggregate_return_b": 0.867187073014991,
+  "abs_aggregate_diff": 0.0027122756206883203,
+  "verdict": "PASS",
+  "per_clip": [
+    {
+      "clip": "dance1_subject1",
+      "return_a": 0.8412452885096391,
+      "return_b": 0.8408414825024024,
+      "abs_return_diff": 0.00040380600723666227,
+      "failed_a": false,
+      "failed_b": false,
+      "alive_steps_a": 6573,
+      "alive_steps_b": 6573,
+      "fall_step_a": null,
+      "fall_step_b": null,
+      "fall_terms_a": [],
+      "fall_terms_b": [],
+      "max_abs_term_diff": 1.4678051766820605e-05,
+      "match": true
+    },
+    {
+      "clip": "walk1_subject1",
+      "return_a": 0.8877043062789662,
+      "return_b": 0.8935326635275795,
+      "abs_return_diff": 0.005828357248613303,
+      "failed_a": false,
+      "failed_b": false,
+      "alive_steps_a": 13064,
+      "alive_steps_b": 13064,
+      "fall_step_a": null,
+      "fall_step_b": null,
+      "fall_terms_a": [],
+      "fall_terms_b": [],
+      "max_abs_term_diff": 0.0006134674732816861,
+      "match": true
+    }
+  ]
+}

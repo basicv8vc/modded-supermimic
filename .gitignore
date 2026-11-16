@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+.DS_Store
+data/
+runs/
+checkpoints/
+submissions/
+leaderboard.csv
+.tmp/
+_test_actor_*.npz
+.workbuddy/
+_test_policy_*
+_test_actor_*

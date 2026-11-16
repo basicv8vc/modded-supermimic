@@ -1,0 +1,906 @@
+{
+  "checkpoint_sha256": "93bc5c43185d21f4ca9be7cde526d313c0cf71fcee4ef46c26ff6e29c23955e7",
+  "max_step_reward": 0.1,
+  "termination_thresholds": {
+    "anchor_pos_m": 0.25,
+    "anchor_ori": 0.8,
+    "ee_body_pos_m": 0.25
+  },
+  "clips": [
+    {
+      "clip": "dance1_subject1",
+      "steps": 6573,
+      "alive_steps": 3617,
+      "failed": true,
+      "fall_step": 3617,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.3043916280993088,
+      "tracking_rate_alive": 0.08067615038202712,
+      "self_collision_rate_alive": -0.023555432679015772,
+      "self_collision_cost_alive": -0.004711086535803154,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.14594833755329978,
+        "right_ankle_roll_link": 0.2945141623916212,
+        "left_wrist_yaw_link": 0.13703007196001715,
+        "right_wrist_yaw_link": 0.11601027990447033
+      }
+    },
+    {
+      "clip": "dance1_subject2",
+      "steps": 6573,
+      "alive_steps": 1708,
+      "failed": true,
+      "fall_step": 1708,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_ankle_roll_link"
+      ],
+      "normalized_return": 0.13479602848464256,
+      "tracking_rate_alive": 0.08233839699111947,
+      "self_collision_rate_alive": -0.028220140515222487,
+      "self_collision_cost_alive": -0.005644028103044498,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.26407960808625164,
+        "right_ankle_roll_link": 0.15718273531121352,
+        "left_wrist_yaw_link": 0.07719228132337386,
+        "right_wrist_yaw_link": 0.07738864265829637
+      }
+    },
+    {
+      "clip": "dance1_subject3",
+      "steps": 6573,
+      "alive_steps": 3306,
+      "failed": true,
+      "fall_step": 3306,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.15231076150155737,
+      "tracking_rate_alive": 0.08841423793929244,
+      "self_collision_rate_alive": -0.0571082879612826,
+      "self_collision_cost_alive": -0.011421657592256522,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.24110320779742275,
+        "right_ankle_roll_link": 0.27916150835685727,
+        "left_wrist_yaw_link": 0.08314449111077726,
+        "right_wrist_yaw_link": 0.1675089217288046
+      }
+    },
+    {
+      "clip": "dance2_subject1",
+      "steps": 11283,
+      "alive_steps": 1940,
+      "failed": true,
+      "fall_step": 1940,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.11698647222030428,
+      "tracking_rate_alive": 0.08881103717008951,
+      "self_collision_rate_alive": -0.019690721649484537,
+      "self_collision_cost_alive": -0.003938144329896908,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.08387268980937443,
+        "right_ankle_roll_link": 0.2608138600322329,
+        "left_wrist_yaw_link": 0.07718942814470775,
+        "right_wrist_yaw_link": 0.14356501486013895
+      }
+    },
+    {
+      "clip": "dance2_subject2",
+      "steps": 11283,
+      "alive_steps": 5240,
+      "failed": true,
+      "fall_step": 5240,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.17201883414129476,
+      "tracking_rate_alive": 0.08194385257388552,
+      "self_collision_rate_alive": -0.04305343511450389,
+      "self_collision_cost_alive": -0.008610687022900777,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.24672199704517173,
+        "right_ankle_roll_link": 0.14284194298232636,
+        "left_wrist_yaw_link": 0.11226498532681217,
+        "right_wrist_yaw_link": 0.0908793805233824
+      }
+    },
+    {
+      "clip": "dance2_subject3",
+      "steps": 11283,
+      "alive_steps": 6900,
+      "failed": true,
+      "fall_step": 6900,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.4073818063677745,
+      "tracking_rate_alive": 0.08395585073970853,
+      "self_collision_rate_alive": -0.016202898550724643,
+      "self_collision_cost_alive": -0.003240579710144929,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.1581879660089539,
+        "right_ankle_roll_link": 0.3490708052468012,
+        "left_wrist_yaw_link": 0.13147415690301034,
+        "right_wrist_yaw_link": 0.06829238177838914
+      }
+    },
+    {
+      "clip": "dance2_subject4",
+      "steps": 11283,
+      "alive_steps": 2967,
+      "failed": true,
+      "fall_step": 2967,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_ankle_roll_link"
+      ],
+      "normalized_return": 0.015728475980152486,
+      "tracking_rate_alive": 0.07587201351108236,
+      "self_collision_rate_alive": -0.06747556454330983,
+      "self_collision_cost_alive": -0.013495112908661967,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.3217223387665623,
+        "right_ankle_roll_link": 0.19182479733279856,
+        "left_wrist_yaw_link": 0.14622778078322543,
+        "right_wrist_yaw_link": 0.13793046924391184
+      }
+    },
+    {
+      "clip": "dance2_subject5",
+      "steps": 11283,
+      "alive_steps": 2919,
+      "failed": true,
+      "fall_step": 2919,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_wrist_yaw_link"
+      ],
+      "normalized_return": 0.16143987102968915,
+      "tracking_rate_alive": 0.0892795219404246,
+      "self_collision_rate_alive": -0.026036313806097958,
+      "self_collision_cost_alive": -0.0052072627612195915,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.07553031759067211,
+        "right_ankle_roll_link": 0.06366913682987065,
+        "left_wrist_yaw_link": 0.16939681775668902,
+        "right_wrist_yaw_link": 0.2945066839882049
+      }
+    },
+    {
+      "clip": "fallAndGetUp1_subject1",
+      "steps": 8409,
+      "alive_steps": 345,
+      "failed": true,
+      "fall_step": 345,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.0019465053734031268,
+      "tracking_rate_alive": 0.09002764736832024,
+      "self_collision_rate_alive": -0.0840579710144928,
+      "self_collision_cost_alive": -0.01681159420289856,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.24618560790269273,
+        "right_ankle_roll_link": 0.09612736955784232,
+        "left_wrist_yaw_link": 0.08522072918588912,
+        "right_wrist_yaw_link": 0.08275330010092427
+      }
+    },
+    {
+      "clip": "fallAndGetUp1_subject4",
+      "steps": 8409,
+      "alive_steps": 846,
+      "failed": true,
+      "fall_step": 846,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_wrist_yaw_link"
+      ],
+      "normalized_return": 0.0,
+      "tracking_rate_alive": 0.0729986825282539,
+      "self_collision_rate_alive": -0.12387706855791938,
+      "self_collision_cost_alive": -0.024775413711583878,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.13047616950128627,
+        "right_ankle_roll_link": 0.24371413547408102,
+        "left_wrist_yaw_link": 0.12870038161199415,
+        "right_wrist_yaw_link": 0.3348477002356589
+      }
+    },
+    {
+      "clip": "fallAndGetUp1_subject5",
+      "steps": 8409,
+      "alive_steps": 457,
+      "failed": true,
+      "fall_step": 457,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_ankle_roll_link",
+        "left_wrist_yaw_link"
+      ],
+      "normalized_return": 0.019784210389951755,
+      "tracking_rate_alive": 0.08620553757499999,
+      "self_collision_rate_alive": -0.04551422319474837,
+      "self_collision_cost_alive": -0.009102844638949673,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.2744060032403164,
+        "right_ankle_roll_link": 0.19771205228705224,
+        "left_wrist_yaw_link": 0.2784031396323975,
+        "right_wrist_yaw_link": 0.1224952714800831
+      }
+    },
+    {
+      "clip": "fallAndGetUp2_subject2",
+      "steps": 8194,
+      "alive_steps": 4673,
+      "failed": true,
+      "fall_step": 4673,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.0,
+      "tracking_rate_alive": 0.07627318056303205,
+      "self_collision_rate_alive": -0.1566445538198145,
+      "self_collision_cost_alive": -0.0313289107639629,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.16927759087374122,
+        "right_ankle_roll_link": 0.267845294280181,
+        "left_wrist_yaw_link": 0.18134044010454925,
+        "right_wrist_yaw_link": 0.24446455995325433
+      }
+    },
+    {
+      "clip": "fallAndGetUp2_subject3",
+      "steps": 8194,
+      "alive_steps": 788,
+      "failed": true,
+      "fall_step": 788,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.06056414196871737,
+      "tracking_rate_alive": 0.08820569531686735,
+      "self_collision_rate_alive": -0.02385786802030458,
+      "self_collision_cost_alive": -0.004771573604060915,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.1571124596789502,
+        "right_ankle_roll_link": 0.25690934932341863,
+        "left_wrist_yaw_link": 0.10152376816989922,
+        "right_wrist_yaw_link": 0.13515289526899749
+      }
+    },
+    {
+      "clip": "fallAndGetUp3_subject1",
+      "steps": 5108,
+      "alive_steps": 1239,
+      "failed": true,
+      "fall_step": 1239,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_ankle_roll_link"
+      ],
+      "normalized_return": 0.06203091766635635,
+      "tracking_rate_alive": 0.07965953155537953,
+      "self_collision_rate_alive": -0.0508474576271186,
+      "self_collision_cost_alive": -0.01016949152542372,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.2708591179481796,
+        "right_ankle_roll_link": 0.16546428978420052,
+        "left_wrist_yaw_link": 0.18200367042257598,
+        "right_wrist_yaw_link": 0.19066077397757064
+      }
+    },
+    {
+      "clip": "fight1_subject2",
+      "steps": 12243,
+      "alive_steps": 949,
+      "failed": true,
+      "fall_step": 949,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.03149257714407137,
+      "tracking_rate_alive": 0.07821026705212103,
+      "self_collision_rate_alive": -0.03477344573234985,
+      "self_collision_cost_alive": -0.00695468914646997,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.0900405946938985,
+        "right_ankle_roll_link": 0.3220350182901878,
+        "left_wrist_yaw_link": 0.13642998762378822,
+        "right_wrist_yaw_link": 0.08129354014442725
+      }
+    },
+    {
+      "clip": "fight1_subject3",
+      "steps": 12243,
+      "alive_steps": 2285,
+      "failed": true,
+      "fall_step": 2285,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.0,
+      "tracking_rate_alive": 0.08527596824774197,
+      "self_collision_rate_alive": -0.09846827133479262,
+      "self_collision_cost_alive": -0.019693654266958523,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.07846580110700063,
+        "right_ankle_roll_link": 0.23825076159470115,
+        "left_wrist_yaw_link": 0.07170588105328901,
+        "right_wrist_yaw_link": 0.0863643894346523
+      }
+    },
+    {
+      "clip": "fight1_subject5",
+      "steps": 12243,
+      "alive_steps": 1188,
+      "failed": true,
+      "fall_step": 1188,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_wrist_yaw_link"
+      ],
+      "normalized_return": 0.06311721478272557,
+      "tracking_rate_alive": 0.0854364949184354,
+      "self_collision_rate_alive": -0.018855218855218864,
+      "self_collision_cost_alive": -0.0037710437710437735,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.07220070962972601,
+        "right_ankle_roll_link": 0.08729214757772336,
+        "left_wrist_yaw_link": 0.12196067820814593,
+        "right_wrist_yaw_link": 0.2655425820377285
+      }
+    },
+    {
+      "clip": "fightAndSports1_subject1",
+      "steps": 12256,
+      "alive_steps": 257,
+      "failed": true,
+      "fall_step": 257,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.01976781104384949,
+      "tracking_rate_alive": 0.09492942980628723,
+      "self_collision_rate_alive": 0.0,
+      "self_collision_cost_alive": 0.0,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.014470341017343,
+        "right_ankle_roll_link": 0.2624287026012804,
+        "left_wrist_yaw_link": 0.06752543938402511,
+        "right_wrist_yaw_link": 0.0549426064101286
+      }
+    },
+    {
+      "clip": "fightAndSports1_subject4",
+      "steps": 12256,
+      "alive_steps": 1478,
+      "failed": true,
+      "fall_step": 1478,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_ankle_roll_link"
+      ],
+      "normalized_return": 0.0,
+      "tracking_rate_alive": 0.0876594510169785,
+      "self_collision_rate_alive": -0.10460081190798375,
+      "self_collision_cost_alive": -0.02092016238159675,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.31199887888695677,
+        "right_ankle_roll_link": 0.14531771431735724,
+        "left_wrist_yaw_link": 0.12247334269120214,
+        "right_wrist_yaw_link": 0.10512854955186235
+      }
+    },
+    {
+      "clip": "jumps1_subject1",
+      "steps": 12221,
+      "alive_steps": 5103,
+      "failed": true,
+      "fall_step": 5103,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.25766351745942195,
+      "tracking_rate_alive": 0.07802133423682835,
+      "self_collision_rate_alive": -0.014109347442680779,
+      "self_collision_cost_alive": -0.002821869488536156,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.1007155261971427,
+        "right_ankle_roll_link": 0.26086901728460865,
+        "left_wrist_yaw_link": 0.14565203162830842,
+        "right_wrist_yaw_link": 0.09277121794003707
+      }
+    },
+    {
+      "clip": "jumps1_subject2",
+      "steps": 12221,
+      "alive_steps": 580,
+      "failed": true,
+      "fall_step": 580,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_ankle_roll_link"
+      ],
+      "normalized_return": 0.04344547969980477,
+      "tracking_rate_alive": 0.09221437961592038,
+      "self_collision_rate_alive": 0.0,
+      "self_collision_cost_alive": 0.0,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.27067797894544027,
+        "right_ankle_roll_link": 0.009692567508054965,
+        "left_wrist_yaw_link": 0.0645272823755969,
+        "right_wrist_yaw_link": 0.09522055108760896
+      }
+    },
+    {
+      "clip": "jumps1_subject5",
+      "steps": 12221,
+      "alive_steps": 212,
+      "failed": true,
+      "fall_step": 212,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.010793217782036233,
+      "tracking_rate_alive": 0.09094345444932639,
+      "self_collision_rate_alive": -0.026415094339622643,
+      "self_collision_cost_alive": -0.005283018867924529,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.10629955499609997,
+        "right_ankle_roll_link": 0.3303826052667027,
+        "left_wrist_yaw_link": 0.16689235903639743,
+        "right_wrist_yaw_link": 0.1315281460968818
+      }
+    },
+    {
+      "clip": "run1_subject2",
+      "steps": 11889,
+      "alive_steps": 3244,
+      "failed": true,
+      "fall_step": 3244,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_wrist_yaw_link"
+      ],
+      "normalized_return": 0.2101458840365547,
+      "tracking_rate_alive": 0.08229284225784399,
+      "self_collision_rate_alive": -0.003514180024660913,
+      "self_collision_cost_alive": -0.0007028360049321827,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.13312028888439267,
+        "right_ankle_roll_link": 0.18779080595965236,
+        "left_wrist_yaw_link": 0.1394515348791946,
+        "right_wrist_yaw_link": 0.2923479065265549
+      }
+    },
+    {
+      "clip": "run1_subject5",
+      "steps": 11889,
+      "alive_steps": 5511,
+      "failed": true,
+      "fall_step": 5511,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_ankle_roll_link",
+        "left_wrist_yaw_link"
+      ],
+      "normalized_return": 0.19159892822417304,
+      "tracking_rate_alive": 0.07350854882741771,
+      "self_collision_rate_alive": -0.02881509707857014,
+      "self_collision_cost_alive": -0.005763019415714028,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.298163106781782,
+        "right_ankle_roll_link": 0.24241326912501504,
+        "left_wrist_yaw_link": 0.27660161904199654,
+        "right_wrist_yaw_link": 0.11184676998409304
+      }
+    },
+    {
+      "clip": "run2_subject1",
+      "steps": 12239,
+      "alive_steps": 12239,
+      "failed": false,
+      "fall_step": null,
+      "fall_terms": [],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.5120577855360162,
+      "tracking_rate_alive": 0.07726366288258761,
+      "self_collision_rate_alive": -0.023531334259334912,
+      "self_collision_cost_alive": -0.004706266851866983,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.10914307798707334,
+        "right_ankle_roll_link": 0.1045360242631299,
+        "left_wrist_yaw_link": 0.10774329613628852,
+        "right_wrist_yaw_link": 0.09569477795575154
+      }
+    },
+    {
+      "clip": "run2_subject4",
+      "steps": 12239,
+      "alive_steps": 9933,
+      "failed": true,
+      "fall_step": 9933,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.23691351022379853,
+      "tracking_rate_alive": 0.07893134803538844,
+      "self_collision_rate_alive": -0.04741769858048952,
+      "self_collision_cost_alive": -0.009483539716097904,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.1516520128305855,
+        "right_ankle_roll_link": 0.1578621367932832,
+        "left_wrist_yaw_link": 0.24699896225986995,
+        "right_wrist_yaw_link": 0.14477724224470667
+      }
+    },
+    {
+      "clip": "sprint1_subject2",
+      "steps": 13654,
+      "alive_steps": 10068,
+      "failed": true,
+      "fall_step": 10068,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_wrist_yaw_link"
+      ],
+      "normalized_return": 0.5078709283701939,
+      "tracking_rate_alive": 0.07961406800484262,
+      "self_collision_rate_alive": -0.008800158919348431,
+      "self_collision_cost_alive": -0.0017600317838696864,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.15691342849162143,
+        "right_ankle_roll_link": 0.1796897440234193,
+        "left_wrist_yaw_link": 0.1746996649070005,
+        "right_wrist_yaw_link": 0.26057872243863955
+      }
+    },
+    {
+      "clip": "sprint1_subject4",
+      "steps": 13654,
+      "alive_steps": 3458,
+      "failed": true,
+      "fall_step": 3458,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_ankle_roll_link"
+      ],
+      "normalized_return": 0.10703386775257467,
+      "tracking_rate_alive": 0.07789007209135579,
+      "self_collision_rate_alive": -0.032562174667437827,
+      "self_collision_cost_alive": -0.006512434933487566,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.15776555893161878,
+        "right_ankle_roll_link": 0.31539523271945574,
+        "left_wrist_yaw_link": 0.17590976289351046,
+        "right_wrist_yaw_link": 0.19989210643702582
+      }
+    },
+    {
+      "clip": "walk1_subject1",
+      "steps": 13064,
+      "alive_steps": 13064,
+      "failed": false,
+      "fall_step": null,
+      "fall_terms": [],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.48373979118396493,
+      "tracking_rate_alive": 0.08805636530654345,
+      "self_collision_rate_alive": -0.03925290875688924,
+      "self_collision_cost_alive": -0.00785058175137785,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.05204362852898125,
+        "right_ankle_roll_link": 0.04622994624403261,
+        "left_wrist_yaw_link": 0.07903422807053762,
+        "right_wrist_yaw_link": 0.05563535012464449
+      }
+    },
+    {
+      "clip": "walk1_subject2",
+      "steps": 13064,
+      "alive_steps": 13064,
+      "failed": false,
+      "fall_step": null,
+      "fall_terms": [],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.5945276181430029,
+      "tracking_rate_alive": 0.08647038692151446,
+      "self_collision_rate_alive": -0.02610226576852415,
+      "self_collision_cost_alive": -0.00522045315370483,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.06369686600686231,
+        "right_ankle_roll_link": 0.11460927597059128,
+        "left_wrist_yaw_link": 0.06083956712936767,
+        "right_wrist_yaw_link": 0.0659153633320082
+      }
+    },
+    {
+      "clip": "walk1_subject5",
+      "steps": 13064,
+      "alive_steps": 13064,
+      "failed": false,
+      "fall_step": null,
+      "fall_terms": [],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.5580310226914099,
+      "tracking_rate_alive": 0.08436584444834253,
+      "self_collision_rate_alive": -0.02732700551132879,
+      "self_collision_cost_alive": -0.005465401102265758,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.07305197750262767,
+        "right_ankle_roll_link": 0.06949309727536812,
+        "left_wrist_yaw_link": 0.06532678144967319,
+        "right_wrist_yaw_link": 0.06661764337673404
+      }
+    },
+    {
+      "clip": "walk2_subject1",
+      "steps": 11908,
+      "alive_steps": 9621,
+      "failed": true,
+      "fall_step": 9621,
+      "fall_terms": [
+        "anchor_pos"
+      ],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.0,
+      "tracking_rate_alive": 0.08449773415105266,
+      "self_collision_rate_alive": -0.10210996777881574,
+      "self_collision_cost_alive": -0.020421993555763154,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.09890241093351311,
+        "right_ankle_roll_link": 0.11289599833305723,
+        "left_wrist_yaw_link": 0.17737958857280517,
+        "right_wrist_yaw_link": 0.0759644738496974
+      }
+    },
+    {
+      "clip": "walk2_subject3",
+      "steps": 11908,
+      "alive_steps": 9438,
+      "failed": true,
+      "fall_step": 9438,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "right_wrist_yaw_link"
+      ],
+      "normalized_return": 0.30337045946337143,
+      "tracking_rate_alive": 0.08557085936968138,
+      "self_collision_rate_alive": -0.04636575545666476,
+      "self_collision_cost_alive": -0.009273151091332952,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.1538868125135029,
+        "right_ankle_roll_link": 0.09874991145008732,
+        "left_wrist_yaw_link": 0.15905482388223213,
+        "right_wrist_yaw_link": 0.284671660648698
+      }
+    },
+    {
+      "clip": "walk2_subject4",
+      "steps": 11908,
+      "alive_steps": 11178,
+      "failed": true,
+      "fall_step": 11178,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_wrist_yaw_link"
+      ],
+      "normalized_return": 0.6814745938320881,
+      "tracking_rate_alive": 0.0875126563235306,
+      "self_collision_rate_alive": -0.01420647700840938,
+      "self_collision_cost_alive": -0.002841295401681876,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.13224968344350582,
+        "right_ankle_roll_link": 0.13213881952864015,
+        "left_wrist_yaw_link": 0.2890601443124805,
+        "right_wrist_yaw_link": 0.07775919241646057
+      }
+    },
+    {
+      "clip": "walk3_subject1",
+      "steps": 12329,
+      "alive_steps": 8208,
+      "failed": true,
+      "fall_step": 8208,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.4644819074221742,
+      "tracking_rate_alive": 0.08663684426748992,
+      "self_collision_rate_alive": -0.016154970760233915,
+      "self_collision_cost_alive": -0.003230994152046783,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.2398598698924867,
+        "right_ankle_roll_link": 0.14313036018990666,
+        "left_wrist_yaw_link": 0.11437847827723024,
+        "right_wrist_yaw_link": 0.09390951882002091
+      }
+    },
+    {
+      "clip": "walk3_subject2",
+      "steps": 12329,
+      "alive_steps": 12329,
+      "failed": false,
+      "fall_step": null,
+      "fall_terms": [],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.6375616156568175,
+      "tracking_rate_alive": 0.08786396247066089,
+      "self_collision_rate_alive": -0.023343336848081753,
+      "self_collision_cost_alive": -0.004668667369616351,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.07108098322142226,
+        "right_ankle_roll_link": 0.07648850183290859,
+        "left_wrist_yaw_link": 0.0733642819777407,
+        "right_wrist_yaw_link": 0.06747802943558223
+      }
+    },
+    {
+      "clip": "walk3_subject3",
+      "steps": 12329,
+      "alive_steps": 8675,
+      "failed": true,
+      "fall_step": 8675,
+      "fall_terms": [
+        "ee_body_pos"
+      ],
+      "fall_ee_bodies": [
+        "left_ankle_roll_link"
+      ],
+      "normalized_return": 0.0,
+      "tracking_rate_alive": 0.08625843549045337,
+      "self_collision_rate_alive": -0.1509625360230501,
+      "self_collision_cost_alive": -0.030192507204610024,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.2693619313091393,
+        "right_ankle_roll_link": 0.20501018309930874,
+        "left_wrist_yaw_link": 0.15393579792448892,
+        "right_wrist_yaw_link": 0.11425973962938135
+      }
+    },
+    {
+      "clip": "walk3_subject4",
+      "steps": 12329,
+      "alive_steps": 12329,
+      "failed": false,
+      "fall_step": null,
+      "fall_terms": [],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.5700506972284743,
+      "tracking_rate_alive": 0.08503007290624517,
+      "self_collision_rate_alive": -0.027204152810446983,
+      "self_collision_cost_alive": -0.0054408305620893965,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.1325174713547977,
+        "right_ankle_roll_link": 0.13221447293762437,
+        "left_wrist_yaw_link": 0.12161748858717966,
+        "right_wrist_yaw_link": 0.18433275721086095
+      }
+    },
+    {
+      "clip": "walk3_subject5",
+      "steps": 12329,
+      "alive_steps": 12329,
+      "failed": false,
+      "fall_step": null,
+      "fall_terms": [],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.7892968365342348,
+      "tracking_rate_alive": 0.08348567646401897,
+      "self_collision_rate_alive": -0.003211939330034876,
+      "self_collision_cost_alive": -0.0006423878660069752,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.07834731852829593,
+        "right_ankle_roll_link": 0.07441927605910453,
+        "left_wrist_yaw_link": 0.09439505267401016,
+        "right_wrist_yaw_link": 0.08537893641487893
+      }
+    },
+    {
+      "clip": "walk4_subject1",
+      "steps": 8194,
+      "alive_steps": 8194,
+      "failed": false,
+      "fall_step": null,
+      "fall_terms": [],
+      "fall_ee_bodies": [],
+      "normalized_return": 0.0,
+      "tracking_rate_alive": 0.09151547947879222,
+      "self_collision_rate_alive": -0.10378325604100469,
+      "self_collision_cost_alive": -0.02075665120820094,
+      "worst_ee_z_error": {
+        "left_ankle_roll_link": 0.03877992142513281,
+        "right_ankle_roll_link": 0.03830689660324149,
+        "left_wrist_yaw_link": 0.06868447972159208,
+        "right_wrist_yaw_link": 0.11239813430689066
+      }
+    }
+  ],
+  "summary": {
+    "failed": 32,
+    "mean_return": 0.22209537293584777,
+    "mean_tracking_rate_alive": 0.0841029243798971,
+    "failures_by_term": {
+      "anchor_pos": 1,
+      "anchor_ori": 0,
+      "ee_body_pos": 31,
+      "nonfinite": 0
+    },
+    "failures_by_ee_body": {
+      "left_ankle_roll_link": 8,
+      "right_ankle_roll_link": 11,
+      "left_wrist_yaw_link": 3,
+      "right_wrist_yaw_link": 6
+    }
+  }
+}

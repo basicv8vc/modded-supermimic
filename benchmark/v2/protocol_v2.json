@@ -1,0 +1,143 @@
+{
+  "protocol_id": "modded-supermimic-g1-lafan1-v2",
+  "version": 2,
+  "status": "DRAFT_PROTOCOL_NO_V2_SCORES",
+  "supersedes": null,
+  "v1_protocol_id": "modded-supermimic-g1-lafan1-v1",
+  "v1_scores_comparable": false,
+  "depends_on_prs": [
+    {
+      "number": 12,
+      "branch": "research/mjlab-reuse-refactor",
+      "head": "f5bf4e0d881837b84ecb0654c88d7d0d3bfc361e",
+      "role": "official mjlab evaluator (physics / PD / motion converter / record identity)"
+    },
+    {
+      "number": 13,
+      "branch": "feat/nablamimic-canonical-policy",
+      "head": "66a6e52664195fee3c446924980ae586bc55c25d",
+      "role": "NablaMimic policy adapter with the confirmed reference-frame indexing fix"
+    }
+  ],
+  "reference_implementations": {
+    "supermimic": {
+      "repo": "zita-ch/supermimic_vibed",
+      "commit": "8bfc1158bd968f729fcc65d5e897a05b05ea3d36",
+      "protocol": "supermimic/evaluate.py:53-96, supermimic/mdp.py:108-152"
+    },
+    "nablamimic": {
+      "repo": "sailab-ai/NablaMimic",
+      "commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+      "protocol": "src/nablamimic/evaluate.py:35-116, src/nablamimic/env.py:404-433"
+    }
+  },
+  "gpu_name_contains": "RTX PRO 6000 Blackwell",
+  "gpu_count": 1,
+  "robot_dof": 29,
+  "full_self_collision": true,
+  "self_collision_reward_penalty": false,
+  "required_versions": {
+    "mujoco": "3.11.0",
+    "mujoco_warp": "3.11.0",
+    "warp_lang": "1.16.0"
+  },
+  "evaluator_implementation": "canonical-mjlab-g1-v2-original-aligned",
+  "evaluator_source_tree": "research/modded-supermimic/benchmark/v2",
+  "mjlab": {
+    "repo": "mujocolab/mjlab",
+    "version": "1.6.0",
+    "commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10"
+  },
+  "physics": {
+    "backend": "mjlab ManagerBasedRlEnv + MuJoCo Warp 3.11.0",
+    "robot": "canonical G1 29-DoF, mjlab FULL_COLLISION (unchanged from V1)",
+    "timestep": 0.005,
+    "decimation": 4,
+    "control_dt": 0.02,
+    "control_hz": 50,
+    "solver_iterations": 10,
+    "ground_friction": 1.0,
+    "foot_friction": 0.6,
+    "action": "q_setpoint = default_joint_pos + action_scale * a (absolute action contract)",
+    "events": "none (no encoder bias / COM offset / foot friction randomization; no reset noise)",
+    "note": "V2 reuses V1's compiled robot model, actuators, contact set and CSV->npz converter verbatim. Physics is NOT changed."
+  },
+  "reference_motion": {
+    "dataset": "lvhaidong/LAFAN1_Retargeting_Dataset (g1/*.csv, 40 clips)",
+    "revision": "07ff8845a94d59d4195a8ac04fe918d4e6338239",
+    "input_fps": 30.0,
+    "output_fps": 50.0,
+    "start_frame": 0,
+    "first_scored_frame": 1,
+    "converter": "mjlab scripts/csv_to_npz.MotionLoader + Scene/Simulation teleport FK (V1 motion.py, unchanged)",
+    "converter_version": "official-csv-to-npz-mjlab1.6.0-1",
+    "tracked_bodies": [
+      "pelvis", "left_hip_roll_link", "left_knee_link", "left_ankle_roll_link",
+      "right_hip_roll_link", "right_knee_link", "right_ankle_roll_link", "torso_link",
+      "left_shoulder_roll_link", "left_elbow_link", "left_wrist_yaw_link",
+      "right_shoulder_roll_link", "right_elbow_link", "right_wrist_yaw_link"
+    ],
+    "reward_anchor_body": "torso_link",
+    "termination_root_body": "pelvis"
+  },
+  "reward": {
+    "scale_rewards_by_dt": true,
+    "max_step_reward": 0.1,
+    "error_frame": "world frame; body pose errors use BeyondMimic xy+yaw reference re-anchoring",
+    "terms": {
+      "motion_global_root_pos": {"mjlab_term": "motion_global_anchor_position_error_exp", "weight": 0.5, "std": 0.3},
+      "motion_global_root_ori": {"mjlab_term": "motion_global_anchor_orientation_error_exp", "weight": 0.5, "std": 0.4},
+      "motion_body_pos": {"mjlab_term": "motion_relative_body_position_error_exp", "weight": 1.0, "std": 0.3},
+      "motion_body_ori": {"mjlab_term": "motion_relative_body_orientation_error_exp", "weight": 1.0, "std": 0.4},
+      "motion_body_lin_vel": {"mjlab_term": "motion_global_body_linear_velocity_error_exp", "weight": 1.0, "std": 1.0},
+      "motion_body_ang_vel": {"mjlab_term": "motion_global_body_angular_velocity_error_exp", "weight": 1.0, "std": 3.14},
+      "action_rate_l2": {"mjlab_term": "action_rate_l2", "weight": -0.1},
+      "joint_limit": {"mjlab_term": "joint_pos_limits", "weight": -2.0, "soft_limit_factor": 0.9}
+    },
+    "excluded_terms": ["self_collisions"],
+    "excluded_terms_reason": "Neither original evaluation has a self-collision reward penalty. Self-collision PHYSICS is kept (full_self_collision=true).",
+    "root_anchor_note": "V2 uses NablaMimic==mjlab torso_link anchor. SuperMimic uses pelvis for these four terms; that is a documented, unresolved divergence, not a numerical match."
+  },
+  "termination": {
+    "terms": {
+      "root_height": {"body": "pelvis", "definition": "abs(qpos_z - ref_qpos_z)", "threshold": 0.25, "fires_when": "strictly greater"},
+      "root_tilt": {"body": "pelvis", "definition": "abs(g_b_z(robot) - g_b_z(ref)), g_b = R(q)^T (0,0,-1)", "threshold": 0.8, "fires_when": "strictly greater"},
+      "nonfinite": {"fields": ["qpos", "qvel"], "fires_when": "any non-finite"}
+    },
+    "excluded_terms": ["ee_body_pos", "anchor_pos", "anchor_ori"],
+    "excluded_terms_reason": "ee_body_pos does not exist in either original evaluation; mjlab anchor_pos/anchor_ori use torso_link while both original terminations use pelvis, so minimal glue replaces them.",
+    "clip_end": "success (not a failure)",
+    "time_out": "retained in mjlab config but never fires in play mode; the rollout driver ends at T-1 steps"
+  },
+  "normalization": {
+    "per_clip": "sum over alive steps of r_t / ((T - 1) * max_step_reward)",
+    "T": "number of 50 Hz reference frames in the full clip",
+    "denominator": "full clip theoretical maximum (unchanged by early termination)",
+    "early_termination": "remaining steps contribute exactly zero",
+    "clipping": "none",
+    "negative_allowed": true,
+    "above_one_allowed": true,
+    "aggregate": "unweighted mean of the 40 per-clip normalized returns",
+    "failed_clips": "number of clips terminated by root_height / root_tilt / nonfinite before clip end",
+    "note": "Reproduces supermimic/evaluate.py:84 and nablamimic/evaluate.py:90 exactly. V1 additionally clamps each clip to [0,1] (runner.py:164); V2 does not."
+  },
+  "quality_gate": {
+    "status": "NOT_SET",
+    "reason": "V1's 0.82 / 0-of-40 gate is tied to V1's rubric and cannot be carried over. V2 has no scored records yet; a gate must be calibrated on a real GPU 40-clip run before any leaderboard use."
+  },
+  "clip_ids": [
+    "dance1_subject1", "dance1_subject2", "dance1_subject3",
+    "dance2_subject1", "dance2_subject2", "dance2_subject3", "dance2_subject4", "dance2_subject5",
+    "fallAndGetUp1_subject1", "fallAndGetUp1_subject4", "fallAndGetUp1_subject5",
+    "fallAndGetUp2_subject2", "fallAndGetUp2_subject3", "fallAndGetUp3_subject1",
+    "fight1_subject2", "fight1_subject3", "fight1_subject5",
+    "fightAndSports1_subject1", "fightAndSports1_subject4",
+    "jumps1_subject1", "jumps1_subject2", "jumps1_subject5",
+    "run1_subject2", "run1_subject5", "run2_subject1", "run2_subject4",
+    "sprint1_subject2", "sprint1_subject4",
+    "walk1_subject1", "walk1_subject2", "walk1_subject5",
+    "walk2_subject1", "walk2_subject3", "walk2_subject4",
+    "walk3_subject1", "walk3_subject2", "walk3_subject3", "walk3_subject4", "walk3_subject5",
+    "walk4_subject1"
+  ]
+}

@@ -1,0 +1,1173 @@
+{
+  "summary": {
+    "clips": 4,
+    "samples": 40,
+    "reference_goal_features_max_abs": 1.2925396962737423e-05,
+    "proprio_fixed_max_abs": {
+      "joint_pos": 1.2243622871110915e-07,
+      "joint_vel": 9.136015011179666e-08,
+      "base_ang_vel": 1.7993793122172974e-07,
+      "gravity_b": 5.310581107087486e-07,
+      "previous_action": 3.6147144832909817e-08
+    },
+    "proprio_prefix_max_abs": {
+      "joint_pos": 1.2243622871110915e-07,
+      "joint_vel": 9.136015011179666e-08,
+      "base_ang_vel": 1.7993793122172974e-07,
+      "gravity_b": 0.06668615792751698,
+      "previous_action": 3.6147144832909817e-08
+    },
+    "goal_686_fixed_max_abs": 9.76525282095353e-06,
+    "goal_686_prefix_max_abs": 0.19258092530071735,
+    "goal_anchor_fixed_max_abs": 0.0,
+    "goal_anchor_prefix_max_abs": 0.19258092530071735,
+    "gyro": {
+      "available": true,
+      "gyro": [
+        0.4259444580185321,
+        -0.02174573469821397,
+        1.1677253870399777
+      ],
+      "qvel_ang": [
+        0.425944458018532,
+        -0.021745734698213955,
+        1.1677253870399775
+      ],
+      "max_abs_diff": 2.220446049250313e-16,
+      "norms": [
+        1.2431750230083984,
+        1.2431750230083982
+      ]
+    }
+  },
+  "clips": [
+    {
+      "clip": "walk3_subject4",
+      "reference": {
+        "frames": 12330,
+        "goal_features_max_abs": 1.2925396962737423e-05,
+        "goal_features_worst_frame": 1291,
+        "goal_features_worst_frame_max": 1.2925396962737423e-05,
+        "goal_features_median": 7.450580569168253e-10
+      },
+      "samples": [
+        {
+          "frame": 1,
+          "tag": "initial",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 9.603284434334114e-08,
+            "joint_vel": 3.548713978229756e-08,
+            "base_ang_vel": 5.197208219342997e-09,
+            "gravity_b": 7.317530725803323e-08,
+            "previous_action": 2.6950456200047768e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 9.603284434334114e-08,
+            "joint_vel": 3.548713978229756e-08,
+            "base_ang_vel": 5.197208219342997e-09,
+            "gravity_b": 0.0005027497526258196,
+            "previous_action": 2.6950456200047768e-08
+          },
+          "goal_features_fixed": 1.2011441867798567e-06,
+          "goal_features_prefix": 1.2011441867798567e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.0005008336156606674,
+          "goal_686_fixed": 1.2011441867798567e-06,
+          "goal_686_prefix": 0.0005008336156606674,
+          "anchor_truth_vs_prev_field": 1.0204148553311825,
+          "anchor_truth_vs_next_field": 1.0199140217155218
+        },
+        {
+          "frame": 1,
+          "tag": "initial",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 5.936622615720921e-08,
+            "joint_vel": 1.7881393421514957e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 2.778683727555631e-09,
+            "previous_action": 2.295029388754699e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 5.936622615720921e-08,
+            "joint_vel": 1.7881393421514957e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.0005021926324658699,
+            "previous_action": 2.295029388754699e-08
+          },
+          "goal_features_fixed": 1.2011441867798567e-06,
+          "goal_features_prefix": 1.2011441867798567e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.0005018394874696241,
+          "goal_686_fixed": 1.2011441867798567e-06,
+          "goal_686_prefix": 0.0005018394874696241,
+          "anchor_truth_vs_prev_field": 1.0,
+          "anchor_truth_vs_next_field": 1.0000001192092896
+        },
+        {
+          "frame": 1232,
+          "tag": "early",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 3.695418149263219e-08,
+            "joint_vel": 2.6515999507203958e-08,
+            "base_ang_vel": 7.062376322641839e-09,
+            "gravity_b": 1.0129593552843374e-07,
+            "previous_action": 1.838759244865429e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 3.695418149263219e-08,
+            "joint_vel": 2.6515999507203958e-08,
+            "base_ang_vel": 7.062376322641839e-09,
+            "gravity_b": 0.004285158516470256,
+            "previous_action": 1.838759244865429e-08
+          },
+          "goal_features_fixed": 9.76525282095353e-06,
+          "goal_features_prefix": 9.76525282095353e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.006147570908069611,
+          "goal_686_fixed": 9.76525282095353e-06,
+          "goal_686_prefix": 0.006147570908069611,
+          "anchor_truth_vs_prev_field": 1.06592408567667,
+          "anchor_truth_vs_next_field": 1.0665962100028992
+        },
+        {
+          "frame": 1232,
+          "tag": "early",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 1.0794163729510586e-08,
+            "previous_action": 3.6147144832909817e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.004284984848031831,
+            "previous_action": 3.6147144832909817e-08
+          },
+          "goal_features_fixed": 9.76525282095353e-06,
+          "goal_features_prefix": 9.76525282095353e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.005837437231093645,
+          "goal_686_fixed": 9.76525282095353e-06,
+          "goal_686_prefix": 0.005837437231093645,
+          "anchor_truth_vs_prev_field": 1.0,
+          "anchor_truth_vs_next_field": 1.0006368031608872
+        },
+        {
+          "frame": 6164,
+          "tag": "middle",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 5.6849759233479347e-08,
+            "joint_vel": 4.2308157643944355e-08,
+            "base_ang_vel": 7.2417864760421224e-09,
+            "gravity_b": 2.2604634875023066e-07,
+            "previous_action": 2.511178176511919e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 5.6849759233479347e-08,
+            "joint_vel": 4.2308157643944355e-08,
+            "base_ang_vel": 7.2417864760421224e-09,
+            "gravity_b": 0.004363952001988804,
+            "previous_action": 2.511178176511919e-08
+          },
+          "goal_features_fixed": 1.1622905731201172e-06,
+          "goal_features_prefix": 1.1622905731201172e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.02435222826898098,
+          "goal_686_fixed": 1.1622905731201172e-06,
+          "goal_686_prefix": 0.02435222826898098,
+          "anchor_truth_vs_prev_field": 1.0227484684437513,
+          "anchor_truth_vs_next_field": 1.021980820223689
+        },
+        {
+          "frame": 6164,
+          "tag": "middle",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 7.152557368605983e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 1.2189181108901437e-08,
+            "previous_action": 2.2236978480805192e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 7.152557368605983e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.004364112383526522,
+            "previous_action": 2.2236978480805192e-08
+          },
+          "goal_features_fixed": 1.1622905731201172e-06,
+          "goal_features_prefix": 1.1622905731201172e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.024431873112916946,
+          "goal_686_fixed": 1.1622905731201172e-06,
+          "goal_686_prefix": 0.024431873112916946,
+          "anchor_truth_vs_prev_field": 1.0000000074505806,
+          "anchor_truth_vs_next_field": 0.999699592590332
+        },
+        {
+          "frame": 4841,
+          "tag": "high_ang_vel",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 5.836725303076662e-08,
+            "joint_vel": 4.891543115004282e-08,
+            "base_ang_vel": 5.848064743574355e-08,
+            "gravity_b": 1.38918743175509e-07,
+            "previous_action": 2.3381308555947555e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 5.836725303076662e-08,
+            "joint_vel": 4.891543115004282e-08,
+            "base_ang_vel": 5.848064743574355e-08,
+            "gravity_b": 0.03262174030276366,
+            "previous_action": 2.3381308555947555e-08
+          },
+          "goal_features_fixed": 1.8016537010612232e-06,
+          "goal_features_prefix": 1.8016537010612232e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.0986147839576006,
+          "goal_686_fixed": 1.8016537010612232e-06,
+          "goal_686_prefix": 0.0986147839576006,
+          "anchor_truth_vs_prev_field": 1.0225313436239958,
+          "anchor_truth_vs_next_field": 1.044524621218443
+        },
+        {
+          "frame": 4841,
+          "tag": "high_ang_vel",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 7.152557368605983e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 4.157185407027697e-08,
+            "previous_action": 2.4302306167456322e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 7.152557368605983e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.032400530445213516,
+            "previous_action": 2.4302306167456322e-08
+          },
+          "goal_features_fixed": 1.8016537010612232e-06,
+          "goal_features_prefix": 1.8016537010612232e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.09867551177740097,
+          "goal_686_fixed": 1.8016537010612232e-06,
+          "goal_686_prefix": 0.09867551177740097,
+          "anchor_truth_vs_prev_field": 1.0,
+          "anchor_truth_vs_next_field": 1.0211303066462278
+        },
+        {
+          "frame": 12327,
+          "tag": "near_final",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 9.633598962999201e-08,
+            "joint_vel": 1.0949144819971668e-09,
+            "base_ang_vel": 1.0802708727553068e-09,
+            "gravity_b": 6.119525708392359e-08,
+            "previous_action": 2.830210654725107e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 9.633598962999201e-08,
+            "joint_vel": 1.0949144819971668e-09,
+            "base_ang_vel": 1.0802708727553068e-09,
+            "gravity_b": 0.0001634281758774482,
+            "previous_action": 2.830210654725107e-08
+          },
+          "goal_features_fixed": 3.2775008915488218e-06,
+          "goal_features_prefix": 3.2775008915488218e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.00015993043780326843,
+          "goal_686_fixed": 3.2775008915488218e-06,
+          "goal_686_prefix": 0.00015993043780326843,
+          "anchor_truth_vs_prev_field": 1.0072502791881561,
+          "anchor_truth_vs_next_field": 1.0074102096259594
+        },
+        {
+          "frame": 12327,
+          "tag": "near_final",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 3.725290301931361e-10,
+            "base_ang_vel": 0.0,
+            "gravity_b": 6.00019903762572e-08,
+            "previous_action": 2.938235987848259e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 3.725290301931361e-10,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.0001634131124515891,
+            "previous_action": 2.938235987848259e-08
+          },
+          "goal_features_fixed": 3.2775008915488218e-06,
+          "goal_features_prefix": 3.2775008915488218e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.00016273234723485075,
+          "goal_686_fixed": 3.2775008915488218e-06,
+          "goal_686_prefix": 0.00016273234723485075,
+          "anchor_truth_vs_prev_field": 0.9999999997271516,
+          "anchor_truth_vs_next_field": 1.0001627320743864
+        }
+      ]
+    },
+    {
+      "clip": "dance1_subject1",
+      "reference": {
+        "frames": 6574,
+        "goal_features_max_abs": 6.043378347420081e-06,
+        "goal_features_worst_frame": 1638,
+        "goal_features_worst_frame_max": 6.043378347420081e-06,
+        "goal_features_median": 1.4901161138336505e-09
+      },
+      "samples": [
+        {
+          "frame": 1,
+          "tag": "initial",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 9.603284434334114e-08,
+            "joint_vel": 5.932899771465827e-08,
+            "base_ang_vel": 1.2647788816266825e-08,
+            "gravity_b": 5.020598403682186e-08,
+            "previous_action": 2.6950456200047768e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 9.603284434334114e-08,
+            "joint_vel": 5.932899771465827e-08,
+            "base_ang_vel": 1.2647788816266825e-08,
+            "gravity_b": 0.0008092299107460982,
+            "previous_action": 2.6950456200047768e-08
+          },
+          "goal_features_fixed": 1.023843651637435e-06,
+          "goal_features_prefix": 1.023843651637435e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.0008154138922691345,
+          "goal_686_fixed": 1.023843651637435e-06,
+          "goal_686_prefix": 0.0008154138922691345,
+          "anchor_truth_vs_prev_field": 1.0212739389389753,
+          "anchor_truth_vs_next_field": 1.0204585250467062
+        },
+        {
+          "frame": 1,
+          "tag": "initial",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 2.3841857821338408e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 7.095550824676167e-08,
+            "previous_action": 2.295029388754699e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 2.3841857821338408e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.0008132194087161829,
+            "previous_action": 2.295029388754699e-08
+          },
+          "goal_features_fixed": 1.023843651637435e-06,
+          "goal_features_prefix": 1.023843651637435e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.0008141040525515564,
+          "goal_686_fixed": 1.023843651637435e-06,
+          "goal_686_prefix": 0.0008141040525515564,
+          "anchor_truth_vs_prev_field": 0.9999999999490683,
+          "anchor_truth_vs_next_field": 0.9999998770654202
+        },
+        {
+          "frame": 657,
+          "tag": "early",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 3.695418149263219e-08,
+            "joint_vel": 2.3128115811399397e-09,
+            "base_ang_vel": 8.595053904714156e-10,
+            "gravity_b": 4.565763822572677e-08,
+            "previous_action": 1.838759244865429e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 3.695418149263219e-08,
+            "joint_vel": 2.3128115811399397e-09,
+            "base_ang_vel": 8.595053904714156e-10,
+            "gravity_b": 0.0019753489870889384,
+            "previous_action": 1.838759244865429e-08
+          },
+          "goal_features_fixed": 4.550223835046718e-06,
+          "goal_features_prefix": 4.550223835046718e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.002901129424571991,
+          "goal_686_fixed": 4.550223835046718e-06,
+          "goal_686_prefix": 0.002901129424571991,
+          "anchor_truth_vs_prev_field": 1.0218671150505543,
+          "anchor_truth_vs_next_field": 1.0217012949287891
+        },
+        {
+          "frame": 657,
+          "tag": "early",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 2.2351741776893697e-09,
+            "base_ang_vel": 0.0,
+            "gravity_b": 3.268390913468977e-08,
+            "previous_action": 3.6147144832909817e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 2.2351741776893697e-09,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.001974885611347909,
+            "previous_action": 3.6147144832909817e-08
+          },
+          "goal_features_fixed": 4.550223835046718e-06,
+          "goal_features_prefix": 4.550223835046718e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.0029020069632679224,
+          "goal_686_fixed": 4.550223835046718e-06,
+          "goal_686_prefix": 0.0029020069632679224,
+          "anchor_truth_vs_prev_field": 1.0,
+          "anchor_truth_vs_next_field": 0.9999940991401672
+        },
+        {
+          "frame": 3286,
+          "tag": "middle",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 3.455603980739852e-08,
+            "joint_vel": 9.136015011179666e-08,
+            "base_ang_vel": 7.2417864760421224e-09,
+            "gravity_b": 1.7024556953071368e-07,
+            "previous_action": 2.511178176511919e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 3.455603980739852e-08,
+            "joint_vel": 9.136015011179666e-08,
+            "base_ang_vel": 7.2417864760421224e-09,
+            "gravity_b": 0.02625757050052313,
+            "previous_action": 2.511178176511919e-08
+          },
+          "goal_features_fixed": 1.5969905583501642e-06,
+          "goal_features_prefix": 1.5969905583501642e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.030825011432170868,
+          "goal_686_fixed": 1.5969905583501642e-06,
+          "goal_686_prefix": 0.030825011432170868,
+          "anchor_truth_vs_prev_field": 1.0310563743114471,
+          "anchor_truth_vs_next_field": 1.0300120413303375
+        },
+        {
+          "frame": 3286,
+          "tag": "middle",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 4.7683715642676816e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 1.9954720764658873e-07,
+            "previous_action": 2.2236978480805192e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 4.7683715642676816e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.026259266137254128,
+            "previous_action": 2.2236978480805192e-08
+          },
+          "goal_features_fixed": 1.5969905583501642e-06,
+          "goal_features_prefix": 1.5969905583501642e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.03132772073149683,
+          "goal_686_fixed": 1.5969905583501642e-06,
+          "goal_686_prefix": 0.03132772073149683,
+          "anchor_truth_vs_prev_field": 0.9999998807907104,
+          "anchor_truth_vs_next_field": 0.9994011521339417
+        },
+        {
+          "frame": 3635,
+          "tag": "high_ang_vel",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 5.836725303076662e-08,
+            "joint_vel": 4.763370320404192e-08,
+            "base_ang_vel": 1.7993793122172974e-07,
+            "gravity_b": 2.1349705792150786e-07,
+            "previous_action": 2.3381308555947555e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 5.836725303076662e-08,
+            "joint_vel": 4.763370320404192e-08,
+            "base_ang_vel": 1.7993793122172974e-07,
+            "gravity_b": 0.013077280625282406,
+            "previous_action": 2.3381308555947555e-08
+          },
+          "goal_features_fixed": 1.704300153781979e-06,
+          "goal_features_prefix": 1.704300153781979e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.19258092530071735,
+          "goal_686_fixed": 1.704300153781979e-06,
+          "goal_686_prefix": 0.19258092530071735,
+          "anchor_truth_vs_prev_field": 1.035314403474331,
+          "anchor_truth_vs_next_field": 1.0273703187704086
+        },
+        {
+          "frame": 3635,
+          "tag": "high_ang_vel",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 3.623962396837044e-08,
+            "joint_vel": 4.768371586472142e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 2.0312432516154597e-08,
+            "previous_action": 2.4302306167456322e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 3.623962396837044e-08,
+            "joint_vel": 4.768371586472142e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.013088706674567227,
+            "previous_action": 2.4302306167456322e-08
+          },
+          "goal_features_fixed": 1.704300153781979e-06,
+          "goal_features_prefix": 1.704300153781979e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.1923237442970276,
+          "goal_686_fixed": 1.704300153781979e-06,
+          "goal_686_prefix": 0.1923237442970276,
+          "anchor_truth_vs_prev_field": 1.0000001192092896,
+          "anchor_truth_vs_next_field": 0.9897305630147457
+        },
+        {
+          "frame": 6571,
+          "tag": "near_final",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 9.633598962999201e-08,
+            "joint_vel": 1.4485630916993841e-08,
+            "base_ang_vel": 1.2480355637833895e-09,
+            "gravity_b": 1.1451793358041584e-07,
+            "previous_action": 2.830210654725107e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 9.633598962999201e-08,
+            "joint_vel": 1.4485630916993841e-08,
+            "base_ang_vel": 1.2480355637833895e-09,
+            "gravity_b": 0.003951641718830529,
+            "previous_action": 2.830210654725107e-08
+          },
+          "goal_features_fixed": 1.043081283569336e-06,
+          "goal_features_prefix": 1.043081283569336e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.003969909623265266,
+          "goal_686_fixed": 1.043081283569336e-06,
+          "goal_686_prefix": 0.003969909623265266,
+          "anchor_truth_vs_prev_field": 1.0065211821347475,
+          "anchor_truth_vs_next_field": 1.0104910917580128
+        },
+        {
+          "frame": 6571,
+          "tag": "near_final",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 5.960464510845753e-09,
+            "base_ang_vel": 0.0,
+            "gravity_b": 4.848887266151181e-07,
+            "previous_action": 2.938235987848259e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 5.960464510845753e-09,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.0040368586360289005,
+            "previous_action": 2.938235987848259e-08
+          },
+          "goal_features_fixed": 1.043081283569336e-06,
+          "goal_features_prefix": 1.043081283569336e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.004018652485683533,
+          "goal_686_fixed": 1.043081283569336e-06,
+          "goal_686_prefix": 0.004018652485683533,
+          "anchor_truth_vs_prev_field": 1.0000002386514097,
+          "anchor_truth_vs_next_field": 1.0040188911370933
+        }
+      ]
+    },
+    {
+      "clip": "run1_subject2",
+      "reference": {
+        "frames": 11890,
+        "goal_features_max_abs": 1.1843496567125189e-05,
+        "goal_features_worst_frame": 7431,
+        "goal_features_worst_frame_max": 1.1843496567125189e-05,
+        "goal_features_median": 1.4901161138336505e-09
+      },
+      "samples": [
+        {
+          "frame": 1,
+          "tag": "initial",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 9.603284434334114e-08,
+            "joint_vel": 5.932899771465827e-08,
+            "base_ang_vel": 2.253372377580831e-09,
+            "gravity_b": 6.343293679211826e-08,
+            "previous_action": 2.6950456200047768e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 9.603284434334114e-08,
+            "joint_vel": 5.932899771465827e-08,
+            "base_ang_vel": 2.253372377580831e-09,
+            "gravity_b": 0.00016433763616584968,
+            "previous_action": 2.6950456200047768e-08
+          },
+          "goal_features_fixed": 1.2028031051158905e-06,
+          "goal_features_prefix": 1.2028031051158905e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.0008444488048553467,
+          "goal_686_fixed": 1.2028031051158905e-06,
+          "goal_686_prefix": 0.0008444488048553467,
+          "anchor_truth_vs_prev_field": 1.0200722943991423,
+          "anchor_truth_vs_next_field": 1.0202346574515104
+        },
+        {
+          "frame": 1,
+          "tag": "initial",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 7.740168850300932e-08,
+            "previous_action": 2.295029388754699e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.00015812983360156962,
+            "previous_action": 2.295029388754699e-08
+          },
+          "goal_features_fixed": 1.2028031051158905e-06,
+          "goal_features_prefix": 1.2028031051158905e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.000842922308947891,
+          "goal_686_fixed": 1.2028031051158905e-06,
+          "goal_686_prefix": 0.000842922308947891,
+          "anchor_truth_vs_prev_field": 1.0000000027112037,
+          "anchor_truth_vs_next_field": 1.0001584115379956
+        },
+        {
+          "frame": 1188,
+          "tag": "early",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 7.513658850655247e-08,
+            "joint_vel": 4.500957406783357e-08,
+            "base_ang_vel": 3.908065371316383e-09,
+            "gravity_b": 9.724458860382867e-08,
+            "previous_action": 1.838759244865429e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 7.513658850655247e-08,
+            "joint_vel": 4.500957406783357e-08,
+            "base_ang_vel": 3.908065371316383e-09,
+            "gravity_b": 0.0016003259508516887,
+            "previous_action": 1.838759244865429e-08
+          },
+          "goal_features_fixed": 1.462729785767225e-06,
+          "goal_features_prefix": 1.462729785767225e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.016014516353607178,
+          "goal_686_fixed": 1.462729785767225e-06,
+          "goal_686_prefix": 0.016014516353607178,
+          "anchor_truth_vs_prev_field": 1.0245139449834824,
+          "anchor_truth_vs_next_field": 1.0262904949486256
+        },
+        {
+          "frame": 1188,
+          "tag": "early",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 2.3841858043383013e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 3.6481738852067735e-08,
+            "previous_action": 3.6147144832909817e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 2.3841858043383013e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.0016067786533037857,
+            "previous_action": 3.6147144832909817e-08
+          },
+          "goal_features_fixed": 1.462729785767225e-06,
+          "goal_features_prefix": 1.462729785767225e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.015966076403856277,
+          "goal_686_fixed": 1.462729785767225e-06,
+          "goal_686_prefix": 0.015966076403856277,
+          "anchor_truth_vs_prev_field": 1.0,
+          "anchor_truth_vs_next_field": 1.0013507154071704
+        },
+        {
+          "frame": 5944,
+          "tag": "middle",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 6.000637498004835e-08,
+            "joint_vel": 5.955424065007264e-08,
+            "base_ang_vel": 7.241786448286547e-09,
+            "gravity_b": 1.5205271486351535e-07,
+            "previous_action": 2.511178176511919e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 6.000637498004835e-08,
+            "joint_vel": 5.955424065007264e-08,
+            "base_ang_vel": 7.241786448286547e-09,
+            "gravity_b": 0.014395075778292011,
+            "previous_action": 2.511178176511919e-08
+          },
+          "goal_features_fixed": 5.368785552684052e-06,
+          "goal_features_prefix": 5.368785552684052e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.026246851310133934,
+          "goal_686_fixed": 5.368785552684052e-06,
+          "goal_686_prefix": 0.026246851310133934,
+          "anchor_truth_vs_prev_field": 1.0247586909681559,
+          "anchor_truth_vs_next_field": 1.0241888705641031
+        },
+        {
+          "frame": 5944,
+          "tag": "middle",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 7.152557368605983e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 3.7904576810632307e-08,
+            "previous_action": 2.2236978480805192e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 2.95639037695139e-08,
+            "joint_vel": 7.152557368605983e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.01439623924298291,
+            "previous_action": 2.2236978480805192e-08
+          },
+          "goal_features_fixed": 5.368785552684052e-06,
+          "goal_features_prefix": 5.368785552684052e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.026910707354545593,
+          "goal_686_fixed": 5.368785552684052e-06,
+          "goal_686_prefix": 0.026910707354545593,
+          "anchor_truth_vs_prev_field": 1.0000000074505806,
+          "anchor_truth_vs_next_field": 0.9995406940579414
+        },
+        {
+          "frame": 9648,
+          "tag": "high_ang_vel",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 5.836725314178892e-08,
+            "joint_vel": 5.979827943924931e-08,
+            "base_ang_vel": 5.848064743574355e-08,
+            "gravity_b": 3.445446979943867e-07,
+            "previous_action": 2.3381308555947555e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 5.836725314178892e-08,
+            "joint_vel": 5.979827943924931e-08,
+            "base_ang_vel": 5.848064743574355e-08,
+            "gravity_b": 0.01862440928162882,
+            "previous_action": 2.3381308555947555e-08
+          },
+          "goal_features_fixed": 5.179481994410651e-06,
+          "goal_features_prefix": 5.179481994410651e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.12919749319553375,
+          "goal_686_fixed": 5.179481994410651e-06,
+          "goal_686_prefix": 0.12919749319553375,
+          "anchor_truth_vs_prev_field": 1.02771458029747,
+          "anchor_truth_vs_next_field": 1.0170540641993284
+        },
+        {
+          "frame": 9648,
+          "tag": "high_ang_vel",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 3.874301912620837e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 3.712614793371927e-08,
+            "previous_action": 2.4302306167456322e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 3.874301912620837e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.018650429738103366,
+            "previous_action": 2.4302306167456322e-08
+          },
+          "goal_features_fixed": 5.179481994410651e-06,
+          "goal_features_prefix": 5.179481994410651e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.12919792532920837,
+          "goal_686_fixed": 5.179481994410651e-06,
+          "goal_686_prefix": 0.12919792532920837,
+          "anchor_truth_vs_prev_field": 1.0,
+          "anchor_truth_vs_next_field": 1.0081541100516915
+        },
+        {
+          "frame": 11887,
+          "tag": "near_final",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 3.673134485460139e-08,
+            "joint_vel": 4.750759896587908e-09,
+            "base_ang_vel": 1.2480355637833895e-09,
+            "gravity_b": 5.2308853693006085e-08,
+            "previous_action": 2.830210654725107e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 3.673134485460139e-08,
+            "joint_vel": 4.750759896587908e-09,
+            "base_ang_vel": 1.2480355637833895e-09,
+            "gravity_b": 0.005406765610958902,
+            "previous_action": 2.830210654725107e-08
+          },
+          "goal_features_fixed": 4.931589458745389e-06,
+          "goal_features_prefix": 4.931589458745389e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.005748149007558823,
+          "goal_686_fixed": 4.931589458745389e-06,
+          "goal_686_prefix": 0.005748149007558823,
+          "anchor_truth_vs_prev_field": 1.0087003419175744,
+          "anchor_truth_vs_next_field": 1.0112283350899816
+        },
+        {
+          "frame": 11887,
+          "tag": "near_final",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 8.940696710757479e-09,
+            "base_ang_vel": 0.0,
+            "gravity_b": 2.8362807280579716e-07,
+            "previous_action": 2.938235987848259e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 8.940696710757479e-09,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.005524160367341838,
+            "previous_action": 2.938235987848259e-08
+          },
+          "goal_features_fixed": 4.931589458745389e-06,
+          "goal_features_prefix": 4.931589458745389e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.005783300264738944,
+          "goal_686_fixed": 4.931589458745389e-06,
+          "goal_686_prefix": 0.005783300264738944,
+          "anchor_truth_vs_prev_field": 0.9999998845160005,
+          "anchor_truth_vs_next_field": 1.0026584696024656
+        }
+      ]
+    },
+    {
+      "clip": "fallAndGetUp2_subject3",
+      "reference": {
+        "frames": 8195,
+        "goal_features_max_abs": 5.45340709101616e-06,
+        "goal_features_worst_frame": 7282,
+        "goal_features_worst_frame_max": 5.45340709101616e-06,
+        "goal_features_median": 7.450580569168253e-10
+      },
+      "samples": [
+        {
+          "frame": 1,
+          "tag": "initial",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 9.603284434334114e-08,
+            "joint_vel": 3.0409935458663995e-08,
+            "base_ang_vel": 2.253372377580831e-09,
+            "gravity_b": 3.253793375845859e-07,
+            "previous_action": 2.6950456200047768e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 9.603284434334114e-08,
+            "joint_vel": 3.0409935458663995e-08,
+            "base_ang_vel": 2.253372377580831e-09,
+            "gravity_b": 0.000352439869753432,
+            "previous_action": 2.6950456200047768e-08
+          },
+          "goal_features_fixed": 6.91870809532702e-07,
+          "goal_features_prefix": 6.91870809532702e-07,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.00035226717591285706,
+          "goal_686_fixed": 6.91870809532702e-07,
+          "goal_686_prefix": 0.00035226717591285706,
+          "anchor_truth_vs_prev_field": 1.0184846017509699,
+          "anchor_truth_vs_next_field": 1.018132334575057
+        },
+        {
+          "frame": 1,
+          "tag": "initial",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 2.384185793236071e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 5.310581107087486e-07,
+            "previous_action": 2.295029388754699e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 2.384185793236071e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.00035296399458835913,
+            "previous_action": 2.295029388754699e-08
+          },
+          "goal_features_fixed": 6.91870809532702e-07,
+          "goal_features_prefix": 6.91870809532702e-07,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.00035279362782603477,
+          "goal_686_fixed": 6.91870809532702e-07,
+          "goal_686_prefix": 0.00035279362782603477,
+          "anchor_truth_vs_prev_field": 1.000000238440407,
+          "anchor_truth_vs_next_field": 1.0
+        },
+        {
+          "frame": 819,
+          "tag": "early",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 9.017712976344683e-08,
+            "joint_vel": 1.746446276484903e-08,
+            "base_ang_vel": 8.595053904714156e-10,
+            "gravity_b": 5.855162743539921e-08,
+            "previous_action": 1.838759244865429e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 9.017712976344683e-08,
+            "joint_vel": 1.746446276484903e-08,
+            "base_ang_vel": 8.595053904714156e-10,
+            "gravity_b": 0.0062747953147820335,
+            "previous_action": 1.838759244865429e-08
+          },
+          "goal_features_fixed": 7.228546636262045e-07,
+          "goal_features_prefix": 7.228546636262045e-07,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.008038505911827087,
+          "goal_686_fixed": 7.228546636262045e-07,
+          "goal_686_prefix": 0.008038505911827087,
+          "anchor_truth_vs_prev_field": 1.0480705425143242,
+          "anchor_truth_vs_next_field": 1.048055998980999
+        },
+        {
+          "frame": 819,
+          "tag": "early",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 3.623962396837044e-08,
+            "joint_vel": 1.7881393421514957e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 1.1911845576584312e-07,
+            "previous_action": 3.6147144832909817e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 3.623962396837044e-08,
+            "joint_vel": 1.7881393421514957e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.005954778243521086,
+            "previous_action": 3.6147144832909817e-08
+          },
+          "goal_features_fixed": 7.228546636262045e-07,
+          "goal_features_prefix": 7.228546636262045e-07,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.008072258904576302,
+          "goal_686_fixed": 7.228546636262045e-07,
+          "goal_686_prefix": 0.008072258904576302,
+          "anchor_truth_vs_prev_field": 0.9999998807907104,
+          "anchor_truth_vs_next_field": 1.0080721396952868
+        },
+        {
+          "frame": 4097,
+          "tag": "middle",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 1.2243622871110915e-07,
+            "joint_vel": 1.8929728895500375e-08,
+            "base_ang_vel": 3.559684713660971e-09,
+            "gravity_b": 1.7856681078232128e-07,
+            "previous_action": 2.511178176511919e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 1.2243622871110915e-07,
+            "joint_vel": 1.8929728895500375e-08,
+            "base_ang_vel": 3.559684713660971e-09,
+            "gravity_b": 0.011551811462599947,
+            "previous_action": 2.511178176511919e-08
+          },
+          "goal_features_fixed": 9.886587381824352e-07,
+          "goal_features_prefix": 9.886587381824352e-07,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.02428455650806427,
+          "goal_686_fixed": 9.886587381824352e-07,
+          "goal_686_prefix": 0.02428455650806427,
+          "anchor_truth_vs_prev_field": 1.037975948303938,
+          "anchor_truth_vs_next_field": 1.0368700437247753
+        },
+        {
+          "frame": 4097,
+          "tag": "middle",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 3.623962396837044e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 4.8870132718370485e-08,
+            "previous_action": 2.2236978480805192e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 3.623962396837044e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.011550217116222328,
+            "previous_action": 2.2236978480805192e-08
+          },
+          "goal_features_fixed": 9.886587381824352e-07,
+          "goal_features_prefix": 9.886587381824352e-07,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.02461285889148712,
+          "goal_686_fixed": 9.886587381824352e-07,
+          "goal_686_prefix": 0.02461285889148712,
+          "anchor_truth_vs_prev_field": 1.0000000298023224,
+          "anchor_truth_vs_next_field": 0.9996779579669237
+        },
+        {
+          "frame": 3892,
+          "tag": "high_ang_vel",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 8.145458485486756e-08,
+            "joint_vel": 6.041530076217327e-08,
+            "base_ang_vel": 5.848064743574355e-08,
+            "gravity_b": 1.2046082531469438e-07,
+            "previous_action": 2.3381308555947555e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 8.145458485486756e-08,
+            "joint_vel": 6.041530076217327e-08,
+            "base_ang_vel": 5.848064743574355e-08,
+            "gravity_b": 0.06609222188298736,
+            "previous_action": 2.3381308555947555e-08
+          },
+          "goal_features_fixed": 8.344650268554688e-07,
+          "goal_features_prefix": 8.344650268554688e-07,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.07655749283730984,
+          "goal_686_fixed": 8.344650268554688e-07,
+          "goal_686_prefix": 0.07655749283730984,
+          "anchor_truth_vs_prev_field": 1.0044067176058888,
+          "anchor_truth_vs_next_field": 1.0041526826098561
+        },
+        {
+          "frame": 3892,
+          "tag": "high_ang_vel",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 4.8058337864809175e-08,
+            "previous_action": 2.4302306167456322e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 3.5762786843029915e-08,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.06668615792751698,
+            "previous_action": 2.4302306167456322e-08
+          },
+          "goal_features_fixed": 8.344650268554688e-07,
+          "goal_features_prefix": 8.344650268554688e-07,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.07512179017066867,
+          "goal_686_fixed": 8.344650268554688e-07,
+          "goal_686_prefix": 0.07512179017066867,
+          "anchor_truth_vs_prev_field": 0.9999999701976776,
+          "anchor_truth_vs_next_field": 1.0249371957033873
+        },
+        {
+          "frame": 8192,
+          "tag": "near_final",
+          "mode": "drifted",
+          "proprio_fixed": {
+            "joint_pos": 9.633598962999201e-08,
+            "joint_vel": 5.532045488365611e-09,
+            "base_ang_vel": 6.202545033140439e-09,
+            "gravity_b": 5.368805278127553e-08,
+            "previous_action": 2.830210654725107e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 9.633598962999201e-08,
+            "joint_vel": 5.532045488365611e-09,
+            "base_ang_vel": 6.202545033140439e-09,
+            "gravity_b": 0.0015989294007559274,
+            "previous_action": 2.830210654725107e-08
+          },
+          "goal_features_fixed": 3.501355647500537e-06,
+          "goal_features_prefix": 3.501355647500537e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.006377680227160454,
+          "goal_686_fixed": 3.501355647500537e-06,
+          "goal_686_prefix": 0.006377680227160454,
+          "anchor_truth_vs_prev_field": 1.006804726086557,
+          "anchor_truth_vs_next_field": 1.0064535774290562
+        },
+        {
+          "frame": 8192,
+          "tag": "near_final",
+          "mode": "matched",
+          "proprio_fixed": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 4.470348355378739e-09,
+            "base_ang_vel": 0.0,
+            "gravity_b": 1.4669813030998569e-08,
+            "previous_action": 2.938235987848259e-08
+          },
+          "proprio_prefix": {
+            "joint_pos": 4.768371586472142e-08,
+            "joint_vel": 4.470348355378739e-09,
+            "base_ang_vel": 0.0,
+            "gravity_b": 0.0015807022832685994,
+            "previous_action": 2.938235987848259e-08
+          },
+          "goal_features_fixed": 3.501355647500537e-06,
+          "goal_features_prefix": 3.501355647500537e-06,
+          "goal_anchor_fixed": 0.0,
+          "goal_anchor_prefix": 0.006360736209899187,
+          "goal_686_fixed": 3.501355647500537e-06,
+          "goal_686_prefix": 0.006360736209899187,
+          "anchor_truth_vs_prev_field": 1.0000000009895302,
+          "anchor_truth_vs_next_field": 0.9999788329005241
+        }
+      ]
+    }
+  ]
+}

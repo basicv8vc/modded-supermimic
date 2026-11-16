@@ -1,0 +1,119 @@
+{
+  "protocol_id": "modded-supermimic-g1-lafan1-v1",
+  "algorithm": "smoke-fixture",
+  "training_commit": "0000000000000000000000000000000000000000",
+  "seed": 0,
+  "hardware": {
+    "gpu_name": "cpu-only",
+    "gpu_count": 1
+  },
+  "evaluator": {
+    "implementation": "canonical-mjlab-g1-v1",
+    "mujoco": "3.11.0",
+    "mujoco_warp": "3.11.0",
+    "warp_lang": "1.16.0",
+    "robot_dof": 29,
+    "self_collision": true,
+    "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+    "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+    "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+    "mjlab_version": "1.6.0"
+  },
+  "checkpoints": [
+    {
+      "checkpoint_sha256": "04638e777fc11db756dd3e9746f886158e12989c3d24b21bed79accd802fdd0a",
+      "training_wall_s": 1.0,
+      "setup_wall_s": 0.6186095000011846,
+      "eval_wall_s": 13.035715790989343,
+      "per_clip": [
+        {
+          "clip": "dance1_subject1",
+          "normalized_return": 0.0005192945128151722,
+          "failed": true
+        },
+        {
+          "clip": "walk1_subject1",
+          "normalized_return": 0.00023229144674432993,
+          "failed": true
+        }
+      ]
+    }
+  ],
+  "evaluation": {
+    "mode": "checkpoint",
+    "protocol_sha256": "ddec7124dbee4c999986f995a8c2aa88097a494e1a0f4df00f2967366c15935b",
+    "control_hz": 50.0,
+    "clip_steps": {
+      "dance1_subject1": 6573,
+      "walk1_subject1": 13064
+    },
+    "normalized_return_denominator": 0.1,
+    "aggregate_normalized_return": 0.00037579297977975105,
+    "failed_clips": 2,
+    "per_clip_diagnostics": {
+      "dance1_subject1": {
+        "steps": 6573,
+        "alive_steps": 7,
+        "fall_step": 7,
+        "fall_terms": [
+          "ee_body_pos"
+        ],
+        "raw_normalized_return": 0.0005192945128151722,
+        "mean_term_score": {
+          "action_rate_l2": -2.1155035147099387e-06,
+          "joint_limit": 0.0,
+          "motion_body_ang_vel": 0.0008012641822044463,
+          "motion_body_lin_vel": 0.00042858165548550017,
+          "motion_body_ori": 0.009298284670012492,
+          "motion_body_pos": 0.01845325133429405,
+          "motion_global_root_ori": 0.009899667377327757,
+          "motion_global_root_pos": 0.009882821037535136,
+          "self_collisions": 0.0
+        },
+        "reference_wall_s": 3.6577848749875557,
+        "rollout_wall_s": 0.0709306659991853
+      },
+      "walk1_subject1": {
+        "steps": 13064,
+        "alive_steps": 6,
+        "fall_step": 6,
+        "fall_terms": [
+          "ee_body_pos"
+        ],
+        "raw_normalized_return": 0.00023229144674432993,
+        "mean_term_score": {
+          "action_rate_l2": -1.5764808813814315e-06,
+          "joint_limit": 0.0,
+          "motion_body_ang_vel": 0.0010246596728700646,
+          "motion_body_lin_vel": 8.721220899383276e-05,
+          "motion_body_ori": 0.010785104781317762,
+          "motion_body_pos": 0.018805302361947787,
+          "motion_global_root_ori": 0.009944061696346351,
+          "motion_global_root_pos": 0.00993282676387103,
+          "self_collisions": 0.0
+        },
+        "reference_wall_s": 8.889172541996231,
+        "rollout_wall_s": 0.4178277080063708
+      }
+    },
+    "policy_kind": "checkpoint_actor",
+    "clip_subset": [
+      "dance1_subject1",
+      "walk1_subject1"
+    ],
+    "frozen": {
+      "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+      "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+      "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+      "compiled_fingerprint": {
+        "nbody": 31,
+        "njnt": 30,
+        "ngeom": 69,
+        "nq": 36,
+        "nv": 35,
+        "nu": 29,
+        "ngeom_robot": 68
+      }
+    }
+  }
+}

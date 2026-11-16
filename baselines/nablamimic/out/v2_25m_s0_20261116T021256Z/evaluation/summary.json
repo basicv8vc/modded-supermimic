@@ -1,0 +1,24 @@
+{
+ "run_id": "v2_25m_s0_20261116T021256Z",
+ "seed": 0,
+ "status": "INCOMPLETE",
+ "integrity_problems": [
+  "no evaluated checkpoint"
+ ],
+ "training": {
+  "updates": 3936,
+  "training_time_min": 24.97,
+  "iter_s_last": 0.3776836395263672,
+  "rew_mean_last": 0.8076952695846558,
+  "term_rate_last": 4.1961669921875e-05
+ },
+ "evaluation": {},
+ "final": {
+  "budget_checkpoint": "it_3750",
+  "normalized_return": null,
+  "failed_clips": null,
+  "last_evaluated_checkpoint": null,
+  "last_evaluated_return": null
+ },
+ "protocol": "official nominal LAFAN1 protocol (scripts/evaluate_run.sh; deterministic EMA actor; MuJoCo Warp, 10 solver iterations; fall forfeits rest of clip)"
+}

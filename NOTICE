@@ -1,0 +1,59 @@
+basicv8vc/modded-supermimic
+Copyright (c) 2026 basicv8vc
+
+Except for the third-party material listed below, the source code and
+documentation in this repository are released under the MIT License (see
+LICENSE). The third-party material keeps its own terms and is redistributed
+here only under those terms; where that material is Apache-2.0, a copy of the
+Apache License 2.0 is provided in licenses/Apache-2.0.txt.
+
+--------------------------------------------------------------------------------
+Third-party components
+--------------------------------------------------------------------------------
+
+1. mjlab — Apache-2.0 (NOT MIT)
+   https://github.com/mujocolab/mjlab
+   Frozen at v1.6.0, commit 0fb8a681136be94ffc636a3dd423cabb97d91f10.
+   License text: licenses/Apache-2.0.txt
+
+   Used as the reference implementation for the Unitree G1 tracking evaluator
+   in this repository. The following remain Apache-2.0 and are not relicensed by
+   this repository:
+
+   * assets/g1/g1.xml and assets/g1/assets/*.STL
+     (G1 29-DoF MJCF and 35 mesh files, copied verbatim from mjlab's
+     asset_zoo/robots/unitree_g1/xmls; 36 files, sha256
+     ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a)
+   * the numerical constants transcribed into
+     benchmark/evaluator/constants.py
+     (reward scales, termination thresholds, actuator stiffness/damping
+     derivation, observation layout, simulation options). Only the constants
+     are derived from mjlab; the surrounding evaluator code is original and
+     MIT-licensed.
+
+   mjlab in turn redistributes the Unitree G1 robot description originating
+   from Unitree Robotics; see mjlab's asset zoo for the upstream provenance.
+
+2. LAFAN1 Retargeting Dataset — not redistributed
+   lvhaidong/LAFAN1_Retargeting_Dataset (g1), revision
+   07ff8845a94d59d4195a8ac04fe918d4e6338239.
+   The 40 motion clips used by the benchmark are intentionally NOT part of this
+   repository (data/ is gitignored). They are fetched by
+   scripts/fetch_lafan1.py at the pinned revision.
+   Please cite the dataset as described by its authors. The source motion capture
+   data is from LAFAN1 (Holden, Kanoun, Pere, Komura, "Learned Motion Matching",
+   ACM TOG / SIGGRAPH 2020).
+
+3. MuJoCo, MuJoCo Warp, Warp — Apache-2.0
+   https://github.com/google-deepmind/mujoco
+   https://github.com/google-deepmind/mujoco_warp
+   https://github.com/NVIDIA/warp
+   Runtime dependencies only; no source is vendored into this repository.
+
+--------------------------------------------------------------------------------
+Scope
+--------------------------------------------------------------------------------
+
+The MIT license covers the code and documentation authored in this repository.
+It does not extend to the material listed above, nor to any model checkpoints,
+datasets, or external baseline repositories referenced by commit SHA.

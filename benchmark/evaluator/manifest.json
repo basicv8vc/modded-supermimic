@@ -1,0 +1,27 @@
+{
+  "evaluator_implementation": "canonical-mjlab-g1-v1",
+  "mjlab": {
+    "repo": "mujocolab/mjlab",
+    "version": "1.6.0",
+    "commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10"
+  },
+  "robot_model": {
+    "source": "mjlab asset_zoo/robots/unitree_g1/xmls",
+    "files": 36,
+    "sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a"
+  },
+  "dataset": {
+    "source": "lvhaidong/LAFAN1_Retargeting_Dataset@g1 (revision 07ff8845a94d59d4195a8ac04fe918d4e6338239)",
+    "clips": 40,
+    "manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085"
+  },
+  "compiled_fingerprint": {
+    "nbody": 31,
+    "njnt": 30,
+    "ngeom": 69,
+    "nq": 36,
+    "nv": 35,
+    "nu": 29,
+    "ngeom_robot": 68
+  }
+}

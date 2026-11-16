@@ -1,0 +1,2237 @@
+Syncing snapshots from Drive: /content/drive/MyDrive/supermimic_v2/runs/official_35k_20261115T120918Z/snapshots
+Syncing prior evals from Drive: /content/drive/MyDrive/supermimic_v2/runs/official_35k_20261115T120918Z/evals
+Indexed 71 snapshots: iter 0..35000
+Pre-loaded 14 already-evaluated checkpoints: [24500, 25000, 26000, 27000, 28000, 29000, 30000, 31000, 32000, 33000, 33500, 34000, 34500, 35000]
+Starting binary search over indices [0..49] (iter 0..24500)
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap025_iter12000_1847.2s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 1847.20 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap025_iter12000_1847.2s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794754722.550675   13348 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794754722.582010   13348 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794754723.792432   13348 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794754723.792692   13348 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.38 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.36 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.59 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.36 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.36 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.35 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.93 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.91 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.11 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.98 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.30 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.19 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.31 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.31 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.33 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.32 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 52.40 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.41 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.50 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 58.39 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.43 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.89 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.37 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.41 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.28 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.28 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.29 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.34 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.81263 ok      alive=5108/5108 49.6s
+[b40 run2_subject1           ] ret=+0.39339 FAILED  alive=6045/12239 58.8s
+[b40 fallAndGetUp1_subject4  ] ret=+0.58760 FAILED  alive=6270/8409 61.0s
+[b40 dance1_subject1         ] ret=+0.79558 ok      alive=6573/6573 64.0s
+[b40 dance1_subject2         ] ret=+0.73292 ok      alive=6573/6573 64.0s
+[b40 dance1_subject3         ] ret=+0.82408 ok      alive=6573/6573 64.0s
+[b40 fallAndGetUp2_subject2  ] ret=+0.84172 ok      alive=8194/8194 80.8s
+[b40 fallAndGetUp2_subject3  ] ret=+0.82585 ok      alive=8194/8194 80.8s
+[b40 walk4_subject1          ] ret=+0.87278 ok      alive=8194/8194 80.8s
+[b40 fallAndGetUp1_subject1  ] ret=+0.79260 ok      alive=8409/8409 83.1s
+[b40 fallAndGetUp1_subject5  ] ret=+0.78364 ok      alive=8409/8409 83.1s
+[b40 dance2_subject1         ] ret=+0.62206 FAILED  alive=9780/11283 97.9s
+[b40 dance2_subject2         ] ret=+0.75106 ok      alive=11283/11283 114.4s
+[b40 dance2_subject3         ] ret=+0.81749 ok      alive=11283/11283 114.4s
+[b40 dance2_subject4         ] ret=+0.76854 ok      alive=11283/11283 114.4s
+[b40 dance2_subject5         ] ret=+0.81354 ok      alive=11283/11283 114.4s
+[b40 run1_subject2           ] ret=+0.80437 ok      alive=11889/11889 121.2s
+[b40 run1_subject5           ] ret=+0.78604 ok      alive=11889/11889 121.2s
+[b40 walk2_subject1          ] ret=+0.82635 ok      alive=11908/11908 121.4s
+[b40 walk2_subject3          ] ret=+0.84863 ok      alive=11908/11908 121.4s
+[b40 walk2_subject4          ] ret=+0.85050 ok      alive=11908/11908 121.4s
+[b40 jumps1_subject2         ] ret=+0.75347 FAILED  alive=11955/12221 121.9s
+[b40 jumps1_subject1         ] ret=+0.78585 ok      alive=12221/12221 125.0s
+[b40 jumps1_subject5         ] ret=+0.78298 ok      alive=12221/12221 125.0s
+[b40 run2_subject4           ] ret=+0.79131 ok      alive=12239/12239 125.2s
+[b40 fight1_subject2         ] ret=+0.75841 ok      alive=12243/12243 125.3s
+[b40 fight1_subject3         ] ret=+0.77583 ok      alive=12243/12243 125.3s
+[b40 fight1_subject5         ] ret=+0.79295 ok      alive=12243/12243 125.3s
+[b40 fightAndSports1_subject1] ret=+0.77335 ok      alive=12256/12256 125.4s
+[b40 fightAndSports1_subject4] ret=+0.78567 ok      alive=12256/12256 125.4s
+[b40 walk3_subject1          ] ret=+0.85286 ok      alive=12329/12329 126.3s
+[b40 walk3_subject2          ] ret=+0.87596 ok      alive=12329/12329 126.3s
+[b40 walk3_subject3          ] ret=+0.83891 ok      alive=12329/12329 126.3s
+[b40 walk3_subject4          ] ret=+0.84579 ok      alive=12329/12329 126.3s
+[b40 walk3_subject5          ] ret=+0.83311 ok      alive=12329/12329 126.3s
+[b40 walk1_subject1          ] ret=+0.86262 ok      alive=13064/13064 135.6s
+[b40 walk1_subject2          ] ret=+0.85399 ok      alive=13064/13064 135.6s
+[b40 walk1_subject5          ] ret=+0.84431 ok      alive=13064/13064 135.6s
+[b40 sprint1_subject2        ] ret=+0.82238 ok      alive=13654/13654 143.2s
+[b40 sprint1_subject4        ] ret=+0.80200 ok      alive=13654/13654 143.2s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 430978 executed (441080 clip-horizon)
+eval wall       : 151.9s (end-to-end)
+aggregate steps/s: 2838.1 (end-to-end)
+steady steps/s  : 3026.2 (430778 steps / 142.4s)
+gpu util        : {'mean': 61.99719887955182, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.78958
+failed clips    : 4
+wrote           : /content/snap_evals/actor_snap025_iter12000_1847.2s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[BISECT] iter=12000 wall=1847.2s ret=0.78958 failed=4 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap038_iter18500_2634.1s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2634.12 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap038_iter18500_2634.1s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794754878.051832   15636 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794754878.083391   15636 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794754879.306659   15636 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794754879.306923   15636 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.39 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.37 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.59 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.36 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.37 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.34 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.95 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.91 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.12 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.98 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.67 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.31 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.33 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.32 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 52.96 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.42 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.51 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 57.96 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.45 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.86 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.39 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.46 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.28 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.33 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.84782 ok      alive=5108/5108 49.0s
+[b40 dance1_subject1         ] ret=+0.82264 ok      alive=6573/6573 63.3s
+[b40 dance1_subject2         ] ret=+0.78009 ok      alive=6573/6573 63.3s
+[b40 dance1_subject3         ] ret=+0.84970 ok      alive=6573/6573 63.3s
+[b40 fallAndGetUp2_subject2  ] ret=+0.83592 ok      alive=8194/8194 79.7s
+[b40 fallAndGetUp2_subject3  ] ret=+0.81728 ok      alive=8194/8194 79.7s
+[b40 walk4_subject1          ] ret=+0.89338 ok      alive=8194/8194 79.7s
+[b40 fallAndGetUp1_subject1  ] ret=+0.83592 ok      alive=8409/8409 81.9s
+[b40 fallAndGetUp1_subject4  ] ret=+0.82221 ok      alive=8409/8409 81.9s
+[b40 fallAndGetUp1_subject5  ] ret=+0.82269 ok      alive=8409/8409 81.9s
+[b40 dance2_subject1         ] ret=+0.78473 ok      alive=11283/11283 112.7s
+[b40 dance2_subject2         ] ret=+0.79141 ok      alive=11283/11283 112.7s
+[b40 dance2_subject3         ] ret=+0.84558 ok      alive=11283/11283 112.7s
+[b40 dance2_subject4         ] ret=+0.79579 ok      alive=11283/11283 112.7s
+[b40 dance2_subject5         ] ret=+0.82739 ok      alive=11283/11283 112.7s
+[b40 run1_subject2           ] ret=+0.83358 ok      alive=11889/11889 119.4s
+[b40 run1_subject5           ] ret=+0.81558 ok      alive=11889/11889 119.4s
+[b40 walk2_subject1          ] ret=+0.84790 ok      alive=11908/11908 119.6s
+[b40 walk2_subject3          ] ret=+0.86517 ok      alive=11908/11908 119.6s
+[b40 walk2_subject4          ] ret=+0.88000 ok      alive=11908/11908 119.6s
+[b40 jumps1_subject1         ] ret=+0.82188 ok      alive=12221/12221 123.2s
+[b40 jumps1_subject2         ] ret=+0.81477 ok      alive=12221/12221 123.2s
+[b40 jumps1_subject5         ] ret=+0.82098 ok      alive=12221/12221 123.2s
+[b40 run2_subject1           ] ret=+0.82129 ok      alive=12239/12239 123.4s
+[b40 run2_subject4           ] ret=+0.81545 ok      alive=12239/12239 123.4s
+[b40 fight1_subject2         ] ret=+0.81000 ok      alive=12243/12243 123.5s
+[b40 fight1_subject3         ] ret=+0.81388 ok      alive=12243/12243 123.5s
+[b40 fight1_subject5         ] ret=+0.82803 ok      alive=12243/12243 123.5s
+[b40 fightAndSports1_subject1] ret=+0.80635 ok      alive=12256/12256 123.6s
+[b40 fightAndSports1_subject4] ret=+0.81317 ok      alive=12256/12256 123.6s
+[b40 walk3_subject1          ] ret=+0.87348 ok      alive=12329/12329 124.5s
+[b40 walk3_subject2          ] ret=+0.90088 ok      alive=12329/12329 124.5s
+[b40 walk3_subject3          ] ret=+0.84532 ok      alive=12329/12329 124.5s
+[b40 walk3_subject4          ] ret=+0.86772 ok      alive=12329/12329 124.5s
+[b40 walk3_subject5          ] ret=+0.86114 ok      alive=12329/12329 124.5s
+[b40 walk1_subject1          ] ret=+0.87283 ok      alive=13064/13064 133.8s
+[b40 walk1_subject2          ] ret=+0.86831 ok      alive=13064/13064 133.8s
+[b40 walk1_subject5          ] ret=+0.86521 ok      alive=13064/13064 133.8s
+[b40 sprint1_subject2        ] ret=+0.83628 ok      alive=13654/13654 141.3s
+[b40 sprint1_subject4        ] ret=+0.81384 ok      alive=13654/13654 141.3s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 441080 executed (441080 clip-horizon)
+eval wall       : 149.6s (end-to-end)
+aggregate steps/s: 2949.3 (end-to-end)
+steady steps/s  : 3132.2 (440880 steps / 140.8s)
+gpu util        : {'mean': 62.50712250712251, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.83464
+failed clips    : 0
+wrote           : /content/snap_evals/actor_snap038_iter18500_2634.1s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[BISECT] iter=18500 wall=2634.1s ret=0.83464 failed=0 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap032_iter15500_2270.9s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2270.89 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap032_iter15500_2270.9s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755031.251342   17903 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755031.282303   17903 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755032.484579   17903 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755032.484832   17903 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.31 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.58 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.26 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.36 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.34 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.92 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.91 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.10 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.97 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.34 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.32 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.31 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.32 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.32 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 52.34 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.40 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.50 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 57.78 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.41 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.77 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.35 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.34 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.25 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.25 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.32 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.32561 FAILED  alive=2086/5108 20.1s
+[b40 dance1_subject1         ] ret=+0.81063 ok      alive=6573/6573 64.1s
+[b40 dance1_subject2         ] ret=+0.75853 ok      alive=6573/6573 64.1s
+[b40 dance1_subject3         ] ret=+0.84469 ok      alive=6573/6573 64.1s
+[b40 fallAndGetUp2_subject2  ] ret=+0.86141 ok      alive=8194/8194 80.6s
+[b40 fallAndGetUp2_subject3  ] ret=+0.80713 ok      alive=8194/8194 80.6s
+[b40 walk4_subject1          ] ret=+0.88270 ok      alive=8194/8194 80.6s
+[b40 fallAndGetUp1_subject1  ] ret=+0.81494 ok      alive=8409/8409 82.9s
+[b40 fallAndGetUp1_subject4  ] ret=+0.80187 ok      alive=8409/8409 82.9s
+[b40 fallAndGetUp1_subject5  ] ret=+0.80875 ok      alive=8409/8409 82.9s
+[b40 dance2_subject1         ] ret=+0.75302 ok      alive=11283/11283 113.8s
+[b40 dance2_subject2         ] ret=+0.76601 ok      alive=11283/11283 113.8s
+[b40 dance2_subject3         ] ret=+0.83946 ok      alive=11283/11283 113.8s
+[b40 dance2_subject4         ] ret=+0.78953 ok      alive=11283/11283 113.8s
+[b40 dance2_subject5         ] ret=+0.82027 ok      alive=11283/11283 113.8s
+[b40 run1_subject2           ] ret=+0.82825 ok      alive=11889/11889 120.7s
+[b40 run1_subject5           ] ret=+0.80095 ok      alive=11889/11889 120.7s
+[b40 walk2_subject1          ] ret=+0.83304 ok      alive=11908/11908 120.9s
+[b40 walk2_subject3          ] ret=+0.85845 ok      alive=11908/11908 120.9s
+[b40 walk2_subject4          ] ret=+0.85904 ok      alive=11908/11908 120.9s
+[b40 jumps1_subject1         ] ret=+0.80742 ok      alive=12221/12221 124.5s
+[b40 jumps1_subject2         ] ret=+0.79442 ok      alive=12221/12221 124.5s
+[b40 jumps1_subject5         ] ret=+0.80000 ok      alive=12221/12221 124.5s
+[b40 run2_subject1           ] ret=+0.80627 ok      alive=12239/12239 124.7s
+[b40 run2_subject4           ] ret=+0.81136 ok      alive=12239/12239 124.7s
+[b40 fight1_subject2         ] ret=+0.78830 ok      alive=12243/12243 124.7s
+[b40 fight1_subject3         ] ret=+0.79171 ok      alive=12243/12243 124.7s
+[b40 fight1_subject5         ] ret=+0.81857 ok      alive=12243/12243 124.7s
+[b40 fightAndSports1_subject1] ret=+0.78472 ok      alive=12256/12256 124.9s
+[b40 fightAndSports1_subject4] ret=+0.80715 ok      alive=12256/12256 124.9s
+[b40 walk3_subject1          ] ret=+0.85505 ok      alive=12329/12329 125.8s
+[b40 walk3_subject2          ] ret=+0.87975 ok      alive=12329/12329 125.8s
+[b40 walk3_subject3          ] ret=+0.84218 ok      alive=12329/12329 125.8s
+[b40 walk3_subject4          ] ret=+0.85590 ok      alive=12329/12329 125.8s
+[b40 walk3_subject5          ] ret=+0.84862 ok      alive=12329/12329 125.8s
+[b40 walk1_subject1          ] ret=+0.86358 ok      alive=13064/13064 134.9s
+[b40 walk1_subject2          ] ret=+0.86417 ok      alive=13064/13064 134.9s
+[b40 walk1_subject5          ] ret=+0.85526 ok      alive=13064/13064 134.9s
+[b40 sprint1_subject2        ] ret=+0.83712 ok      alive=13654/13654 142.4s
+[b40 sprint1_subject4        ] ret=+0.81691 ok      alive=13654/13654 142.4s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 438058 executed (441080 clip-horizon)
+eval wall       : 150.6s (end-to-end)
+aggregate steps/s: 2909.0 (end-to-end)
+steady steps/s  : 3087.2 (437858 steps / 141.8s)
+gpu util        : {'mean': 62.2909604519774, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.80982
+failed clips    : 1
+wrote           : /content/snap_evals/actor_snap032_iter15500_2270.9s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[BISECT] iter=15500 wall=2270.9s ret=0.80982 failed=1 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap035_iter17000_2453.1s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2453.09 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap035_iter17000_2453.1s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755185.507754   20175 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755185.539449   20175 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755186.734856   20175 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755186.735120   20175 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.31 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.57 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.26 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.35 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.31 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.34 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.90 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.89 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.10 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.96 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.29 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.14 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.30 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.30 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.32 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 52.91 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.40 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.49 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 58.70 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.42 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.76 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.34 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.33 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.28 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.34 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.83398 ok      alive=5108/5108 49.1s
+[b40 dance1_subject1         ] ret=+0.84415 ok      alive=6573/6573 63.5s
+[b40 dance1_subject2         ] ret=+0.77482 ok      alive=6573/6573 63.5s
+[b40 dance1_subject3         ] ret=+0.86071 ok      alive=6573/6573 63.5s
+[b40 fallAndGetUp2_subject2  ] ret=+0.86543 ok      alive=8194/8194 79.9s
+[b40 fallAndGetUp2_subject3  ] ret=+0.82957 ok      alive=8194/8194 79.9s
+[b40 walk4_subject1          ] ret=+0.88758 ok      alive=8194/8194 79.9s
+[b40 fallAndGetUp1_subject1  ] ret=+0.83357 ok      alive=8409/8409 82.2s
+[b40 fallAndGetUp1_subject4  ] ret=+0.80912 ok      alive=8409/8409 82.2s
+[b40 fallAndGetUp1_subject5  ] ret=+0.82039 ok      alive=8409/8409 82.2s
+[b40 dance2_subject1         ] ret=+0.79353 ok      alive=11283/11283 112.7s
+[b40 dance2_subject2         ] ret=+0.79291 ok      alive=11283/11283 112.7s
+[b40 dance2_subject3         ] ret=+0.84420 ok      alive=11283/11283 112.7s
+[b40 dance2_subject4         ] ret=+0.79335 ok      alive=11283/11283 112.7s
+[b40 dance2_subject5         ] ret=+0.82726 ok      alive=11283/11283 112.7s
+[b40 run1_subject2           ] ret=+0.83979 ok      alive=11889/11889 119.4s
+[b40 run1_subject5           ] ret=+0.81433 ok      alive=11889/11889 119.4s
+[b40 walk2_subject1          ] ret=+0.84673 ok      alive=11908/11908 119.6s
+[b40 walk2_subject3          ] ret=+0.86130 ok      alive=11908/11908 119.6s
+[b40 walk2_subject4          ] ret=+0.87374 ok      alive=11908/11908 119.6s
+[b40 jumps1_subject1         ] ret=+0.81288 ok      alive=12221/12221 123.2s
+[b40 jumps1_subject2         ] ret=+0.80093 ok      alive=12221/12221 123.2s
+[b40 jumps1_subject5         ] ret=+0.81085 ok      alive=12221/12221 123.2s
+[b40 run2_subject1           ] ret=+0.81506 ok      alive=12239/12239 123.3s
+[b40 run2_subject4           ] ret=+0.81370 ok      alive=12239/12239 123.3s
+[b40 fight1_subject2         ] ret=+0.79720 ok      alive=12243/12243 123.4s
+[b40 fight1_subject3         ] ret=+0.82564 ok      alive=12243/12243 123.4s
+[b40 fight1_subject5         ] ret=+0.82498 ok      alive=12243/12243 123.4s
+[b40 fightAndSports1_subject1] ret=+0.79898 ok      alive=12256/12256 123.5s
+[b40 fightAndSports1_subject4] ret=+0.83114 ok      alive=12256/12256 123.5s
+[b40 walk3_subject1          ] ret=+0.87092 ok      alive=12329/12329 124.4s
+[b40 walk3_subject2          ] ret=+0.92685 ok      alive=12329/12329 124.4s
+[b40 walk3_subject3          ] ret=+0.84240 ok      alive=12329/12329 124.4s
+[b40 walk3_subject4          ] ret=+0.88127 ok      alive=12329/12329 124.4s
+[b40 walk3_subject5          ] ret=+0.86101 ok      alive=12329/12329 124.4s
+[b40 walk1_subject1          ] ret=+0.89364 ok      alive=13064/13064 133.5s
+[b40 walk1_subject2          ] ret=+0.86066 ok      alive=13064/13064 133.5s
+[b40 walk1_subject5          ] ret=+0.87818 ok      alive=13064/13064 133.5s
+[b40 sprint1_subject2        ] ret=+0.83825 ok      alive=13654/13654 140.9s
+[b40 sprint1_subject4        ] ret=+0.82288 ok      alive=13654/13654 140.9s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 441080 executed (441080 clip-horizon)
+eval wall       : 149.1s (end-to-end)
+aggregate steps/s: 2958.4 (end-to-end)
+steady steps/s  : 3141.8 (440880 steps / 140.3s)
+gpu util        : {'mean': 62.52285714285714, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.83635
+failed clips    : 0
+wrote           : /content/snap_evals/actor_snap035_iter17000_2453.1s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[BISECT] iter=17000 wall=2453.1s ret=0.83635 failed=0 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap034_iter16500_2393.0s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2393.01 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap034_iter16500_2393.0s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755338.289681   22430 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755338.321171   22430 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755339.511410   22430 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755339.511679   22430 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.31 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.36 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.57 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.27 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.35 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.31 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.35 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.91 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.90 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.10 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.96 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.10 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.31 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.30 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.33 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 52.41 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.41 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.50 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 57.79 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.44 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.79 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.36 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.44 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.29 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.32 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.82918 ok      alive=5108/5108 48.9s
+[b40 dance1_subject1         ] ret=+0.81742 ok      alive=6573/6573 63.2s
+[b40 dance1_subject2         ] ret=+0.75954 ok      alive=6573/6573 63.2s
+[b40 dance1_subject3         ] ret=+0.85597 ok      alive=6573/6573 63.2s
+[b40 fallAndGetUp2_subject2  ] ret=+0.87707 ok      alive=8194/8194 79.6s
+[b40 fallAndGetUp2_subject3  ] ret=+0.82187 ok      alive=8194/8194 79.6s
+[b40 walk4_subject1          ] ret=+0.88919 ok      alive=8194/8194 79.6s
+[b40 fallAndGetUp1_subject1  ] ret=+0.81994 ok      alive=8409/8409 81.8s
+[b40 fallAndGetUp1_subject4  ] ret=+0.79303 ok      alive=8409/8409 81.8s
+[b40 fallAndGetUp1_subject5  ] ret=+0.84426 ok      alive=8409/8409 81.8s
+[b40 dance2_subject1         ] ret=+0.77558 ok      alive=11283/11283 112.5s
+[b40 dance2_subject2         ] ret=+0.78323 ok      alive=11283/11283 112.5s
+[b40 dance2_subject3         ] ret=+0.84225 ok      alive=11283/11283 112.5s
+[b40 dance2_subject4         ] ret=+0.77625 ok      alive=11283/11283 112.5s
+[b40 dance2_subject5         ] ret=+0.82347 ok      alive=11283/11283 112.5s
+[b40 run1_subject2           ] ret=+0.83572 ok      alive=11889/11889 119.3s
+[b40 run1_subject5           ] ret=+0.80402 ok      alive=11889/11889 119.3s
+[b40 walk2_subject1          ] ret=+0.84663 ok      alive=11908/11908 119.5s
+[b40 walk2_subject3          ] ret=+0.85902 ok      alive=11908/11908 119.5s
+[b40 walk2_subject4          ] ret=+0.87115 ok      alive=11908/11908 119.5s
+[b40 jumps1_subject2         ] ret=+0.78473 FAILED  alive=12040/12221 121.0s
+[b40 jumps1_subject1         ] ret=+0.80833 ok      alive=12221/12221 123.0s
+[b40 jumps1_subject5         ] ret=+0.79468 ok      alive=12221/12221 123.0s
+[b40 run2_subject1           ] ret=+0.81137 ok      alive=12239/12239 123.2s
+[b40 run2_subject4           ] ret=+0.81787 ok      alive=12239/12239 123.2s
+[b40 fight1_subject2         ] ret=+0.79595 ok      alive=12243/12243 123.3s
+[b40 fight1_subject3         ] ret=+0.80208 ok      alive=12243/12243 123.3s
+[b40 fight1_subject5         ] ret=+0.82918 ok      alive=12243/12243 123.3s
+[b40 fightAndSports1_subject1] ret=+0.78679 ok      alive=12256/12256 123.4s
+[b40 fightAndSports1_subject4] ret=+0.79605 ok      alive=12256/12256 123.4s
+[b40 walk3_subject1          ] ret=+0.86428 ok      alive=12329/12329 124.3s
+[b40 walk3_subject2          ] ret=+0.89112 ok      alive=12329/12329 124.3s
+[b40 walk3_subject3          ] ret=+0.83906 ok      alive=12329/12329 124.3s
+[b40 walk3_subject4          ] ret=+0.86034 ok      alive=12329/12329 124.3s
+[b40 walk3_subject5          ] ret=+0.85475 ok      alive=12329/12329 124.3s
+[b40 walk1_subject1          ] ret=+0.88889 ok      alive=13064/13064 133.4s
+[b40 walk1_subject2          ] ret=+0.86600 ok      alive=13064/13064 133.4s
+[b40 walk1_subject5          ] ret=+0.86048 ok      alive=13064/13064 133.4s
+[b40 sprint1_subject2        ] ret=+0.83093 ok      alive=13654/13654 140.8s
+[b40 sprint1_subject4        ] ret=+0.81461 ok      alive=13654/13654 140.8s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 440899 executed (441080 clip-horizon)
+eval wall       : 149.0s (end-to-end)
+aggregate steps/s: 2959.9 (end-to-end)
+steady steps/s  : 3143.1 (440699 steps / 140.2s)
+gpu util        : {'mean': 62.64, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.82806
+failed clips    : 1
+wrote           : /content/snap_evals/actor_snap034_iter16500_2393.0s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[BISECT] iter=16500 wall=2393.0s ret=0.82806 failed=1 []
+Binary search converged at idx=34 (iter=17000)
+[EDGE-CHECK-CACHED] iter=16500 wall=2393.0s ret=0.82806 failed=1 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap033_iter16000_2330.9s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2330.95 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap033_iter16000_2330.9s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755491.009862   24683 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755491.041263   24683 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755492.264004   24683 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755492.264263   24683 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.31 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.60 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.27 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.35 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.36 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.31 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.33 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.92 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.89 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.10 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.96 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.08 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.30 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.30 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.33 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 51.96 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.40 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.50 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 57.46 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.41 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.76 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.42 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.31 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.25 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.33 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.83958 ok      alive=5108/5108 49.1s
+[b40 dance1_subject1         ] ret=+0.82594 ok      alive=6573/6573 63.4s
+[b40 dance1_subject2         ] ret=+0.80694 ok      alive=6573/6573 63.4s
+[b40 dance1_subject3         ] ret=+0.89706 ok      alive=6573/6573 63.4s
+[b40 fallAndGetUp2_subject2  ] ret=+0.84675 ok      alive=8194/8194 79.9s
+[b40 fallAndGetUp2_subject3  ] ret=+0.81085 ok      alive=8194/8194 79.9s
+[b40 walk4_subject1          ] ret=+0.88628 ok      alive=8194/8194 79.9s
+[b40 fallAndGetUp1_subject1  ] ret=+0.83567 ok      alive=8409/8409 82.1s
+[b40 fallAndGetUp1_subject4  ] ret=+0.82410 ok      alive=8409/8409 82.1s
+[b40 fallAndGetUp1_subject5  ] ret=+0.82802 ok      alive=8409/8409 82.1s
+[b40 dance2_subject1         ] ret=+0.78976 ok      alive=11283/11283 112.6s
+[b40 dance2_subject2         ] ret=+0.81288 ok      alive=11283/11283 112.6s
+[b40 dance2_subject3         ] ret=+0.85700 ok      alive=11283/11283 112.6s
+[b40 dance2_subject4         ] ret=+0.79730 ok      alive=11283/11283 112.6s
+[b40 dance2_subject5         ] ret=+0.83222 ok      alive=11283/11283 112.6s
+[b40 run1_subject2           ] ret=+0.83940 ok      alive=11889/11889 119.3s
+[b40 run1_subject5           ] ret=+0.81713 ok      alive=11889/11889 119.3s
+[b40 walk2_subject1          ] ret=+0.86422 ok      alive=11908/11908 119.5s
+[b40 walk2_subject3          ] ret=+0.87049 ok      alive=11908/11908 119.5s
+[b40 walk2_subject4          ] ret=+0.87249 ok      alive=11908/11908 119.5s
+[b40 jumps1_subject1         ] ret=+0.81727 ok      alive=12221/12221 123.1s
+[b40 jumps1_subject2         ] ret=+0.80689 ok      alive=12221/12221 123.1s
+[b40 jumps1_subject5         ] ret=+0.81587 ok      alive=12221/12221 123.1s
+[b40 run2_subject1           ] ret=+0.82327 ok      alive=12239/12239 123.3s
+[b40 run2_subject4           ] ret=+0.81800 ok      alive=12239/12239 123.3s
+[b40 fight1_subject2         ] ret=+0.80284 ok      alive=12243/12243 123.4s
+[b40 fight1_subject3         ] ret=+0.81408 ok      alive=12243/12243 123.4s
+[b40 fight1_subject5         ] ret=+0.83522 ok      alive=12243/12243 123.4s
+[b40 fightAndSports1_subject1] ret=+0.80500 ok      alive=12256/12256 123.5s
+[b40 fightAndSports1_subject4] ret=+0.83949 ok      alive=12256/12256 123.5s
+[b40 walk3_subject1          ] ret=+0.86264 ok      alive=12329/12329 124.4s
+[b40 walk3_subject2          ] ret=+0.90565 ok      alive=12329/12329 124.4s
+[b40 walk3_subject3          ] ret=+0.85396 ok      alive=12329/12329 124.4s
+[b40 walk3_subject4          ] ret=+0.87021 ok      alive=12329/12329 124.4s
+[b40 walk3_subject5          ] ret=+0.86013 ok      alive=12329/12329 124.4s
+[b40 walk1_subject1          ] ret=+0.87981 ok      alive=13064/13064 133.6s
+[b40 walk1_subject2          ] ret=+0.86932 ok      alive=13064/13064 133.6s
+[b40 walk1_subject5          ] ret=+0.86905 ok      alive=13064/13064 133.6s
+[b40 sprint1_subject2        ] ret=+0.83572 ok      alive=13654/13654 141.0s
+[b40 sprint1_subject4        ] ret=+0.81978 ok      alive=13654/13654 141.0s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 441080 executed (441080 clip-horizon)
+eval wall       : 149.2s (end-to-end)
+aggregate steps/s: 2955.9 (end-to-end)
+steady steps/s  : 3139.6 (440880 steps / 140.4s)
+gpu util        : {'mean': 62.542857142857144, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.83896
+failed clips    : 0
+wrote           : /content/snap_evals/actor_snap033_iter16000_2330.9s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[EDGE-CHECK] iter=16000 wall=2330.9s ret=0.83896 failed=0 []
+[EDGE-CHECK-CACHED] iter=15500 wall=2270.9s ret=0.80982 failed=1 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap031_iter15000_2210.8s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2210.83 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap031_iter15000_2210.8s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755643.962452   26940 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755643.993735   26940 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755645.206280   26940 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755645.206550   26940 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.30 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.58 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.26 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.36 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.31 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.34 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.90 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.89 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.09 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.95 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 24.86 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.30 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.30 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.33 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.30 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 51.97 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.39 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.51 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 56.85 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.42 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.78 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.37 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.32 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.32 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.82529 ok      alive=5108/5108 49.2s
+[b40 dance1_subject1         ] ret=+0.81261 ok      alive=6573/6573 63.6s
+[b40 dance1_subject2         ] ret=+0.77392 ok      alive=6573/6573 63.6s
+[b40 dance1_subject3         ] ret=+0.84607 ok      alive=6573/6573 63.6s
+[b40 fallAndGetUp2_subject2  ] ret=+0.84135 ok      alive=8194/8194 80.0s
+[b40 fallAndGetUp2_subject3  ] ret=+0.82244 ok      alive=8194/8194 80.0s
+[b40 walk4_subject1          ] ret=+0.88492 ok      alive=8194/8194 80.0s
+[b40 fallAndGetUp1_subject1  ] ret=+0.81625 ok      alive=8409/8409 82.3s
+[b40 fallAndGetUp1_subject4  ] ret=+0.80471 ok      alive=8409/8409 82.3s
+[b40 fallAndGetUp1_subject5  ] ret=+0.79635 ok      alive=8409/8409 82.3s
+[b40 dance2_subject1         ] ret=+0.76657 ok      alive=11283/11283 113.2s
+[b40 dance2_subject2         ] ret=+0.78934 ok      alive=11283/11283 113.2s
+[b40 dance2_subject3         ] ret=+0.84032 ok      alive=11283/11283 113.2s
+[b40 dance2_subject4         ] ret=+0.78543 ok      alive=11283/11283 113.2s
+[b40 dance2_subject5         ] ret=+0.82195 ok      alive=11283/11283 113.2s
+[b40 run1_subject2           ] ret=+0.82908 ok      alive=11889/11889 119.9s
+[b40 run1_subject5           ] ret=+0.81289 ok      alive=11889/11889 119.9s
+[b40 walk2_subject1          ] ret=+0.84578 ok      alive=11908/11908 120.1s
+[b40 walk2_subject3          ] ret=+0.86015 ok      alive=11908/11908 120.1s
+[b40 walk2_subject4          ] ret=+0.86262 ok      alive=11908/11908 120.1s
+[b40 jumps1_subject1         ] ret=+0.80876 ok      alive=12221/12221 123.8s
+[b40 jumps1_subject2         ] ret=+0.80484 ok      alive=12221/12221 123.8s
+[b40 jumps1_subject5         ] ret=+0.80823 ok      alive=12221/12221 123.8s
+[b40 run2_subject1           ] ret=+0.82432 ok      alive=12239/12239 124.0s
+[b40 run2_subject4           ] ret=+0.81239 ok      alive=12239/12239 124.0s
+[b40 fight1_subject2         ] ret=+0.79231 ok      alive=12243/12243 124.0s
+[b40 fight1_subject3         ] ret=+0.80342 ok      alive=12243/12243 124.0s
+[b40 fight1_subject5         ] ret=+0.81847 ok      alive=12243/12243 124.0s
+[b40 fightAndSports1_subject1] ret=+0.79173 ok      alive=12256/12256 124.2s
+[b40 fightAndSports1_subject4] ret=+0.80889 ok      alive=12256/12256 124.2s
+[b40 walk3_subject1          ] ret=+0.85692 ok      alive=12329/12329 125.1s
+[b40 walk3_subject2          ] ret=+0.88384 ok      alive=12329/12329 125.1s
+[b40 walk3_subject3          ] ret=+0.82894 ok      alive=12329/12329 125.1s
+[b40 walk3_subject4          ] ret=+0.87719 ok      alive=12329/12329 125.1s
+[b40 walk3_subject5          ] ret=+0.85455 ok      alive=12329/12329 125.1s
+[b40 walk1_subject1          ] ret=+0.87043 ok      alive=13064/13064 134.3s
+[b40 walk1_subject2          ] ret=+0.87041 ok      alive=13064/13064 134.3s
+[b40 walk1_subject5          ] ret=+0.85109 ok      alive=13064/13064 134.3s
+[b40 sprint1_subject2        ] ret=+0.83492 ok      alive=13654/13654 141.8s
+[b40 sprint1_subject4        ] ret=+0.81665 ok      alive=13654/13654 141.8s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 441080 executed (441080 clip-horizon)
+eval wall       : 150.1s (end-to-end)
+aggregate steps/s: 2938.8 (end-to-end)
+steady steps/s  : 3120.9 (440880 steps / 141.3s)
+gpu util        : {'mean': 62.47443181818182, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.82641
+failed clips    : 0
+wrote           : /content/snap_evals/actor_snap031_iter15000_2210.8s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[EDGE-CHECK] iter=15000 wall=2210.8s ret=0.82641 failed=0 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap030_iter14500_2150.8s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2150.77 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap030_iter14500_2150.8s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755797.798079   29204 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755797.829671   29204 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755799.040500   29204 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755799.040758   29204 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.32 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.58 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.35 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.31 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.34 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.91 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.90 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.09 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.95 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.30 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.37 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.31 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.30 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.32 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 52.94 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.40 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.50 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 57.68 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.44 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.78 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.35 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.40 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.28 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.34 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.83787 ok      alive=5108/5108 49.3s
+[b40 dance1_subject1         ] ret=+0.84019 ok      alive=6573/6573 63.7s
+[b40 dance1_subject2         ] ret=+0.77261 ok      alive=6573/6573 63.7s
+[b40 dance1_subject3         ] ret=+0.85831 ok      alive=6573/6573 63.7s
+[b40 fallAndGetUp2_subject2  ] ret=+0.84603 ok      alive=8194/8194 80.2s
+[b40 fallAndGetUp2_subject3  ] ret=+0.81463 ok      alive=8194/8194 80.2s
+[b40 walk4_subject1          ] ret=+0.89899 ok      alive=8194/8194 80.2s
+[b40 fallAndGetUp1_subject1  ] ret=+0.81141 ok      alive=8409/8409 82.4s
+[b40 fallAndGetUp1_subject4  ] ret=+0.80554 ok      alive=8409/8409 82.4s
+[b40 fallAndGetUp1_subject5  ] ret=+0.80156 ok      alive=8409/8409 82.4s
+[b40 jumps1_subject1         ] ret=+0.75030 FAILED  alive=11247/12221 112.9s
+[b40 dance2_subject1         ] ret=+0.77433 ok      alive=11283/11283 113.3s
+[b40 dance2_subject2         ] ret=+0.78163 ok      alive=11283/11283 113.3s
+[b40 dance2_subject3         ] ret=+0.84893 ok      alive=11283/11283 113.3s
+[b40 dance2_subject4         ] ret=+0.79027 ok      alive=11283/11283 113.3s
+[b40 dance2_subject5         ] ret=+0.83533 ok      alive=11283/11283 113.3s
+[b40 run1_subject2           ] ret=+0.82404 ok      alive=11889/11889 120.1s
+[b40 run1_subject5           ] ret=+0.80422 ok      alive=11889/11889 120.1s
+[b40 walk2_subject1          ] ret=+0.86358 ok      alive=11908/11908 120.4s
+[b40 walk2_subject3          ] ret=+0.87219 ok      alive=11908/11908 120.4s
+[b40 walk2_subject4          ] ret=+0.87212 ok      alive=11908/11908 120.4s
+[b40 jumps1_subject2         ] ret=+0.80915 ok      alive=12221/12221 124.0s
+[b40 jumps1_subject5         ] ret=+0.81461 ok      alive=12221/12221 124.0s
+[b40 run2_subject1           ] ret=+0.81730 ok      alive=12239/12239 124.2s
+[b40 run2_subject4           ] ret=+0.80645 ok      alive=12239/12239 124.2s
+[b40 fight1_subject2         ] ret=+0.79597 ok      alive=12243/12243 124.3s
+[b40 fight1_subject3         ] ret=+0.80726 ok      alive=12243/12243 124.3s
+[b40 fight1_subject5         ] ret=+0.82733 ok      alive=12243/12243 124.3s
+[b40 fightAndSports1_subject1] ret=+0.80326 ok      alive=12256/12256 124.4s
+[b40 fightAndSports1_subject4] ret=+0.80818 ok      alive=12256/12256 124.4s
+[b40 walk3_subject1          ] ret=+0.86876 ok      alive=12329/12329 125.3s
+[b40 walk3_subject2          ] ret=+0.89312 ok      alive=12329/12329 125.3s
+[b40 walk3_subject3          ] ret=+0.84747 ok      alive=12329/12329 125.3s
+[b40 walk3_subject4          ] ret=+0.90552 ok      alive=12329/12329 125.3s
+[b40 walk3_subject5          ] ret=+0.84997 ok      alive=12329/12329 125.3s
+[b40 walk1_subject1          ] ret=+0.87411 ok      alive=13064/13064 134.5s
+[b40 walk1_subject2          ] ret=+0.87931 ok      alive=13064/13064 134.5s
+[b40 walk1_subject5          ] ret=+0.87772 ok      alive=13064/13064 134.5s
+[b40 sprint1_subject2        ] ret=+0.83198 ok      alive=13654/13654 142.0s
+[b40 sprint1_subject4        ] ret=+0.81679 ok      alive=13654/13654 142.0s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 440106 executed (441080 clip-horizon)
+eval wall       : 150.3s (end-to-end)
+aggregate steps/s: 2928.5 (end-to-end)
+steady steps/s  : 3109.3 (439906 steps / 141.5s)
+gpu util        : {'mean': 62.25212464589235, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.83096
+failed clips    : 1
+wrote           : /content/snap_evals/actor_snap030_iter14500_2150.8s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[EDGE-CHECK] iter=14500 wall=2150.8s ret=0.83096 failed=1 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap029_iter14000_2090.7s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2090.71 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap029_iter14000_2090.7s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755951.823602   31481 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755951.855007   31481 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794755953.058839   31481 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794755953.059098   31481 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.35 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.59 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.27 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.35 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.31 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.33 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 2.01 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.89 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.10 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.96 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.20 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.30 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.30 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.33 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.30 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 53.00 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.39 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.49 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 57.46 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.42 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.77 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.36 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.44 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.29 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.33 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp1_subject1  ] ret=+0.17021 FAILED  alive=1802/8409 17.4s
+[b40 fallAndGetUp3_subject1  ] ret=+0.81979 ok      alive=5108/5108 49.4s
+[b40 dance1_subject1         ] ret=+0.80338 ok      alive=6573/6573 63.9s
+[b40 dance1_subject2         ] ret=+0.74219 ok      alive=6573/6573 63.9s
+[b40 dance1_subject3         ] ret=+0.84752 ok      alive=6573/6573 63.9s
+[b40 fallAndGetUp2_subject2  ] ret=+0.84168 ok      alive=8194/8194 80.5s
+[b40 fallAndGetUp2_subject3  ] ret=+0.80921 ok      alive=8194/8194 80.5s
+[b40 walk4_subject1          ] ret=+0.88692 ok      alive=8194/8194 80.5s
+[b40 fallAndGetUp1_subject4  ] ret=+0.79731 ok      alive=8409/8409 82.7s
+[b40 fallAndGetUp1_subject5  ] ret=+0.79158 ok      alive=8409/8409 82.7s
+[b40 dance2_subject1         ] ret=+0.76537 ok      alive=11283/11283 113.5s
+[b40 dance2_subject2         ] ret=+0.75939 ok      alive=11283/11283 113.5s
+[b40 dance2_subject3         ] ret=+0.82916 ok      alive=11283/11283 113.5s
+[b40 dance2_subject4         ] ret=+0.77730 ok      alive=11283/11283 113.5s
+[b40 dance2_subject5         ] ret=+0.82058 ok      alive=11283/11283 113.5s
+[b40 run1_subject2           ] ret=+0.82366 ok      alive=11889/11889 120.2s
+[b40 run1_subject5           ] ret=+0.80600 ok      alive=11889/11889 120.2s
+[b40 walk2_subject1          ] ret=+0.85062 ok      alive=11908/11908 120.5s
+[b40 walk2_subject3          ] ret=+0.86296 ok      alive=11908/11908 120.5s
+[b40 walk2_subject4          ] ret=+0.85466 ok      alive=11908/11908 120.5s
+[b40 jumps1_subject2         ] ret=+0.77619 FAILED  alive=11950/12221 120.9s
+[b40 jumps1_subject1         ] ret=+0.80780 ok      alive=12221/12221 124.1s
+[b40 jumps1_subject5         ] ret=+0.80201 ok      alive=12221/12221 124.1s
+[b40 run2_subject1           ] ret=+0.81379 ok      alive=12239/12239 124.3s
+[b40 run2_subject4           ] ret=+0.82224 ok      alive=12239/12239 124.3s
+[b40 fight1_subject2         ] ret=+0.77541 ok      alive=12243/12243 124.3s
+[b40 fight1_subject3         ] ret=+0.79233 ok      alive=12243/12243 124.3s
+[b40 fight1_subject5         ] ret=+0.81237 ok      alive=12243/12243 124.3s
+[b40 fightAndSports1_subject1] ret=+0.78131 ok      alive=12256/12256 124.5s
+[b40 fightAndSports1_subject4] ret=+0.78930 ok      alive=12256/12256 124.5s
+[b40 walk3_subject1          ] ret=+0.85809 ok      alive=12329/12329 125.4s
+[b40 walk3_subject2          ] ret=+0.87658 ok      alive=12329/12329 125.4s
+[b40 walk3_subject3          ] ret=+0.84333 ok      alive=12329/12329 125.4s
+[b40 walk3_subject4          ] ret=+0.86300 ok      alive=12329/12329 125.4s
+[b40 walk3_subject5          ] ret=+0.83689 ok      alive=12329/12329 125.4s
+[b40 walk1_subject1          ] ret=+0.86171 ok      alive=13064/13064 134.6s
+[b40 walk1_subject2          ] ret=+0.85032 ok      alive=13064/13064 134.6s
+[b40 walk1_subject5          ] ret=+0.85506 ok      alive=13064/13064 134.6s
+[b40 sprint1_subject2        ] ret=+0.83323 ok      alive=13654/13654 142.1s
+[b40 sprint1_subject4        ] ret=+0.81025 ok      alive=13654/13654 142.1s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 434202 executed (441080 clip-horizon)
+eval wall       : 150.3s (end-to-end)
+aggregate steps/s: 2889.4 (end-to-end)
+steady steps/s  : 3066.4 (434002 steps / 141.5s)
+gpu util        : {'mean': 62.46458923512748, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.80302
+failed clips    : 2
+wrote           : /content/snap_evals/actor_snap029_iter14000_2090.7s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[EDGE-CHECK] iter=14000 wall=2090.7s ret=0.80302 failed=2 []
+>>> /usr/bin/python3 scripts/v2/fast_eval.py --backend batched --batch-envs 40 --policy-file benchmark/policies/official_supermimic.py:make_policy --checkpoint /content/snapshots/actor_snap036_iter17500_2513.6s.pt --algorithm SuperMimic-official-gencoord-proprio --training-commit abc124c1bd5976341034668af3d12c087f2f1f55 --training-wall-s 2513.57 --seed 0 --cache-references --gpu-name RTX PRO 6000 Blackwell --gpu-count 1 --out /content/snap_evals/actor_snap036_iter17500_2513.6s_v2.json
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+torch.cuda.is_available              : True
+torch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition
+torch.cuda.get_device_capability(0)  : (12, 0) (sm_120)
+warp CUDA devices                    : ['cuda:0']
+mjlab runtime device                 : cuda:0
+MuJoCo Warp simulation backend       : mujoco_warp (mjlab.sim.sim.Simulation)
+warp device / arch                   : cuda:0 / 120
+CUDA runtime / driver                : 13.0 / 580.82.07
+CUDA graph step captured             : n/a
+physics state array device           : n/a
+target GPU RTX PRO 6000 / sm_120     : True / True
+fast_eval(B)    : batch_envs=40 clips=40 policy_device=auto device=cuda:0
+/usr/local/lib/python3.13/dist-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794756105.840020   33745 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794756105.871826   33745 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794756107.058083   33745 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794756107.058341   33745 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Setting seed: 0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.33 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.57 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.27 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.35 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.35 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.31 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.35 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.91 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.90 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 1.10 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.96 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 25.04 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.30 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.30 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.32 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 52.38 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.41 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_9fe0d8d1 e97f89f load on device 'cuda:0' took 0.49 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 57.37 ms  (cached)
+Module _contact_sort__locals__contact_sort_c7ec4c16 3b32e96 load on device 'cuda:0' took 0.42 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.77 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.36 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.31 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.25 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.32 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 40     |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 0 active terms.
+
+[INFO] <CommandManager> contains 1 active terms.
++--------------------------------+
+|      Active Command Terms      |
++-------+--------+---------------+
+| Index | Name   |      Type     |
++-------+--------+---------------+
+|   0   | motion | MotionCommand |
++-------+--------+---------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor' (shape: (160,)) |
++----------+------------------------------------+------------+
+|  Index   | Name                               |   Shape    |
++----------+------------------------------------+------------+
+|    0     | command                            |   (58,)    |
+|    1     | motion_anchor_pos_b                |    (3,)    |
+|    2     | motion_anchor_ori_b                |    (6,)    |
+|    3     | base_lin_vel                       |    (3,)    |
+|    4     | base_ang_vel                       |    (3,)    |
+|    5     | joint_pos                          |   (29,)    |
+|    6     | joint_vel                          |   (29,)    |
+|    7     | actions                            |   (29,)    |
++----------+------------------------------------+------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (286,)) |
++-----------+------------------------------------+------------+
+|   Index   | Name                               |   Shape    |
++-----------+------------------------------------+------------+
+|     0     | command                            |   (58,)    |
+|     1     | motion_anchor_pos_b                |    (3,)    |
+|     2     | motion_anchor_ori_b                |    (6,)    |
+|     3     | body_pos                           |   (42,)    |
+|     4     | body_ori                           |   (84,)    |
+|     5     | base_lin_vel                       |    (3,)    |
+|     6     | base_ang_vel                       |    (3,)    |
+|     7     | joint_pos                          |   (29,)    |
+|     8     | joint_vel                          |   (29,)    |
+|     9     | actions                            |   (29,)    |
++-----------+------------------------------------+------------+
+
+[INFO] <TerminationManager> contains 4 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | root_height |  False   |
+|   2   | root_tilt   |  False   |
+|   3   | nonfinite   |  False   |
++-------+-------------+----------+
+
+[INFO] <RewardManager> contains 8 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[b40 fallAndGetUp3_subject1  ] ret=+0.84183 ok      alive=5108/5108 49.1s
+[b40 dance1_subject1         ] ret=+0.82887 ok      alive=6573/6573 63.4s
+[b40 dance1_subject2         ] ret=+0.78372 ok      alive=6573/6573 63.4s
+[b40 dance1_subject3         ] ret=+0.86473 ok      alive=6573/6573 63.4s
+[b40 fallAndGetUp2_subject2  ] ret=+0.83920 ok      alive=8194/8194 79.9s
+[b40 fallAndGetUp2_subject3  ] ret=+0.81106 ok      alive=8194/8194 79.9s
+[b40 walk4_subject1          ] ret=+0.89884 ok      alive=8194/8194 79.9s
+[b40 fallAndGetUp1_subject1  ] ret=+0.81382 ok      alive=8409/8409 82.1s
+[b40 fallAndGetUp1_subject4  ] ret=+0.81313 ok      alive=8409/8409 82.1s
+[b40 fallAndGetUp1_subject5  ] ret=+0.83100 ok      alive=8409/8409 82.1s
+[b40 dance2_subject1         ] ret=+0.78692 ok      alive=11283/11283 112.7s
+[b40 dance2_subject2         ] ret=+0.80309 ok      alive=11283/11283 112.7s
+[b40 dance2_subject3         ] ret=+0.85656 ok      alive=11283/11283 112.7s
+[b40 dance2_subject4         ] ret=+0.80045 ok      alive=11283/11283 112.7s
+[b40 dance2_subject5         ] ret=+0.84145 ok      alive=11283/11283 112.7s
+[b40 run1_subject2           ] ret=+0.83875 ok      alive=11889/11889 119.4s
+[b40 run1_subject5           ] ret=+0.81824 ok      alive=11889/11889 119.4s
+[b40 walk2_subject1          ] ret=+0.85904 ok      alive=11908/11908 119.6s
+[b40 walk2_subject3          ] ret=+0.88996 ok      alive=11908/11908 119.6s
+[b40 walk2_subject4          ] ret=+0.87750 ok      alive=11908/11908 119.6s
+[b40 jumps1_subject1         ] ret=+0.83106 ok      alive=12221/12221 123.2s
+[b40 jumps1_subject2         ] ret=+0.79850 ok      alive=12221/12221 123.2s
+[b40 jumps1_subject5         ] ret=+0.81614 ok      alive=12221/12221 123.2s
+[b40 run2_subject1           ] ret=+0.82009 ok      alive=12239/12239 123.4s
+[b40 run2_subject4           ] ret=+0.82892 ok      alive=12239/12239 123.4s
+[b40 fight1_subject2         ] ret=+0.80706 ok      alive=12243/12243 123.4s
+[b40 fight1_subject3         ] ret=+0.81619 ok      alive=12243/12243 123.4s
+[b40 fight1_subject5         ] ret=+0.83024 ok      alive=12243/12243 123.4s
+[b40 fightAndSports1_subject1] ret=+0.80521 ok      alive=12256/12256 123.6s
+[b40 fightAndSports1_subject4] ret=+0.82561 ok      alive=12256/12256 123.6s
+[b40 walk3_subject1          ] ret=+0.88026 ok      alive=12329/12329 124.5s
+[b40 walk3_subject2          ] ret=+0.90294 ok      alive=12329/12329 124.5s
+[b40 walk3_subject3          ] ret=+0.86002 ok      alive=12329/12329 124.5s
+[b40 walk3_subject4          ] ret=+0.87939 ok      alive=12329/12329 124.5s
+[b40 walk3_subject5          ] ret=+0.85002 ok      alive=12329/12329 124.5s
+[b40 walk1_subject1          ] ret=+0.87592 ok      alive=13064/13064 133.6s
+[b40 walk1_subject2          ] ret=+0.87464 ok      alive=13064/13064 133.6s
+[b40 walk1_subject5          ] ret=+0.87163 ok      alive=13064/13064 133.6s
+[b40 sprint1_subject2        ] ret=+0.84242 ok      alive=13654/13654 141.0s
+[b40 sprint1_subject4        ] ret=+0.82214 ok      alive=13654/13654 141.0s
+
+fast_eval       : backend=batched batch_envs=40 policy=official_supermimic_gpu clips=40
+control steps   : 441080 executed (441080 clip-horizon)
+eval wall       : 149.2s (end-to-end)
+aggregate steps/s: 2956.7 (end-to-end)
+steady steps/s  : 3139.1 (440880 steps / 140.4s)
+gpu util        : {'mean': 62.58, 'max': 69.0, 'min': 0.0}
+aggregate return: +0.83841
+failed clips    : 0
+wrote           : /content/snap_evals/actor_snap036_iter17500_2513.6s_v2.json
+audit           : FORMAT_VALID_PENDING_PHYSICS_AUDIT
+[EDGE-ABOVE] iter=17500 wall=2513.6s ret=0.83841 failed=0 []
+=== BISECT DONE ===

@@ -1,0 +1,61 @@
+{
+  "a": {
+    "path": "/tmp/sm_serial_2clips.json",
+    "algorithm": "unknown",
+    "workers": 1
+  },
+  "b": {
+    "path": "/tmp/sm_batched_2clips.json",
+    "algorithm": "SuperMimic-vibed",
+    "workers": "batched(num_envs=40)"
+  },
+  "tol_return": 0.01,
+  "tol_terms": 0.01,
+  "clips_compared": 2,
+  "clips_mismatched": 1,
+  "max_abs_return_diff": 0.0006590293197386021,
+  "max_abs_term_diff": 0.00010511694331689653,
+  "aggregate_return_a": 0.5395132276078389,
+  "aggregate_return_b": 0.5396506751714295,
+  "abs_aggregate_diff": 0.00013744756359057586,
+  "verdict": "FAIL",
+  "per_clip": [
+    {
+      "clip": "dance1_subject1",
+      "return_a": 0.21507456007464715,
+      "return_b": 0.21469042588208959,
+      "abs_return_diff": 0.0003841341925575614,
+      "failed_a": true,
+      "failed_b": true,
+      "alive_steps_a": 1617,
+      "alive_steps_b": 1621,
+      "fall_step_a": 1617,
+      "fall_step_b": 1621,
+      "fall_terms_a": [
+        "root_height"
+      ],
+      "fall_terms_b": [
+        "root_height",
+        "root_tilt"
+      ],
+      "max_abs_term_diff": 0.00010511694331689653,
+      "match": false
+    },
+    {
+      "clip": "walk1_subject1",
+      "return_a": 0.8639518951410308,
+      "return_b": 0.8646109244607694,
+      "abs_return_diff": 0.0006590293197386021,
+      "failed_a": false,
+      "failed_b": false,
+      "alive_steps_a": 13064,
+      "alive_steps_b": 13064,
+      "fall_step_a": null,
+      "fall_step_b": null,
+      "fall_terms_a": [],
+      "fall_terms_b": [],
+      "max_abs_term_diff": 2.423202174690192e-05,
+      "match": true
+    }
+  ]
+}

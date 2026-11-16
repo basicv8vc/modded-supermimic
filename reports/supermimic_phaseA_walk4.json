@@ -1,0 +1,88 @@
+{
+  "protocol_id": "modded-supermimic-g1-lafan1-v1",
+  "algorithm": "SuperMimic",
+  "training_commit": "8bfc1158bd968f729fcc65d5e897a05b05ea3d36",
+  "seed": 0,
+  "hardware": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "gpu_count": 1
+  },
+  "evaluator": {
+    "implementation": "canonical-mjlab-g1-v1",
+    "mujoco": "3.11.0",
+    "mujoco_warp": "3.11.0",
+    "warp_lang": "1.16.0",
+    "robot_dof": 29,
+    "self_collision": true,
+    "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+    "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+    "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+    "mjlab_version": "1.6.0"
+  },
+  "checkpoints": [
+    {
+      "checkpoint_sha256": "93bc5c43185d21f4ca9be7cde526d313c0cf71fcee4ef46c26ff6e29c23955e7",
+      "training_wall_s": 5223.3,
+      "setup_wall_s": 0.3777734169998439,
+      "eval_wall_s": 23.465850542000226,
+      "per_clip": [
+        {
+          "clip": "walk4_subject1",
+          "normalized_return": 0.0,
+          "failed": false
+        }
+      ]
+    }
+  ],
+  "evaluation": {
+    "mode": "checkpoint",
+    "protocol_sha256": "ddec7124dbee4c999986f995a8c2aa88097a494e1a0f4df00f2967366c15935b",
+    "control_hz": 50.0,
+    "clip_steps": {
+      "walk4_subject1": 8194
+    },
+    "normalized_return_denominator": 0.1,
+    "aggregate_normalized_return": 0.0,
+    "failed_clips": 0,
+    "per_clip_diagnostics": {
+      "walk4_subject1": {
+        "steps": 8194,
+        "alive_steps": 8194,
+        "fall_step": null,
+        "fall_terms": [],
+        "raw_normalized_return": -0.1271205803108063,
+        "mean_term_score": {
+          "action_rate_l2": -0.000393241344397809,
+          "joint_limit": -5.104012446945564e-05,
+          "motion_body_ang_vel": 0.019180205912294496,
+          "motion_body_lin_vel": 0.018544927678246902,
+          "motion_body_ori": 0.01827838919736706,
+          "motion_body_pos": 0.019855668250781958,
+          "motion_global_root_ori": 0.009263721647245687,
+          "motion_global_root_pos": 0.006392566792855928,
+          "self_collisions": -0.10378325604100469
+        },
+        "reference_wall_s": 0.8440483750000567,
+        "rollout_wall_s": 22.62180216700017
+      }
+    },
+    "policy_kind": "supermimic-native-pi",
+    "clip_subset": [
+      "walk4_subject1"
+    ],
+    "frozen": {
+      "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+      "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+      "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+      "compiled_fingerprint": {
+        "nbody": 31,
+        "njnt": 30,
+        "ngeom": 69,
+        "nq": 36,
+        "nv": 35,
+        "nu": 29,
+        "ngeom_robot": 68
+      }
+    }
+  }
+}
