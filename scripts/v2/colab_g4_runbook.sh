@@ -1,25 +1,26 @@
 #!/usr/bin/env bash
 # Benchmark V2 - Colab G4 (RTX PRO 6000 Blackwell / sm_120) acceptance runbook.
 #
-# The repository is PRIVATE, so there is no anonymous raw-URL one-liner.  In a
-# Colab notebook with a **G4** runtime, upload this file (or clone first) and:
+# In a Colab notebook with a **G4** runtime, run:
 #
-#   import os; os.environ["GH_TOKEN"] = "github_pat_xxx"   # read-only is enough
-#   !bash /content/gptfiles/research/modded-supermimic/scripts/v2/colab_g4_runbook.sh
+#   !git clone --depth 1 https://github.com/basicv8vc/modded-supermimic.git /content/modded-supermimic
+#   !bash /content/modded-supermimic/scripts/v2/colab_g4_runbook.sh
 #
-# If the repo is already cloned, the script reuses it and re-checks out BRANCH.
+# If the repo is already cloned at $ROOT, the script fetches and checks out $BRANCH.
 #
-# Optional env: CLIPS="walk1_subject1 dance1_subject1"  STEPS=200  BRANCH=...
+# Optional env: CLIPS="walk1_subject1 dance1_subject1"  STEPS=200  BRANCH=main
+#               REPO_SLUG=basicv8vc/modded-supermimic  SUBDIR=.
 #               GH_TOKEN=<PAT>  SKIP_INSTALL=1 (reuse a provisioned VM)
 #
 # The script fails fast and loudly on: wrong GPU, wrong compute capability,
 # dependency drift, or a smoke that is not SMOKE_VALID.  It never upgrades the
-# frozen benchmark stack to "make it work" -- see the drift check at the end.
+# frozen benchmark stack to "make it work" -- see the drift check below.
 set -euo pipefail
 
-BRANCH="${BRANCH:-feat/benchmark-v2-protocol}"
-REPO_SLUG="${REPO_SLUG:-basicv8vc/gptfiles}"
-ROOT="${ROOT:-/content/gptfiles}"
+BRANCH="${BRANCH:-main}"
+REPO_SLUG="${REPO_SLUG:-basicv8vc/modded-supermimic}"
+ROOT="${ROOT:-/content/modded-supermimic}"
+SUBDIR="${SUBDIR:-.}"
 CLIPS="${CLIPS:-walk1_subject1 dance1_subject1}"
 STEPS="${STEPS:-200}"
 SKIP_INSTALL="${SKIP_INSTALL:-0}"
@@ -85,8 +86,9 @@ fi
 # --------------------------------------------------------------------------
 say "3/7 frozen benchmark stack (exact versions, no substitutions)"
 if [ "$SKIP_INSTALL" != "1" ]; then
-  pip -q install "mujoco==3.11.0" "mujoco-warp==3.11.0" "warp-lang==1.16.0"
+  pip -q install "mujoco==3.11.0" "mujoco-warp==3.11.0" "warp-lang==1.16.0" pytest
   pip -q install "mjlab @ git+https://github.com/mujocolab/mjlab.git@${MJLAB_COMMIT}"
+  pip -q install --no-deps --force-reinstall "mujoco==3.11.0" "mujoco-warp==3.11.0" "warp-lang==1.16.0"
 fi
 python - <<'PY' || exit 1
 import importlib.metadata as md
@@ -115,12 +117,16 @@ if [ -d "$ROOT/.git" ]; then
   git -C "$ROOT" checkout -q FETCH_HEAD
 else
   git clone -q --depth 1 --branch "$BRANCH" "$REPO_URL" "$ROOT" \
-    || die "clone failed: the repo is private -- export GH_TOKEN=<read-only PAT>"
+    || die "clone failed (if the repo is private, export GH_TOKEN=<read-only PAT>)"
 fi
 EVAL_SHA="$(git -C "$ROOT" rev-parse HEAD)"
 export V2_EVALUATOR_GIT_SHA="$EVAL_SHA"
 echo "evaluator git sha: $EVAL_SHA"
-cd "$ROOT/research/modded-supermimic"
+BM_DIR="${ROOT}"
+if [ -n "$SUBDIR" ] && [ "$SUBDIR" != "." ]; then
+  BM_DIR="${ROOT}/${SUBDIR}"
+fi
+cd "$BM_DIR"
 
 # --------------------------------------------------------------------------
 say "5/7 LAFAN1 data + manifest (not in git; hashes must match)"
@@ -179,6 +185,6 @@ print(f"fps (V2 step)     : {perf.get('steady_simulation_fps', 0):.1f}")
 print(f"fps (raw physics) : {perf.get('sim_step_fps', 0):.1f}")
 print(f"bottleneck        : {perf.get('bottleneck')}")
 PY
-(cd "$ROOT/research/modded-supermimic" && zip -q -r /content/v2_g4_artifacts.zip reports/v2) \
+(cd "$BM_DIR" && zip -q -r /content/v2_g4_artifacts.zip reports/v2) \
   && echo "wrote /content/v2_g4_artifacts.zip"
 say "DONE - download /content/v2_g4_artifacts.zip and commit the three JSONs"

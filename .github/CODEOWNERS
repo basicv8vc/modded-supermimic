@@ -1,0 +1,5 @@
+# Frozen Benchmark V2 referee, assets, and CI governance require maintainer review.
+/benchmark/ @basicv8vc
+/assets/g1/ @basicv8vc
+/scripts/v2/ @basicv8vc
+/.github/ @basicv8vc

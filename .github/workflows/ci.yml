@@ -11,6 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Guard frozen referee on record PRs
+        if: github.event_name == 'pull_request'
+        run: |
+          CHANGED="$(git diff --name-only "${{ github.event.pull_request.base.sha }}...HEAD")"
+          echo "Changed files:"
+          echo "$CHANGED"
+          if echo "$CHANGED" | grep -qE '^(records/|reports/v2/registry\.json$)'; then
+            if echo "$CHANGED" | grep -qE '^(benchmark/|assets/g1/|scripts/v2/audit_registry\.py$)'; then
+              echo "::error::Record PRs must not modify frozen referee files (benchmark/, assets/g1/, scripts/v2/audit_registry.py)."
+              exit 1
+            fi
+          fi
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5

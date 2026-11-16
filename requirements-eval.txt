@@ -1,0 +1,12 @@
+# Pinned Benchmark V2 evaluator dependencies.
+# Install sequence for full GPU evaluation (e.g., on Colab G4 / RTX PRO 6000):
+#   pip install -r requirements-eval.txt
+#   pip install "mjlab @ git+https://github.com/mujocolab/mjlab.git@0fb8a681136be94ffc636a3dd423cabb97d91f10"
+#   pip install --no-deps --force-reinstall mujoco==3.11.0 mujoco-warp==3.11.0 warp-lang==1.16.0
+# See scripts/v2/colab_g4_runbook.sh for full GPU provisioning and drift checks.
+
+mujoco==3.11.0
+mujoco-warp==3.11.0
+warp-lang==1.16.0
+numpy
+pytest
