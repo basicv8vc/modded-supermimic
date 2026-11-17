@@ -16,6 +16,11 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20%2B%20Apache--2.0%20assets-green" alt="MIT 与 Apache-2.0 资产"></a>
 </p>
 
+<p align="center">
+  <img src="assets/g1-flash.png" alt="G1 闪电侠 —— 更快的 Unitree G1 训练竞速" width="160"><br>
+  <sub><i>更快的 Unitree G1 训练 —— 从零训练，以竞速节拍跑通全部 40 条动作。</i></sub>
+</p>
+
 灵感来自 [modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt)：**固定任务、硬件与独立裁判；完全开放训练算法、框架与训练物理引擎。**
 
 ---

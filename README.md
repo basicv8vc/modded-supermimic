@@ -16,6 +16,11 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20%2B%20Apache--2.0%20assets-green" alt="MIT and Apache-2.0 assets"></a>
 </p>
 
+<p align="center">
+  <img src="assets/g1-flash.png" alt="G1 Flash — Faster Unitree G1 Training Speedrun" width="160"><br>
+  <sub><i>Faster training for Unitree G1 — from scratch to full 40-clip mastery at speedrun pace.</i></sub>
+</p>
+
 Inspired by [modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt): **fix the task, hardware, and independent referee; leave the training algorithm, framework, and simulator open.**
 
 ---
