@@ -1,0 +1,56 @@
+{
+  "a": {
+    "path": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/_parity_serial_2clips.json",
+    "algorithm": "InstantTrack-v1.4-FULL_COLLISION",
+    "workers": 2
+  },
+  "b": {
+    "path": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/_parity_batched_2clips.json",
+    "algorithm": "InstantTrack-v1.4-FULL_COLLISION",
+    "workers": "batched(num_envs=2)"
+  },
+  "tol_return": 0.01,
+  "tol_terms": 0.01,
+  "clips_compared": 2,
+  "clips_mismatched": 0,
+  "max_abs_return_diff": 0.0026888961105882014,
+  "max_abs_term_diff": 0.00022463459622437437,
+  "aggregate_return_a": 0.8410515297802648,
+  "aggregate_return_b": 0.8398368408866863,
+  "abs_aggregate_diff": 0.0012146888935784528,
+  "verdict": "PASS",
+  "per_clip": [
+    {
+      "clip": "dance1_subject1",
+      "return_a": 0.805661409712022,
+      "return_b": 0.8059209280354536,
+      "abs_return_diff": 0.00025951832343151793,
+      "failed_a": false,
+      "failed_b": false,
+      "alive_steps_a": 6573,
+      "alive_steps_b": 6573,
+      "fall_step_a": null,
+      "fall_step_b": null,
+      "fall_terms_a": [],
+      "fall_terms_b": [],
+      "max_abs_term_diff": 4.5187584558778254e-05,
+      "match": true
+    },
+    {
+      "clip": "walk1_subject1",
+      "return_a": 0.8764416498485074,
+      "return_b": 0.8737527537379192,
+      "abs_return_diff": 0.0026888961105882014,
+      "failed_a": false,
+      "failed_b": false,
+      "alive_steps_a": 13064,
+      "alive_steps_b": 13064,
+      "fall_step_a": null,
+      "fall_step_b": null,
+      "fall_terms_a": [],
+      "fall_terms_b": [],
+      "max_abs_term_diff": 0.00022463459622437437,
+      "match": true
+    }
+  ]
+}

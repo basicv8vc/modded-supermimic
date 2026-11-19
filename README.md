@@ -31,11 +31,12 @@ Evaluated independently under [`benchmark/v2/protocol_v2.json`](benchmark/v2/pro
 
 | # | Record | Training Time (0/40 & ≥0.82) | Trainer / Simulator | Return | Failed Clips | Date | Record Card & Artifacts |
 | ---: | --- | ---: | --- | ---: | ---: | --- | --- |
-| **1** | **NablaMimic** (`configs/ours.args`, `seed=0`) | **`9m 32s`** (`572.18 s`, iter `1,500`) | JAX + `NablaEngine 0.1.0` | `0.84108` *(25m end: `0.86896`)* | **0 / 40** | 2026-11-16 | [`records/v2/002_nablamimic_nablaengine`](records/v2/002_nablamimic_nablaengine/README.md) · [`v2_it_001500.json`](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
-| **2** | **SuperMimic Official** (`GenCoord` `proprio`, `h=10`, `seed=0`) | **`36m 51s`** (`2,210.83 s`, iter `15,000`) *(stable: `40m 53s` / `2,453.09 s`)* | PyTorch + `mjlab` (`HybridRobotics/supermimic`) | `0.82641` *(stable: `0.83635`, peak: `0.85751`)* | **0 / 40** | 2026-11-15 | [`records/v2/001_supermimic_official_mjlab`](records/v2/001_supermimic_official_mjlab/README.md) · [`bisect_report.json`](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
+| **1** | **InstantTrack v1.4** (`PRESET[instanttrack]` + `FULL_COLLISION`, `seed=0`) | **`6m 45s`** (`405.23 s` raw, iter `2,300`; *net train: ~`3m 24s` / `204.16 s`*) | PyTorch + `mjlab` / MuJoCo Warp (`InstantTrack v1.4.0` + `BlinkMimic`) | `0.82169` *(15m end: `0.84308`)* | **0 / 40** | 2026-11-19 | [`records/v2/003_instanttrack_v14`](records/v2/003_instanttrack_v14/README.md) · [`ckpt_002300_v2.json`](reports/v2/instanttrack_v14_s0/ckpt_002300_v2.json) |
+| **2** | **NablaMimic** (`configs/ours.args`, `seed=0`) | **`9m 32s`** (`572.18 s`, iter `1,500`) | JAX + `NablaEngine 0.1.0` | `0.84108` *(25m end: `0.86896`)* | **0 / 40** | 2026-11-16 | [`records/v2/002_nablamimic_nablaengine`](records/v2/002_nablamimic_nablaengine/README.md) · [`v2_it_001500.json`](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
+| **3** | **SuperMimic Official** (`GenCoord` `proprio`, `h=10`, `seed=0`) | **`36m 51s`** (`2,210.83 s`, iter `15,000`) *(stable: `40m 53s` / `2,453.09 s`)* | PyTorch + `mjlab` (`HybridRobotics/supermimic`) | `0.82641` *(stable: `0.83635`, peak: `0.85751`)* | **0 / 40** | 2026-11-15 | [`records/v2/001_supermimic_official_mjlab`](records/v2/001_supermimic_official_mjlab/README.md) · [`bisect_report.json`](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
 
-- **Fastest Overall**: **`9m 32s` (`572.18 s`)** — NablaMimic on `NablaEngine` (~**3.9× faster** to earliest `0/40` than `mjlab`, ~**4.3× faster** to stable `0/40`).
-- **Fastest on `mjlab`**: **`36m 51s` (`2,210.83 s`)** earliest `0/40`, **`40m 53s` (`2,453.09 s`)** stable `0/40` — official `HybridRobotics/supermimic`.
+- **Fastest Overall & Fastest on `mjlab`**: **`6m 45s` (`405.23 s` raw; ~`3m 24s` / `204.16 s` excluding `201.07 s` initial compile)** — `InstantTrack v1.4` (incorporating [BlinkMimic](https://arxiv.org/abs/2611.16422)) aligned to `FULL_COLLISION` (~**5.5× faster** raw / ~**10.8× faster** net than official `HybridRobotics/supermimic`, and ~**1.4× faster** raw than `NablaMimic`).
+- **Fastest on `NablaEngine` (JAX)**: **`9m 32s` (`572.18 s`)** — NablaMimic ([$\nabla$Mimic](https://arxiv.org/abs/2610.41654)).
 - **Machine-readable registry**: [`reports/v2/registry.json`](reports/v2/registry.json) (audited by CI).
 
 ---
@@ -99,8 +100,8 @@ See [`docs/POLICY_INTERFACE.md`](docs/POLICY_INTERFACE.md) for the exact `reset(
 | Path | Role |
 | --- | --- |
 | [`benchmark/`](benchmark/), [`assets/g1/`](assets/g1/), [`scripts/v2/`](scripts/v2/) | **Frozen V2 referee** (`mjlab 1.6.0` + `mujoco-warp` `FULL_COLLISION`), policy interface, and CLI/parity tools (`benchmark.py`). |
-| [`baselines/`](baselines/README.md) | One-command Colab G4 + Google Drive training & V2 evaluation workflows for [`supermimic_mjlab`](baselines/supermimic_mjlab/README.md) and [`nablamimic`](baselines/nablamimic/README.md). |
-| [`records/v2/`](records/README.md) | Human-readable speedrun record cards (`001_...`, `002_...`) paired with audited 40-clip JSONs under [`reports/v2/`](reports/v2/registry.json). |
+| [`baselines/`](baselines/README.md) | One-command Colab G4 + Google Drive training & V2 evaluation workflows for [`instanttrack`](baselines/instanttrack/README.md), [`nablamimic`](baselines/nablamimic/README.md), and [`supermimic_mjlab`](baselines/supermimic_mjlab/README.md). |
+| [`records/v2/`](records/README.md) | Human-readable speedrun record cards (`001_...`, `002_...`, `003_...`) paired with audited 40-clip JSONs under [`reports/v2/`](reports/v2/registry.json). |
 | [`docs/`](docs/V2_G4_BASELINE_AND_DIAGNOSTIC_REPORT.md) | Protocol design, policy interface spec, and V2 G4 baseline & diagnostic report. |
 | [`tests/`](tests/) | CPU contract/parity tests (`test_benchmark_v2.py`) and G4 CUDA runtime acceptance tests (`test_v2_gpu_runtime.py`). |
 

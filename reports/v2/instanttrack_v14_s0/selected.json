@@ -1,0 +1,76 @@
+{
+  "selected": {
+    "label": "ckpt_002300",
+    "ckpt": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/ckpt_002300.pt",
+    "iter": 2300,
+    "wall_s": 405.22649598121643,
+    "json": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/ckpt_002300_v2.json",
+    "audit_status": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+    "aggregate_return": 0.8216875979595798,
+    "failed_clips": 0,
+    "failed_names": [],
+    "eligible": true
+  },
+  "evaluated": [
+    {
+      "label": "ckpt_002200",
+      "ckpt": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/ckpt_002200.pt",
+      "iter": 2200,
+      "wall_s": 396.4826476573944,
+      "json": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/ckpt_002200_v2.json",
+      "audit_status": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "aggregate_return": 0.8127112337859469,
+      "failed_clips": 1,
+      "failed_names": [],
+      "eligible": true
+    },
+    {
+      "label": "ckpt_002300",
+      "ckpt": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/ckpt_002300.pt",
+      "iter": 2300,
+      "wall_s": 405.22649598121643,
+      "json": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/ckpt_002300_v2.json",
+      "audit_status": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "aggregate_return": 0.8216875979595798,
+      "failed_clips": 0,
+      "failed_names": [],
+      "eligible": true
+    },
+    {
+      "label": "ckpt_002400",
+      "ckpt": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/ckpt_002400.pt",
+      "iter": 2400,
+      "wall_s": 413.9861922264099,
+      "json": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/ckpt_002400_v2.json",
+      "audit_status": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "aggregate_return": 0.8069581901619938,
+      "failed_clips": 1,
+      "failed_names": [],
+      "eligible": true
+    },
+    {
+      "label": "ckpt_002466",
+      "ckpt": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/ckpt_002466.pt",
+      "iter": 2466,
+      "wall_s": 420.2151355743408,
+      "json": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/ckpt_002466_v2.json",
+      "audit_status": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "aggregate_return": 0.8246104515338823,
+      "failed_clips": 0,
+      "failed_names": [],
+      "eligible": true
+    },
+    {
+      "label": "ckpt_007920",
+      "ckpt": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/ckpt_007920.pt",
+      "iter": 7920,
+      "wall_s": 900.0987875461578,
+      "json": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/ckpt_007920_v2.json",
+      "audit_status": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "aggregate_return": 0.8430800515999826,
+      "failed_clips": 0,
+      "failed_names": [],
+      "eligible": true
+    }
+  ]
+}

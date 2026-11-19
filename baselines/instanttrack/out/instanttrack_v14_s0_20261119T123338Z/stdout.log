@@ -1,0 +1,274 @@
+/content/instanttrack_ws/repo/.venv/lib/python3.13/site-packages/torch/backends/__init__.py:46: UserWarning: Please use the new API settings to control TF32 behavior, such as torch.backends.cudnn.conv.fp32_precision = 'tf32' or torch.backends.cuda.matmul.fp32_precision = 'ieee'. Old settings, e.g, torch.backends.cuda.matmul.allow_tf32 = True, torch.backends.cudnn.allow_tf32 = True, allowTF32CuDNN() and allowTF32CuBLAS() will be deprecated after Pytorch 2.9. Please see https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:80.)
+  self.setter(val)
+Warp 1.16.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.0
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA RTX PRO 6000 Blackwell Server Edition" (95 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.16.0
+Module mujoco_warp._src.smooth c4020f1 load on device 'cuda:0' took 2.48 ms  (cached)
+Module _nxn_broadphase__locals__kernel_af72a12e af72a12 load on device 'cuda:0' took 0.38 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_83787faa 83787fa load on device 'cuda:0' took 0.57 ms  (cached)
+Module mujoco_warp._src.constraint 36c8060 load on device 'cuda:0' took 0.27 ms  (cached)
+Module _friction_dof__locals__kernel_ddb8a6ec ddb8a6e load on device 'cuda:0' took 0.38 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_a75b7345 a75b734 load on device 'cuda:0' took 0.36 ms  (cached)
+Module _efc_contact_init__locals__kernel_cccfaa76 cccfaa7 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_2144a1f6 2144a1f load on device 'cuda:0' took 0.33 ms  (cached)
+Module _efc_contact_update__locals__kernel_d8fb6a36 d8fb6a3 load on device 'cuda:0' took 0.34 ms  (cached)
+Module mujoco_warp._src.sensor de892d8 load on device 'cuda:0' took 1.71 ms  (cached)
+Module mujoco_warp._src.forward bfd9fb5 load on device 'cuda:0' took 0.91 ms  (cached)
+Module mujoco_warp._src.passive d8c18c6 load on device 'cuda:0' took 0.98 ms  (cached)
+Module mujoco_warp._src.forward b068ad6 load on device 'cuda:0' took 0.87 ms  (cached)
+Module _qfrc_smooth__locals__kernel_4658f88b 4658f88 load on device 'cuda:0' took 0.29 ms  (cached)
+Module mujoco_warp._src.support ca784c5 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_d59a856e 173a666 load on device 'cuda:0' took 22.90 ms  (cached)
+Module _solve_init_dof__locals__kernel_e05b1ce4 e05b1ce load on device 'cuda:0' took 0.31 ms  (cached)
+Module mujoco_warp._src.solver 3a105a0 load on device 'cuda:0' took 1.33 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_9aff3158 9aff315 load on device 'cuda:0' took 0.32 ms  (cached)
+Module mul_m_kernel__locals___mul_m_4f80c25f 4f80c25 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_constraint_efc__locals__kernel_2874152a 2874152 load on device 'cuda:0' took 0.33 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_sparse__locals__kernel_41cad2cd 41cad2c load on device 'cuda:0' took 0.30 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_dc20e701 dc20e70 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _update_gradient_grad__locals__kernel_75e45f77 75e45f7 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_init_h_sparse__locals__kernel_36dd1e5a 36dd1e5 load on device 'cuda:0' took 0.30 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de 342243d load on device 'cuda:0' took 0.31 ms  (cached)
+Module _JTDAJ_sparse__locals__kernel_342243de e314b13 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_cholesky_blocked__locals__kernel_fb90cc46 53fec0b load on device 'cuda:0' took 50.49 ms  (cached)
+Module _linesearch_jv_fused_kernel__locals__kernel_c15033af c15033a load on device 'cuda:0' took 0.40 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_d5499a80 da1f31a load on device 'cuda:0' took 0.50 ms  (cached)
+Module _update_constraint_efc__locals__kernel_c5c7ee21 c5c7ee2 load on device 'cuda:0' took 0.34 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_c8324c35 c8324c3 load on device 'cuda:0' took 0.31 ms  (cached)
+Module _update_gradient_grad__locals__kernel_5d6ef3e8 5d6ef3e load on device 'cuda:0' took 0.29 ms  (cached)
+Module _update_gradient_h_incremental_sparse__locals__kernel_da279b83 da279b8 load on device 'cuda:0' took 0.32 ms  (cached)
+Module _update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_d953dcb2 5d835d8 load on device 'cuda:0' took 57.64 ms  (cached)
+Module mujoco_warp._src.derivative 833f5d0 load on device 'cuda:0' took 0.82 ms  (cached)
+Module _next_time_builder__locals___next_time_b0eef204 b0eef20 load on device 'cuda:0' took 0.37 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_fb15556a fb15556 load on device 'cuda:0' took 0.34 ms  (cached)
+Module reset_data__locals__reset_M_7fe3caab 7fe3caa load on device 'cuda:0' took 0.27 ms  (cached)
+Module reset_data__locals__reset_mocap_72adcc80 72adcc8 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_d045dbe7 d045dbe load on device 'cuda:0' took 0.28 ms  (cached)
+Module reset_data__locals__reset_sleep_a443f67b a443f67 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_nworld_afd827a5 afd827a load on device 'cuda:0' took 0.32 ms  (cached)
+Module repeat_array_kernel_f3ffbc3f f56645b load on device 'cuda:0' took 0.43 ms  (cached)
+--eprobe: 372 probe worlds of 1489 tiles of 300 frames
+--collect_graph: captured one collection step in 0.0 s
+cuda_graph: captured wm_update in 0.0 s, 5.7 GB reserved
+cuda_graph: captured critic_update in 0.0 s, 7.0 GB reserved
+cuda_graph: captured policy_update in 0.1 s, 11.5 GB reserved
+it 50 | 0.057 h | wm 2.5828 e8 6.4177 | pi -0.959 v 0.0260 imag_r 0.274 surv 0.308 | sim_r 0.405 ep_len 32.7 ep_ret 0.357 term 0.97 | 0.24 it/s
+it 100 | 0.058 h | wm 0.9386 e8 1.9376 | pi -1.705 v 0.0654 imag_r 0.235 surv 0.626 | sim_r 0.209 ep_len 49.6 ep_ret 0.181 term 0.99 | 13.71 it/s
+it 150 | 0.059 h | wm 0.6761 e8 1.3010 | pi -3.098 v 0.0868 imag_r 0.278 surv 0.825 | sim_r 0.221 ep_len 86.6 ep_ret 0.054 term 0.99 | 13.58 it/s
+it 200 | 0.060 h | wm 0.5867 e8 1.0963 | pi -4.121 v 0.0802 imag_r 0.355 surv 0.884 | sim_r 0.371 ep_len 148.7 ep_ret 0.148 term 0.94 | 13.56 it/s
+it 250 | 0.061 h | wm 0.5368 e8 0.9989 | pi -5.238 v 0.0656 imag_r 0.439 surv 0.930 | sim_r 0.521 ep_len 259.3 ep_ret 0.303 term 0.76 | 13.48 it/s
+it 300 | 0.062 h | wm 0.5047 e8 0.9203 | pi -5.964 v 0.0557 imag_r 0.502 surv 0.953 | sim_r 0.580 ep_len 414.4 ep_ret 0.413 term 0.24 | 13.55 it/s
+it 350 | 0.063 h | wm 0.4797 e8 0.8761 | pi -6.391 v 0.0488 imag_r 0.540 surv 0.963 | sim_r 0.593 ep_len 441.0 ep_ret 0.468 term 0.18 | 13.53 it/s
+it 400 | 0.064 h | wm 0.4694 e8 0.8547 | pi -6.569 v 0.0468 imag_r 0.567 surv 0.964 | sim_r 0.619 ep_len 423.0 ep_ret 0.497 term 0.18 | 13.57 it/s
+it 450 | 0.065 h | wm 0.4693 e8 0.8373 | pi -6.928 v 0.0398 imag_r 0.607 surv 0.975 | sim_r 0.636 ep_len 385.8 ep_ret 0.522 term 0.28 | 13.54 it/s
+it 500 | 0.066 h | wm 0.4414 e8 0.7759 | pi -7.225 v 0.0322 imag_r 0.660 surv 0.984 | sim_r 0.650 ep_len 443.1 ep_ret 0.576 term 0.15 | 13.58 it/s
+it 550 | 0.067 h | wm 0.3669 e8 0.6457 | pi -7.528 v 0.0286 imag_r 0.705 surv 0.990 | sim_r 0.654 ep_len 461.0 ep_ret 0.604 term 0.11 | 13.51 it/s
+it 600 | 0.068 h | wm 0.3032 e8 0.5358 | pi -7.746 v 0.0247 imag_r 0.739 surv 0.994 | sim_r 0.667 ep_len 437.2 ep_ret 0.575 term 0.14 | 13.60 it/s
+it 650 | 0.069 h | wm 0.2962 e8 0.5306 | pi -7.955 v 0.0225 imag_r 0.754 surv 0.995 | sim_r 0.679 ep_len 413.3 ep_ret 0.589 term 0.25 | 13.56 it/s
+it 700 | 0.070 h | wm 0.3126 e8 0.5495 | pi -7.991 v 0.0200 imag_r 0.770 surv 0.995 | sim_r 0.691 ep_len 445.6 ep_ret 0.627 term 0.14 | 13.59 it/s
+it 750 | 0.071 h | wm 0.3017 e8 0.5222 | pi -8.065 v 0.0208 imag_r 0.779 surv 0.995 | sim_r 0.694 ep_len 465.2 ep_ret 0.646 term 0.10 | 13.58 it/s
+it 800 | 0.072 h | wm 0.3008 e8 0.5310 | pi -8.193 v 0.0189 imag_r 0.787 surv 0.995 | sim_r 0.695 ep_len 436.7 ep_ret 0.622 term 0.13 | 13.61 it/s
+it 850 | 0.073 h | wm 0.3321 e8 0.5725 | pi -8.152 v 0.0193 imag_r 0.791 surv 0.995 | sim_r 0.704 ep_len 421.6 ep_ret 0.603 term 0.20 | 13.58 it/s
+it 900 | 0.074 h | wm 0.3253 e8 0.5603 | pi -8.148 v 0.0177 imag_r 0.797 surv 0.995 | sim_r 0.710 ep_len 444.4 ep_ret 0.642 term 0.16 | 13.61 it/s
+it 950 | 0.075 h | wm 0.3331 e8 0.5707 | pi -8.239 v 0.0175 imag_r 0.803 surv 0.995 | sim_r 0.710 ep_len 431.2 ep_ret 0.590 term 0.09 | 13.58 it/s
+it 1000 | 0.076 h | wm 0.3331 e8 0.5820 | pi -8.328 v 0.0186 imag_r 0.804 surv 0.995 | sim_r 0.706 ep_len 399.8 ep_ret 0.533 term 0.10 | 13.60 it/s
+--eprobe_graph: captured one sweep step in 0.0 s
+it 1050 | 0.082 h | wm 0.3167 e8 0.5552 | pi -8.284 v 0.0173 imag_r 0.806 surv 0.995 | sim_r 0.717 ep_len 413.3 ep_ret 0.611 term 0.19 | 2.55 it/s
+--eprobe it 1000: lead 326 | 17/372 failures [('dance1_s1', 5349), ('dance2_s4', 2986), ('dance2_s4', 3003), ('fallAndGetUp1_s1', 6481), ('fallAndGetUp2_s2', 1146), ('fallAndGetUp2_s2', 1182), ('fallAndGetUp2_s2', 5374), ('fallAndGetUp2_s3', 7089)] | 20.9 s | applied at it 1063
+it 1100 | 0.083 h | wm 0.3278 e8 0.5671 | pi -8.321 v 0.0174 imag_r 0.810 surv 0.995 | sim_r 0.713 ep_len 394.7 ep_ret 0.539 term 0.11 | 12.46 it/s
+it 1150 | 0.084 h | wm 0.3292 e8 0.5725 | pi -8.301 v 0.0178 imag_r 0.809 surv 0.994 | sim_r 0.697 ep_len 383.8 ep_ret 0.516 term 0.11 | 11.25 it/s
+--eprobe it 1125: lead 304 | 15/372 failures [('dance1_s1', 5350), ('dance1_s1', 5788), ('dance2_s4', 2986), ('dance2_s4', 2987), ('dance2_s5', 6942), ('fallAndGetUp1_s1', 7231), ('fallAndGetUp1_s5', 670), ('fallAndGetUp2_s2', 3075)] | 6.3 s | applied at it 1186
+it 1200 | 0.085 h | wm 0.3344 e8 0.5857 | pi -8.346 v 0.0168 imag_r 0.810 surv 0.994 | sim_r 0.693 ep_len 399.5 ep_ret 0.567 term 0.14 | 10.63 it/s
+it 1250 | 0.086 h | wm 0.3551 e8 0.6215 | pi -8.389 v 0.0172 imag_r 0.809 surv 0.994 | sim_r 0.693 ep_len 403.9 ep_ret 0.589 term 0.21 | 13.63 it/s
+it 1300 | 0.088 h | wm 0.3713 e8 0.6471 | pi -8.198 v 0.0162 imag_r 0.808 surv 0.994 | sim_r 0.695 ep_len 415.0 ep_ret 0.589 term 0.19 | 9.68 it/s
+--eprobe it 1250: lead 390 | 16/372 failures [('dance1_s1', 5349), ('dance1_s1', 5350), ('dance1_s1', 5789), ('dance2_s4', 2990), ('dance2_s4', 2991), ('dance2_s4', 2999), ('fallAndGetUp1_s4', 4569), ('fallAndGetUp1_s5', 670)] | 7.1 s | applied at it 1319
+it 1350 | 0.089 h | wm 0.3688 e8 0.6390 | pi -8.189 v 0.0165 imag_r 0.805 surv 0.993 | sim_r 0.690 ep_len 403.7 ep_ret 0.550 term 0.10 | 11.87 it/s
+--lr_decay_ret: deadline --lr_decay_by 1400 at it 1400: policy LR x4.0 -> x1 over 300 its
+it 1400 | 0.090 h | wm 0.3733 e8 0.6471 | pi -8.253 v 0.0169 imag_r 0.804 surv 0.992 | sim_r 0.687 ep_len 432.8 ep_ret 0.622 term 0.13 | 11.33 it/s
+--eprobe it 1375: lead 372 | 18/372 failures [('dance1_s1', 5085), ('dance1_s1', 5349), ('dance1_s1', 5351), ('dance1_s1', 5791), ('dance2_s4', 2987), ('fallAndGetUp1_s5', 1586), ('fallAndGetUp1_s5', 1710), ('fallAndGetUp2_s3', 1607)] | 7.0 s | applied at it 1443
+it 1450 | 0.092 h | wm 0.3827 e8 0.6770 | pi -8.182 v 0.0170 imag_r 0.800 surv 0.992 | sim_r 0.689 ep_len 407.6 ep_ret 0.570 term 0.17 | 10.21 it/s
+it 1500 | 0.093 h | wm 0.3909 e8 0.6833 | pi -8.206 v 0.0156 imag_r 0.800 surv 0.993 | sim_r 0.695 ep_len 363.7 ep_ret 0.474 term 0.14 | 13.64 it/s
+it 1550 | 0.094 h | wm 0.3806 e8 0.6682 | pi -8.254 v 0.0146 imag_r 0.801 surv 0.993 | sim_r 0.701 ep_len 419.4 ep_ret 0.574 term 0.09 | 9.67 it/s
+--eprobe it 1500: lead 428 | 8/372 failures [('dance1_s1', 5357), ('dance1_s1', 5374), ('dance1_s1', 5375), ('dance1_s1', 5795), ('fight1_s3', 10120), ('fightAndSports1_s1', 2957), ('jumps1_s2', 11589), ('sprint1_s4', 13458)] | 7.5 s | applied at it 1573
+it 1600 | 0.095 h | wm 0.3725 e8 0.6514 | pi -8.260 v 0.0139 imag_r 0.804 surv 0.993 | sim_r 0.703 ep_len 429.3 ep_ret 0.611 term 0.11 | 11.58 it/s
+it 1650 | 0.097 h | wm 0.3639 e8 0.6318 | pi -8.319 v 0.0133 imag_r 0.807 surv 0.993 | sim_r 0.710 ep_len 438.5 ep_ret 0.649 term 0.11 | 11.32 it/s
+--eprobe it 1625: lead 339 | 6/372 failures [('dance1_s1', 5798), ('fight1_s2', 7592), ('run2_s1', 7826), ('sprint1_s4', 13455), ('sprint1_s4', 13456)] | 6.6 s | applied at it 1689
+it 1700 | 0.098 h | wm 0.3500 e8 0.6124 | pi -8.291 v 0.0130 imag_r 0.813 surv 0.993 | sim_r 0.721 ep_len 454.7 ep_ret 0.666 term 0.09 | 10.41 it/s
+it 1750 | 0.099 h | wm 0.3446 e8 0.5997 | pi -8.326 v 0.0119 imag_r 0.816 surv 0.994 | sim_r 0.725 ep_len 458.7 ep_ret 0.660 term 0.06 | 13.61 it/s
+it 1800 | 0.100 h | wm 0.3404 e8 0.5929 | pi -8.446 v 0.0123 imag_r 0.820 surv 0.995 | sim_r 0.724 ep_len 449.4 ep_ret 0.660 term 0.08 | 9.72 it/s
+--eprobe it 1750: lead 347 | 2/372 failures [('dance1_s1', 5798)] | 6.6 s | applied at it 1815
+it 1850 | 0.101 h | wm 0.3168 e8 0.5492 | pi -8.422 v 0.0110 imag_r 0.822 surv 0.995 | sim_r 0.733 ep_len 424.8 ep_ret 0.627 term 0.08 | 12.26 it/s
+it 1900 | 0.103 h | wm 0.3096 e8 0.5438 | pi -8.466 v 0.0114 imag_r 0.826 surv 0.996 | sim_r 0.733 ep_len 428.1 ep_ret 0.637 term 0.07 | 11.33 it/s
+--eprobe it 1875: lead 360 | 2/372 failures [('dance2_s1', 9782), ('fight1_s2', 7605)] | 6.9 s | applied at it 1941
+it 1950 | 0.104 h | wm 0.3014 e8 0.5259 | pi -8.502 v 0.0111 imag_r 0.830 surv 0.996 | sim_r 0.736 ep_len 424.0 ep_ret 0.619 term 0.06 | 10.25 it/s
+it 2000 | 0.105 h | wm 0.2947 e8 0.5085 | pi -8.542 v 0.0106 imag_r 0.834 surv 0.996 | sim_r 0.738 ep_len 454.2 ep_ret 0.684 term 0.03 | 13.66 it/s
+it 2050 | 0.106 h | wm 0.2887 e8 0.4977 | pi -8.593 v 0.0098 imag_r 0.836 surv 0.996 | sim_r 0.744 ep_len 422.5 ep_ret 0.618 term 0.04 | 9.69 it/s
+--eprobe it 2000: lead 272 | 0/372 failures [] | 5.9 s | applied at it 2058
+it 2100 | 0.108 h | wm 0.2740 e8 0.4750 | pi -8.578 v 0.0103 imag_r 0.840 surv 0.997 | sim_r 0.749 ep_len 396.7 ep_ret 0.587 term 0.03 | 13.01 it/s
+it 2150 | 0.109 h | wm 0.2765 e8 0.4769 | pi -8.617 v 0.0094 imag_r 0.843 surv 0.997 | sim_r 0.746 ep_len 423.9 ep_ret 0.642 term 0.03 | 11.31 it/s
+--eprobe it 2125: lead 325 | 1/372 failures [('fallAndGetUp1_s1', 5489)] | 6.5 s | applied at it 2188
+it 2200 | 0.110 h | wm 0.2687 e8 0.4588 | pi -8.665 v 0.0088 imag_r 0.847 surv 0.997 | sim_r 0.747 ep_len 429.7 ep_ret 0.653 term 0.03 | 10.52 it/s
+it 2250 | 0.111 h | wm 0.2510 e8 0.4273 | pi -8.697 v 0.0088 imag_r 0.848 surv 0.997 | sim_r 0.751 ep_len 381.0 ep_ret 0.552 term 0.04 | 13.60 it/s
+it 2300 | 0.113 h | wm 0.2508 e8 0.4289 | pi -8.742 v 0.0086 imag_r 0.851 surv 0.997 | sim_r 0.755 ep_len 421.6 ep_ret 0.630 term 0.02 | 9.73 it/s
+--eprobe it 2250: lead 440 | 1/372 failures [('fallAndGetUp1_s1', 5491)] | 7.6 s | applied at it 2324
+it 2350 | 0.114 h | wm 0.2452 e8 0.4213 | pi -8.718 v 0.0078 imag_r 0.854 surv 0.998 | sim_r 0.751 ep_len 407.2 ep_ret 0.623 term 0.03 | 11.48 it/s
+it 2400 | 0.115 h | wm 0.2346 e8 0.4018 | pi -8.688 v 0.0087 imag_r 0.855 surv 0.998 | sim_r 0.752 ep_len 383.8 ep_ret 0.571 term 0.03 | 11.35 it/s
+--eprobe it 2375: lead 403 | 1/372 failures [('fight1_s3', 8025)] | 7.3 s | applied at it 2446
+it 2450 | 0.116 h | wm 0.2292 e8 0.3963 | pi -8.680 v 0.0080 imag_r 0.855 surv 0.998 | sim_r 0.752 ep_len 405.3 ep_ret 0.609 term 0.04 | 10.04 it/s
+it 2500 | 0.117 h | wm 0.2301 e8 0.3988 | pi -8.687 v 0.0081 imag_r 0.855 surv 0.998 | sim_r 0.755 ep_len 396.5 ep_ret 0.594 term 0.03 | 13.59 it/s
+it 2550 | 0.119 h | wm 0.2290 e8 0.3922 | pi -8.715 v 0.0081 imag_r 0.856 surv 0.998 | sim_r 0.751 ep_len 375.0 ep_ret 0.566 term 0.03 | 9.69 it/s
+--eprobe it 2500: lead 388 | 0/372 failures [] | 7.1 s | applied at it 2569
+it 2600 | 0.120 h | wm 0.2265 e8 0.3939 | pi -8.754 v 0.0077 imag_r 0.857 surv 0.998 | sim_r 0.752 ep_len 366.0 ep_ret 0.532 term 0.03 | 11.90 it/s
+it 2650 | 0.121 h | wm 0.2205 e8 0.3774 | pi -8.728 v 0.0078 imag_r 0.857 surv 0.998 | sim_r 0.756 ep_len 388.3 ep_ret 0.587 term 0.03 | 11.34 it/s
+--eprobe it 2625: lead 320 | 0/372 failures [] | 6.4 s | applied at it 2687
+it 2700 | 0.123 h | wm 0.2256 e8 0.3838 | pi -8.762 v 0.0077 imag_r 0.859 surv 0.998 | sim_r 0.759 ep_len 362.4 ep_ret 0.544 term 0.03 | 10.55 it/s
+it 2750 | 0.124 h | wm 0.2188 e8 0.3743 | pi -8.755 v 0.0073 imag_r 0.858 surv 0.998 | sim_r 0.752 ep_len 373.7 ep_ret 0.545 term 0.02 | 13.64 it/s
+it 2800 | 0.125 h | wm 0.2133 e8 0.3641 | pi -8.733 v 0.0072 imag_r 0.861 surv 0.998 | sim_r 0.757 ep_len 374.1 ep_ret 0.574 term 0.02 | 9.71 it/s
+--eprobe it 2750: lead 231 | 2/372 failures [('fallAndGetUp1_s5', 1746), ('fight1_s2', 2902)] | 5.5 s | applied at it 2804
+it 2850 | 0.126 h | wm 0.2146 e8 0.3687 | pi -8.749 v 0.0073 imag_r 0.861 surv 0.998 | sim_r 0.760 ep_len 375.4 ep_ret 0.563 term 0.02 | 13.43 it/s
+it 2900 | 0.127 h | wm 0.2063 e8 0.3522 | pi -8.791 v 0.0072 imag_r 0.861 surv 0.998 | sim_r 0.759 ep_len 377.4 ep_ret 0.557 term 0.02 | 11.33 it/s
+--eprobe it 2875: lead 315 | 0/372 failures [] | 6.4 s | applied at it 2937
+it 2950 | 0.129 h | wm 0.2028 e8 0.3445 | pi -8.814 v 0.0076 imag_r 0.863 surv 0.998 | sim_r 0.758 ep_len 378.9 ep_ret 0.581 term 0.02 | 10.60 it/s
+it 3000 | 0.130 h | wm 0.2011 e8 0.3443 | pi -8.791 v 0.0068 imag_r 0.864 surv 0.998 | sim_r 0.758 ep_len 397.0 ep_ret 0.632 term 0.02 | 13.67 it/s
+it 3050 | 0.131 h | wm 0.2024 e8 0.3478 | pi -8.766 v 0.0068 imag_r 0.863 surv 0.998 | sim_r 0.763 ep_len 388.7 ep_ret 0.600 term 0.02 | 9.69 it/s
+--eprobe it 3000: lead 224 | 0/372 failures [] | 5.4 s | applied at it 3053
+it 3100 | 0.132 h | wm 0.1943 e8 0.3355 | pi -8.822 v 0.0067 imag_r 0.864 surv 0.998 | sim_r 0.767 ep_len 378.7 ep_ret 0.583 term 0.01 | 13.49 it/s
+it 3150 | 0.133 h | wm 0.1924 e8 0.3342 | pi -8.846 v 0.0072 imag_r 0.866 surv 0.999 | sim_r 0.764 ep_len 361.7 ep_ret 0.545 term 0.02 | 11.31 it/s
+--eprobe it 3125: lead 290 | 1/372 failures [('fight1_s5', 10273)] | 6.1 s | applied at it 3184
+it 3200 | 0.135 h | wm 0.1866 e8 0.3217 | pi -8.827 v 0.0062 imag_r 0.867 surv 0.998 | sim_r 0.763 ep_len 361.1 ep_ret 0.570 term 0.02 | 10.73 it/s
+it 3250 | 0.136 h | wm 0.1857 e8 0.3195 | pi -8.824 v 0.0063 imag_r 0.868 surv 0.999 | sim_r 0.768 ep_len 361.7 ep_ret 0.546 term 0.02 | 13.62 it/s
+it 3300 | 0.137 h | wm 0.1862 e8 0.3229 | pi -8.870 v 0.0063 imag_r 0.870 surv 0.998 | sim_r 0.773 ep_len 374.9 ep_ret 0.585 term 0.02 | 9.73 it/s
+--eprobe it 3250: lead 223 | 0/372 failures [] | 5.4 s | applied at it 3303
+it 3350 | 0.138 h | wm 0.1818 e8 0.3188 | pi -8.895 v 0.0061 imag_r 0.872 surv 0.998 | sim_r 0.775 ep_len 386.6 ep_ret 0.615 term 0.02 | 13.48 it/s
+it 3400 | 0.139 h | wm 0.1719 e8 0.3028 | pi -8.897 v 0.0063 imag_r 0.874 surv 0.999 | sim_r 0.775 ep_len 389.4 ep_ret 0.610 term 0.02 | 11.33 it/s
+--eprobe it 3375: lead 363 | 0/372 failures [] | 6.9 s | applied at it 3442
+it 3450 | 0.141 h | wm 0.1716 e8 0.2955 | pi -8.895 v 0.0062 imag_r 0.874 surv 0.998 | sim_r 0.780 ep_len 371.0 ep_ret 0.577 term 0.02 | 10.29 it/s
+it 3500 | 0.142 h | wm 0.1637 e8 0.2853 | pi -8.918 v 0.0058 imag_r 0.876 surv 0.998 | sim_r 0.781 ep_len 369.3 ep_ret 0.586 term 0.01 | 13.62 it/s
+it 3550 | 0.143 h | wm 0.1582 e8 0.2730 | pi -8.934 v 0.0058 imag_r 0.880 surv 0.999 | sim_r 0.779 ep_len 370.4 ep_ret 0.578 term 0.01 | 9.69 it/s
+--eprobe it 3500: lead 271 | 0/372 failures [] | 5.9 s | applied at it 3558
+it 3600 | 0.144 h | wm 0.1556 e8 0.2652 | pi -8.926 v 0.0064 imag_r 0.880 surv 0.998 | sim_r 0.775 ep_len 364.0 ep_ret 0.570 term 0.02 | 13.00 it/s
+it 3650 | 0.145 h | wm 0.1522 e8 0.2594 | pi -8.948 v 0.0060 imag_r 0.882 surv 0.999 | sim_r 0.782 ep_len 340.6 ep_ret 0.506 term 0.02 | 11.31 it/s
+--eprobe it 3625: lead 435 | 0/372 failures [] | 7.7 s | applied at it 3699
+it 3700 | 0.147 h | wm 0.1488 e8 0.2541 | pi -8.999 v 0.0060 imag_r 0.884 surv 0.999 | sim_r 0.782 ep_len 354.7 ep_ret 0.553 term 0.02 | 9.70 it/s
+it 3750 | 0.148 h | wm 0.1509 e8 0.2588 | pi -8.980 v 0.0060 imag_r 0.884 surv 0.999 | sim_r 0.781 ep_len 360.3 ep_ret 0.572 term 0.02 | 13.87 it/s
+it 3800 | 0.149 h | wm 0.1499 e8 0.2585 | pi -8.990 v 0.0066 imag_r 0.885 surv 0.999 | sim_r 0.782 ep_len 351.4 ep_ret 0.529 term 0.02 | 9.71 it/s
+--eprobe it 3750: lead 246 | 1/372 failures [('fallAndGetUp1_s4', 6251)] | 5.6 s | applied at it 3805
+it 3850 | 0.150 h | wm 0.1480 e8 0.2598 | pi -8.936 v 0.0057 imag_r 0.884 surv 0.999 | sim_r 0.785 ep_len 351.8 ep_ret 0.529 term 0.01 | 13.16 it/s
+it 3900 | 0.151 h | wm 0.1499 e8 0.2586 | pi -8.980 v 0.0055 imag_r 0.886 surv 0.999 | sim_r 0.786 ep_len 355.8 ep_ret 0.544 term 0.01 | 11.33 it/s
+--eprobe it 3875: lead 409 | 2/372 failures [('dance2_s4', 2699), ('fallAndGetUp1_s4', 6254)] | 7.4 s | applied at it 3946
+it 3950 | 0.153 h | wm 0.1541 e8 0.2691 | pi -9.018 v 0.0058 imag_r 0.886 surv 0.999 | sim_r 0.781 ep_len 352.9 ep_ret 0.516 term 0.01 | 9.98 it/s
+it 4000 | 0.154 h | wm 0.1509 e8 0.2573 | pi -8.989 v 0.0055 imag_r 0.886 surv 0.999 | sim_r 0.778 ep_len 342.2 ep_ret 0.508 term 0.01 | 13.64 it/s
+it 4050 | 0.155 h | wm 0.1445 e8 0.2487 | pi -8.983 v 0.0051 imag_r 0.886 surv 0.999 | sim_r 0.780 ep_len 343.8 ep_ret 0.500 term 0.01 | 9.68 it/s
+--eprobe it 4000: lead 362 | 0/372 failures [] | 6.8 s | applied at it 4067
+it 4100 | 0.156 h | wm 0.1449 e8 0.2500 | pi -9.014 v 0.0050 imag_r 0.886 surv 0.999 | sim_r 0.781 ep_len 341.9 ep_ret 0.486 term 0.01 | 12.14 it/s
+it 4150 | 0.158 h | wm 0.1487 e8 0.2582 | pi -8.985 v 0.0049 imag_r 0.888 surv 0.999 | sim_r 0.775 ep_len 355.8 ep_ret 0.517 term 0.01 | 11.33 it/s
+--eprobe it 4125: lead 286 | 0/372 failures [] | 6.1 s | applied at it 4184
+it 4200 | 0.159 h | wm 0.1490 e8 0.2573 | pi -8.977 v 0.0051 imag_r 0.887 surv 0.999 | sim_r 0.777 ep_len 353.6 ep_ret 0.545 term 0.01 | 10.80 it/s
+it 4250 | 0.160 h | wm 0.1467 e8 0.2534 | pi -8.992 v 0.0051 imag_r 0.885 surv 0.999 | sim_r 0.780 ep_len 351.1 ep_ret 0.513 term 0.01 | 13.62 it/s
+it 4300 | 0.161 h | wm 0.1564 e8 0.2709 | pi -9.004 v 0.0053 imag_r 0.885 surv 0.999 | sim_r 0.782 ep_len 336.1 ep_ret 0.499 term 0.01 | 9.70 it/s
+--eprobe it 4250: lead 386 | 0/372 failures [] | 7.1 s | applied at it 4319
+it 4350 | 0.163 h | wm 0.1545 e8 0.2644 | pi -8.977 v 0.0049 imag_r 0.885 surv 0.999 | sim_r 0.780 ep_len 349.7 ep_ret 0.507 term 0.02 | 11.94 it/s
+it 4400 | 0.164 h | wm 0.1565 e8 0.2647 | pi -8.992 v 0.0056 imag_r 0.885 surv 0.999 | sim_r 0.785 ep_len 341.1 ep_ret 0.491 term 0.01 | 11.34 it/s
+--eprobe it 4375: lead 362 | 0/372 failures [] | 6.9 s | applied at it 4442
+it 4450 | 0.165 h | wm 0.1517 e8 0.2555 | pi -8.985 v 0.0051 imag_r 0.886 surv 0.999 | sim_r 0.786 ep_len 354.8 ep_ret 0.532 term 0.01 | 10.29 it/s
+it 4500 | 0.166 h | wm 0.1540 e8 0.2592 | pi -9.009 v 0.0054 imag_r 0.886 surv 0.999 | sim_r 0.785 ep_len 351.6 ep_ret 0.536 term 0.01 | 13.63 it/s
+it 4550 | 0.168 h | wm 0.1478 e8 0.2489 | pi -9.006 v 0.0049 imag_r 0.887 surv 0.999 | sim_r 0.783 ep_len 344.3 ep_ret 0.505 term 0.01 | 9.71 it/s
+--eprobe it 4500: lead 206 | 0/372 failures [] | 5.2 s | applied at it 4551
+it 4600 | 0.169 h | wm 0.1496 e8 0.2555 | pi -8.988 v 0.0050 imag_r 0.888 surv 0.999 | sim_r 0.781 ep_len 334.8 ep_ret 0.495 term 0.01 | 13.68 it/s
+it 4650 | 0.170 h | wm 0.1478 e8 0.2483 | pi -8.988 v 0.0048 imag_r 0.887 surv 0.999 | sim_r 0.780 ep_len 340.7 ep_ret 0.492 term 0.02 | 11.32 it/s
+--eprobe it 4625: lead 270 | 0/372 failures [] | 5.9 s | applied at it 4682
+it 4700 | 0.171 h | wm 0.1420 e8 0.2441 | pi -9.013 v 0.0049 imag_r 0.887 surv 0.999 | sim_r 0.782 ep_len 337.1 ep_ret 0.485 term 0.01 | 10.88 it/s
+it 4750 | 0.172 h | wm 0.1462 e8 0.2478 | pi -9.018 v 0.0050 imag_r 0.888 surv 0.999 | sim_r 0.783 ep_len 347.2 ep_ret 0.499 term 0.01 | 13.65 it/s
+it 4800 | 0.174 h | wm 0.1407 e8 0.2386 | pi -8.963 v 0.0048 imag_r 0.888 surv 0.999 | sim_r 0.785 ep_len 335.8 ep_ret 0.478 term 0.01 | 9.72 it/s
+--eprobe it 4750: lead 432 | 0/372 failures [] | 7.5 s | applied at it 4824
+it 4850 | 0.175 h | wm 0.1395 e8 0.2330 | pi -9.001 v 0.0048 imag_r 0.889 surv 0.999 | sim_r 0.789 ep_len 342.2 ep_ret 0.475 term 0.01 | 11.58 it/s
+it 4900 | 0.176 h | wm 0.1404 e8 0.2411 | pi -9.007 v 0.0048 imag_r 0.889 surv 0.999 | sim_r 0.792 ep_len 340.2 ep_ret 0.479 term 0.01 | 11.34 it/s
+--eprobe it 4875: lead 309 | 0/372 failures [] | 6.3 s | applied at it 4936
+it 4950 | 0.177 h | wm 0.1391 e8 0.2327 | pi -9.007 v 0.0049 imag_r 0.891 surv 0.999 | sim_r 0.790 ep_len 342.1 ep_ret 0.485 term 0.01 | 10.61 it/s
+it 5000 | 0.178 h | wm 0.1354 e8 0.2296 | pi -9.004 v 0.0047 imag_r 0.892 surv 0.999 | sim_r 0.790 ep_len 339.8 ep_ret 0.482 term 0.01 | 13.65 it/s
+it 5050 | 0.180 h | wm 0.1322 e8 0.2233 | pi -9.028 v 0.0048 imag_r 0.893 surv 0.999 | sim_r 0.795 ep_len 341.5 ep_ret 0.501 term 0.01 | 9.70 it/s
+--eprobe it 5000: lead 437 | 0/372 failures [] | 7.6 s | applied at it 5074
+it 5100 | 0.181 h | wm 0.1283 e8 0.2171 | pi -9.067 v 0.0043 imag_r 0.894 surv 0.999 | sim_r 0.796 ep_len 346.6 ep_ret 0.489 term 0.01 | 11.51 it/s
+it 5150 | 0.182 h | wm 0.1260 e8 0.2114 | pi -9.072 v 0.0045 imag_r 0.896 surv 0.999 | sim_r 0.792 ep_len 339.9 ep_ret 0.499 term 0.01 | 11.35 it/s
+--eprobe it 5125: lead 321 | 0/372 failures [] | 6.5 s | applied at it 5188
+it 5200 | 0.184 h | wm 0.1241 e8 0.2060 | pi -9.061 v 0.0044 imag_r 0.895 surv 0.999 | sim_r 0.787 ep_len 340.5 ep_ret 0.515 term 0.01 | 10.54 it/s
+it 5250 | 0.185 h | wm 0.1235 e8 0.2087 | pi -9.057 v 0.0043 imag_r 0.897 surv 0.999 | sim_r 0.788 ep_len 346.8 ep_ret 0.490 term 0.02 | 13.65 it/s
+it 5300 | 0.186 h | wm 0.1238 e8 0.2079 | pi -9.046 v 0.0046 imag_r 0.895 surv 0.999 | sim_r 0.791 ep_len 338.5 ep_ret 0.475 term 0.01 | 9.71 it/s
+--eprobe it 5250: lead 261 | 0/372 failures [] | 5.8 s | applied at it 5307
+it 5350 | 0.187 h | wm 0.1244 e8 0.2084 | pi -9.069 v 0.0043 imag_r 0.896 surv 0.999 | sim_r 0.791 ep_len 347.0 ep_ret 0.501 term 0.01 | 13.11 it/s
+it 5400 | 0.188 h | wm 0.1213 e8 0.2027 | pi -9.056 v 0.0044 imag_r 0.896 surv 0.999 | sim_r 0.792 ep_len 337.3 ep_ret 0.462 term 0.01 | 11.34 it/s
+--eprobe it 5375: lead 410 | 0/372 failures [] | 7.4 s | applied at it 5446
+it 5450 | 0.190 h | wm 0.1261 e8 0.2123 | pi -9.069 v 0.0047 imag_r 0.896 surv 0.999 | sim_r 0.792 ep_len 341.4 ep_ret 0.503 term 0.01 | 9.99 it/s
+it 5500 | 0.191 h | wm 0.1267 e8 0.2116 | pi -9.060 v 0.0045 imag_r 0.895 surv 0.999 | sim_r 0.790 ep_len 338.4 ep_ret 0.501 term 0.01 | 13.66 it/s
+it 5550 | 0.192 h | wm 0.1294 e8 0.2140 | pi -9.011 v 0.0046 imag_r 0.894 surv 0.999 | sim_r 0.793 ep_len 344.3 ep_ret 0.546 term 0.01 | 9.69 it/s
+--eprobe it 5500: lead 352 | 0/372 failures [] | 6.7 s | applied at it 5566
+it 5600 | 0.193 h | wm 0.1291 e8 0.2161 | pi -9.033 v 0.0045 imag_r 0.896 surv 0.999 | sim_r 0.791 ep_len 338.8 ep_ret 0.478 term 0.01 | 12.27 it/s
+it 5650 | 0.194 h | wm 0.1271 e8 0.2089 | pi -9.048 v 0.0047 imag_r 0.895 surv 0.999 | sim_r 0.789 ep_len 335.8 ep_ret 0.488 term 0.01 | 11.31 it/s
+--eprobe it 5625: lead 290 | 0/372 failures [] | 6.1 s | applied at it 5684
+it 5700 | 0.196 h | wm 0.1275 e8 0.2116 | pi -9.046 v 0.0045 imag_r 0.896 surv 0.999 | sim_r 0.793 ep_len 342.9 ep_ret 0.489 term 0.01 | 10.74 it/s
+it 5750 | 0.197 h | wm 0.1289 e8 0.2130 | pi -9.056 v 0.0045 imag_r 0.896 surv 0.999 | sim_r 0.794 ep_len 332.5 ep_ret 0.492 term 0.01 | 13.62 it/s
+it 5800 | 0.198 h | wm 0.1262 e8 0.2099 | pi -9.067 v 0.0046 imag_r 0.896 surv 0.999 | sim_r 0.792 ep_len 347.5 ep_ret 0.495 term 0.01 | 9.72 it/s
+--eprobe it 5750: lead 288 | 0/372 failures [] | 6.0 s | applied at it 5809
+it 5850 | 0.199 h | wm 0.1310 e8 0.2196 | pi -9.072 v 0.0043 imag_r 0.897 surv 0.999 | sim_r 0.796 ep_len 344.3 ep_ret 0.531 term 0.01 | 12.80 it/s
+it 5900 | 0.201 h | wm 0.1300 e8 0.2142 | pi -9.062 v 0.0043 imag_r 0.896 surv 0.999 | sim_r 0.792 ep_len 337.7 ep_ret 0.490 term 0.01 | 11.34 it/s
+--eprobe it 5875: lead 316 | 0/372 failures [] | 6.4 s | applied at it 5937
+it 5950 | 0.202 h | wm 0.1338 e8 0.2222 | pi -9.088 v 0.0042 imag_r 0.897 surv 0.999 | sim_r 0.792 ep_len 336.6 ep_ret 0.491 term 0.01 | 10.58 it/s
+it 6000 | 0.203 h | wm 0.1260 e8 0.2108 | pi -9.065 v 0.0042 imag_r 0.896 surv 0.999 | sim_r 0.791 ep_len 342.5 ep_ret 0.505 term 0.01 | 13.66 it/s
+it 6050 | 0.204 h | wm 0.1306 e8 0.2176 | pi -9.086 v 0.0043 imag_r 0.897 surv 0.999 | sim_r 0.791 ep_len 346.4 ep_ret 0.507 term 0.01 | 9.70 it/s
+--eprobe it 6000: lead 231 | 1/372 failures [('jumps1_s2', 12063)] | 5.5 s | applied at it 6054
+it 6100 | 0.205 h | wm 0.1284 e8 0.2164 | pi -9.074 v 0.0043 imag_r 0.897 surv 0.999 | sim_r 0.788 ep_len 340.8 ep_ret 0.500 term 0.01 | 13.46 it/s
+it 6150 | 0.207 h | wm 0.1307 e8 0.2180 | pi -9.032 v 0.0044 imag_r 0.896 surv 0.999 | sim_r 0.778 ep_len 337.4 ep_ret 0.486 term 0.02 | 11.33 it/s
+--eprobe it 6125: lead 402 | 0/372 failures [] | 7.3 s | applied at it 6196
+it 6200 | 0.208 h | wm 0.1371 e8 0.2316 | pi -9.020 v 0.0044 imag_r 0.893 surv 0.999 | sim_r 0.770 ep_len 335.8 ep_ret 0.511 term 0.01 | 10.05 it/s
+it 6250 | 0.209 h | wm 0.1421 e8 0.2400 | pi -8.999 v 0.0048 imag_r 0.889 surv 0.999 | sim_r 0.763 ep_len 323.4 ep_ret 0.518 term 0.01 | 13.64 it/s
+it 6300 | 0.210 h | wm 0.1541 e8 0.2588 | pi -9.003 v 0.0050 imag_r 0.887 surv 0.999 | sim_r 0.768 ep_len 322.2 ep_ret 0.495 term 0.02 | 9.72 it/s
+--eprobe it 6250: lead 205 | 0/372 failures [] | 5.2 s | applied at it 6301
+it 6350 | 0.211 h | wm 0.1624 e8 0.2723 | pi -9.026 v 0.0053 imag_r 0.884 surv 0.999 | sim_r 0.772 ep_len 312.1 ep_ret 0.471 term 0.02 | 13.69 it/s
+it 6400 | 0.213 h | wm 0.1607 e8 0.2665 | pi -9.017 v 0.0051 imag_r 0.882 surv 0.999 | sim_r 0.776 ep_len 312.9 ep_ret 0.457 term 0.01 | 11.35 it/s
+--eprobe it 6375: lead 203 | 0/372 failures [] | 5.3 s | applied at it 6426
+it 6450 | 0.214 h | wm 0.1616 e8 0.2687 | pi -9.031 v 0.0054 imag_r 0.882 surv 0.998 | sim_r 0.779 ep_len 321.3 ep_ret 0.487 term 0.01 | 11.41 it/s
+it 6500 | 0.215 h | wm 0.1619 e8 0.2685 | pi -9.020 v 0.0048 imag_r 0.882 surv 0.999 | sim_r 0.784 ep_len 336.1 ep_ret 0.540 term 0.01 | 13.64 it/s
+it 6550 | 0.216 h | wm 0.1637 e8 0.2759 | pi -9.041 v 0.0050 imag_r 0.883 surv 0.999 | sim_r 0.786 ep_len 318.9 ep_ret 0.492 term 0.01 | 9.70 it/s
+--eprobe it 6500: lead 348 | 0/372 failures [] | 6.7 s | applied at it 6565
+it 6600 | 0.217 h | wm 0.1549 e8 0.2573 | pi -9.063 v 0.0048 imag_r 0.885 surv 0.999 | sim_r 0.787 ep_len 315.5 ep_ret 0.488 term 0.01 | 12.24 it/s
+it 6650 | 0.219 h | wm 0.1435 e8 0.2373 | pi -9.083 v 0.0050 imag_r 0.888 surv 0.999 | sim_r 0.791 ep_len 323.2 ep_ret 0.514 term 0.01 | 11.34 it/s
+--eprobe it 6625: lead 276 | 0/372 failures [] | 6.0 s | applied at it 6683
+it 6700 | 0.220 h | wm 0.1392 e8 0.2323 | pi -9.114 v 0.0047 imag_r 0.892 surv 0.999 | sim_r 0.793 ep_len 312.1 ep_ret 0.500 term 0.01 | 10.86 it/s
+it 6750 | 0.221 h | wm 0.1348 e8 0.2233 | pi -9.125 v 0.0046 imag_r 0.894 surv 0.999 | sim_r 0.791 ep_len 327.3 ep_ret 0.526 term 0.01 | 13.63 it/s
+it 6800 | 0.222 h | wm 0.1345 e8 0.2202 | pi -9.161 v 0.0045 imag_r 0.896 surv 0.999 | sim_r 0.795 ep_len 325.3 ep_ret 0.486 term 0.01 | 9.71 it/s
+--eprobe it 6750: lead 290 | 0/372 failures [] | 6.1 s | applied at it 6809
+it 6850 | 0.223 h | wm 0.1302 e8 0.2148 | pi -9.189 v 0.0043 imag_r 0.899 surv 0.999 | sim_r 0.797 ep_len 329.1 ep_ret 0.562 term 0.01 | 12.77 it/s
+it 6900 | 0.225 h | wm 0.1263 e8 0.2094 | pi -9.158 v 0.0043 imag_r 0.900 surv 0.999 | sim_r 0.798 ep_len 324.4 ep_ret 0.508 term 0.01 | 11.33 it/s
+it 6950 | 0.226 h | wm 0.1245 e8 0.2047 | pi -9.187 v 0.0043 imag_r 0.902 surv 0.999 | sim_r 0.797 ep_len 326.4 ep_ret 0.501 term 0.01 | 9.75 it/s
+--eprobe it 6875: lead 449 | 0/372 failures [] | 7.8 s | applied at it 6950
+it 7000 | 0.227 h | wm 0.1248 e8 0.2086 | pi -9.190 v 0.0042 imag_r 0.901 surv 0.999 | sim_r 0.798 ep_len 320.1 ep_ret 0.503 term 0.01 | 13.72 it/s
+it 7050 | 0.229 h | wm 0.1236 e8 0.2061 | pi -9.189 v 0.0045 imag_r 0.903 surv 0.999 | sim_r 0.796 ep_len 317.4 ep_ret 0.485 term 0.01 | 9.71 it/s
+--eprobe it 7000: lead 284 | 0/372 failures [] | 6.0 s | applied at it 7059
+it 7100 | 0.230 h | wm 0.1204 e8 0.1998 | pi -9.195 v 0.0044 imag_r 0.903 surv 0.999 | sim_r 0.799 ep_len 323.3 ep_ret 0.524 term 0.01 | 12.86 it/s
+it 7150 | 0.231 h | wm 0.1212 e8 0.2015 | pi -9.210 v 0.0042 imag_r 0.904 surv 0.999 | sim_r 0.797 ep_len 320.5 ep_ret 0.495 term 0.01 | 11.32 it/s
+--eprobe it 7125: lead 380 | 0/372 failures [] | 7.1 s | applied at it 7193
+it 7200 | 0.232 h | wm 0.1222 e8 0.2033 | pi -9.195 v 0.0043 imag_r 0.905 surv 0.999 | sim_r 0.799 ep_len 318.4 ep_ret 0.506 term 0.01 | 10.15 it/s
+it 7250 | 0.233 h | wm 0.1245 e8 0.2072 | pi -9.184 v 0.0042 imag_r 0.905 surv 0.999 | sim_r 0.800 ep_len 336.2 ep_ret 0.514 term 0.02 | 13.62 it/s
+it 7300 | 0.235 h | wm 0.1230 e8 0.2035 | pi -9.180 v 0.0043 imag_r 0.905 surv 0.999 | sim_r 0.801 ep_len 317.3 ep_ret 0.526 term 0.01 | 9.72 it/s
+--eprobe it 7250: lead 396 | 0/372 failures [] | 7.2 s | applied at it 7320
+it 7350 | 0.236 h | wm 0.1192 e8 0.1942 | pi -9.180 v 0.0044 imag_r 0.905 surv 0.999 | sim_r 0.801 ep_len 315.0 ep_ret 0.489 term 0.01 | 11.85 it/s
+it 7400 | 0.237 h | wm 0.1220 e8 0.2013 | pi -9.200 v 0.0045 imag_r 0.906 surv 0.999 | sim_r 0.803 ep_len 317.7 ep_ret 0.498 term 0.00 | 11.34 it/s
+--eprobe it 7375: lead 410 | 0/372 failures [] | 7.4 s | applied at it 7446
+it 7450 | 0.238 h | wm 0.1192 e8 0.1982 | pi -9.206 v 0.0042 imag_r 0.907 surv 0.999 | sim_r 0.801 ep_len 322.2 ep_ret 0.505 term 0.01 | 9.97 it/s
+it 7500 | 0.239 h | wm 0.1202 e8 0.1984 | pi -9.184 v 0.0041 imag_r 0.908 surv 0.999 | sim_r 0.803 ep_len 321.3 ep_ret 0.534 term 0.01 | 13.64 it/s
+it 7550 | 0.241 h | wm 0.1244 e8 0.2032 | pi -9.229 v 0.0040 imag_r 0.908 surv 0.999 | sim_r 0.800 ep_len 327.8 ep_ret 0.526 term 0.01 | 9.69 it/s
+--eprobe it 7500: lead 395 | 0/372 failures [] | 7.2 s | applied at it 7570
+it 7600 | 0.242 h | wm 0.1218 e8 0.2001 | pi -9.217 v 0.0042 imag_r 0.907 surv 0.999 | sim_r 0.800 ep_len 329.4 ep_ret 0.542 term 0.01 | 11.85 it/s
+it 7650 | 0.243 h | wm 0.1254 e8 0.2064 | pi -9.198 v 0.0041 imag_r 0.907 surv 0.999 | sim_r 0.801 ep_len 321.0 ep_ret 0.507 term 0.01 | 11.32 it/s
+--eprobe it 7625: lead 296 | 0/372 failures [] | 6.2 s | applied at it 7685
+it 7700 | 0.245 h | wm 0.1210 e8 0.1982 | pi -9.211 v 0.0041 imag_r 0.908 surv 0.999 | sim_r 0.804 ep_len 324.1 ep_ret 0.505 term 0.01 | 10.72 it/s
+it 7750 | 0.246 h | wm 0.1311 e8 0.2158 | pi -9.209 v 0.0040 imag_r 0.907 surv 0.999 | sim_r 0.802 ep_len 320.7 ep_ret 0.500 term 0.01 | 13.60 it/s
+it 7800 | 0.247 h | wm 0.1357 e8 0.2218 | pi -9.218 v 0.0040 imag_r 0.908 surv 0.999 | sim_r 0.800 ep_len 312.8 ep_ret 0.483 term 0.02 | 9.70 it/s
+--eprobe it 7750: lead 427 | 2/372 failures [('fallAndGetUp2_s3', 4911), ('fallAndGetUp2_s3', 4964)] | 7.5 s | applied at it 7823
+it 7850 | 0.248 h | wm 0.1301 e8 0.2139 | pi -9.233 v 0.0044 imag_r 0.907 surv 0.999 | sim_r 0.803 ep_len 317.7 ep_ret 0.512 term 0.02 | 11.59 it/s
+it 7900 | 0.249 h | wm 0.1364 e8 0.2271 | pi -9.214 v 0.0042 imag_r 0.907 surv 0.999 | sim_r 0.801 ep_len 315.9 ep_ret 0.489 term 0.02 | 11.34 it/s
+time budget of 0.25 h reached at it 7920

@@ -1,0 +1,330 @@
+{
+  "protocol_id": "modded-supermimic-g1-lafan1-v2",
+  "algorithm": "InstantTrack-v1.4-FULL_COLLISION",
+  "training_commit": "b9512a96d4e82e6ddea9a6de3b03276888bbcb2c",
+  "seed": 0,
+  "hardware": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "gpu_count": 1,
+    "declared_gpu_name": "declared-only",
+    "gpu_compute_capability": "sm_120",
+    "actual_torch_device": "cuda:0",
+    "actual_warp_device": "cuda:0",
+    "actual_simulation_backend": "mujoco_warp",
+    "cuda_graph_step_captured": true
+  },
+  "evaluator": {
+    "implementation": "canonical-mjlab-g1-v2-original-aligned",
+    "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+    "evaluator_source_tree": "research/modded-supermimic/benchmark/v2",
+    "source_git_sha": "unknown",
+    "self_collision": true,
+    "self_collision_reward_penalty": false,
+    "robot_dof": 29,
+    "mujoco": "3.11.0",
+    "mujoco_warp": "3.11.0",
+    "warp_lang": "1.16.0",
+    "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+    "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+    "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+    "mjlab_version": "1.6.0",
+    "motion_converter_version": "official-csv-to-npz-mjlab1.6.0-1",
+    "reference_implementations": {
+      "supermimic": {
+        "repo": "zita-ch/supermimic_vibed",
+        "commit": "8bfc1158bd968f729fcc65d5e897a05b05ea3d36",
+        "protocol": "supermimic/evaluate.py:53-96, supermimic/mdp.py:108-152"
+      },
+      "nablamimic": {
+        "repo": "sailab-ai/NablaMimic",
+        "commit": "bfbb2a6773b4776c17402a34a93ec7589d9c7c18",
+        "protocol": "src/nablamimic/evaluate.py:35-116, src/nablamimic/env.py:404-433"
+      }
+    },
+    "depends_on_prs": [
+      {
+        "number": 12,
+        "branch": "research/mjlab-reuse-refactor",
+        "head": "f5bf4e0d881837b84ecb0654c88d7d0d3bfc361e",
+        "role": "official mjlab evaluator (physics / PD / motion converter / record identity)"
+      },
+      {
+        "number": 13,
+        "branch": "feat/nablamimic-canonical-policy",
+        "head": "66a6e52664195fee3c446924980ae586bc55c25d",
+        "role": "NablaMimic policy adapter with the confirmed reference-frame indexing fix"
+      }
+    ]
+  },
+  "checkpoints": [
+    {
+      "checkpoint_sha256": "9a1948756b29197ab45a4aed5270c24d6b3038919cd4c0d1b80388144f911c43",
+      "training_wall_s": 405.23,
+      "setup_wall_s": 0.0,
+      "eval_wall_s": 818.466408712,
+      "per_clip": [
+        {
+          "clip": "walk1_subject1",
+          "normalized_return": 0.8764416498485074,
+          "failed": false
+        },
+        {
+          "clip": "dance1_subject1",
+          "normalized_return": 0.805661409712022,
+          "failed": false
+        }
+      ]
+    }
+  ],
+  "target_hardware_met": true,
+  "submission_eligible": true,
+  "comparison_valid": true,
+  "evaluation": {
+    "mode": "benchmark",
+    "submission_eligible": true,
+    "comparison_valid": true,
+    "cuda_required": true,
+    "provenance": {
+      "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "gpu_compute_capability": "sm_120",
+      "gpu_count": 1,
+      "actual_torch_device": "cuda:0",
+      "actual_warp_device": "cuda:0",
+      "warp_cuda_devices": [
+        "cuda:0"
+      ],
+      "actual_simulation_backend": "mujoco_warp",
+      "simulation_state_device": "cuda:0",
+      "cuda_graph_step_captured": true,
+      "cuda_runtime": "13.0",
+      "driver_version": "580.82.07",
+      "mujoco_version": "3.11.0",
+      "mujoco_warp_version": "3.11.0",
+      "warp_version": "1.16.0",
+      "mjlab_version": "1.6.0",
+      "mjlab_commit": "0fb8a681136be94ffc636a3dd423cabb97d91f10",
+      "version_drift": {},
+      "target_gpu_match": true,
+      "sm_120_confirmed": true,
+      "evaluator_git_sha": "ece19946191958b2692a6b2e69c4647b4fae1368",
+      "v2_protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+      "v2_protocol_id": "modded-supermimic-g1-lafan1-v2",
+      "robot_model_sha256": "ae606600e1089fe79412054852092673ebbef8df881caa9c3e291b8894b0396a",
+      "dataset_manifest_sha256": "595fd98a3e75a8ed1408cec0e473db19ec7f1022cbdd52480613ce39305a5085",
+      "motion_converter_version": "official-csv-to-npz-mjlab1.6.0-1",
+      "simulation_fps": 44.299734380516625,
+      "simulation_fps_source": "measured steady-state CUDA rollout",
+      "nominal_control_fps": 50.0,
+      "runtime": {
+        "env_device": "cuda:0",
+        "sim_device": "cuda:0",
+        "simulation_class": "mjlab.sim.sim.Simulation",
+        "simulation_backend": "mujoco_warp",
+        "mujoco_warp_data_class": "mujoco_warp._src.types.Data",
+        "warp_device": "cuda:0",
+        "warp_device_is_cuda": true,
+        "warp_device_arch": 120,
+        "wp_data_qpos_device": "cuda:0",
+        "wp_data_qpos_is_cuda": true,
+        "wp_data_is_mjwarp": true,
+        "use_cuda_graph": true,
+        "step_graph_captured": true,
+        "graph_capture_status": "captured",
+        "no_cpu_fallback": true,
+        "warnings": []
+      },
+      "kernel_execution": {},
+      "telemetry": {
+        "samples": 983,
+        "interval_s": 0.4,
+        "gpu_utilization_pct": {
+          "mean": 19.473041709053916,
+          "max": 51.0,
+          "min": 0.0
+        },
+        "gpu_memory_used_mib": {
+          "mean": 1451.7700915564599,
+          "max": 1586.0,
+          "min": 3.0
+        },
+        "cpu_utilization_pct": {
+          "mean": 97.90345879959308,
+          "max": 100.0,
+          "min": 2.2
+        }
+      },
+      "performance": {
+        "per_clip": {
+          "walk1_subject1": {
+            "cuda_env_build_s": 0.943304688000353,
+            "reset_wall_s": 0.15649683300034667,
+            "warmup_steps": 5,
+            "warmup_wall_s": 0.29077700699963316,
+            "first_step_wall_s": 0.23249531599958573,
+            "steady_steps": 13059,
+            "steady_wall_s": 135.52207213286783,
+            "steady_simulation_fps": 96.36068718899726,
+            "step_wall_s_mean": 0.010395962120320535,
+            "step_wall_s_max": 0.23249531599958573,
+            "total_steps": 13064,
+            "total_step_wall_s": 135.81284913986747,
+            "phase_times": {},
+            "reference_load_s": 0.07928228200034937
+          },
+          "dance1_subject1": {
+            "cuda_env_build_s": 0.9638949079999293,
+            "reset_wall_s": 0.15748404200076038,
+            "warmup_steps": 5,
+            "warmup_wall_s": 0.19845467300001474,
+            "first_step_wall_s": 0.16837220699926547,
+            "steady_steps": 6568,
+            "steady_wall_s": 90.61067461496532,
+            "steady_simulation_fps": 72.4859408442725,
+            "step_wall_s_mean": 0.013815476842836655,
+            "step_wall_s_max": 0.16837220699926547,
+            "total_steps": 6573,
+            "total_step_wall_s": 90.80912928796533,
+            "phase_times": {},
+            "reference_load_s": 0.04067949000000226
+          }
+        },
+        "evaluation_wall_s": 443.27579554600015,
+        "steady_simulation_fps": 44.299734380516625
+      },
+      "collected_at_unix": 1795097093.6416988,
+      "platform": "6.6.159+",
+      "dependency_versions": {
+        "mujoco": "3.11.0",
+        "mujoco_warp": "3.11.0",
+        "warp_lang": "1.16.0"
+      },
+      "evaluation_mode": "benchmark"
+    },
+    "telemetry": {
+      "samples": 983,
+      "interval_s": 0.4,
+      "gpu_utilization_pct": {
+        "mean": 19.473041709053916,
+        "max": 51.0,
+        "min": 0.0
+      },
+      "gpu_memory_used_mib": {
+        "mean": 1451.7700915564599,
+        "max": 1586.0,
+        "min": 3.0
+      },
+      "cpu_utilization_pct": {
+        "mean": 97.90345879959308,
+        "max": 100.0,
+        "min": 2.2
+      }
+    },
+    "performance": {
+      "walk1_subject1": {
+        "cuda_env_build_s": 0.943304688000353,
+        "reset_wall_s": 0.15649683300034667,
+        "warmup_steps": 5,
+        "warmup_wall_s": 0.29077700699963316,
+        "first_step_wall_s": 0.23249531599958573,
+        "steady_steps": 13059,
+        "steady_wall_s": 135.52207213286783,
+        "steady_simulation_fps": 96.36068718899726,
+        "step_wall_s_mean": 0.010395962120320535,
+        "step_wall_s_max": 0.23249531599958573,
+        "total_steps": 13064,
+        "total_step_wall_s": 135.81284913986747,
+        "phase_times": {},
+        "reference_load_s": 0.07928228200034937
+      },
+      "dance1_subject1": {
+        "cuda_env_build_s": 0.9638949079999293,
+        "reset_wall_s": 0.15748404200076038,
+        "warmup_steps": 5,
+        "warmup_wall_s": 0.19845467300001474,
+        "first_step_wall_s": 0.16837220699926547,
+        "steady_steps": 6568,
+        "steady_wall_s": 90.61067461496532,
+        "steady_simulation_fps": 72.4859408442725,
+        "step_wall_s_mean": 0.013815476842836655,
+        "step_wall_s_max": 0.16837220699926547,
+        "total_steps": 6573,
+        "total_step_wall_s": 90.80912928796533,
+        "phase_times": {},
+        "reference_load_s": 0.04067949000000226
+      }
+    },
+    "normalization": "full-clip (T-1)*0.1 denominator, no clipping",
+    "control_hz": 50.0,
+    "clip_steps": {
+      "walk1_subject1": 13064,
+      "dance1_subject1": 6573
+    },
+    "normalized_return_denominator": 0.1,
+    "aggregate_normalized_return": 0.8410515297802648,
+    "failed_clips": 0,
+    "per_clip_diagnostics": {
+      "walk1_subject1": {
+        "steps": 13064,
+        "alive_steps": 13064,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.00045969002834665094,
+          "joint_limit": -1.6124004322476354e-05,
+          "motion_body_ang_vel": 0.019138333583518626,
+          "motion_body_lin_vel": 0.019420286062044115,
+          "motion_body_ori": 0.018518206995831413,
+          "motion_body_pos": 0.019752638460355295,
+          "motion_global_root_ori": 0.00960448139898625,
+          "motion_global_root_pos": 0.0016860322322757295
+        }
+      },
+      "dance1_subject1": {
+        "steps": 6573,
+        "alive_steps": 6573,
+        "fall_step": null,
+        "fall_terms": [],
+        "mean_term_score": {
+          "action_rate_l2": -0.001972517377869465,
+          "joint_limit": -9.81031960374739e-05,
+          "motion_body_ang_vel": 0.016665263225575502,
+          "motion_body_lin_vel": 0.017975189573936897,
+          "motion_body_ori": 0.017666290912069206,
+          "motion_body_pos": 0.01954413541172537,
+          "motion_global_root_ori": 0.009355171835650284,
+          "motion_global_root_pos": 0.0014307103397273408
+        }
+      }
+    },
+    "clip_subset": [
+      "walk1_subject1",
+      "dance1_subject1"
+    ],
+    "protocol_sha256": "e5a5c0335fcc239edae4a085eb66b9ac5b93d4c44917c7168d21761c12675ba0",
+    "robot_dof": 29,
+    "hardware_report": "torch.cuda.is_available              : True\ntorch.cuda.get_device_name(0)        : NVIDIA RTX PRO 6000 Blackwell Server Edition\ntorch.cuda.get_device_capability(0)  : (12, 0) (sm_120)\nwarp CUDA devices                    : ['cuda:0']\nmjlab runtime device                 : cuda:0\nMuJoCo Warp simulation backend       : mujoco_warp\nwarp device / arch                   : cuda:0 / 120\nCUDA runtime / driver                : 13.0 / 580.82.07\nCUDA graph step captured             : True\nphysics state array device           : cuda:0\ntarget GPU RTX PRO 6000 / sm_120     : True / True",
+    "runtime_parity": {
+      "status": "SKIPPED"
+    },
+    "evaluation_wall_s": 443.27579554600015,
+    "cuda_init_s": null,
+    "version_drift": {},
+    "fast_eval": {
+      "implementation": "scripts/v2/fast_eval.py",
+      "option": "A_independent_parallel_workers",
+      "workers": 2,
+      "num_envs_per_worker": 1,
+      "worker_resolution": null,
+      "shards": {
+        "0": 1,
+        "1": 1
+      },
+      "eval_wall_s": 443.27579554600015,
+      "total_control_steps": 19637,
+      "aggregate_steps_per_s": 44.299734380516625,
+      "parts_dir": "/content/instanttrack_runs/instanttrack_v14_s0_20261119T123338Z/v2_evals/.fast__parity_serial_2clips/parts"
+    }
+  },
+  "mode": "benchmark",
+  "report_scope": "acceptance"
+}

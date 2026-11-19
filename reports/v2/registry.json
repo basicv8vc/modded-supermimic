@@ -61,6 +61,27 @@
         "25-minute G4 sweep (configs/ours.args, --hours 0.41667 --seed 0, NablaEngine 0.1.0 @ c61a6fe7f5ec47c7f4f9b0a4c055d60cbe40807c, 3,936 iterations in 1498.46 s = 24.97 min; run v2_25m_s0_20261116T021256Z) extending the 8-min baseline g4_nablamimic_seed0.json.",
         "V2 bisect across 12 checkpoints (nablamimic_25m_bisect/bisect_summary.json) found earliest and stable 0/40 failed + >=0.82 onset at it_001500 (572.18 s = 9.54 min, 0.84108, 0/40 failed) and remained 0/40 across all 11 checkpoints from it_001500 through it_003936 (0.86896)."
       ]
+    },
+    {
+      "path": "instanttrack_v14_s0/ckpt_002300_v2.json",
+      "algorithm": "InstantTrack-v1.4-FULL_COLLISION",
+      "upstream_repo": "https://github.com/Huy-Quang-Dao/InstantTrack",
+      "seed": 0,
+      "training_commit": "b9512a96d4e82e6ddea9a6de3b03276888bbcb2c",
+      "checkpoint_sha256": "9a1948756b29197ab45a4aed5270c24d6b3038919cd4c0d1b80388144f911c43",
+      "training_wall_s": 405.23,
+      "aggregate_normalized_return": 0.8216875979595798,
+      "failed_clips": 0,
+      "report_scope": "acceptance",
+      "submission_eligible": true,
+      "target_hardware_met": true,
+      "backend": "batched(num_envs=40)",
+      "audit": "FORMAT_VALID_PENDING_PHYSICS_AUDIT",
+      "notes": [
+        "15-minute Colab G4 run (instanttrack_v14_s0_20261119T123338Z, InstantTrack v1.4.0 @ b9512a96d4e82e6ddea9a6de3b03276888bbcb2c incorporating BlinkMimic arXiv:2611.16422, PRESET[instanttrack], --seed 0) with G1 constants patched to frozen V2 FULL_COLLISION assets/g1/g1.xml and pinned 40 LAFAN1 CSVs.",
+        "Earliest 0/40 failed + >=0.82 checkpoint at iter 2,300: 405.23 s raw wall-clock (6m 45s, including 201.07 s initial torch.compile/CUDA-graph warmup recorded at it 1 in eval.csv -> ~204.16 s / 3m 24s net training wall). Adjacent ckpt_002466 achieved 0.82461 (0/40, 420.22 s) and endpoint ckpt_007920 achieved 0.84308 (0/40, 900.10 s).",
+        "2-clip Option B vs serial parity check (instanttrack_v14_s0/parity_ckpt_002300_2clips.json) PASSED 2/2 clips (dance1_subject1: 0.80566 vs 0.80592; walk1_subject1: 0.87644 vs 0.87375; max|delta_return|=2.689e-3, max|delta_term|=2.246e-4)."
+      ]
     }
   ],
   "note": "V2 is an independent protocol on RTX PRO 6000 Blackwell (sm_120). V1 records in ../ stay untouched and MUST NOT be compared directly against V2. Diagnostic ablations and historical L4/A100 preflight artifacts are listed separately below with submission_eligible=false and never enter records[].",
@@ -253,6 +274,42 @@
       "summary_path": "nablamimic_25m_bisect/bisect_summary.json",
       "training_summary_path": "../../baselines/nablamimic/out/v2_25m_s0_20261116T021256Z/summary.json",
       "notes": "Trained on Colab G4 (sm_120) using official configs/ours.args with --hours 0.41667 --seed 0 (NablaEngine 0.1.0 @ c61a6fe7f5ec47c7f4f9b0a4c055d60cbe40807c); 12 checkpoints (it_001250..it_003936) evaluated under V2 FULL_COLLISION via fast_eval.py (--policy-backend nablamimic_gpu). Full 40-clip JSONs committed in reports/v2/nablamimic_25m_bisect/ and training archive in baselines/nablamimic/out/v2_25m_s0_20261116T021256Z/; .pkl weights stored on Google Drive MyDrive/supermimic/nablamimic/runs/v2_25m_s0_20261116T021256Z/checkpoints/."
+    },
+    {
+      "run_id": "instanttrack_v14_s0_20261119T123338Z",
+      "algorithm": "InstantTrack-v1.4-FULL_COLLISION",
+      "training_commit": "b9512a96d4e82e6ddea9a6de3b03276888bbcb2c",
+      "budget_hours": 0.25,
+      "total_iterations": 7920,
+      "save_interval": 100,
+      "earliest_zero_fail": {
+        "iter": 2300,
+        "wall_s": 405.23,
+        "net_train_wall_s_est": 204.16,
+        "aggregate_normalized_return": 0.8216875979595798,
+        "failed_clips": 0,
+        "record_path": "instanttrack_v14_s0/ckpt_002300_v2.json",
+        "parity_2clips_summary": "instanttrack_v14_s0/parity_ckpt_002300_2clips.json"
+      },
+      "best_passing": {
+        "iter": 7920,
+        "wall_s": 900.1,
+        "net_train_wall_s_est": 699.03,
+        "aggregate_normalized_return": 0.8430800515999826,
+        "failed_clips": 0,
+        "record_path": "instanttrack_v14_s0/ckpt_007920_v2.json"
+      },
+      "final": {
+        "iter": 7920,
+        "wall_s": 900.1,
+        "net_train_wall_s_est": 699.03,
+        "aggregate_normalized_return": 0.8430800515999826,
+        "failed_clips": 0,
+        "record_path": "instanttrack_v14_s0/ckpt_007920_v2.json"
+      },
+      "summary_path": "instanttrack_v14_s0/selected.json",
+      "training_summary_path": "../../baselines/instanttrack/out/instanttrack_v14_s0_20261119T123338Z/launcher_meta.json",
+      "notes": "Trained on Colab G4 (sm_120) with upstream PRESET[instanttrack] defaults + --seed 0 + V2 FULL_COLLISION patch (assets/g1/g1.xml, pinned 40 LAFAN1 CSVs). 94 checkpoints screened via upstream eval_batch.py (eval.csv) and 5 boundary/endpoint checkpoints (2200, 2300, 2400, 2466, 7920) evaluated under frozen V2 referee via baselines/instanttrack/policy.py:make_policy; ckpt_002466 also passed V2 at 420.22 s (0.82461, 0/40). 94 .pt checkpoints stored in Google Drive MyDrive/supermimic_v2/runs/instanttrack_v14_s0_20261119T123338Z/checkpoints/."
     }
   ]
 }

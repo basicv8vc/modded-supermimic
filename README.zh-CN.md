@@ -31,11 +31,12 @@
 
 | # | 纪录 | 达标训练时间（0/40 且 ≥0.82） | 训练框架 / 仿真器 | 归一化回报 | 失败 Clip | 日期 | 纪录卡片与完整证据 |
 | ---: | --- | ---: | --- | ---: | ---: | --- | --- |
-| **1** | **NablaMimic**（`configs/ours.args`，`seed=0`） | **`9m 32s`**（`572.18 s`，iter `1,500`） | JAX + `NablaEngine 0.1.0` | `0.84108` *（25m 终点：`0.86896`）* | **0 / 40** | 2026-11-16 | [`records/v2/002_nablamimic_nablaengine`](records/v2/002_nablamimic_nablaengine/README.md) · [`v2_it_001500.json`](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
-| **2** | **SuperMimic Official**（`GenCoord` `proprio`，`h=10`，`seed=0`） | **`36m 51s`**（`2,210.83 s`，iter `15,000`）*（稳定：`40m 53s` / `2,453.09 s`）* | PyTorch + `mjlab`（`HybridRobotics/supermimic`） | `0.82641` *（稳定：`0.83635`，峰值：`0.85751`）* | **0 / 40** | 2026-11-15 | [`records/v2/001_supermimic_official_mjlab`](records/v2/001_supermimic_official_mjlab/README.md) · [`bisect_report.json`](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
+| **1** | **InstantTrack v1.4**（`PRESET[instanttrack]` + `FULL_COLLISION`，`seed=0`） | **`6m 45s`**（含首轮编译 `405.23 s`，iter `2,300`；*扣编译约 `3m 24s` / `204.16 s`*） | PyTorch + `mjlab` / MuJoCo Warp（`InstantTrack v1.4.0` + `BlinkMimic`） | `0.82169` *（15m 终点：`0.84308`）* | **0 / 40** | 2026-11-19 | [`records/v2/003_instanttrack_v14`](records/v2/003_instanttrack_v14/README.md) · [`ckpt_002300_v2.json`](reports/v2/instanttrack_v14_s0/ckpt_002300_v2.json) |
+| **2** | **NablaMimic**（`configs/ours.args`，`seed=0`） | **`9m 32s`**（`572.18 s`，iter `1,500`） | JAX + `NablaEngine 0.1.0` | `0.84108` *（25m 终点：`0.86896`）* | **0 / 40** | 2026-11-16 | [`records/v2/002_nablamimic_nablaengine`](records/v2/002_nablamimic_nablaengine/README.md) · [`v2_it_001500.json`](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
+| **3** | **SuperMimic Official**（`GenCoord` `proprio`，`h=10`，`seed=0`） | **`36m 51s`**（`2,210.83 s`，iter `15,000`）*（稳定：`40m 53s` / `2,453.09 s`）* | PyTorch + `mjlab`（`HybridRobotics/supermimic`） | `0.82641` *（稳定：`0.83635`，峰值：`0.85751`）* | **0 / 40** | 2026-11-15 | [`records/v2/001_supermimic_official_mjlab`](records/v2/001_supermimic_official_mjlab/README.md) · [`bisect_report.json`](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
 
-- **总榜最快**：**`9m 32s`（`572.18 s`）** — NablaMimic（`NablaEngine`），到达成首个 `0/40` 较 `mjlab` 快约 **3.9×**（到稳定 `0/40` 快约 **4.3×**）。
-- **`mjlab` 赛道最快**：首个 `0/40` 为 **`36m 51s`（`2,210.83 s`）**，稳定 `0/40` 为 **`40m 53s`（`2,453.09 s`）** — 官方 `HybridRobotics/supermimic`。
+- **总榜最快 & `mjlab` 赛道最快**：**`6m 45s`（含首轮编译 `405.23 s`；扣除 `201.07 s` 首次编译后约 `3m 24s` / `204.16 s`）** — `InstantTrack v1.4`（合入 [BlinkMimic](https://arxiv.org/abs/2611.16422) 并对齐 `FULL_COLLISION`），含编译对比官方 `HybridRobotics/supermimic` 快约 **5.5×**（扣编译快约 **10.8×**），比 `NablaMimic` 快约 **1.4×**。
+- **`NablaEngine` (JAX) 赛道最快**：**`9m 32s`（`572.18 s`）** — NablaMimic（[$\nabla$Mimic](https://arxiv.org/abs/2610.41654)）。
 - **机读注册表**：[`reports/v2/registry.json`](reports/v2/registry.json)（由 CI 自动审计）。
 
 ---
@@ -99,8 +100,8 @@ python3 scripts/v2/audit_registry.py
 | 目录 | 用途 |
 | --- | --- |
 | [`benchmark/`](benchmark/), [`assets/g1/`](assets/g1/), [`scripts/v2/`](scripts/v2/) | **冻结的 V2 裁判系统**（`mjlab 1.6.0` + `mujoco-warp` `FULL_COLLISION`）、策略接口与 CLI/一致性工具（`benchmark.py`）。 |
-| [`baselines/`](baselines/README.md) | 两条基线在 Colab G4 + Google Drive 上的一键训练与 V2 评测工作流：[`supermimic_mjlab`](baselines/supermimic_mjlab/README.md) 与 [`nablamimic`](baselines/nablamimic/README.md)。 |
-| [`records/v2/`](records/README.md) | 面向阅读的竞速纪录卡片（`001_...`、`002_...`），关联 [`reports/v2/`](reports/v2/registry.json) 中经审计的完整 40-clip JSON。 |
+| [`baselines/`](baselines/README.md) | 各基线在 Colab G4 + Google Drive 上的一键训练与 V2 评测工作流：[`instanttrack`](baselines/instanttrack/README.md)、[`nablamimic`](baselines/nablamimic/README.md) 与 [`supermimic_mjlab`](baselines/supermimic_mjlab/README.md)。 |
+| [`records/v2/`](records/README.md) | 面向阅读的竞速纪录卡片（`001_...`、`002_...`、`003_...`），关联 [`reports/v2/`](reports/v2/registry.json) 中经审计的完整 40-clip JSON。 |
 | [`docs/`](docs/V2_G4_BASELINE_AND_DIAGNOSTIC_REPORT.md) | 协议设计、策略接口文档及 V2 G4 基线与归因报告。 |
 | [`tests/`](tests/) | CPU 契约/一致性单元测试（`test_benchmark_v2.py`）与 G4 CUDA 运行时验收测试（`test_v2_gpu_runtime.py`）。 |
 

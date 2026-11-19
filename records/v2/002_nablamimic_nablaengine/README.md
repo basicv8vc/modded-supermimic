@@ -1,6 +1,6 @@
 # Record 002 — NablaMimic (`configs/ours.args`, `NablaEngine 0.1.0`)
 
-- **Algorithm**: `NablaMimic` (`sailab-ai/NablaMimic` @ `bfbb2a6773b4776c17402a34a93ec7589d9c7c18`, `configs/ours.args`)
+- **Algorithm**: `NablaMimic` (`sailab-ai/NablaMimic` @ `bfbb2a6773b4776c17402a34a93ec7589d9c7c18`, `configs/ours.args`; paper: [$\nabla$Mimic, arXiv:2610.41654](https://arxiv.org/abs/2610.41654))
 - **Trainer / Simulator**: JAX + `NablaEngine 0.1.0` @ `c61a6fe7f5ec47c7f4f9b0a4c055d60cbe40807c`
 - **Hardware**: `1 × NVIDIA RTX PRO 6000 Blackwell Server Edition` (`sm_120`, Colab G4)
 - **Seed**: `0`
