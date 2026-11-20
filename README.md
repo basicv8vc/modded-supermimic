@@ -27,13 +27,18 @@ Inspired by [modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt): **
 
 ## World Record Progression
 
-Evaluated independently by the frozen V2 referee ([protocol_v2.json](benchmark/v2/protocol_v2.json)) on **1× NVIDIA RTX PRO 6000 Blackwell Server Edition** (sm_120, Colab G4) under FULL_COLLISION physics (mjlab 1.6.0 / mujoco 3.11.0 / mujoco-warp 3.11.0 / warp-lang 1.16.0, unclipped returns, zero self-collision reward penalty).
+Evaluated independently by the frozen V2 referee ([protocol_v2.json](benchmark/v2/protocol_v2.json)) on **1× NVIDIA RTX PRO 6000 Blackwell Server Edition** (sm_120, Colab G4):
+
+- **Physics**: FULL_COLLISION enabled
+- **Runtime**: mjlab 1.6.0 · mujoco 3.11.0 · mujoco-warp 3.11.0 · warp-lang 1.16.0
+- **Scoring**: Unclipped returns (no [0, 1] clamping)
+- **Reward**: Zero self-collision reward penalty
 
 | # | Record | Training Time (0/40 & ≥0.82) | Trainer / Simulator | Return | Fails | Date | Artifacts |
 | :---: | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| **1** | **InstantTrack v1.4**<br><sub>PRESET[instanttrack] · FULL_COLLISION · seed=0</sub> | **6m 45s** (405.23 s raw, iter 2,300)<br><sub>Net train: ≈ 3m 24s (204.16 s)</sub> | PyTorch + mjlab / MuJoCo Warp<br><sub>InstantTrack v1.4.0 + BlinkMimic</sub> | **0.82169**<br><sub>15m end: 0.84308</sub> | **0 / 40** | 2026-11-19 | [Record Card](records/v2/003_instanttrack_v14/README.md) · [Eval JSON](reports/v2/instanttrack_v14_s0/ckpt_002300_v2.json) |
-| **2** | **NablaMimic**<br><sub>configs/ours.args · seed=0</sub> | **9m 32s** (572.18 s, iter 1,500) | JAX + NablaEngine 0.1.0 | **0.84108**<br><sub>25m end: 0.86896</sub> | **0 / 40** | 2026-11-16 | [Record Card](records/v2/002_nablamimic_nablaengine/README.md) · [Eval JSON](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
-| **3** | **SuperMimic Official**<br><sub>GenCoord proprio, h=10 · seed=0</sub> | **36m 51s** (2,210.83 s, iter 15,000)<br><sub>Stable onset: 40m 53s (2,453.09 s)</sub> | PyTorch + mjlab<br><sub>HybridRobotics/supermimic</sub> | **0.82641**<br><sub>Stable: 0.83635 · Peak: 0.85751</sub> | **0 / 40** | 2026-11-15 | [Record Card](records/v2/001_supermimic_official_mjlab/README.md) · [Bisect Report](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
+| **1** | **InstantTrack v1.4** | **6m 45s** (405.23 s raw, iter 2,300)<br><sub>Net train: ≈ 3m 24s (204.16 s)</sub> | PyTorch + mjlab / MuJoCo Warp<br><sub>InstantTrack v1.4.0 + BlinkMimic</sub> | **0.82169**<br><sub>15m end: 0.84308</sub> | **0 / 40** | 2026-11-19 | [Record Card](records/v2/003_instanttrack_v14/README.md) · [Eval JSON](reports/v2/instanttrack_v14_s0/ckpt_002300_v2.json) |
+| **2** | **NablaMimic** | **9m 32s** (572.18 s, iter 1,500) | JAX + NablaEngine 0.1.0 | **0.84108**<br><sub>25m end: 0.86896</sub> | **0 / 40** | 2026-11-16 | [Record Card](records/v2/002_nablamimic_nablaengine/README.md) · [Eval JSON](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
+| **3** | **SuperMimic Official** | **36m 51s** (2,210.83 s, iter 15,000)<br><sub>Stable onset: 40m 53s (2,453.09 s)</sub> | PyTorch + mjlab<br><sub>HybridRobotics/supermimic</sub> | **0.82641**<br><sub>Stable: 0.83635 · Peak: 0.85751</sub> | **0 / 40** | 2026-11-15 | [Record Card](records/v2/001_supermimic_official_mjlab/README.md) · [Bisect Report](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
 
 - **Fastest Overall & Fastest on mjlab**: **6m 45s** (405.23 s raw; ≈ 3m 24s / 204.16 s net excluding 201.07 s initial compile) — InstantTrack v1.4 (incorporating [BlinkMimic](https://arxiv.org/abs/2611.16422)) aligned to FULL_COLLISION (≈ **5.5× faster** raw / **10.8× faster** net than official HybridRobotics/supermimic, and ≈ **1.4× faster** raw than NablaMimic).
 - **Fastest on NablaEngine (JAX)**: **9m 32s** (572.18 s) — NablaMimic ([∇Mimic](https://arxiv.org/abs/2610.41654)).
