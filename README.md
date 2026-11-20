@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Unitree G1 Motion-Tracking Speedrun Benchmark.</b><br>
-  Train a deployable 29-DoF policy from scratch to ≥ 0.82 normalized return and 0/40 failures across 40 LAFAN1 clips as fast as possible on 1× Colab G4 (RTX PRO 6000 Blackwell 96 GB).
+  Train a deployable 29-DoF policy from scratch to ≥ 0.82 normalized return and 0/40 failures across 40 LAFAN1 clips as fast as possible on 1× Colab G4 (RTX PRO 6000).
 </p>
 
 <p align="center">
