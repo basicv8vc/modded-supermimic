@@ -27,21 +27,22 @@
 
 ## 世界纪录榜
 
-所有成绩均在 **1× NVIDIA RTX PRO 6000 Blackwell Server Edition**（sm_120，Colab G4）上，由冻结的 V2 独立裁判按 [benchmark/v2/protocol_v2.json](benchmark/v2/protocol_v2.json) 评测：
+所有成绩均在 **Google Colab RTX PRO 6000** 上，由冻结的 V2 独立裁判按 [benchmark/v2/protocol_v2.json](benchmark/v2/protocol_v2.json) 评测：
 
 - **物理配置**：开启 FULL_COLLISION 全自碰撞物理
 - **裁判运行时**：mjlab 1.6.0 · mujoco 3.11.0 · mujoco-warp 3.11.0 · warp-lang 1.16.0
 - **回报计算**：不做 [0, 1] 截断
 - **碰撞惩罚**：无自碰撞奖励惩罚
 
-| # | 纪录 | 达标时间（0/40 且 ≥0.82） | 训练框架 / 仿真器 | 归一化回报 | 失败数 | 日期 | 证据与卡片 |
-| :---: | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| **1** | **InstantTrack v1.4** | **6m 45s**（含编译 405.23 s，iter 2,300）<br><sub>扣编译约 3m 24s（204.16 s）</sub> | PyTorch + mjlab / MuJoCo Warp<br><sub>InstantTrack v1.4.0 + BlinkMimic</sub> | **0.82169**<br><sub>15m 终点：0.84308</sub> | **0 / 40** | 2026-11-19 | [纪录卡片](records/v2/003_instanttrack_v14/README.md) · [评测 JSON](reports/v2/instanttrack_v14_s0/ckpt_002300_v2.json) |
-| **2** | **NablaMimic** | **9m 32s**（572.18 s，iter 1,500） | JAX + NablaEngine 0.1.0 | **0.84108**<br><sub>25m 终点：0.86896</sub> | **0 / 40** | 2026-11-16 | [纪录卡片](records/v2/002_nablamimic_nablaengine/README.md) · [评测 JSON](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
-| **3** | **SuperMimic Official** | **36m 51s**（2,210.83 s，iter 15,000）<br><sub>稳定达标：40m 53s（2,453.09 s）</sub> | PyTorch + mjlab<br><sub>HybridRobotics/supermimic</sub> | **0.82641**<br><sub>稳定：0.83635 · 峰值：0.85751</sub> | **0 / 40** | 2026-11-15 | [纪录卡片](records/v2/001_supermimic_official_mjlab/README.md) · [二分报告](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
+| # | 纪录 | 达标时间（0/40 且 ≥0.82） | 训练框架 / 仿真器 | 归一化回报 | 失败数 | 论文 / 仓库 | 证据与卡片 |
+| :---: | :--- | :---: | :--- | :---: | :---: | :--- | :--- |
+| **1** | **InstantTrack v1.4** | **6m 45s** | PyTorch + mjlab / MuJoCo Warp<br><sub>InstantTrack v1.4.0 + BlinkMimic</sub> | **0.82169** | **0 / 40** | [BlinkMimic](https://arxiv.org/abs/2611.16422) · [Repo](https://github.com/Huy-Quang-Dao/InstantTrack) | [纪录卡片](records/v2/003_instanttrack_v14/README.md) · [评测 JSON](reports/v2/instanttrack_v14_s0/ckpt_002300_v2.json) |
+| **2** | **NablaMimic** | **9m 32s** | JAX + NablaEngine 0.1.0 | **0.84108** | **0 / 40** | [∇Mimic](https://arxiv.org/abs/2610.41654) · [Repo](https://github.com/sailab-ai/NablaMimic) | [纪录卡片](records/v2/002_nablamimic_nablaengine/README.md) · [评测 JSON](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
+| **3** | **SuperMimic Official** | **36m 51s** | PyTorch + mjlab<br><sub>HybridRobotics/supermimic</sub> | **0.82641** | **0 / 40** | [SuperMimic](https://arxiv.org/abs/2610.28480) · [Repo](https://github.com/HybridRobotics/supermimic) | [纪录卡片](records/v2/001_supermimic_official_mjlab/README.md) · [二分报告](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
 
-- **总榜最快 & mjlab 赛道最快**：**6m 45s**（含首轮编译 405.23 s；扣除 201.07 s 首次编译后约 3m 24s / 204.16 s）— InstantTrack v1.4（合入 [BlinkMimic](https://arxiv.org/abs/2611.16422) 并对齐 FULL_COLLISION），含编译对比官方 HybridRobotics/supermimic 快约 **5.5×**（扣编译快约 **10.8×**），比 NablaMimic 快约 **1.4×**。
-- **NablaEngine（JAX）赛道最快**：**9m 32s**（572.18 s）— NablaMimic（[∇Mimic](https://arxiv.org/abs/2610.41654)）。
+- **#1 InstantTrack v1.4**（总榜最快 & mjlab 赛道最快）：**6m 45s**（含首轮编译 405.23 s，iter 2,300；扣除 201.07 s 首次编译后约 3m 24s / 204.16 s；15m 终点回报 0.84308）— 合入 [BlinkMimic](https://arxiv.org/abs/2611.16422) 并对齐 FULL_COLLISION，含编译对比官方 HybridRobotics/supermimic 快约 **5.5×**（扣编译快约 **10.8×**），比 NablaMimic 快约 **1.4×**。
+- **#2 NablaMimic**（NablaEngine / JAX 赛道最快）：**9m 32s**（572.18 s，iter 1,500；25m 终点回报 0.86896）— [∇Mimic](https://arxiv.org/abs/2610.41654)。
+- **#3 SuperMimic Official**（官方基线）：**36m 51s**（2,210.83 s，iter 15,000；稳定 0 / 40 达标时间为 40m 53s / 2,453.09 s，回报 0.83635；峰值回报 0.85751）— HybridRobotics/supermimic。
 - **机读注册表**：[reports/v2/registry.json](reports/v2/registry.json)（由 CI 自动审计）。
 
 ---
