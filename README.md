@@ -25,38 +25,38 @@ Inspired by [modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt): **
 
 ---
 
-## World Record Progression (`V2`: `modded-supermimic-g1-lafan1-v2`)
+## World Record Progression
 
-Evaluated independently under [`benchmark/v2/protocol_v2.json`](benchmark/v2/protocol_v2.json) (`FULL_COLLISION` physics, `mjlab 1.6.0` / `mujoco 3.11.0` / `mujoco-warp 3.11.0` / `warp-lang 1.16.0`, no `[0, 1]` clipping, zero self-collision reward penalty) on **1× NVIDIA RTX PRO 6000 Blackwell Server Edition (`sm_120`, Colab G4)**.
+Evaluated independently by the frozen V2 referee ([protocol_v2.json](benchmark/v2/protocol_v2.json)) on **1× NVIDIA RTX PRO 6000 Blackwell Server Edition** (sm_120, Colab G4) under FULL_COLLISION physics (mjlab 1.6.0 / mujoco 3.11.0 / mujoco-warp 3.11.0 / warp-lang 1.16.0, unclipped returns, zero self-collision reward penalty).
 
-| # | Record | Training Time (0/40 & ≥0.82) | Trainer / Simulator | Return | Failed Clips | Date | Record Card & Artifacts |
-| ---: | --- | ---: | --- | ---: | ---: | --- | --- |
-| **1** | **InstantTrack v1.4** (`PRESET[instanttrack]` + `FULL_COLLISION`, `seed=0`) | **`6m 45s`** (`405.23 s` raw, iter `2,300`; *net train: ~`3m 24s` / `204.16 s`*) | PyTorch + `mjlab` / MuJoCo Warp (`InstantTrack v1.4.0` + `BlinkMimic`) | `0.82169` *(15m end: `0.84308`)* | **0 / 40** | 2026-11-19 | [`records/v2/003_instanttrack_v14`](records/v2/003_instanttrack_v14/README.md) · [`ckpt_002300_v2.json`](reports/v2/instanttrack_v14_s0/ckpt_002300_v2.json) |
-| **2** | **NablaMimic** (`configs/ours.args`, `seed=0`) | **`9m 32s`** (`572.18 s`, iter `1,500`) | JAX + `NablaEngine 0.1.0` | `0.84108` *(25m end: `0.86896`)* | **0 / 40** | 2026-11-16 | [`records/v2/002_nablamimic_nablaengine`](records/v2/002_nablamimic_nablaengine/README.md) · [`v2_it_001500.json`](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
-| **3** | **SuperMimic Official** (`GenCoord` `proprio`, `h=10`, `seed=0`) | **`36m 51s`** (`2,210.83 s`, iter `15,000`) *(stable: `40m 53s` / `2,453.09 s`)* | PyTorch + `mjlab` (`HybridRobotics/supermimic`) | `0.82641` *(stable: `0.83635`, peak: `0.85751`)* | **0 / 40** | 2026-11-15 | [`records/v2/001_supermimic_official_mjlab`](records/v2/001_supermimic_official_mjlab/README.md) · [`bisect_report.json`](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
+| # | Record | Training Time (0/40 & ≥0.82) | Trainer / Simulator | Return | Fails | Date | Artifacts |
+| :---: | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **1** | **InstantTrack v1.4**<br><sub>PRESET[instanttrack] · FULL_COLLISION · seed=0</sub> | **6m 45s** (405.23 s raw, iter 2,300)<br><sub>Net train: ≈ 3m 24s (204.16 s)</sub> | PyTorch + mjlab / MuJoCo Warp<br><sub>InstantTrack v1.4.0 + BlinkMimic</sub> | **0.82169**<br><sub>15m end: 0.84308</sub> | **0 / 40** | 2026-11-19 | [Record Card](records/v2/003_instanttrack_v14/README.md) · [Eval JSON](reports/v2/instanttrack_v14_s0/ckpt_002300_v2.json) |
+| **2** | **NablaMimic**<br><sub>configs/ours.args · seed=0</sub> | **9m 32s** (572.18 s, iter 1,500) | JAX + NablaEngine 0.1.0 | **0.84108**<br><sub>25m end: 0.86896</sub> | **0 / 40** | 2026-11-16 | [Record Card](records/v2/002_nablamimic_nablaengine/README.md) · [Eval JSON](reports/v2/nablamimic_25m_bisect/v2_it_001500.json) |
+| **3** | **SuperMimic Official**<br><sub>GenCoord proprio, h=10 · seed=0</sub> | **36m 51s** (2,210.83 s, iter 15,000)<br><sub>Stable onset: 40m 53s (2,453.09 s)</sub> | PyTorch + mjlab<br><sub>HybridRobotics/supermimic</sub> | **0.82641**<br><sub>Stable: 0.83635 · Peak: 0.85751</sub> | **0 / 40** | 2026-11-15 | [Record Card](records/v2/001_supermimic_official_mjlab/README.md) · [Bisect Report](baselines/supermimic_mjlab/out/official_35k_20261115T120918Z/bisect_report.json) |
 
-- **Fastest Overall & Fastest on `mjlab`**: **`6m 45s` (`405.23 s` raw; ~`3m 24s` / `204.16 s` excluding `201.07 s` initial compile)** — `InstantTrack v1.4` (incorporating [BlinkMimic](https://arxiv.org/abs/2611.16422)) aligned to `FULL_COLLISION` (~**5.5× faster** raw / ~**10.8× faster** net than official `HybridRobotics/supermimic`, and ~**1.4× faster** raw than `NablaMimic`).
-- **Fastest on `NablaEngine` (JAX)**: **`9m 32s` (`572.18 s`)** — NablaMimic ([$\nabla$Mimic](https://arxiv.org/abs/2610.41654)).
-- **Machine-readable registry**: [`reports/v2/registry.json`](reports/v2/registry.json) (audited by CI).
+- **Fastest Overall & Fastest on mjlab**: **6m 45s** (405.23 s raw; ≈ 3m 24s / 204.16 s net excluding 201.07 s initial compile) — InstantTrack v1.4 (incorporating [BlinkMimic](https://arxiv.org/abs/2611.16422)) aligned to FULL_COLLISION (≈ **5.5× faster** raw / **10.8× faster** net than official HybridRobotics/supermimic, and ≈ **1.4× faster** raw than NablaMimic).
+- **Fastest on NablaEngine (JAX)**: **9m 32s** (572.18 s) — NablaMimic ([∇Mimic](https://arxiv.org/abs/2610.41654)).
+- **Machine-readable registry**: [reports/v2/registry.json](reports/v2/registry.json) (audited by CI).
 
 ---
 
 ## Rules
 
-1. **Frozen Hardware**: `1 × Google Colab G4` (`NVIDIA RTX PRO 6000 Blackwell Server Edition`, `sm_120`, 96 GB).
-2. **Target Contract (Same Checkpoint)**: On one single checkpoint evaluated across all 40 canonical LAFAN1 clips under `modded-supermimic-g1-lafan1-v2`:
-   - **Aggregate normalized return ≥ `0.82`** (unweighted mean of full-clip normalized returns, no clamping).
-   - **Failed clips = `0 / 40`** (no `root_height < 0.25 m`, `root_tilt > 0.8 rad`, or non-finite termination before `T - 1` steps).
-3. **Training-Only Wall Time**: Ranked by effective training wall time from step 0 until the qualifying checkpoint is written — excluding dataset fetch, environment installation, one-time JIT/CUDA-graph compilation, and post-hoc evaluation.
+1. **Frozen Hardware**: 1× Google Colab G4 (NVIDIA RTX PRO 6000 Blackwell Server Edition, sm_120, 96 GB).
+2. **Target Contract (Single Checkpoint)**: A single checkpoint evaluated across all 40 canonical LAFAN1 clips under modded-supermimic-g1-lafan1-v2 must satisfy:
+   - **Aggregate normalized return ≥ 0.82** (unweighted mean of full-clip normalized returns, without clamping).
+   - **Failed clips = 0 / 40** (no root_height < 0.25 m, root_tilt > 0.8 rad, or non-finite termination before step T - 1).
+3. **Training-Only Wall Time**: Ranked by effective training wall-clock time from step 0 until the qualifying checkpoint is written — excluding dataset fetch, environment setup, one-time JIT/CUDA-graph compilation, and post-hoc evaluation.
 4. **From Scratch, Deployable Control**:
-   - Weights must be trained from scratch on the 40 canonical LAFAN1 clips (no pre-trained external weights).
-   - At test time, the frozen referee exposes only [`StepInput`](docs/POLICY_INTERFACE.md) (`joint_pos`, `joint_vel`, `base_lin_vel`, `base_ang_vel`, `anchor_pos_b`/`_prev`, `anchor_ori_b`/`_prev`, `previous_action`, read-only `ReferenceClip`) and accepts `(29,)` joint actions at 50 Hz (`target = action * action_scale + default_joint_pos`).
+   - Weights must be trained from scratch on the 40 canonical LAFAN1 clips (no external pre-trained weights).
+   - At test time, the frozen referee exposes only [StepInput](docs/POLICY_INTERFACE.md) (joint_pos, joint_vel, base_lin_vel, base_ang_vel, anchor_pos_b / anchor_pos_b_prev, anchor_ori_b / anchor_ori_b_prev, previous_action, and read-only ReferenceClip) and accepts (29,) joint actions at 50 Hz (target = action * action_scale + default_joint_pos).
 5. **Open Training Stack, Frozen Referee**:
-   - Any training framework, observation encoding, history/lookahead design, RL/imitation algorithm, or GPU training simulator is allowed (labelled explicitly with `Trainer / Simulator` in the leaderboard).
-   - **The V2 referee (`benchmark/`, `assets/g1/`, `protocol_v2.json`) may never be modified by a record submission.**
+   - Any training framework, observation encoding, history/lookahead design, RL/imitation algorithm, or GPU training simulator is allowed (labelled explicitly under Trainer / Simulator on the leaderboard).
+   - **Record PRs must never modify the V2 referee (benchmark/, assets/g1/, protocol_v2.json).**
 6. **Reproducibility & Proof**:
-   - Single seed (`seed=0`) is accepted for leaderboard exploration; high-scrutiny claims may request multi-seed verification.
-   - Every submission PR must include a reproducible launch script / pinned commit + patch, training log, `checkpoint_sha256`, and the complete 40-clip V2 evaluation JSON generated by `scripts/v2/fast_eval.py`.
+   - Single-seed runs (seed=0) are accepted for leaderboard exploration; high-scrutiny claims may request multi-seed verification.
+   - Every submission PR must include a reproducible launch script (or pinned commit + patch), training log, checkpoint_sha256, and the complete 40-clip V2 evaluation JSON generated by scripts/v2/fast_eval.py.
 
 ---
 
@@ -91,35 +91,35 @@ python3 scripts/v2/fast_eval.py \
 python3 scripts/v2/audit_registry.py
 ```
 
-See [`docs/POLICY_INTERFACE.md`](docs/POLICY_INTERFACE.md) for the exact `reset(context)` / `act(step)` contract and [`baselines/`](baselines/README.md) to reproduce either baseline end-to-end on Colab G4.
+See [docs/POLICY_INTERFACE.md](docs/POLICY_INTERFACE.md) for the exact reset(context) / act(step) contract, and [baselines/](baselines/README.md) to reproduce any baseline end-to-end on Colab G4.
 
 ---
 
 ## Repository Layout
 
 | Path | Role |
-| --- | --- |
-| [`benchmark/`](benchmark/), [`assets/g1/`](assets/g1/), [`scripts/v2/`](scripts/v2/) | **Frozen V2 referee** (`mjlab 1.6.0` + `mujoco-warp` `FULL_COLLISION`), policy interface, and CLI/parity tools (`benchmark.py`). |
-| [`baselines/`](baselines/README.md) | One-command Colab G4 + Google Drive training & V2 evaluation workflows for [`instanttrack`](baselines/instanttrack/README.md), [`nablamimic`](baselines/nablamimic/README.md), and [`supermimic_mjlab`](baselines/supermimic_mjlab/README.md). |
-| [`records/v2/`](records/README.md) | Human-readable speedrun record cards (`001_...`, `002_...`, `003_...`) paired with audited 40-clip JSONs under [`reports/v2/`](reports/v2/registry.json). |
-| [`docs/`](docs/V2_G4_BASELINE_AND_DIAGNOSTIC_REPORT.md) | Protocol design, policy interface spec, and V2 G4 baseline & diagnostic report. |
-| [`tests/`](tests/) | CPU contract/parity tests (`test_benchmark_v2.py`) and G4 CUDA runtime acceptance tests (`test_v2_gpu_runtime.py`). |
+| :--- | :--- |
+| [benchmark/](benchmark/), [assets/g1/](assets/g1/), [scripts/v2/](scripts/v2/) | **Frozen V2 referee** (mjlab 1.6.0 + mujoco-warp FULL_COLLISION), policy interface, and CLI/parity tools (benchmark.py). |
+| [baselines/](baselines/README.md) | One-command Colab G4 + Google Drive training & V2 evaluation workflows for [instanttrack](baselines/instanttrack/README.md), [nablamimic](baselines/nablamimic/README.md), and [supermimic_mjlab](baselines/supermimic_mjlab/README.md). |
+| [records/v2/](records/README.md) | Human-readable speedrun record cards (001_..., 002_..., 003_...) paired with audited 40-clip JSONs under [reports/v2/](reports/v2/registry.json). |
+| [docs/](docs/V2_G4_BASELINE_AND_DIAGNOSTIC_REPORT.md) | Protocol design, policy interface spec, and V2 G4 baseline & diagnostic report. |
+| [tests/](tests/) | CPU contract/parity tests (test_benchmark_v2.py) and G4 CUDA runtime acceptance tests (test_v2_gpu_runtime.py). |
 
 > [!NOTE]
-> `V1` artifacts in `reports/` (`modded-supermimic-g1-lafan1-v1`) are kept strictly for historical regression testing and **must not** be compared against `V2` scores. See [`docs/BENCHMARK_V2_EVALUATION.md`](docs/BENCHMARK_V2_EVALUATION.md) for details.
+> V1 artifacts in reports/ (modded-supermimic-g1-lafan1-v1) are kept strictly for historical regression testing and **must not** be compared against V2 scores. See [docs/BENCHMARK_V2_EVALUATION.md](docs/BENCHMARK_V2_EVALUATION.md) for details.
 
 ---
 
 ## Submitting a Record
 
-1. Train from scratch on `1 × Colab G4` and run 40-clip V2 evaluation (`scripts/v2/fast_eval.py --backend batched --batch-envs 40`) plus a 2-clip serial-vs-batched parity check (`scripts/v2/compare_evals.py`).
-2. Add a folder `records/v2/<NNN>_<name>/` with a concise `README.md`, training config/patch/launch script, `train.log`, and the complete 40-clip V2 JSON (under `reports/v2/` or inside the record folder, registered in [`reports/v2/registry.json`](reports/v2/registry.json)).
-3. Run `python3 scripts/v2/audit_registry.py` and `pytest` locally, then open a PR **without touching any file under `benchmark/` or `assets/g1/`**.
+1. Train from scratch on 1× Colab G4, run the 40-clip V2 evaluation (scripts/v2/fast_eval.py --backend batched --batch-envs 40), and run a 2-clip serial-vs-batched parity check (scripts/v2/compare_evals.py).
+2. Add a folder records/v2/\<NNN\>\_\<name\>/ containing a concise README.md, training config/patch/launch script, train.log, and the complete 40-clip V2 JSON (under reports/v2/ or inside the record folder, registered in [reports/v2/registry.json](reports/v2/registry.json)).
+3. Run python3 scripts/v2/audit_registry.py and pytest locally, then open a PR **without modifying any file under benchmark/ or assets/g1/**.
 
 ---
 
 ## License
 
-Source code and documentation authored in this repository are released under the **MIT License** — see [`LICENSE`](LICENSE).
+Source code and documentation authored in this repository are released under the **MIT License** — see [LICENSE](LICENSE).
 
-Third-party exception: `assets/g1/` (Unitree G1 29-DoF MJCF + 35 STL meshes copied verbatim from [`mujocolab/mjlab`](https://github.com/mujocolab/mjlab)) remains under **Apache-2.0** ([`licenses/Apache-2.0.txt`](licenses/Apache-2.0.txt)). LAFAN1 motion data is not redistributed; `scripts/fetch_lafan1.py` downloads it at a pinned revision. Full attribution in [`NOTICE`](NOTICE).
+Third-party exception: assets/g1/ (Unitree G1 29-DoF MJCF + 35 STL meshes copied verbatim from [mujocolab/mjlab](https://github.com/mujocolab/mjlab)) remains under **Apache-2.0** ([licenses/Apache-2.0.txt](licenses/Apache-2.0.txt)). LAFAN1 motion data is not redistributed; scripts/fetch_lafan1.py downloads it at a pinned revision. Full attribution in [NOTICE](NOTICE).
